@@ -1,4 +1,4 @@
-defmodule Renewex.Tokenzier do
+defmodule Renewex.Tokenizer do
   @tokens [
     %{name: :white, pattern: ~r/\s+/},
     %{name: :float, pattern: ~r/-?\d+\.\d+/},
@@ -33,6 +33,10 @@ defmodule Renewex.Tokenzier do
 
   @token_types Regex.names(@pattern) |> Enum.map(&String.to_atom/1)
 
+  def token_types do
+    @token_types
+  end
+
   def scan(input) do
     for captures <- Regex.scan(@pattern, input, capture: :all_names) do
       Enum.zip(@token_types, captures)
@@ -41,6 +45,14 @@ defmodule Renewex.Tokenzier do
         {type, value} -> {type, cast_value(type, value)}
       end)
     end
+  end
+
+  def skip_whitespace(tokens) do
+    tokens
+    |> Enum.filter(fn
+      {:white, _} -> false
+      _ -> true
+    end)
   end
 
   def cast_value(type, value) do
@@ -52,7 +64,7 @@ defmodule Renewex.Tokenzier do
       :null -> nil
       :ref -> Integer.parse(value, 10) |> elem(0)
       :className -> value
-      :string -> Renewex.Tokenzier.read_string_literal(value)
+      :string -> Renewex.Tokenizer.read_string_literal(value)
     end
   end
 

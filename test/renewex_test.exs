@@ -1,10 +1,12 @@
 defmodule RenewexTest do
   use ExUnit.Case
+  alias Renewex.Tokenizer
+  alias Renewex.Parser
   doctest Renewex
 
   test "initial test" do
     {:ok, example} = "./example_files/example.rnw" |> File.read()
-    assert(3350 == Enum.count(Renewex.parse_string(example)))
+    assert(3350 == Enum.count(Tokenizer.scan(example)))
   end
 
   test "aliases" do
@@ -56,5 +58,19 @@ defmodule RenewexTest do
           "de.renew.gui.fs.IsaConnection"
         ]
     )
+  end
+
+  test "parser test" do
+    {:ok, example} = "./example_files/example.rnw" |> File.read()
+
+    parser =
+      example
+      |> Tokenizer.scan()
+      |> Tokenizer.skip_whitespace()
+      |> Parser.detect_document_version()
+
+    assert(parser.grammar.version == 11)
+
+    Parser.parse_primitive(parser, :int) |> dbg
   end
 end

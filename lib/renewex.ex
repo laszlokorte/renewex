@@ -1,7 +1,7 @@
 defmodule Renewex do
-  alias Renewex.Tokenzier
+  alias Renewex.Tokenizer
 
   def parse_string(input) do
-    input |> Tokenzier.scan()
+    input |> Tokenizer.scan()
   end
 end

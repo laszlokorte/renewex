@@ -1,4 +1,6 @@
 defmodule Renewex.Grammar do
+  alias Renewex.Storable
+  alias Renewex.Parser
   defstruct [:version, :hierarchy]
 
   def new(version) do
@@ -445,7 +447,18 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "CH.ifa.draw.standard.CompositeFigure", into) do
-    {:ok, into, parser}
+    {:ok, figures, next_parser} =
+      Parser.parse_list(parser, fn
+        p -> Parser.parse_storable(p, "CH.ifa.draw.framework.Figure")
+      end)
+
+    {:ok,
+     %Storable{
+       into
+       | fields: %{
+           "figures" => figures
+         }
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.FigureAttributes", into) do
@@ -453,7 +466,21 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
-    {:ok, into, parser}
+    {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
+    {:ok, "attributes", next_parser} = Parser.parse_primitive(next_parser, :string)
+
+    {:ok, attrs, next_parser} =
+      Parser.parse_list(next_parser, fn
+        p -> Parser.parse_primitive(p, :string)
+      end)
+
+    {:ok,
+     %Storable{
+       into
+       | fields: %{
+           "attributes" => attrs
+         }
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.RectangleFigure", into) do

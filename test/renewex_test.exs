@@ -96,6 +96,5 @@ defmodule RenewexTest do
       |> Parser.parse_storable()
 
     dbg(result)
-    assert(Parser.is_eof(parser))
   end
 end

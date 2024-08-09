@@ -79,7 +79,8 @@ defmodule Renewex.Parser do
         %Renewex.Parser{
           tokens: [{current_type, current_value} | rest_tokens],
           ref_list: ref_list
-        } = parser
+        } = parser,
+        expected_interface \\ nil
       ) do
     next_parser = %Renewex.Parser{
       parser
@@ -96,15 +97,23 @@ defmodule Renewex.Parser do
       :class_name ->
         class_name = Aliases.resolve_alias(current_value)
 
-        with {:ok, result, p} <-
-               parse_grammar_rule(next_parser, class_name, Storable.new(class_name)) do
-          {:ok, result,
-           %Renewex.Parser{
-             p
-             | ref_list: [result, ref_list]
-           }}
+        if is_nil(expected_interface) or
+             Enum.member?(
+               Hierarchy.interfaces_of(parser.grammar, class_name),
+               expected_interface
+             ) do
+          with {:ok, result, p} <-
+                 parse_grammar_rule(next_parser, class_name, Storable.new(class_name)) do
+            {:ok, result,
+             %Renewex.Parser{
+               p
+               | ref_list: [result | ref_list]
+             }}
+          else
+            err -> err
+          end
         else
-          err -> err
+          {:error, {class_name, expected_interface}, next_parser}
         end
 
       _ ->
@@ -113,20 +122,16 @@ defmodule Renewex.Parser do
   end
 
   def parse_grammar_rule(parser, rule, storable) do
-    storable =
+    base =
       if super_rule = Hierarchy.get_super(parser.grammar, rule) do
         parse_grammar_rule(parser, super_rule, storable)
       else
-        storable
+        {:ok, storable, parser}
       end
 
-    with {:ok, value, parser} <- Grammar.parse(parser, rule, storable) do
-      {:ok, value,
-       %Renewex.Parser{
-         parser
-         | # TODO
-           tokens: []
-       }}
+    with {:ok, storable, parser} <- base,
+         {:ok, value, parser} <- Grammar.parse(parser, rule, storable) do
+      {:ok, value, parser}
     else
       err -> err
     end

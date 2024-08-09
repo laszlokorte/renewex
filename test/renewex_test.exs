@@ -70,7 +70,18 @@ defmodule RenewexTest do
       |> Parser.detect_document_version()
 
     assert(parser.grammar.version == 11)
+  end
 
-    Parser.parse_primitive(parser, :int) |> dbg
+  test "list parsing" do
+    {:ok, list_of_5_bools, _} =
+      "5 true false true false true"
+      |> Tokenizer.scan()
+      |> Tokenizer.skip_whitespace()
+      |> Parser.new(Renewex.Grammar.new(11))
+      |> Parser.parse_list(fn p ->
+        Parser.parse_primitive(p, :boolean)
+      end)
+
+    assert(list_of_5_bools == [true, false, true, false, true])
   end
 end

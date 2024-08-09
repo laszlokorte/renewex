@@ -71,8 +71,6 @@ defmodule Renewex.Tokenizer do
   def read_string_literal(v) do
     with {:ok, s} when is_binary(s) <- Code.string_to_quoted(v) do
       s
-    else
-      _ -> nil
     end
   end
 end

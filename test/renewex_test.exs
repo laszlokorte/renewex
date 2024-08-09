@@ -74,7 +74,7 @@ defmodule RenewexTest do
 
   test "list parsing" do
     {:ok, list_of_5_bools, _} =
-      "5 true false true false true"
+      "5 true false 1 0 true"
       |> Tokenizer.scan()
       |> Tokenizer.skip_whitespace()
       |> Parser.new(Renewex.Grammar.new(11))
@@ -83,5 +83,19 @@ defmodule RenewexTest do
       end)
 
     assert(list_of_5_bools == [true, false, true, false, true])
+  end
+
+  test "test parse storable" do
+    {:ok, example} = "./example_files/example.rnw" |> File.read()
+
+    {:ok, result, parser} =
+      example
+      |> Tokenizer.scan()
+      |> Tokenizer.skip_whitespace()
+      |> Parser.detect_document_version()
+      |> Parser.parse_storable()
+
+    dbg(result)
+    assert(Parser.is_eof(parser))
   end
 end

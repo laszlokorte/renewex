@@ -10,7 +10,7 @@ defmodule Renewex.Tokenizer do
     %{name: :null, pattern: ~r/NULL/, cast: fn _ -> nil end},
     %{name: :ref, pattern: ~r/\d+/, prefix: ~r/REF\s+/},
     %{
-      name: :className,
+      name: :class_name,
       pattern: ~r/[_a-zA-Z]+(?:\.[_a-zA-Z][_a-zA-Z0-9]*)*/
     },
     %{
@@ -63,7 +63,7 @@ defmodule Renewex.Tokenizer do
       :boolean -> Enum.member?(["1", "true"], value)
       :null -> nil
       :ref -> Integer.parse(value, 10) |> elem(0)
-      :className -> value
+      :class_name -> value
       :string -> Renewex.Tokenizer.read_string_literal(value)
     end
   end

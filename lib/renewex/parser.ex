@@ -42,17 +42,78 @@ defmodule Renewex.Parser do
          }}
 
       %Renewex.Parser{tokens: []} ->
-        {:error, :eof}
+        {:error, :eof, parser}
 
-      %Renewex.Parser{tokens: [{actual_type, actual_value} | _]} ->
-        {:error, {actual_type, actual_value}}
+      %Renewex.Parser{tokens: [{actual_type, actual_value} | rest_tokens]} ->
+        {:error, {actual_type, actual_value},
+         %Renewex.Parser{
+           parser
+           | tokens: rest_tokens
+         }}
     end
   end
 
   Tokenizer.token_types()
+  |> Enum.filter(fn
+    :boolean -> false
+    _ -> true
+  end)
   |> Enum.each(fn name ->
     def unquote(:parse_primitive)(parser, unquote(name)), do: parse_token(parser, unquote(name))
   end)
+
+  def parse_primitive(parser, :boolean) do
+    with {:ok, bool, next_parser} <- parse_token(parser, :boolean) do
+      {:ok, bool, next_parser}
+    else
+      {:error, {:int, 1}, next_parser} -> {:ok, true, next_parser}
+      {:error, {:int, 0}, next_parser} -> {:ok, false, next_parser}
+      e -> e
+    end
+  end
+
+  def parse_storable(
+        %Renewex.Parser{
+          tokens: [{current_type, current_value} | rest_tokens],
+          ref_list: ref_list
+        } = parser
+      ) do
+    next_parser = %Renewex.Parser{
+      parser
+      | tokens: rest_tokens
+    }
+
+    case current_type do
+      :null ->
+        {:ok, nil}
+
+      :ref ->
+        {:ok, {:ref, current_value}}
+
+      :class_name ->
+        with {:ok, result, p} <- parse_grammar_rule(next_parser, current_type) do
+          {:ok, result,
+           %Renewex.Parser{
+             p
+             | ref_list: [result, ref_list]
+           }}
+        else
+          err -> err
+        end
+
+      _ ->
+        {:error, {current_type, current_value}, next_parser}
+    end
+  end
+
+  def parse_grammar_rule(parser, rule) do
+    {:ok, rule,
+     %Renewex.Parser{
+       parser
+       | # TODO
+         tokens: []
+     }}
+  end
 
   def parse_list(parser, fun) do
     {:ok, count, parser} = parse_primitive(parser, :int)
@@ -60,7 +121,7 @@ defmodule Renewex.Parser do
     if count > 0 do
       1..count
       |> Enum.reduce({:ok, [], parser}, fn
-        _, {:error, _} = a ->
+        _, {:error, _, _} = a ->
           a
 
         _, {:ok, list, parser} ->
@@ -75,4 +136,12 @@ defmodule Renewex.Parser do
       {:ok, []}
     end
   end
+
+  def skip_any(%Renewex.Parser{tokens: []}), do: {:error, :eof}
+
+  def skip_any(%Renewex.Parser{tokens: [_ | rest]} = parser),
+    do: %Renewex.Parser{parser | tokens: rest}
+
+  def is_eof(%Renewex.Parser{tokens: []}), do: true
+  def is_eof(%Renewex.Parser{tokens: [_ | _]}), do: false
 end

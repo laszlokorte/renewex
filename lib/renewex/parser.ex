@@ -1,4 +1,7 @@
 defmodule Renewex.Parser do
+  alias Renewex.Hierarchy
+  alias Renewex.Storable
+  alias Renewex.Aliases
   alias Renewex.Tokenizer
   alias Renewex.Grammar
   defstruct [:grammar, :tokens, :ref_list]
@@ -91,7 +94,10 @@ defmodule Renewex.Parser do
         {:ok, {:ref, current_value}}
 
       :class_name ->
-        with {:ok, result, p} <- parse_grammar_rule(next_parser, current_type) do
+        class_name = Aliases.resolve_alias(current_value)
+
+        with {:ok, result, p} <-
+               parse_grammar_rule(next_parser, class_name, Storable.new(class_name)) do
           {:ok, result,
            %Renewex.Parser{
              p
@@ -106,13 +112,24 @@ defmodule Renewex.Parser do
     end
   end
 
-  def parse_grammar_rule(parser, rule) do
-    {:ok, rule,
-     %Renewex.Parser{
-       parser
-       | # TODO
-         tokens: []
-     }}
+  def parse_grammar_rule(parser, rule, storable) do
+    storable =
+      if super_rule = Hierarchy.get_super(parser.grammar, rule) do
+        parse_grammar_rule(parser, super_rule, storable)
+      else
+        storable
+      end
+
+    with {:ok, value, parser} <- Grammar.parse(parser, rule, storable) do
+      {:ok, value,
+       %Renewex.Parser{
+         parser
+         | # TODO
+           tokens: []
+       }}
+    else
+      err -> err
+    end
   end
 
   def parse_list(parser, fun) do

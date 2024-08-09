@@ -440,221 +440,252 @@ defmodule Renewex.Grammar do
     }
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.diagram.AssocArrowTip", _tokens) do
+  def parse(parser, "de.renew.diagram.AssocArrowTip", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.standard.CompositeFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.standard.CompositeFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.FigureAttributes", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.FigureAttributes", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.AttributeFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.RectangleFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.RectangleFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing", _tokens) do
+  def parse(parser, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.contrib.PolygonFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.contrib.PolygonFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d", _tokens) do
+  def parse(parser, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.EllipseFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.EllipseFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.RoundRectangleFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.RoundRectangleFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.TransitionFigure", _tokens) do
+  def parse(parser, "de.renew.gui.TransitionFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.PlaceFigure", _tokens) do
+  def parse(parser, "de.renew.gui.PlaceFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.VirtualPlaceFigure", _tokens) do
+  def parse(parser, "de.renew.gui.VirtualPlaceFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.fs.IsaConnection", _tokens) do
+  def parse(parser, "de.renew.gui.fs.IsaConnection", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "fs.ConceptFigure", _tokens) do
+  def parse(parser, "fs.ConceptFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "fs.PartitionFigure", _tokens) do
+  def parse(parser, "fs.PartitionFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure", _tokens) do
+  def parse(parser, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.standard.OffsetLocator", _tokens) do
+  def parse(parser, "CH.ifa.draw.standard.OffsetLocator", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.standard.RelativeLocator", _tokens) do
+  def parse(parser, "CH.ifa.draw.standard.RelativeLocator", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.PolyLineFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.PolyLineFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.LineConnection", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.LineConnection", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.ArrowTip", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.ArrowTip", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.standard.AbstractConnector", _tokens) do
+  def parse(parser, "CH.ifa.draw.standard.AbstractConnector", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.fs.FSFigure", _tokens) do
+  def parse(parser, "de.renew.gui.fs.FSFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.TextFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.TextFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.CPNTextFigure", _tokens) do
+  def parse(parser, "de.renew.gui.CPNTextFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.ImageFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.ImageFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "fs.TypeFigure", _tokens) do
+  def parse(parser, "fs.TypeFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.contrib.TriangleFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.contrib.TriangleFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "CH.ifa.draw.figures.CompositeAttributeFigure", _tokens) do
+  def parse(parser, "CH.ifa.draw.figures.CompositeAttributeFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.gui.CPNDrawing", _tokens) do
+  def parse(parser, "de.renew.gui.CPNDrawing", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.diagram.DiagramFigure", _tokens) do
+  def parse(parser, "de.renew.diagram.DiagramFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.diagram.LifeLineLogicFigure", _tokens) do
+  def parse(parser, "de.renew.diagram.LifeLineLogicFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.diagram.HSplitFigure", _tokens) do
+  def parse(parser, "de.renew.diagram.HSplitFigure", into) do
+    {:ok, into, parser}
   end
 
-  def parse(%Renewex.Grammar{}, "de.renew.diagram.SplitDecoration", _tokens) do
+  def parse(parser, "de.renew.diagram.SplitDecoration", into) do
+    {:ok, into, parser}
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.diagram.AssocArrowTip", _tokens) do
+  def parse(parser, _, into) do
+    {:ok, into, parser}
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.standard.CompositeFigure", _tokens) do
+  def serialize(parser, "de.renew.diagram.AssocArrowTip") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.FigureAttributes", _tokens) do
+  def serialize(parser, "CH.ifa.draw.standard.CompositeFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.AttributeFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.FigureAttributes") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.RectangleFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.AttributeFigure") do
   end
 
-  def serialize(
-        %Renewex.Grammar{},
-        "de.renew.hierarchicalworkflownets.gui.HNViewDrawing",
-        _tokens
-      ) do
+  def serialize(parser, "CH.ifa.draw.figures.RectangleFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.contrib.PolygonFigure", _tokens) do
+  def serialize(parser, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d", _tokens) do
+  def serialize(parser, "CH.ifa.draw.contrib.PolygonFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.EllipseFigure", _tokens) do
+  def serialize(parser, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.RoundRectangleFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.EllipseFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.TransitionFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.RoundRectangleFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.PlaceFigure", _tokens) do
+  def serialize(parser, "de.renew.gui.TransitionFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.VirtualPlaceFigure", _tokens) do
+  def serialize(parser, "de.renew.gui.PlaceFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.fs.IsaConnection", _tokens) do
+  def serialize(parser, "de.renew.gui.VirtualPlaceFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "fs.ConceptFigure", _tokens) do
+  def serialize(parser, "de.renew.gui.fs.IsaConnection") do
   end
 
-  def serialize(%Renewex.Grammar{}, "fs.PartitionFigure", _tokens) do
+  def serialize(parser, "fs.ConceptFigure") do
   end
 
-  def serialize(
-        %Renewex.Grammar{},
-        "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure",
-        _tokens
-      ) do
+  def serialize(parser, "fs.PartitionFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.standard.OffsetLocator", _tokens) do
+  def serialize(parser, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.standard.RelativeLocator", _tokens) do
+  def serialize(parser, "CH.ifa.draw.standard.OffsetLocator") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.PolyLineFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.standard.RelativeLocator") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.LineConnection", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.PolyLineFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.ArrowTip", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.LineConnection") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.standard.AbstractConnector", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.ArrowTip") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.fs.FSFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.standard.AbstractConnector") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.TextFigure", _tokens) do
+  def serialize(parser, "de.renew.gui.fs.FSFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.CPNTextFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.TextFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.ImageFigure", _tokens) do
+  def serialize(parser, "de.renew.gui.CPNTextFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "fs.TypeFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.ImageFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.contrib.TriangleFigure", _tokens) do
+  def serialize(parser, "fs.TypeFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "CH.ifa.draw.figures.CompositeAttributeFigure", _tokens) do
+  def serialize(parser, "CH.ifa.draw.contrib.TriangleFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.gui.CPNDrawing", _tokens) do
+  def serialize(parser, "CH.ifa.draw.figures.CompositeAttributeFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.diagram.DiagramFigure", _tokens) do
+  def serialize(parser, "de.renew.gui.CPNDrawing") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.diagram.LifeLineLogicFigure", _tokens) do
+  def serialize(parser, "de.renew.diagram.DiagramFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.diagram.HSplitFigure", _tokens) do
+  def serialize(parser, "de.renew.diagram.LifeLineLogicFigure") do
   end
 
-  def serialize(%Renewex.Grammar{}, "de.renew.diagram.SplitDecoration", _tokens) do
+  def serialize(parser, "de.renew.diagram.HSplitFigure") do
+  end
+
+  def serialize(parser, "de.renew.diagram.SplitDecoration") do
   end
 end

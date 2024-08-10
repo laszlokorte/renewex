@@ -173,9 +173,9 @@ defmodule Renewex.Parser do
         skippables
       ) do
     if Enum.member?(skippables, current_type) do
-      %Renewex.Parser{parser | tokens: rest}
+      {:ok, nil, %Renewex.Parser{parser | tokens: rest}}
     else
-      {:error, current_token, next_parser}
+      {:error, current_token, %Renewex.Parser{parser | tokens: rest}}
     end
   end
 

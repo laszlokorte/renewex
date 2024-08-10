@@ -471,16 +471,23 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
-    {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
+    case Parser.parse_primitive(parser, :string) do
+      {:ok, "attributes", next_parser} ->
+        {:ok, attributes, next_parser} =
+          Parser.parse_grammar_rule(next_parser, "CH.ifa.draw.figures.FigureAttributes")
 
-    {:ok, attributes, next_parser} =
-      Parser.parse_grammar_rule(next_parser, "CH.ifa.draw.figures.FigureAttributes")
+        {:ok,
+         %Storable{
+           into
+           | fields: into.fields |> put_in([:attributes], attributes)
+         }, next_parser}
 
-    {:ok,
-     %Storable{
-       into
-       | fields: into.fields |> put_in([:attributes], attributes)
-     }, next_parser}
+      {:ok, "no_attributes", next_parser} ->
+        {:ok, into, next_parser}
+
+      err ->
+        err
+    end
   end
 
   def parse(parser, "CH.ifa.draw.figures.RectangleFigure", into) do
@@ -557,6 +564,8 @@ defmodule Renewex.Grammar do
     {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
     {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
     {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, arc_width, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, arc_height, next_parser} = Parser.parse_primitive(next_parser, :int)
 
     {:ok,
      %Storable{
@@ -567,6 +576,8 @@ defmodule Renewex.Grammar do
            |> put_in([:y], y)
            |> put_in([:w], w)
            |> put_in([:h], h)
+           |> put_in([:arc_width], arc_width)
+           |> put_in([:arc_height], arc_height)
      }, next_parser}
   end
 
@@ -1129,7 +1140,9 @@ defmodule Renewex.Grammar do
           )
 
         "Boolean" ->
-          Parser.parse_primitive(next_parser, :boolean)
+          {:ok, v, next_parser} = Parser.parse_primitive(next_parser, :string)
+
+          {:ok, String.downcase(v) === "true", next_parser}
 
         "String" ->
           Parser.parse_primitive(next_parser, :string)

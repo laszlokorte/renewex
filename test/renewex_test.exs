@@ -94,7 +94,22 @@ defmodule RenewexTest do
       |> Tokenizer.skip_whitespace()
       |> Parser.detect_document_version()
       |> Parser.parse_storable()
+  end
 
-    dbg(result)
+  test "test example files" do
+    dir = "./example_files/"
+    {:ok, files} = File.ls(dir)
+
+    for file <- files do
+      dbg(file)
+      {:ok, example} = File.read(Path.join(dir, file))
+
+      {:ok, result, parser} =
+        example
+        |> Tokenizer.scan()
+        |> Tokenizer.skip_whitespace()
+        |> Parser.detect_document_version()
+        |> Parser.parse_storable()
+    end
   end
 end

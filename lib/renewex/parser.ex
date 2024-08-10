@@ -168,6 +168,17 @@ defmodule Renewex.Parser do
   def skip_any(%Renewex.Parser{tokens: [_ | rest]} = parser),
     do: %Renewex.Parser{parser | tokens: rest}
 
+  def skip_any(
+        %Renewex.Parser{tokens: [{current_type, _} = current_token | rest]} = parser,
+        skippables
+      ) do
+    if Enum.member?(skippables, current_type) do
+      %Renewex.Parser{parser | tokens: rest}
+    else
+      {:error, current_token, next_parser}
+    end
+  end
+
   def is_eof(%Renewex.Parser{tokens: []}), do: true
   def is_eof(%Renewex.Parser{tokens: [_ | _]}), do: false
 end

@@ -1,4 +1,5 @@
 defmodule Renewex.Grammar do
+  alias Erl2exVendored.Pipeline.Parse
   alias Renewex.Storable
   alias Renewex.Parser
   defstruct [:version, :hierarchy]
@@ -455,36 +456,102 @@ defmodule Renewex.Grammar do
     {:ok,
      %Storable{
        into
-       | fields: %{
-           "figures" => figures
-         }
+       | fields: into.fields |> put_in([:figures], figures)
      }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.FigureAttributes", into) do
-    {:ok, into, parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
     {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
-    {:ok, "attributes", next_parser} = Parser.parse_primitive(next_parser, :string)
 
     {:ok, attrs, next_parser} =
       Parser.parse_list(next_parser, fn
-        p -> Parser.parse_primitive(p, :string)
+        p -> parse_attribute(p)
       end)
 
     {:ok,
      %Storable{
        into
-       | fields: %{
-           "attributes" => attrs
-         }
+       | fields: into.fields |> put_in([:attributes], attrs)
+     }, next_parser}
+  end
+
+  def parse_attribute(parser) do
+    {:ok, key, next_parser} = Parser.parse_primitive(parser, :string)
+    {:ok, type, next_parser} = Parser.parse_primitive(next_parser, :string)
+
+    {:ok, value, next_parser} =
+      case type do
+        "Color" ->
+          if(parser.grammar.version < 11,
+            do: parse_color_rgb(next_parser),
+            else: parse_color_rgba(next_parser)
+          )
+
+        "Boolean" ->
+          Parser.parse_primitive(next_parser, :boolean)
+
+        "String" ->
+          Parser.parse_primitive(next_parser, :string)
+
+        "Int" ->
+          Parser.parse_primitive(next_parser, :int)
+
+        "Storable" ->
+          Parser.parse_storable(next_parser)
+
+        "UNKNOWN" ->
+          :unknown
+      end
+
+    {:ok, {key, type, value}, next_parser}
+  end
+
+  def parse_color_rgba(parser) do
+    {:ok, r, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, g, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, b, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, a, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok, {:rgba, r, g, b, a}, next_parser}
+  end
+
+  def parse_color_rgb(parser) do
+    {:ok, r, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, g, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, b, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok, {:rgba, r, g, b}, next_parser}
+  end
+
+  def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
+    {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
+
+    {:ok, attributes, next_parser} =
+      Parser.parse_grammar_rule(next_parser, "CH.ifa.draw.figures.FigureAttributes")
+
+    {:ok,
+     %Storable{
+       into
+       | fields: into.fields |> put_in([:attributes], attributes)
      }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.RectangleFigure", into) do
-    {:ok, into, parser}
+    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:x], x)
+           |> put_in([:y], y)
+           |> put_in([:w], w)
+           |> put_in([:h], h)
+     }, next_parser}
   end
 
   def parse(parser, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing", into) do
@@ -500,15 +567,52 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "CH.ifa.draw.figures.EllipseFigure", into) do
-    {:ok, into, parser}
+    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:x], x)
+           |> put_in([:y], y)
+           |> put_in([:w], w)
+           |> put_in([:h], h)
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.RoundRectangleFigure", into) do
-    {:ok, into, parser}
+    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:x], x)
+           |> put_in([:y], y)
+           |> put_in([:w], w)
+           |> put_in([:h], h)
+     }, next_parser}
   end
 
   def parse(parser, "de.renew.gui.TransitionFigure", into) do
-    {:ok, into, parser}
+    {:ok, highlight_figure, next_parser} =
+      Parser.parse_storable(parser, "CH.ifa.draw.framework.Figure")
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:highlight_figure], highlight_figure)
+     }, next_parser}
   end
 
   def parse(parser, "de.renew.gui.PlaceFigure", into) do
@@ -536,27 +640,143 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "CH.ifa.draw.standard.OffsetLocator", into) do
-    {:ok, into, parser}
+    {:ok, fOffsetX, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, fOffsetY, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok, fBase, next_parser} =
+      Parser.parse_storable(next_parser, "CH.ifa.draw.framework.Locator")
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:fOffsetX], fOffsetX)
+           |> put_in([:fOffsetY], fOffsetY)
+           |> put_in([:fBase], fBase)
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.standard.RelativeLocator", into) do
-    {:ok, into, parser}
+    {:ok, fOffsetX, next_parser} = Parser.parse_primitive(parser, :float)
+    {:ok, fOffsetY, next_parser} = Parser.parse_primitive(next_parser, :float)
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:fOffsetX], fOffsetX)
+           |> put_in([:fOffsetY], fOffsetY)
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.PolyLineFigure", into) do
-    {:ok, into, parser}
+    {:ok, points, next_parser} =
+      Parser.parse_list(parser, fn
+        p -> parse_xy(p)
+      end)
+
+    {:ok, start_decoration, next_parser} =
+      Parser.parse_storable(next_parser, "CH.ifa.draw.figures.LineDecoration")
+
+    {:ok, end_decoration, next_parser} =
+      Parser.parse_storable(next_parser, "CH.ifa.draw.figures.LineDecoration")
+
+    into = %Storable{
+      into
+      | fields:
+          into.fields
+          |> put_in([:points], points)
+          |> put_in([:start_decoration], start_decoration)
+          |> put_in([:end_decoration], end_decoration)
+    }
+
+    cond do
+      parser.grammar.version >= 8 ->
+        {:ok, arrow_name, next_parser} = Parser.parse_primitive(next_parser, :string)
+
+        {:ok,
+         %Storable{
+           into
+           | fields:
+               into.fields
+               |> put_in([:arrow_name], arrow_name)
+         }, next_parser}
+
+      parser.grammar.version == -1 ->
+        {:ok, frame_color, next_parser} = parse_color_rgb(next_parser)
+
+        {:ok,
+         %Storable{
+           into
+           | fields:
+               into.fields
+               |> put_in([:frame_color], frame_color)
+         }, next_parser}
+
+      true ->
+        {:ok, into, next_parser}
+    end
+  end
+
+  def parse_xy(parser) do
+    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
+
+    {:ok, {x, y}, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.LineConnection", into) do
-    {:ok, into, parser}
+    {:ok, start, next_parser} =
+      Parser.parse_storable(parser, "CH.ifa.draw.framework.Connector")
+
+    {:ok, ende, next_parser} =
+      Parser.parse_storable(next_parser, "CH.ifa.draw.framework.Connector")
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:start], start)
+           |> put_in([:end], ende)
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.ArrowTip", into) do
-    {:ok, into, parser}
+    if parser.grammar.version >= 5 do
+      {:ok, angle, next_parser} = Parser.parse_primitive(parser, :float)
+      {:ok, outer_radius, next_parser} = Parser.parse_primitive(next_parser, :float)
+      {:ok, inner_radius, next_parser} = Parser.parse_primitive(next_parser, :float)
+      {:ok, filled, next_parser} = Parser.parse_primitive(next_parser, :boolean)
+
+      {:ok,
+       %Storable{
+         into
+         | fields:
+             into.fields
+             |> put_in([:angle], angle)
+             |> put_in([:outer_radius], outer_radius)
+             |> put_in([:inner_radius], inner_radius)
+             |> put_in([:filled], filled)
+       }, next_parser}
+    else
+      {:ok, into, parser}
+    end
   end
 
   def parse(parser, "CH.ifa.draw.standard.AbstractConnector", into) do
-    {:ok, into, parser}
+    {:ok, owner, next_parser} =
+      Parser.parse_storable(parser, "CH.ifa.draw.framework.Figure")
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:owner], owner)
+     }, next_parser}
   end
 
   def parse(parser, "de.renew.gui.fs.FSFigure", into) do
@@ -564,11 +784,47 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "CH.ifa.draw.figures.TextFigure", into) do
-    {:ok, into, parser}
+    {:ok, fOriginX, next_parser} = Parser.parse_primitive(parser, :int)
+    {:ok, fOriginY, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, text, next_parser} = Parser.parse_primitive(next_parser, :string)
+    {:ok, fCurrentFontName, next_parser} = Parser.parse_primitive(next_parser, :string)
+    {:ok, fCurrentFontStyle, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, fCurrentFontSize, next_parser} = Parser.parse_primitive(next_parser, :int)
+    {:ok, fIsReadOnly, next_parser} = Parser.parse_primitive(next_parser, :boolean)
+
+    {:ok, fParent, next_parser} =
+      Parser.parse_storable(next_parser, "CH.ifa.draw.framework.ParentFigure")
+
+    {:ok, fLocator, next_parser} =
+      Parser.parse_storable(next_parser, "CH.ifa.draw.standard.OffsetLocator")
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:fOriginX], fOriginX)
+           |> put_in([:fOriginY], fOriginY)
+           |> put_in([:text], text)
+           |> put_in([:fCurrentFontName], fCurrentFontName)
+           |> put_in([:fCurrentFontStyle], fCurrentFontStyle)
+           |> put_in([:fCurrentFontSize], fCurrentFontSize)
+           |> put_in([:fIsReadOnly], fIsReadOnly)
+           |> put_in([:fParent], fParent)
+           |> put_in([:fLocator], fLocator)
+     }, next_parser}
   end
 
   def parse(parser, "de.renew.gui.CPNTextFigure", into) do
-    {:ok, into, parser}
+    {:ok, fType, next_parser} = Parser.parse_primitive(parser, :int)
+
+    {:ok,
+     %Storable{
+       into
+       | fields:
+           into.fields
+           |> put_in([:fType], fType)
+     }, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.figures.ImageFigure", into) do

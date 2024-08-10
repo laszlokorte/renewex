@@ -80,7 +80,7 @@ defmodule Renewex.Parser do
           tokens: [{current_type, current_value} | rest_tokens],
           ref_list: ref_list
         } = parser,
-        expected_interface \\ nil
+        expected_type \\ nil
       ) do
     next_parser = %Renewex.Parser{
       parser
@@ -89,18 +89,18 @@ defmodule Renewex.Parser do
 
     case current_type do
       :null ->
-        {:ok, nil}
+        {:ok, nil, next_parser}
 
       :ref ->
-        {:ok, {:ref, current_value}}
+        {:ok, {:ref, current_value}, next_parser}
 
       :class_name ->
         class_name = Aliases.resolve_alias(current_value)
 
-        if is_nil(expected_interface) or
+        if is_nil(expected_type) or class_name == expected_type or
              Enum.member?(
                Hierarchy.interfaces_of(parser.grammar, class_name),
-               expected_interface
+               expected_type
              ) do
           with {:ok, result, p} <-
                  parse_grammar_rule(next_parser, class_name, Storable.new(class_name)) do
@@ -113,12 +113,16 @@ defmodule Renewex.Parser do
             err -> err
           end
         else
-          {:error, {class_name, expected_interface}, next_parser}
+          {:error, {class_name, expected_type}, next_parser}
         end
 
       _ ->
         {:error, {current_type, current_value}, next_parser}
     end
+  end
+
+  def parse_grammar_rule(parser, rule) do
+    parse_grammar_rule(parser, rule, Storable.new(rule))
   end
 
   def parse_grammar_rule(parser, rule, storable) do

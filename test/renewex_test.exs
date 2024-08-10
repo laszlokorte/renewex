@@ -101,7 +101,6 @@ defmodule RenewexTest do
     {:ok, files} = File.ls(dir)
 
     for file <- files do
-      dbg(file)
       {:ok, example} = File.read(Path.join(dir, file))
 
       {:ok, result, parser} =
@@ -110,6 +109,21 @@ defmodule RenewexTest do
         |> Tokenizer.skip_whitespace()
         |> Parser.detect_document_version()
         |> Parser.parse_storable()
+        |> Parser.try_skip([:int, :int, :int, :int])
+
+      # assert Parser.is_eof(parser)
+    end
+  end
+
+  test "integrations" do
+    dir = "./example_files/"
+    {:ok, files} = File.ls(dir)
+
+    for file <- files do
+      dbg(file)
+      {:ok, example} = File.read(Path.join(dir, file))
+
+      {:ok, root, refs} = Renewex.parse_string(example)
     end
   end
 end

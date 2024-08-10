@@ -183,4 +183,32 @@ defmodule Renewex.Parser do
 
   def is_eof(%Renewex.Parser{tokens: []}), do: true
   def is_eof(%Renewex.Parser{tokens: [_ | _]}), do: false
+
+  def finalize(%Renewex.Parser{tokens: [], ref_list: ref_list}) do
+    {:ok, Enum.reverse(ref_list)}
+  end
+
+  def finalize(%Renewex.Parser{tokens: [current_token | _], ref_list: ref_list}) do
+    {:error, current_token}
+  end
+
+  def try_skip(%Renewex.Parser{tokens: []} = parser, _) do
+    {:ok, parser}
+  end
+
+  def try_skip(%Renewex.Parser{} = parser, []) do
+    {:ok, parser}
+  end
+
+  def try_skip(%Renewex.Parser{tokens: [{type, _} | rest_tokens]} = parser, [type | rest_expect]) do
+    with {:ok, p} <- try_skip(%Renewex.Parser{parser | tokens: rest_tokens}, rest_expect) do
+      {:ok, p}
+    else
+      _ -> {:err, parser}
+    end
+  end
+
+  def try_skip(parser, _) do
+    {:err, parser}
+  end
 end

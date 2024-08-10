@@ -69,6 +69,8 @@ defmodule Renewex.Parser do
     with {:ok, bool, next_parser} <- parse_token(parser, :boolean) do
       {:ok, bool, next_parser}
     else
+      {:error, {:int, 1, _}, next_parser} -> {:ok, true, next_parser}
+      {:error, {:int, 0, _}, next_parser} -> {:ok, false, next_parser}
       {:error, {:int, 1}, next_parser} -> {:ok, true, next_parser}
       {:error, {:int, 0}, next_parser} -> {:ok, false, next_parser}
       e -> e

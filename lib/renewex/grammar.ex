@@ -673,7 +673,9 @@ defmodule Renewex.Grammar do
   end
 
   def parse(parser, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure", into) do
-    {:ok, into, Parser.skip_any(parser, [:ref, :string])}
+    {:ok, nil, next_parser} = Parser.skip_any(parser, [:ref, :string])
+
+    {:ok, into, next_parser}
   end
 
   def parse(parser, "CH.ifa.draw.standard.OffsetLocator", into) do
@@ -997,6 +999,8 @@ defmodule Renewex.Grammar do
     {:ok, decoration, next_parser} =
       Parser.parse_storable(parser, "de.renew.diagram.FigureDecoration")
 
+    {:ok, nil, next_parser} = Parser.skip_any(next_parser, [:string])
+
     {:ok,
      %Storable{
        into
@@ -1006,10 +1010,10 @@ defmodule Renewex.Grammar do
 
   def parse(parser, "de.renew.diagram.SplitDecoration", into) do
     {:ok, size, next_parser} =
-      Parser.parse_primitive(parser, :string)
+      Parser.parse_primitive(parser, :int)
 
     {:ok, half_size, next_parser} =
-      Parser.parse_primitive(next_parser, :string)
+      Parser.parse_primitive(next_parser, :int)
 
     {:ok,
      %Storable{

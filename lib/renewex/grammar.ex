@@ -13,7 +13,8 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.standard.CompositeFigure" => %{
           super: "CH.ifa.draw.standard.AbstractFigure",
-          interfaces: ["CH.ifa.draw.framework.Figure"]
+          interfaces: ["CH.ifa.draw.framework.Figure"],
+          fields: [figures: {:list, {:storable, "CH.ifa.draw.framework.Figure"}}]
         },
         "CH.ifa.draw.figures.GroupFigure" => %{
           super: "CH.ifa.draw.standard.CompositeFigure",
@@ -58,7 +59,8 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.contrib.PolygonFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: ["CH.ifa.draw.figures.PolyLineable"]
+          interfaces: ["CH.ifa.draw.figures.PolyLineable"],
+          fields: [points: {:list, [x: :int, y: :int]}]
         },
         "de.renew.hierarchicalworkflownets.gui.HNTransitionFigure" => %{
           super: "de.renew.gui.TransitionFigure",
@@ -231,7 +233,17 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.figures.PolyLineFigure" => %{
           super: if(version >= 1, do: "CH.ifa.draw.figures.AttributeFigure"),
-          interfaces: ["CH.ifa.draw.figures.PolyLineable"]
+          interfaces: ["CH.ifa.draw.figures.PolyLineable"],
+          fields:
+            Enum.concat([
+              [
+                points: {:list, [x: :int, y: :int]},
+                start_decoration: {:storable, "CH.ifa.draw.figures.LineDecoration"},
+                end_decoration: {:storable, "CH.ifa.draw.figures.LineDecoration"}
+              ],
+              if(version >= 8, do: [arrow_name: :string], else: []),
+              if(version == -1, do: [frame_color: :color_rgb], else: [])
+            ])
         },
         "CH.ifa.draw.figures.LineConnection" => %{
           super: "CH.ifa.draw.figures.PolyLineFigure",
@@ -329,7 +341,8 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.figures.CompositeAttributeFigure" => %{
           super: if(version > 9, do: "CH.ifa.draw.figures.AttributeFigure"),
-          interfaces: []
+          interfaces: [],
+          fields: [figures: {:list, {:storable, "CH.ifa.draw.framework.Figure"}}]
         },
         "de.renew.netcomponents.NetComponentFigure" => %{
           super: "CH.ifa.draw.figures.CompositeAttributeFigure",
@@ -495,19 +508,6 @@ defmodule Renewex.Grammar do
     }
   end
 
-  def parse(parser, "CH.ifa.draw.standard.CompositeFigure", into) do
-    {:ok, figures, next_parser} =
-      Parser.parse_list(parser, fn
-        p -> Parser.parse_storable(p, "CH.ifa.draw.framework.Figure")
-      end)
-
-    {:ok,
-     %Storable{
-       into
-       | fields: into.fields |> put_in([:figures], figures)
-     }, next_parser}
-  end
-
   def parse(parser, "CH.ifa.draw.figures.FigureAttributes", into) do
     {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
 
@@ -548,70 +548,6 @@ defmodule Renewex.Grammar do
     {:ok, into, parser}
   end
 
-  def parse(parser, "CH.ifa.draw.contrib.PolygonFigure", into) do
-    {:ok, points, next_parser} =
-      Parser.parse_list(parser, fn
-        p -> parse_xy(p)
-      end)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:points], points)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.figures.PolyLineFigure", into) do
-    {:ok, points, next_parser} =
-      Parser.parse_list(parser, fn
-        p -> parse_xy(p)
-      end)
-
-    {:ok, start_decoration, next_parser} =
-      Parser.parse_storable(next_parser, "CH.ifa.draw.figures.LineDecoration")
-
-    {:ok, end_decoration, next_parser} =
-      Parser.parse_storable(next_parser, "CH.ifa.draw.figures.LineDecoration")
-
-    into = %Storable{
-      into
-      | fields:
-          into.fields
-          |> put_in([:points], points)
-          |> put_in([:start_decoration], start_decoration)
-          |> put_in([:end_decoration], end_decoration)
-    }
-
-    cond do
-      parser.grammar.version >= 8 ->
-        {:ok, arrow_name, next_parser} = Parser.parse_primitive(next_parser, :string)
-
-        {:ok,
-         %Storable{
-           into
-           | fields:
-               into.fields
-               |> put_in([:arrow_name], arrow_name)
-         }, next_parser}
-
-      parser.grammar.version == -1 ->
-        {:ok, frame_color, next_parser} = parse_color_rgb(next_parser)
-
-        {:ok,
-         %Storable{
-           into
-           | fields:
-               into.fields
-               |> put_in([:frame_color], frame_color)
-         }, next_parser}
-
-      true ->
-        {:ok, into, next_parser}
-    end
-  end
-
   def parse(parser, "de.renew.gui.fs.FSFigure", into) do
     if parser.grammar.version <= 5 do
       {:ok,
@@ -648,22 +584,16 @@ defmodule Renewex.Grammar do
     end
   end
 
-  def parse(parser, "CH.ifa.draw.figures.CompositeAttributeFigure", into) do
-    {:ok, figures, next_parser} =
-      Parser.parse_list(parser, fn
-        p -> Parser.parse_storable(p, "CH.ifa.draw.framework.Figure")
-      end)
-
-    {:ok,
-     %Storable{
-       into
-       | fields: into.fields |> put_in([:figures], figures)
-     }, next_parser}
-  end
-
   def parse(parser, rule, into) do
     if Map.has_key?(parser.grammar.hierarchy[rule], :fields) do
-      parse_fields(parser, parser.grammar.hierarchy[rule].fields, into)
+      {:ok, new_fields, next_parser} =
+        parse_fields(parser, parser.grammar.hierarchy[rule].fields, into.fields)
+
+      {:ok,
+       %Storable{
+         into
+         | fields: new_fields
+       }, next_parser}
     else
       {:ok, into, parser}
     end
@@ -676,30 +606,59 @@ defmodule Renewex.Grammar do
           {:ok, into, next_parser}
         end
 
+      {field_name, {:list, list_type}}, {:ok, into, parser} ->
+        with {:ok, value, next_parser} <- parse_list_field(parser, list_type) do
+          {:ok,
+           into
+           |> put_in([field_name], value), next_parser}
+        end
+
+      {field_name, :color_rgb}, {:ok, into, parser} ->
+        with {:ok, color, next_parser} <- parse_color_rgb(parser) do
+          {:ok,
+           into
+           |> put_in([field_name], color), next_parser}
+        end
+
+      {field_name, :color_rgba}, {:ok, into, parser} ->
+        with {:ok, color, next_parser} <- parse_color_rgba(parser) do
+          {:ok,
+           into
+           |> put_in([field_name], color), next_parser}
+        end
+
       {field_name, {:storable, of_type}}, {:ok, into, parser} ->
         with {:ok, value, next_parser} <- Parser.parse_storable(parser, of_type) do
           {:ok,
-           %Storable{
-             into
-             | fields:
-                 into.fields
-                 |> put_in([field_name], value)
-           }, next_parser}
+           into
+           |> put_in([field_name], value), next_parser}
         end
 
       {field_name, field_type}, {:ok, into, parser} ->
         with {:ok, value, next_parser} <- Parser.parse_primitive(parser, field_type) do
           {:ok,
-           %Storable{
-             into
-             | fields:
-                 into.fields
-                 |> put_in([field_name], value)
-           }, next_parser}
+           into
+           |> put_in([field_name], value), next_parser}
         end
 
       _, err ->
         err
+    end)
+  end
+
+  defp parse_list_field(parser, list_type) do
+    Parser.parse_list(parser, fn
+      p ->
+        case list_type do
+          {:storable, type} ->
+            Parser.parse_storable(p, type)
+
+          primitive when is_atom(primitive) ->
+            Parser.parse_primitive(p, primitive)
+
+          multiples when is_list(multiples) ->
+            parse_fields(p, multiples, [])
+        end
     end)
   end
 

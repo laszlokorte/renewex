@@ -1,4 +1,5 @@
 defmodule Renewex.Parser do
+  alias Renewex.Parser
   alias Renewex.Hierarchy
   alias Renewex.Storable
   alias Renewex.Aliases
@@ -25,11 +26,13 @@ defmodule Renewex.Parser do
   end
 
   def detect_and_parse_document(tokens) do
-    state = detect_document_version(tokens)
+    detect_document_version(tokens)
+    |> Parser.parse_storable(nil)
   end
 
   def parse_document(tokens, version \\ @auto_version) do
-    state = Renewex.Parser.new(tokens, Grammar.new(version))
+    Renewex.Parser.new(tokens, Grammar.new(version))
+    |> Parser.parse_storable(nil)
   end
 
   defp parse_token(
@@ -129,10 +132,15 @@ defmodule Renewex.Parser do
 
   def parse_grammar_rule(parser, rule, storable) do
     base =
-      if super_rule = Hierarchy.get_super(parser.grammar, rule) do
-        parse_grammar_rule(parser, super_rule, storable)
-      else
+      if Grammar.skip_super(parser.grammar, rule) do
         {:ok, storable, parser}
+      else
+        if super_rule =
+             Hierarchy.get_super(parser.grammar, rule) do
+          parse_grammar_rule(parser, super_rule, storable)
+        else
+          {:ok, storable, parser}
+        end
       end
 
     with {:ok, storable, parser} <- base,

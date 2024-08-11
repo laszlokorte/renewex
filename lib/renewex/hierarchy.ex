@@ -29,6 +29,10 @@ defmodule Renewex.Hierarchy do
     end)
   end
 
+  def is_descendant_of(grammar, child, parent) do
+    Enum.member?(descendants_of(grammar, [parent]), child)
+  end
+
   def implementors_of(grammar, interface) do
     grammar
     |> all_rules

@@ -1,5 +1,7 @@
 defmodule RenewexTest do
   use ExUnit.Case
+  alias Renewex.Hierarchy
+  alias Renewex.Storable
   alias Renewex.Tokenizer
   alias Renewex.Parser
   doctest Renewex
@@ -88,7 +90,7 @@ defmodule RenewexTest do
   test "test parse storable" do
     {:ok, example} = "./example_files/example.rnw" |> File.read()
 
-    assert {:ok, result, parser} =
+    assert {:ok, %Storable{}, %Parser{}} =
              example
              |> Tokenizer.scan()
              |> Tokenizer.skip_whitespace()
@@ -103,7 +105,7 @@ defmodule RenewexTest do
     for file <- files do
       assert {:ok, example} = File.read(Path.join(dir, file))
 
-      assert {:ok, result, parser} =
+      assert {:ok, %Storable{}, parser} =
                example
                |> Tokenizer.scan()
                |> Tokenizer.skip_whitespace()
@@ -118,10 +120,18 @@ defmodule RenewexTest do
   test "integrations" do
     dir = "./example_files/"
     {:ok, files} = File.ls(dir)
+    grammar = Renewex.Grammar.new(11)
 
     for file <- files do
       assert {:ok, example} = File.read(Path.join(dir, file))
-      assert {:ok, root, refs} = Renewex.parse_string(example)
+      assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example)
+      assert is_list(refs)
+
+      assert Hierarchy.is_descendant_of(
+               grammar,
+               root.class_name,
+               "CH.ifa.draw.standard.AbstractFigure"
+             )
     end
   end
 end

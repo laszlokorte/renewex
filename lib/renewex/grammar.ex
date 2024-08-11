@@ -42,8 +42,35 @@ defmodule Renewex.Grammar do
         },
         "de.renew.hierarchicalworkflownets.gui.HNViewDrawing" => %{
           super: "de.renew.gui.CPNDrawing",
-          skipSuper: true,
-          interfaces: []
+          skip_super: true,
+          interfaces: [],
+          fields: [
+            hn_model: {:rule, "de.renew.hierarchicalworkflownets.gui.HNModel"},
+            figures: {:list, {:storable, "CH.ifa.draw.framework.Figure"}}
+          ]
+        },
+        "de.renew.hierarchicalworkflownets.gui.HNModel" => %{
+          super: nil,
+          skip_super: true,
+          interfaces: [],
+          fields: [
+            node: {:rule, "de.renew.hierarchicalworkflownets.tree.TreeNode"},
+            drawings: {:list, {:storable, "de.renew.gui.ArcConnection"}}
+          ]
+        },
+        "de.renew.hierarchicalworkflownets.tree.TreeNode" => %{
+          super: nil,
+          skip_super: true,
+          interfaces: [],
+          fields: [
+            nodes:
+              {:list,
+               [
+                 name: :string,
+                 node: {:storable, "CH.ifa.draw.framework.Figure"},
+                 child: {:rule, "de.renew.hierarchicalworkflownets.tree.TreeNode"}
+               ]}
+          ]
         },
         "de.renew.hierarchicalworkflownets.gui.HNPlaceFigure" => %{
           super: "de.renew.gui.PlaceFigure",
@@ -543,11 +570,6 @@ defmodule Renewex.Grammar do
     end
   end
 
-  def parse(parser, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing", into) do
-    # TODO
-    {:ok, into, parser}
-  end
-
   def parse(parser, "de.renew.gui.fs.FSFigure", into) do
     if parser.grammar.version <= 5 do
       {:ok,
@@ -634,6 +656,13 @@ defmodule Renewex.Grammar do
            |> put_in([field_name], value), next_parser}
         end
 
+      {field_name, {:rule, of_type}}, {:ok, into, parser} ->
+        with {:ok, value, next_parser} <- Parser.parse_grammar_rule(parser, of_type) do
+          {:ok,
+           into
+           |> put_in([field_name], value), next_parser}
+        end
+
       {field_name, field_type}, {:ok, into, parser} ->
         with {:ok, value, next_parser} <- Parser.parse_primitive(parser, field_type) do
           {:ok,
@@ -653,6 +682,9 @@ defmodule Renewex.Grammar do
           {:storable, type} ->
             Parser.parse_storable(p, type)
 
+          {:rule, type} ->
+            Parser.parse_grammar_rule(p, type)
+
           primitive when is_atom(primitive) ->
             Parser.parse_primitive(p, primitive)
 
@@ -662,109 +694,106 @@ defmodule Renewex.Grammar do
     end)
   end
 
-  def serialize(parser, "de.renew.diagram.AssocArrowTip") do
+  def serialize(_parser, "de.renew.diagram.AssocArrowTip") do
   end
 
-  def serialize(parser, "CH.ifa.draw.standard.CompositeFigure") do
+  def serialize(_parser, "CH.ifa.draw.standard.CompositeFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.FigureAttributes") do
+  def serialize(_parser, "CH.ifa.draw.figures.FigureAttributes") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.AttributeFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.AttributeFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.RectangleFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.RectangleFigure") do
   end
 
-  def serialize(parser, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing") do
+  def serialize(_parser, "CH.ifa.draw.contrib.PolygonFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.contrib.PolygonFigure") do
+  def serialize(_parser, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d") do
   end
 
-  def serialize(parser, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d") do
+  def serialize(_parser, "CH.ifa.draw.figures.EllipseFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.EllipseFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.RoundRectangleFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.RoundRectangleFigure") do
+  def serialize(_parser, "de.renew.gui.TransitionFigure") do
   end
 
-  def serialize(parser, "de.renew.gui.TransitionFigure") do
+  def serialize(_parser, "de.renew.gui.PlaceFigure") do
   end
 
-  def serialize(parser, "de.renew.gui.PlaceFigure") do
+  def serialize(_parser, "de.renew.gui.VirtualPlaceFigure") do
   end
 
-  def serialize(parser, "de.renew.gui.VirtualPlaceFigure") do
+  def serialize(_parser, "de.renew.gui.fs.IsaConnection") do
   end
 
-  def serialize(parser, "de.renew.gui.fs.IsaConnection") do
+  def serialize(_parser, "fs.ConceptFigure") do
   end
 
-  def serialize(parser, "fs.ConceptFigure") do
+  def serialize(_parser, "fs.PartitionFigure") do
   end
 
-  def serialize(parser, "fs.PartitionFigure") do
+  def serialize(_parser, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure") do
   end
 
-  def serialize(parser, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure") do
+  def serialize(_parser, "CH.ifa.draw.standard.OffsetLocator") do
   end
 
-  def serialize(parser, "CH.ifa.draw.standard.OffsetLocator") do
+  def serialize(_parser, "CH.ifa.draw.standard.RelativeLocator") do
   end
 
-  def serialize(parser, "CH.ifa.draw.standard.RelativeLocator") do
+  def serialize(_parser, "CH.ifa.draw.figures.PolyLineFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.PolyLineFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.LineConnection") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.LineConnection") do
+  def serialize(_parser, "CH.ifa.draw.figures.ArrowTip") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.ArrowTip") do
+  def serialize(_parser, "CH.ifa.draw.standard.AbstractConnector") do
   end
 
-  def serialize(parser, "CH.ifa.draw.standard.AbstractConnector") do
+  def serialize(_parser, "de.renew.gui.fs.FSFigure") do
   end
 
-  def serialize(parser, "de.renew.gui.fs.FSFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.TextFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.TextFigure") do
+  def serialize(_parser, "de.renew.gui.CPNTextFigure") do
   end
 
-  def serialize(parser, "de.renew.gui.CPNTextFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.ImageFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.ImageFigure") do
+  def serialize(_parser, "fs.TypeFigure") do
   end
 
-  def serialize(parser, "fs.TypeFigure") do
+  def serialize(_parser, "CH.ifa.draw.contrib.TriangleFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.contrib.TriangleFigure") do
+  def serialize(_parser, "CH.ifa.draw.figures.CompositeAttributeFigure") do
   end
 
-  def serialize(parser, "CH.ifa.draw.figures.CompositeAttributeFigure") do
+  def serialize(_parser, "de.renew.gui.CPNDrawing") do
   end
 
-  def serialize(parser, "de.renew.gui.CPNDrawing") do
+  def serialize(_parser, "de.renew.diagram.DiagramFigure") do
   end
 
-  def serialize(parser, "de.renew.diagram.DiagramFigure") do
+  def serialize(_parser, "de.renew.diagram.LifeLineLogicFigure") do
   end
 
-  def serialize(parser, "de.renew.diagram.LifeLineLogicFigure") do
+  def serialize(_parser, "de.renew.diagram.HSplitFigure") do
   end
 
-  def serialize(parser, "de.renew.diagram.HSplitFigure") do
-  end
-
-  def serialize(parser, "de.renew.diagram.SplitDecoration") do
+  def serialize(_parser, "de.renew.diagram.SplitDecoration") do
   end
 
   def parse_attribute(parser) do
@@ -822,5 +851,9 @@ defmodule Renewex.Grammar do
     {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
 
     {:ok, {x, y}, next_parser}
+  end
+
+  def skip_super(grammar, rule) do
+    Map.get(grammar.hierarchy[rule], :skip_super, false)
   end
 end

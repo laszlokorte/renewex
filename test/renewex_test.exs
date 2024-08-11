@@ -69,18 +69,18 @@ defmodule RenewexTest do
       |> Tokenizer.skip_whitespace()
       |> Parser.detect_document_version()
 
-    assert(parser.grammar.version == 11)
+    assert parser.grammar.version == 11
   end
 
   test "list parsing" do
-    {:ok, list_of_5_bools, _} =
-      "5 true false 1 0 true"
-      |> Tokenizer.scan()
-      |> Tokenizer.skip_whitespace()
-      |> Parser.new(Renewex.Grammar.new(11))
-      |> Parser.parse_list(fn p ->
-        Parser.parse_primitive(p, :boolean)
-      end)
+    assert {:ok, list_of_5_bools, _} =
+             "5 true false 1 0 true"
+             |> Tokenizer.scan()
+             |> Tokenizer.skip_whitespace()
+             |> Parser.new(Renewex.Grammar.new(11))
+             |> Parser.parse_list(fn p ->
+               Parser.parse_primitive(p, :boolean)
+             end)
 
     assert(list_of_5_bools == [true, false, true, false, true])
   end
@@ -88,12 +88,12 @@ defmodule RenewexTest do
   test "test parse storable" do
     {:ok, example} = "./example_files/example.rnw" |> File.read()
 
-    {:ok, result, parser} =
-      example
-      |> Tokenizer.scan()
-      |> Tokenizer.skip_whitespace()
-      |> Parser.detect_document_version()
-      |> Parser.parse_storable()
+    assert {:ok, result, parser} =
+             example
+             |> Tokenizer.scan()
+             |> Tokenizer.skip_whitespace()
+             |> Parser.detect_document_version()
+             |> Parser.parse_storable()
   end
 
   test "test example files" do
@@ -101,17 +101,17 @@ defmodule RenewexTest do
     {:ok, files} = File.ls(dir)
 
     for file <- files do
-      {:ok, example} = File.read(Path.join(dir, file))
+      assert {:ok, example} = File.read(Path.join(dir, file))
 
-      {:ok, result, parser} =
-        example
-        |> Tokenizer.scan()
-        |> Tokenizer.skip_whitespace()
-        |> Parser.detect_document_version()
-        |> Parser.parse_storable()
-        |> Parser.try_skip([:int, :int, :int, :int])
+      assert {:ok, result, parser} =
+               example
+               |> Tokenizer.scan()
+               |> Tokenizer.skip_whitespace()
+               |> Parser.detect_document_version()
+               |> Parser.parse_storable()
+               |> Parser.try_skip([:int, :int, :int, :int])
 
-      # assert Parser.is_eof(parser)
+      assert Parser.is_eof(parser)
     end
   end
 
@@ -120,10 +120,8 @@ defmodule RenewexTest do
     {:ok, files} = File.ls(dir)
 
     for file <- files do
-      dbg(file)
-      {:ok, example} = File.read(Path.join(dir, file))
-
-      {:ok, root, refs} = Renewex.parse_string(example)
+      assert {:ok, example} = File.read(Path.join(dir, file))
+      assert {:ok, root, refs} = Renewex.parse_string(example)
     end
   end
 end

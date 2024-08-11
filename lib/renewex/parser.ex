@@ -188,27 +188,22 @@ defmodule Renewex.Parser do
     {:ok, Enum.reverse(ref_list)}
   end
 
-  def finalize(%Renewex.Parser{tokens: [current_token | _], ref_list: ref_list}) do
+  def finalize(%Renewex.Parser{tokens: [current_token | _]}) do
     {:error, current_token}
   end
 
-  def try_skip(%Renewex.Parser{tokens: []} = parser, _) do
-    {:ok, parser}
+  def try_skip({:ok, result, %Renewex.Parser{} = parser}, skips) do
+    {:ok, result, try_skip(parser, skips)}
   end
 
-  def try_skip(%Renewex.Parser{} = parser, []) do
-    {:ok, parser}
-  end
+  def try_skip(%Renewex.Parser{tokens: tokens} = parser, skips) do
+    matching_skips =
+      Enum.zip_with(tokens, skips, fn {actual_type, _}, skip_type -> skip_type == actual_type end)
 
-  def try_skip(%Renewex.Parser{tokens: [{type, _} | rest_tokens]} = parser, [type | rest_expect]) do
-    with {:ok, p} <- try_skip(%Renewex.Parser{parser | tokens: rest_tokens}, rest_expect) do
-      {:ok, p}
+    if Enum.all?(matching_skips) and Enum.count(matching_skips) == Enum.count(skips) do
+      %Renewex.Parser{parser | tokens: Enum.drop(parser.tokens, Enum.count(skips))}
     else
-      _ -> {:err, parser}
+      parser
     end
-  end
-
-  def try_skip(parser, _) do
-    {:err, parser}
   end
 end

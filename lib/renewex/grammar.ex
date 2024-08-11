@@ -32,7 +32,8 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.figures.RectangleFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int]
         },
         "CH.ifa.draw.contrib.DiamondFigure" => %{
           super: "CH.ifa.draw.figures.RectangleFigure",
@@ -65,15 +66,18 @@ defmodule Renewex.Grammar do
         },
         "de.renew.hierarchicalworkflownets.gui.layout.Vec2d" => %{
           super: nil,
-          interfaces: []
+          interfaces: [],
+          fields: [x: :int, y: :int]
         },
         "CH.ifa.draw.figures.EllipseFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int]
         },
         "CH.ifa.draw.figures.RoundRectangleFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int, arc_width: :int, arc_height: :int]
         },
         "de.renew.gui.TransitionFigure" => %{
           super: "CH.ifa.draw.figures.RectangleFigure",
@@ -81,7 +85,8 @@ defmodule Renewex.Grammar do
             "CH.ifa.draw.framework.Figure",
             "de.renew.gui.InscribableFigure",
             "CH.ifa.draw.framework.ParentFigure"
-          ]
+          ],
+          fields: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}]
         },
         "de.renew.gui.PlaceFigure" => %{
           super: "CH.ifa.draw.figures.EllipseFigure",
@@ -89,11 +94,14 @@ defmodule Renewex.Grammar do
             "CH.ifa.draw.framework.Figure",
             "de.renew.gui.InscribableFigure",
             "CH.ifa.draw.framework.ParentFigure"
-          ]
+          ],
+          fields:
+            if(version >= 3, do: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}])
         },
         "de.renew.gui.VirtualPlaceFigure" => %{
           super: "de.renew.gui.PlaceFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [highlight_figure: {:storable, "e.renew.gui.PlaceFigure"}]
         },
         "de.renew.gui.ArcConnection" => %{
           super: "CH.ifa.draw.figures.LineConnection",
@@ -121,7 +129,8 @@ defmodule Renewex.Grammar do
         },
         "de.renew.gui.fs.IsaConnection" => %{
           super: "de.renew.gui.fs.ConceptConnection",
-          interfaces: []
+          interfaces: [],
+          fields: [is_disjunctive: :boolean]
         },
         "fs.IsaConnection" => %{
           super: "de.renew.gui.fs.ConceptConnection",
@@ -153,11 +162,13 @@ defmodule Renewex.Grammar do
         },
         "fs.ConceptFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
-          interfaces: ["CH.ifa.draw.framework.Locator"]
+          interfaces: ["CH.ifa.draw.framework.Locator"],
+          fields: if(version < 0, do: [int: :type])
         },
         "fs.PartitionFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: ["CH.ifa.draw.framework.Locator"]
+          interfaces: ["CH.ifa.draw.framework.Locator"],
+          fields: [x: :int, y: :int, w: :int, h: :int]
         },
         "de.renew.gui.fs.FSNodeFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
@@ -201,15 +212,22 @@ defmodule Renewex.Grammar do
         },
         "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure" => %{
           super: "de.renew.netcomponents.NetComponentFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [skip: [:ref, :string]]
         },
         "CH.ifa.draw.standard.OffsetLocator" => %{
           super: "CH.ifa.draw.figures.AbstractLocator",
-          interfaces: ["CH.ifa.draw.framework.Locator"]
+          interfaces: ["CH.ifa.draw.framework.Locator"],
+          fields: [
+            fOffsetX: :int,
+            fOffsetY: :int,
+            fBase: {:storable, "CH.ifa.draw.framework.Locator"}
+          ]
         },
         "CH.ifa.draw.standard.RelativeLocator" => %{
           super: "CH.ifa.draw.figures.AbstractLocator",
-          interfaces: ["CH.ifa.draw.framework.Locator"]
+          interfaces: ["CH.ifa.draw.framework.Locator"],
+          fields: [fOffsetX: :float, fOffsetY: :float]
         },
         "CH.ifa.draw.figures.PolyLineFigure" => %{
           super: if(version >= 1, do: "CH.ifa.draw.figures.AttributeFigure"),
@@ -217,11 +235,25 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.figures.LineConnection" => %{
           super: "CH.ifa.draw.figures.PolyLineFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [
+            start: {:storable, "CH.ifa.draw.framework.Connector"},
+            end: {:storable, "CH.ifa.draw.framework.Connector"}
+          ]
         },
         "CH.ifa.draw.figures.ArrowTip" => %{
           super: nil,
-          interfaces: ["CH.ifa.draw.figures.LineDecoration"]
+          interfaces: ["CH.ifa.draw.figures.LineDecoration"],
+          fields:
+            if(version >= 5,
+              do: [
+                angle: :float,
+                outer_radius: :float,
+                inner_radius: :float,
+                filled: :boolean
+              ],
+              else: nil
+            )
         },
         "de.renew.gui.CircleDecoration" => %{
           super: nil,
@@ -237,7 +269,8 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.standard.AbstractConnector" => %{
           super: nil,
-          interfaces: ["CH.ifa.draw.framework.Connector"]
+          interfaces: ["CH.ifa.draw.framework.Connector"],
+          fields: [owner: {:storable, "CH.ifa.draw.framework.Figure"}]
         },
         "de.renew.gui.DeclarationFigure" => %{
           super: "de.renew.gui.CPNTextFigure",
@@ -257,19 +290,33 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.figures.TextFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [
+            fOriginX: :int,
+            fOriginY: :int,
+            text: :string,
+            fCurrentFontName: :string,
+            fCurrentFontStyle: :int,
+            fCurrentFontSize: :int,
+            fIsReadOnly: :boolean,
+            fParent: {:storable, "CH.ifa.draw.framework.ParentFigure"},
+            fLocator: {:storable, "CH.ifa.draw.standard.OffsetLocator"}
+          ]
         },
         "de.renew.gui.CPNTextFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [fType: :int]
         },
         "CH.ifa.draw.figures.ImageFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int, name: :string]
         },
         "fs.TypeFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [type: :string]
         },
         "CH.ifa.draw.figures.LineFigure" => %{
           super: "CH.ifa.draw.figures.PolyLineFigure",
@@ -277,7 +324,8 @@ defmodule Renewex.Grammar do
         },
         "CH.ifa.draw.contrib.TriangleFigure" => %{
           super: "CH.ifa.draw.figures.RectangleFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [rotation: :int]
         },
         "CH.ifa.draw.figures.CompositeAttributeFigure" => %{
           super: if(version > 9, do: "CH.ifa.draw.figures.AttributeFigure"),
@@ -289,7 +337,8 @@ defmodule Renewex.Grammar do
         },
         "de.renew.gui.CPNDrawing" => %{
           super: "CH.ifa.draw.standard.StandardDrawing",
-          interfaces: ["CH.ifa.draw.framework.Figure"]
+          interfaces: ["CH.ifa.draw.framework.Figure"],
+          fields: if(version >= 2, do: [icon: {:storable, "CH.ifa.draw.framework.Figure"}])
         },
         "de.renew.sdnet.gui.SDNDrawing" => %{
           super: "de.renew.gui.CPNDrawing",
@@ -309,7 +358,8 @@ defmodule Renewex.Grammar do
         },
         "de.renew.diagram.DiagramFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
-          interfaces: ["de.renew.diagram.RepresentableDiagramFigure"]
+          interfaces: ["de.renew.diagram.RepresentableDiagramFigure"],
+          fields: [x: :int, y: :int, w: :int, h: :int]
         },
         "de.renew.diagram.TailFigure" => %{
           super: "de.renew.diagram.DiagramFigure",
@@ -320,7 +370,8 @@ defmodule Renewex.Grammar do
           interfaces: [
             "de.renew.diagram.RepresentableLifeLineLogicFigure",
             "de.renew.diagram.ISplitFigure"
-          ]
+          ],
+          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, skip: [:string]]
         },
         "de.renew.diagram.VSplitFigure" => %{
           super: "de.renew.diagram.LifeLineLogicFigure",
@@ -332,7 +383,8 @@ defmodule Renewex.Grammar do
         },
         "de.renew.diagram.HSplitFigure" => %{
           super: "de.renew.diagram.DiagramFigure",
-          interfaces: []
+          interfaces: [],
+          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, skip: [:string]]
         },
         "de.renew.diagram.VSplitCenterConnector" => %{
           super: "CH.ifa.draw.standard.AbstractConnector",
@@ -344,7 +396,8 @@ defmodule Renewex.Grammar do
         },
         "de.renew.diagram.SplitDecoration" => %{
           super: nil,
-          interfaces: ["de.renew.diagram.FigureDecoration"]
+          interfaces: ["de.renew.diagram.FigureDecoration"],
+          fields: [size: :int, half_size: :int]
         },
         "de.renew.diagram.XORDecoration" => %{
           super: "de.renew.diagram.SplitDecoration",
@@ -490,24 +543,6 @@ defmodule Renewex.Grammar do
     end
   end
 
-  def parse(parser, "CH.ifa.draw.figures.RectangleFigure", into) do
-    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-           |> put_in([:w], w)
-           |> put_in([:h], h)
-     }, next_parser}
-  end
-
   def parse(parser, "de.renew.hierarchicalworkflownets.gui.HNViewDrawing", into) do
     # TODO
     {:ok, into, parser}
@@ -525,188 +560,6 @@ defmodule Renewex.Grammar do
        | fields:
            into.fields
            |> put_in([:points], points)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.hierarchicalworkflownets.gui.layout.Vec2d", into) do
-    {:ok, {x, y}, next_parser} = parse_xy(parser)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.figures.EllipseFigure", into) do
-    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-           |> put_in([:w], w)
-           |> put_in([:h], h)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.figures.RoundRectangleFigure", into) do
-    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, arc_width, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, arc_height, next_parser} = Parser.parse_primitive(next_parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-           |> put_in([:w], w)
-           |> put_in([:h], h)
-           |> put_in([:arc_width], arc_width)
-           |> put_in([:arc_height], arc_height)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.gui.TransitionFigure", into) do
-    {:ok, highlight_figure, next_parser} =
-      Parser.parse_storable(parser, "CH.ifa.draw.framework.Figure")
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:highlight_figure], highlight_figure)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.gui.PlaceFigure", into) do
-    if parser.grammar.version >= 3 do
-      {:ok, highlight_figure, next_parser} =
-        Parser.parse_storable(parser, "CH.ifa.draw.framework.Figure")
-
-      {:ok,
-       %Storable{
-         into
-         | fields:
-             into.fields
-             |> put_in([:highlight_figure], highlight_figure)
-       }, next_parser}
-    else
-      {:ok, into, parser}
-    end
-  end
-
-  def parse(parser, "de.renew.gui.VirtualPlaceFigure", into) do
-    {:ok, place_figure, next_parser} =
-      Parser.parse_storable(parser, "de.renew.gui.PlaceFigure")
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:place_figure], place_figure)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.gui.fs.IsaConnection", into) do
-    {:ok, is_disjunctive, next_parser} =
-      Parser.parse_primitive(parser, :boolean)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:is_disjunctive], is_disjunctive)
-     }, next_parser}
-  end
-
-  def parse(parser, "fs.ConceptFigure", into) do
-    if parser.grammar.version < 0 do
-      {:ok, type, next_parser} =
-        Parser.parse_primitive(parser, :int)
-
-      {:ok,
-       %Storable{
-         into
-         | fields:
-             into.fields
-             |> put_in([:type], type)
-       }, next_parser}
-    else
-      {:ok, into, parser}
-    end
-  end
-
-  def parse(parser, "fs.PartitionFigure", into) do
-    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-           |> put_in([:w], w)
-           |> put_in([:h], h)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure", into) do
-    {:ok, nil, next_parser} = Parser.skip_any(parser, [:ref, :string])
-
-    {:ok, into, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.standard.OffsetLocator", into) do
-    {:ok, fOffsetX, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, fOffsetY, next_parser} = Parser.parse_primitive(next_parser, :int)
-
-    {:ok, fBase, next_parser} =
-      Parser.parse_storable(next_parser, "CH.ifa.draw.framework.Locator")
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:fOffsetX], fOffsetX)
-           |> put_in([:fOffsetY], fOffsetY)
-           |> put_in([:fBase], fBase)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.standard.RelativeLocator", into) do
-    {:ok, fOffsetX, next_parser} = Parser.parse_primitive(parser, :float)
-    {:ok, fOffsetY, next_parser} = Parser.parse_primitive(next_parser, :float)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:fOffsetX], fOffsetX)
-           |> put_in([:fOffsetY], fOffsetY)
      }, next_parser}
   end
 
@@ -759,58 +612,6 @@ defmodule Renewex.Grammar do
     end
   end
 
-  def parse(parser, "CH.ifa.draw.figures.LineConnection", into) do
-    {:ok, start, next_parser} =
-      Parser.parse_storable(parser, "CH.ifa.draw.framework.Connector")
-
-    {:ok, ende, next_parser} =
-      Parser.parse_storable(next_parser, "CH.ifa.draw.framework.Connector")
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:start], start)
-           |> put_in([:end], ende)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.figures.ArrowTip", into) do
-    if parser.grammar.version >= 5 do
-      {:ok, angle, next_parser} = Parser.parse_primitive(parser, :float)
-      {:ok, outer_radius, next_parser} = Parser.parse_primitive(next_parser, :float)
-      {:ok, inner_radius, next_parser} = Parser.parse_primitive(next_parser, :float)
-      {:ok, filled, next_parser} = Parser.parse_primitive(next_parser, :boolean)
-
-      {:ok,
-       %Storable{
-         into
-         | fields:
-             into.fields
-             |> put_in([:angle], angle)
-             |> put_in([:outer_radius], outer_radius)
-             |> put_in([:inner_radius], inner_radius)
-             |> put_in([:filled], filled)
-       }, next_parser}
-    else
-      {:ok, into, parser}
-    end
-  end
-
-  def parse(parser, "CH.ifa.draw.standard.AbstractConnector", into) do
-    {:ok, owner, next_parser} =
-      Parser.parse_storable(parser, "CH.ifa.draw.framework.Figure")
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:owner], owner)
-     }, next_parser}
-  end
-
   def parse(parser, "de.renew.gui.fs.FSFigure", into) do
     if parser.grammar.version <= 5 do
       {:ok,
@@ -847,94 +648,6 @@ defmodule Renewex.Grammar do
     end
   end
 
-  def parse(parser, "CH.ifa.draw.figures.TextFigure", into) do
-    {:ok, fOriginX, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, fOriginY, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, text, next_parser} = Parser.parse_primitive(next_parser, :string)
-    {:ok, fCurrentFontName, next_parser} = Parser.parse_primitive(next_parser, :string)
-    {:ok, fCurrentFontStyle, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, fCurrentFontSize, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, fIsReadOnly, next_parser} = Parser.parse_primitive(next_parser, :boolean)
-
-    {:ok, fParent, next_parser} =
-      Parser.parse_storable(next_parser, "CH.ifa.draw.framework.ParentFigure")
-
-    {:ok, fLocator, next_parser} =
-      Parser.parse_storable(next_parser, "CH.ifa.draw.standard.OffsetLocator")
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:fOriginX], fOriginX)
-           |> put_in([:fOriginY], fOriginY)
-           |> put_in([:text], text)
-           |> put_in([:fCurrentFontName], fCurrentFontName)
-           |> put_in([:fCurrentFontStyle], fCurrentFontStyle)
-           |> put_in([:fCurrentFontSize], fCurrentFontSize)
-           |> put_in([:fIsReadOnly], fIsReadOnly)
-           |> put_in([:fParent], fParent)
-           |> put_in([:fLocator], fLocator)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.gui.CPNTextFigure", into) do
-    {:ok, fType, next_parser} = Parser.parse_primitive(parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:fType], fType)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.figures.ImageFigure", into) do
-    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, name, next_parser} = Parser.parse_primitive(next_parser, :string)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-           |> put_in([:w], w)
-           |> put_in([:h], h)
-           |> put_in([:name], name)
-     }, next_parser}
-  end
-
-  def parse(parser, "fs.TypeFigure", into) do
-    {:ok, type, next_parser} = Parser.parse_primitive(parser, :string)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:type], type)
-     }, next_parser}
-  end
-
-  def parse(parser, "CH.ifa.draw.contrib.TriangleFigure", into) do
-    {:ok, rotation, next_parser} = Parser.parse_primitive(parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:rotation], rotation)
-     }, next_parser}
-  end
-
   def parse(parser, "CH.ifa.draw.figures.CompositeAttributeFigure", into) do
     {:ok, figures, next_parser} =
       Parser.parse_list(parser, fn
@@ -948,82 +661,46 @@ defmodule Renewex.Grammar do
      }, next_parser}
   end
 
-  def parse(parser, "de.renew.gui.CPNDrawing", into) do
-    if parser.grammar.version >= 2 do
-      {:ok, icon, next_parser} =
-        Parser.parse_storable(parser, "CH.ifa.draw.framework.Figure")
-
-      {:ok,
-       %Storable{
-         into
-         | fields: into.fields |> put_in([:icon], icon)
-       }, next_parser}
+  def parse(parser, rule, into) do
+    if Map.has_key?(parser.grammar.hierarchy[rule], :fields) do
+      parse_fields(parser, parser.grammar.hierarchy[rule].fields, into)
     else
       {:ok, into, parser}
     end
   end
 
-  def parse(parser, "de.renew.diagram.DiagramFigure", into) do
-    {:ok, x, next_parser} = Parser.parse_primitive(parser, :int)
-    {:ok, y, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, w, next_parser} = Parser.parse_primitive(next_parser, :int)
-    {:ok, h, next_parser} = Parser.parse_primitive(next_parser, :int)
+  defp parse_fields(parser, fields, into) do
+    Enum.reduce(fields, {:ok, into, parser}, fn
+      {:skip, [_ | _] = types}, {:ok, into, parser} ->
+        with {:ok, nil, next_parser} <- Parser.skip_any(parser, types) do
+          {:ok, into, next_parser}
+        end
 
-    {:ok,
-     %Storable{
-       into
-       | fields:
-           into.fields
-           |> put_in([:x], x)
-           |> put_in([:y], y)
-           |> put_in([:w], w)
-           |> put_in([:h], h)
-     }, next_parser}
-  end
+      {field_name, {:storable, of_type}}, {:ok, into, parser} ->
+        with {:ok, value, next_parser} <- Parser.parse_storable(parser, of_type) do
+          {:ok,
+           %Storable{
+             into
+             | fields:
+                 into.fields
+                 |> put_in([field_name], value)
+           }, next_parser}
+        end
 
-  def parse(parser, "de.renew.diagram.LifeLineLogicFigure", into) do
-    {:ok, decoration, next_parser} =
-      Parser.parse_storable(parser, "de.renew.diagram.FigureDecoration")
+      {field_name, field_type}, {:ok, into, parser} ->
+        with {:ok, value, next_parser} <- Parser.parse_primitive(parser, field_type) do
+          {:ok,
+           %Storable{
+             into
+             | fields:
+                 into.fields
+                 |> put_in([field_name], value)
+           }, next_parser}
+        end
 
-    {:ok, _, next_parser} =
-      Parser.parse_primitive(next_parser, :string)
-
-    {:ok,
-     %Storable{
-       into
-       | fields: into.fields |> put_in([:decoration], decoration)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.diagram.HSplitFigure", into) do
-    {:ok, decoration, next_parser} =
-      Parser.parse_storable(parser, "de.renew.diagram.FigureDecoration")
-
-    {:ok, nil, next_parser} = Parser.skip_any(next_parser, [:string])
-
-    {:ok,
-     %Storable{
-       into
-       | fields: into.fields |> put_in([:decoration], decoration)
-     }, next_parser}
-  end
-
-  def parse(parser, "de.renew.diagram.SplitDecoration", into) do
-    {:ok, size, next_parser} =
-      Parser.parse_primitive(parser, :int)
-
-    {:ok, half_size, next_parser} =
-      Parser.parse_primitive(next_parser, :int)
-
-    {:ok,
-     %Storable{
-       into
-       | fields: into.fields |> put_in([:size], size) |> put_in([:half_size], half_size)
-     }, next_parser}
-  end
-
-  def parse(parser, _, into) do
-    {:ok, into, parser}
+      _, err ->
+        err
+    end)
   end
 
   def serialize(parser, "de.renew.diagram.AssocArrowTip") do

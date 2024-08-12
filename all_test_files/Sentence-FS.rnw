@@ -1,0 +1,97 @@
+7 
+    de.renew.gui.CPNDrawing 37 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 3 "Visibility" "Boolean" "TRUE" 2 192 105 221 105 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 184 98 " " "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 4 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 226 98 "Satz" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 5 "Visibility" "Boolean" "TRUE" 2 256 102 310 65 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 6 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 315 55 "NP" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 7 "Visibility" "Boolean" "TRUE" 2 336 59 385 40 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 11  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 8 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 390 30 "Nom" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 9 "Visibility" "Boolean" "TRUE" 2 336 65 385 83 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 11  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 10 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 390 79 "Bindung" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 11 "Visibility" "Boolean" "TRUE" 2 256 106 310 106 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 12 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 315 101 "VP" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 13 "Visibility" "Boolean" "TRUE" 2 336 105 385 89 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 26  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 21   
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 14 "Visibility" "Boolean" "TRUE" 2 336 111 385 129 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 26  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 15 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 390 125 "Praes" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 16 "Visibility" "Boolean" "TRUE" 2 441 83 490 63 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 21  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 17 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 495 53 "Dritte" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 18 "Visibility" "Boolean" "TRUE" 2 441 89 490 112 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 21  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 19 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 495 108 "Sing" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 22 "Visibility" "Boolean" "TRUE" 2 256 108 310 168 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 23 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 315 164 "NP+" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 20 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 267 76 "subj" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator -4 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 11 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 24 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 278 135 "obj" "Helvetica" 0 12 0 REF 46 
+            CH.ifa.draw.standard.OffsetLocator 3 4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 21 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 26 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 453 66 "pers" "Helvetica" 0 12 0 REF 36 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 27 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 453 93 "num" "Helvetica" 0 12 0 REF 41 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 28 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 342 42 "kasus" "Helvetica" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator -1 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 25 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 344 91 "bind" "Helvetica" 0 12 0 REF 27 
+            CH.ifa.draw.standard.OffsetLocator -4 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 29 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 346 67 "bind" "Helvetica" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator -2 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 40 REF 45 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 21 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 265 98 "praed" "Helvetica" 0 12 0 REF 22 
+            CH.ifa.draw.standard.OffsetLocator -2 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 6 
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 22 21 "[Satz\n subj: [NP\n             kasus: [Nom]\n             bind: #1[Bindung pers: [Dritte]\n                num: [Sing]]]\n praed: [VP\n                 zeit: [Praes]\n                 bind: #1]\n obj: <NP[NP]>\n]" "Helvetica" 0 12 0 NULL NULL 1 11 "praed" "obj:tl" "praed:zeit" "" "obj:hd" "subj:bind" "subj" "obj" "subj:bind:num" "subj:bind:pers" "subj:kasus"
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 32 "Visibility" "Boolean" "TRUE" 2 343 168 385 159 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 50  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 31 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 390 149 "NP" "Helvetica" 1 12 0 NULL NULL    REF 26
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 33 "Visibility" "Boolean" "TRUE" 2 343 174 385 185 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 50  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 34 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 390 181 "<NP>" "Helvetica" 1 12 0 NULL NULL
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 35 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 358 172 " tl " "Helvetica" 0 12 0 REF 81 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 16 REF 80 REF 50 REF 4 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 36 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 357 155 "hd" "Helvetica" 0 12 0 REF 76 
+            CH.ifa.draw.standard.OffsetLocator 0 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 37 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 351 113 "zeit" "Helvetica" 0 12 0 REF 31 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 85 REF 35 
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "Visibility" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 30 181 21 "access SentenceTypes;" "Helvetica" 0 12 0 NULL NULL 1  NULL  383 123 627 261 

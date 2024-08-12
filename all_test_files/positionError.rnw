@@ -1,0 +1,6 @@
+11 
+    de.renew.gui.CPNDrawing 2 
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 4 "FigureWithID" "Int" 6960 "FillColor" "Color" 204 204 204 255 "FontName" "String" "Arial" "Location" "Boolean" "FALSE" 35 20 559 266 8 8  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 6 "TextType" "Int" 0 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 7041 "TextAlignment" "Int" 1 "TextColor" "Color" 255 255 255 255 "FillColor" "Color" 64 64 64 255 92 227 "position;\nname=;" "Arial" 0 18 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -189 96 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  1016 144 692 419 

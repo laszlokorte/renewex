@@ -1,0 +1,126 @@
+2 
+    de.renew.gui.CPNDrawing 45 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 2 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 112 219 147 158 321 20 20  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 161 343 "KB" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 2 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.TransitionFigure "no_attributes" 287 284 24 16  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 287 295 178 329 NULL NULL 
+            CH.ifa.draw.standard.ChopBoxConnector REF 5  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 238 306 "kb" "Helvetica" 0 12 0 REF 6 
+            CH.ifa.draw.standard.OffsetLocator 13 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 325 257 ":perform(MOVERIGHT)" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 95 -27 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 316 179 "kb:fact([Adjacent right:(ROBLOC@location)],LOC)" "Helvetica" 0 12 0 
+            de.renew.gui.TransitionFigure "no_attributes" 296 155 24 16  
+            CH.ifa.draw.standard.OffsetLocator 154 24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "no_attributes" 287 398 24 16  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 177 336 287 399 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 19   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 222 352 "kb" "Helvetica" 0 12 0 REF 20 
+            CH.ifa.draw.standard.OffsetLocator -3 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 318 376 ":perform(PICK)" "Helvetica" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 62 -22 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 332 392 "guard PICK>=[Pick entity:[Entity]]" "Helvetica" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 129 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "no_attributes" 285 521 24 16  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 173 339 291 521 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 32   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 228 415 "kb" "Helvetica" 0 12 0 REF 33 
+            CH.ifa.draw.standard.OffsetLocator 3 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 326 486 ":perform(DROP)" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 77 -35 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 339 502 "guard DROP>=[Drop entity:[Entity]]" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 145 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 16 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 174 324 301 171 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 233 158 "kb" "Helvetica" 0 12 0 REF 45 
+            CH.ifa.draw.standard.OffsetLocator 3 -81 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 333 135 ":perform(MOVELEFT)" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 89 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 332 163 "kb:retractBelief([Located entity:[robot]],ROBLOC)" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 168 8 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 322 199 "kb:addBelief([Located entity:[robot] location:(LOC@left)])" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 181 44 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "no_attributes" 157 169 24 16  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 168 185 168 322 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 60  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 146 149 ":new(kb)" "Helvetica" 0 12 0 REF 60 
+            CH.ifa.draw.standard.OffsetLocator 2 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 147 203 "kb" "Helvetica" 0 12 0 REF 61 
+            CH.ifa.draw.standard.OffsetLocator -14 -42 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 263 137 "moveLeft" "Helvetica" 1 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator -14 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 244 265 "moveRight" "Helvetica" 1 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator -18 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 283 378 "pick" "Helvetica" 1 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator -2 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 285 499 "drop" "Helvetica" 1 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 4 -22 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 278 465 "kb:retractBelief([Free],B2)" "Helvetica" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 55 67 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 295 446 "kb:addBelief([Located entity:(PICK@entity) location:[robot]])" "Helvetica" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 172 48 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 192 550 "kb:retractBelief([Located entity:(DROP@entity) location:[robot]],B2)" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 92 29 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 199 567 "kb:addBelief([Located entity:(DROP@entity) location:[bin]])" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 76 46 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 335 519 "kb:fact([Located entity:[robot]],ROBLOC)" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 157 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 324 273 "guard MOVERIGHT>=[MoveRight]" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 128 -11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 326 309 "kb:fact([Adjacent left:(ROBLOC@location)],LOC)" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 169 25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 268 329 "kb:addBelief([Located entity:[robot] location:(LOC@right)])" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 140 45 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 323 408 "kb:fact([Located entity:[robot]],ROBLOC)" "Helvetica" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 143 10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 247 581 "kb:addBelief([Free])" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 10 60 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 217 534 "kb:fact([Located entity:[bin] location:(ROBLOC@location)],B1)" "Helvetica" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator 101 13 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 329 148 "guard MOVELEFT>=[MoveLeft]" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 114 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 326 290 "kb:retractBelief([Located entity:[robot]],ROBLOC)" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 171 6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 238 426 "kb:retractBelief([Located entity:(PICK@entity) location:(ROBLOC@location)],B1)" "Helvetica" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 173 28 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  

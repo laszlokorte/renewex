@@ -1,0 +1,6 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 2 
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 99 90 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 133 90 ":zero()" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 39 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

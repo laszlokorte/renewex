@@ -1,0 +1,67 @@
+10 
+    de.renew.gui.CPNDrawing 25 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 59 110 127 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 60 110 349 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 61 211 163 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 62 223 273 20 20 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 63 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 202 148 "child1" "SansSerif" 1 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 64 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 96 108 "base_final" "SansSerif" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 7 -22 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 65 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 100 372 "child1a" "SansSerif" 1 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 2 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 66 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 215 259 "child2" "SansSerif" 1 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 1 -17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 67 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 164 108 "base_final" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 73 -22 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 68 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 139 129 "> base_final" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 55 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 69 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 243 148 "child1" "SansSerif" 0 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 39 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 70 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 149 373 "child1a" "SansSerif" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 50 21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 71 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 259 260 "child2" "SansSerif" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 43 -16 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 72 109 212 24 16 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 73 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 118 193 "t" "SansSerif" 1 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator -1 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 74 2 120 147 120 212 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 32   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 75 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 116 172 "b" "SansSerif" 0 12 0 REF 36 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 76 2 133 214 213 177 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 77 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 143 188 "is child1 b" "SansSerif" 0 12 0 REF 43 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 78 2 133 226 225 279 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 4   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 79 2 120 228 120 350 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 80 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 87 282 "is child1a b" "SansSerif" 0 12 0 REF 54 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 81 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 153 248 "is child2 b" "SansSerif" 0 12 0 REF 50 
+            CH.ifa.draw.standard.OffsetLocator 4 3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 84 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 4 9 "typedef struct {\n  int data;\n  struct {} kind;\n} base_final;\n\ntypedef struct {\n  int data;\n  union {\n    struct {\n    } base;\n    struct {\n      bool flag;\n      struct {} kind;\n    } child1;\n  } kind;\n} child1_final;\n\ntypedef struct {\n  int data;\n  union {\n    struct {\n    } base;\n    struct {\n      bool flag;\n      union {\n        struct {\n        } child1;\n        struct {\n          enum {d} e;\n        } child1a;\n      } kind;\n    } child1;\n  } kind;\n} child1a;\n\ntypedef struct {\n  int data;\n  union {\n    struct {\n    } base;\n    struct {\n      bool flag;\n      union {\n        struct {\n        } child1;\n        struct {\n          enum {d} e;\n        } child1a;\n      } kind;\n    } child1;\n  } kind;\n} child1;\n\ntypedef struct {\n  int data;\n  union {\n    struct {\n    } base;\n    struct {\n      char c;\n    } child2;\n  } kind;\n} child2;\n\ntypedef struct {\n  int data;\n  union {\n    struct {\n    } base;\n    struct {\n      bool flag;\n      struct {} kind;\n    } child1;\n    struct {\n      char c;\n    } child2;\n  } kind;\n} base;" "SansSerif" 0 9 0 NULL NULL 1  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 82 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 87 11 "/*\nclass base { int data; };\nclass child1: public base { bool flag; };\nclass child1a: public child1 { enum {d} e; };\nclass child2: public base { char c; };\n*/" "SansSerif" 0 12 0 NULL NULL 1  NULL  438 0 370 919 

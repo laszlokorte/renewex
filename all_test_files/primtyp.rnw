@@ -1,0 +1,72 @@
+1 
+    de.renew.gui.CPNDrawing 28 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 196 264 "byte" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 108 223 "char" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 194 223 "short" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 156 180 "int" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 150 135 "long" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 151 92 "float" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 143 44 "double" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 207 264 207 238 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 199 223 169 193 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 127 223 156 194 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 162 180 162 150 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 5   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 162 135 162 107 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 5  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 162 92 162 59 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 389 266 "byte" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 298 193 "char" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 387 192 "short" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 303 120 "int" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 389 120 "float" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 382 44 "double" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 400 266 400 207 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector REF 34   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 391 192 316 132 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 34  
+            CH.ifa.draw.standard.ChopBoxConnector REF 35   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 309 193 309 135 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 33  
+            CH.ifa.draw.standard.ChopBoxConnector REF 35   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 309 120 309 59 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 35  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 298 44 "long" "Helvetica" 0 12 0 NULL NULL    
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 316 122 391 59 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 35  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 400 120 400 59 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 36  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 319 193 391 135 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 33  
+            CH.ifa.draw.standard.ChopBoxConnector REF 36   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 400 192 400 135 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 34  
+            CH.ifa.draw.standard.ChopBoxConnector REF 36   REF 54  

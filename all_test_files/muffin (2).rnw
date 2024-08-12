@@ -1,0 +1,5 @@
+8 
+    de.renew.gui.CPNDrawing 1 
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 2 "FigureWithID" "Int" 1 "FillColor" "Color" 255 199 158 10 6 35 43 "muffin-anim.gif"  
+            CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 37 " $ID " "SansSerif" 0 9 0 NULL NULL   REF 1  93 170 119 124 

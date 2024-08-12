@@ -1,0 +1,54 @@
+10 
+    de.renew.gui.CPNDrawing 19 
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 2 "LineStyle" "String" "1 2" "FigureWithID" "Int" 8 2 303 382 765 68 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 181 382 "WorkflowPlugin\n\ncleanup: boolean {readOnly}\n\ninit()\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 4 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 646 50 "de.renew.remote.RemoteObjectHelperListener" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 9 2 778 322 778 68 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 611 322 "RemoteObjectHelper\n\nobjects: java.util.Map {readOnly}\nremoteObjects: java.util.Map {readOnly}\nlocalObjects: java.util.Map {readOnly}\n\nconnectedTo(RemoteServerRegistry$ServerDescriptor)\ndisconnectedFrom(RemoteServerRegistry$ServerDescriptor)\naddLocalObject(Object): String\nremoveLocalObject(String)\naddObserver(RemoteObjectHelperObserver)\nremoveObserver(RemoteObjectHelperObserver)\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 10 2 778 502 778 606 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 566 606 "RemoteServerRegistry\n\nallServers: RemoteServerRegistry$ServerDescriptor[] {readOnly}\n\nconnectServer(String, String): RemoteServerRegistry$ServerDescriptor\naddRegistryListener(RemoteServerRegistryListener)\ncatchUpOnPreviousConnects(RemoteServerRegistryListener)\nremoveRegistryListener(RemoteServerRegistryListener)\nremoveServer(int)\ngetServerDescriptor(int): RemoteServerRegistry$ServerDescriptor\nallNetInstances(int): NetInstanceAccessor[]\ngetServer(int): Server\nregisterObjectIfPossible(String, java.rmi.Remote, java.util.Properties): boolean\nregisterObjectIfPossible(String, java.rmi.Remote): boolean\nregisterObject(String, java.rmi.Remote): boolean\nregisterObject(String, java.rmi.Remote, java.util.Properties): boolean\nunregisterObject(java.rmi.Remote)\n" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 12 2 341 412 606 412 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 14 2 258 443 259 599 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 13 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 88 599 "WorkflowManagerExtension\n\nsimulationSetup(de.renew.application.SimulationEnvironment)\nsimulationTerminated()\n" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 15 3 436 624 465 624 645 502 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 25  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 2 "LineStyle" "String" "1 2" "FigureWithID" "Int" 20 2 393 59 641 59 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 19 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 91 12 "LoginDialog\n\ncurrentManager: de.renew.access.Manager {readOnly}\nloginInfo: de.renew.access.LoginInfo {readOnly}\n\nnotifyObjectAdded(String, Object)\nnotifyObjectRemoved(String)\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 21 2 330 200 270 107 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 18 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 268 200 "AdminTool\n\nshutdown: boolean {readOnly}\nstart: boolean {readOnly}\n\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 33   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 22 2 158 201 212 107 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 17 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 59 201 "AgendaGUI\n\nshutdown: boolean {readOnly}\nstart: boolean {readOnly}\n\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 33   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 24 2 273 382 335 261 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 38   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 25 2 238 382 161 262 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 43   REF 6 REF 43 REF 38 REF 10 REF 16 REF 4 REF 33 REF 25 NULL  20 160 1105 767 

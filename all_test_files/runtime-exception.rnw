@@ -1,0 +1,7 @@
+10 
+    de.renew.gui.CPNDrawing 3 
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 12 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 5 4 "(import s2j)\n(define-java-classes\n  <java.lang.runtime-exception>)" "SansSerif" 0 12 0 NULL NULL 1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 13 147 79 24 16 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 8 89 "(throw\n  (make-error 'transition\n                     (java-new <java.lang.runtime-exception>\n                                     (->jstring \"Foo\"))))" "SansSerif" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 13 32 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  750 141 402 223 

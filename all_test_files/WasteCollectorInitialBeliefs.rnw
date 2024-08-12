@@ -1,0 +1,31 @@
+7 
+    de.renew.gui.CPNDrawing 11 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 25 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 18 9 393 179 NULL  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 74 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 102 "[Located what:[robot] at:[a]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -167 26 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "" "at" "what"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 72 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 88 102 "[Located what:[bin] at:[b]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -100 26 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "at" "" "what"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 69 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 70 52 "[Adjacent left:[b] right:[c]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -122 -24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "left" "right" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 70 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 52 "[Adjacent left:[a] right:[b]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -176 -24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "right" "" "left"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 222 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 33 "[Idle]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -187 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 68 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 285 26 "[Rule\n goal:[InDirection from:#1 to:#2 dir:#4[Left]]\n subgoals:\n  <[Adjacent left:#1 right:#3]\n   [InDirection from:#3 to:#2 dir:#4]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 155 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 11 "goal:from" "subgoals:hd:right" "goal:to" "subgoals:tl" "goal:dir" "subgoals:tl:hd" "goal" "subgoals" "subgoals:hd" "subgoals:tl:tl" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 224 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 470 26 "[Rule\n goal:[InDirection from:#1 to:#2 dir:[Right]]\n subgoals:\n  <[InDirection from:#2 to:#1 dir:[Left]]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 315 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 9 "goal:dir" "subgoals" "subgoals:tl" "goal" "subgoals:hd" "subgoals:hd:dir" "" "goal:from" "goal:to"  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 212 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 16 12 "Initial Beliefs:" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -161 -79 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 223 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 426 532 "access _BDItypes;\naccess _WasteCollectorTypes;" "Helvetica" 0 12 0 NULL NULL 1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 213 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 163 26 "[Rule\n goal:[InDirection from:#1 to:#2 dir:[Left]]\n subgoals:\n  <[Adjacent left:#1 right:#2]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 2 -11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 8 "subgoals" "subgoals:hd" "goal" "goal:from" "goal:to" "subgoals:tl" "goal:dir" ""  NULL  0 97 704 215 

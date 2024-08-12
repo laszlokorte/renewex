@@ -1,0 +1,6 @@
+7 
+    de.renew.gui.CPNDrawing 4 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 23 15 "M\n\np1\np2\np3\np4\np5" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 90 14 "Tr\n\nrule\neff: Eff" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 46 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 142 15 "Eff\n\npre: M\npost: M" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 63 15 "E" "Helvetica" 0 12 0 NULL NULL  NULL  17 430 273 236

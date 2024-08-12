@@ -1,0 +1,59 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 22 
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 191 175 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 240 93 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 308 164 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 300 226 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 302 283 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 189 242 24 16  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 376 233 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 247 109 206 177 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.cpn.ArcConnection 2 259 109 312 168 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3   
+        CH.ifa.draw.cpn.ArcConnection 2 318 184 312 226 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        CH.ifa.draw.cpn.ArcConnection 2 325 181 379 233 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        CH.ifa.draw.cpn.ArcConnection 2 312 242 312 284 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 5   
+        CH.ifa.draw.cpn.ArcConnection 2 201 195 201 242 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6   
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 378 285 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 388 249 388 286 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 7  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 32   
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 246 414 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 203 258 254 415 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37   
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 335 346 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 317 302 342 346 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 5  
+            CH.ifa.draw.standard.ChopBoxConnector REF 42   
+        CH.ifa.draw.cpn.ArcConnection 2 383 303 352 346 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector REF 42   
+        CH.ifa.draw.cpn.ArcConnection 2 336 362 264 419 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 42  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 271 93 ":new()" "Helvetica" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 32 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

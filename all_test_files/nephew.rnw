@@ -1,0 +1,78 @@
+2 
+    de.renew.gui.CPNDrawing 29 
+        de.renew.gui.TransitionFigure "no_attributes" 93 86 24 16  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 124 88 ":new()" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 36 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.PlaceFigure "no_attributes" 94 174 20 20  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 104 102 104 175 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 5   
+        de.renew.gui.TransitionFigure "no_attributes" 93 249 24 16  
+        de.renew.gui.PlaceFigure "no_attributes" 94 315 20 20  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 104 194 104 249 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 5  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 104 265 104 316 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 130 236 "this:sibling(x,y)" "Helvetica" 0 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 65 -14 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 120 203 "x" "Helvetica" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 19 -11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 116 133 "\"esau\"" "Helvetica" 0 12 0 REF 6 
+            CH.ifa.draw.standard.OffsetLocator 29 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 130 257 "this:father(y,z)" "Helvetica" 0 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 63 7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 112 282 "z" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 11 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 126 315 "nephew" "Helvetica" 1 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 44 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 124 173 "uncle" "Helvetica" 1 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 35 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.TransitionFigure "no_attributes" 330 206 24 16  
+        de.renew.gui.PlaceFigure "no_attributes" 332 126 20 20  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FrameColor" "Color" 0 0 0 2 342 146 342 206 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector REF 41   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 368 207 ":father(father,son)" "Helvetica" 0 12 0 REF 41 
+            CH.ifa.draw.standard.OffsetLocator 74 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 269 166 "[father,son]" "Helvetica" 0 12 0 REF 43 
+            CH.ifa.draw.standard.OffsetLocator -43 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 375 101 "[\"isaac\", \"esau\"]" "Helvetica" 0 12 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator 75 -28 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 375 122 "[\"isaac\",\"jacob\"]" "Helvetica" 0 12 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator 75 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 366 143 "[\"jacob\",\"joseph\"]" "Helvetica" 0 12 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator 70 14 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "no_attributes" 334 294 24 16  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 368 295 ":sibling(x,y)" "Helvetica" 0 12 0 REF 61 
+            CH.ifa.draw.standard.OffsetLocator 53 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 372 313 "this:father(father,x)" "Helvetica" 0 12 0 REF 61 
+            CH.ifa.draw.standard.OffsetLocator 76 18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 373 331 "this:father(father,y)" "Helvetica" 0 12 0 REF 61 
+            CH.ifa.draw.standard.OffsetLocator 77 36 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 372 347 "guard !x.equals(y)" "Helvetica" 0 12 0 REF 61 
+            CH.ifa.draw.standard.OffsetLocator 75 52 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 342 83 "[\"abraham\",\"isaac\"]" "Helvetica" 0 12 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator 51 -46 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  

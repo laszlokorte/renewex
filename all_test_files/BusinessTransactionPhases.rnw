@@ -1,0 +1,60 @@
+8 
+    de.renew.gui.CPNDrawing 26 
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 22 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 10 129 16 187 49 249 73 490 101 628 101 628 165 490 165 249 191 186 213 129 250  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 3 "FillColor" "Color" 0 0 0 2 95 10 95 257 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.GroupFigure 5 
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 10 "FillColor" "Color" 255 255 255 162 149 49 12  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 7 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 163 112 48 43  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 5 "FillColor" "Color" 192 192 192 162 103 49 12  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 8 2 162 109 162 155 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 11 2 211 109 211 155 NULL NULL "CH.ifa.draw.figures.ArrowTip"   
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "LineStyle" "String" "10" "FigureWithID" "Int" 12 2 313 18 313 248 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "LineStyle" "String" "10" "FigureWithID" "Int" 13 2 490 18 490 248 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 1 "FigureWithID" "Int" 1 469 184 44 49 "Contract.gif"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 17 "FillColor" "Color" 0 0 0 2 186 49 186 97 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 20 "FillColor" "Color" 0 0 0 2 186 165 186 213 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  NULL "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 18 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 223 57 "Katalog der\nDienstangebote\n& -nachfragen\n" "SansSerif" 1 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 80 -42 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 2 "FigureWithID" "Int" 4 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 112 "Verhandlungs-\nspielraum " "SansSerif" 1 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator -44 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 24 2 313 81 337 171 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 25 2 379 91 402 161 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 26 2 463 99 482 163 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 27 2 525 101 541 159 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 28 2 579 103 595 161 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 29 2 346 168 368 92 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 30 2 425 164 454 106 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 31 2 494 163 516 108 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 32 2 551 163 573 108 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 33 "FillColor" "Color" 0 0 0 2 129 254 305 254 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 34 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 159 256 "Informationsphase" "SansSerif" 0 14 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator 0 12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 35 "FillColor" "Color" 0 0 0 2 320 254 487 254 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 36 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 340 256 "Verhandlungsphase" "SansSerif" 0 14 0 REF 47 
+            CH.ifa.draw.standard.OffsetLocator 0 12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 37 "FillColor" "Color" 0 0 0 2 497 254 627 254 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 38 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 497 256 "Ausführungsphase" "SansSerif" 0 14 0 REF 52 
+            CH.ifa.draw.standard.OffsetLocator -6 12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 39 2 601 163 623 108 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  NULL  2 152 745 331 

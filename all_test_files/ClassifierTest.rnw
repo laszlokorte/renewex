@@ -1,0 +1,23 @@
+7 
+    de.renew.gui.CPNDrawing 9 
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 19 11 "import java.awt.*;" "Helvetica" 0 12 0 NULL NULL 1  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 45 83 91 87 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 4 2 135 126 211 126 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 3 "FigureWithID" "Int" 5 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 211 118 24 16 NULL    REF 7 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 6 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 168 119 "fs" "Helvetica" 0 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 7 2 235 126 345 127 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 344 50 139 154 NULL    REF 15 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 9 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 251 119 "fs.instantiate()" "Helvetica" 0 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 10 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 15 50 "[Any r:#1[Rectangle location:(new Point(1,1)) width:(100) height:(100)] r2:#1]" "Helvetica" 0 12 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator 6 -23 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 5 "r" "r:location" "r:height" "" "r:width"  NULL  0 97 530 291 

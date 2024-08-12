@@ -1,0 +1,29 @@
+11 
+    de.renew.gui.CPNDrawing 12 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 346 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 123 253 "refnet-element" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 372 "FillColor" "Color" 255 255 255 255 2 170 253 170 223 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 530 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 46 207 "BPMNOntology_BasicProperties::element" "SansSerif" 0 12 0 NULL NULL   1
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 5 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 52 17 "package de.renew.bpmn.ontology;\naccess BPMNOntology_BasicProperties;" "SansSerif" 0 12 0 NULL NULL 1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 395 "FillColor" "Color" 255 255 255 255 4 259 153 259 128 171 128 171 103 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 394 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 186 153 "refnet-model\n\nelements:refnet-element*" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 373 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 147 87 "concept" "SansSerif" 0 12 0 NULL NULL   1
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 396 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 121 299 "net-component" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 398 "FillColor" "Color" 255 255 255 255 2 170 345 170 315 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 397 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 142 345 "sequence" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 14  1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 399 "FillColor" "Color" 255 255 255 255 2 170 299 170 269 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 14  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  1  REF 18 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 400 "FillColor" "Color" 255 255 255 255 2 171 207 171 103 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13  1  REF 6 REF 13 REF 11 NULL  410 201 1280 720 

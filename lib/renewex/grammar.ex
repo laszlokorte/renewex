@@ -51,7 +51,6 @@ defmodule Renewex.Grammar do
         },
         "de.renew.hierarchicalworkflownets.gui.HNModel" => %{
           super: nil,
-          skip_super: true,
           interfaces: [],
           fields: [
             node: {:rule, "de.renew.hierarchicalworkflownets.tree.TreeNode"},
@@ -60,7 +59,6 @@ defmodule Renewex.Grammar do
         },
         "de.renew.hierarchicalworkflownets.tree.TreeNode" => %{
           super: nil,
-          skip_super: true,
           interfaces: [],
           fields: [
             nodes:
@@ -115,7 +113,11 @@ defmodule Renewex.Grammar do
             "de.renew.gui.InscribableFigure",
             "CH.ifa.draw.framework.ParentFigure"
           ],
-          fields: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}]
+          fields:
+            if(version >= 4,
+              do: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}],
+              else: []
+            )
         },
         "de.renew.gui.PlaceFigure" => %{
           super: "CH.ifa.draw.figures.EllipseFigure",
@@ -125,12 +127,15 @@ defmodule Renewex.Grammar do
             "CH.ifa.draw.framework.ParentFigure"
           ],
           fields:
-            if(version >= 3, do: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}])
+            if(version >= 3,
+              do: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}],
+              else: []
+            )
         },
         "de.renew.gui.VirtualPlaceFigure" => %{
           super: "de.renew.gui.PlaceFigure",
           interfaces: [],
-          fields: [highlight_figure: {:storable, "e.renew.gui.PlaceFigure"}]
+          fields: [highlight_figure: {:storable, "de.renew.gui.PlaceFigure"}]
         },
         "de.renew.gui.ArcConnection" => %{
           super: "CH.ifa.draw.figures.LineConnection",
@@ -192,7 +197,7 @@ defmodule Renewex.Grammar do
         "fs.ConceptFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
           interfaces: ["CH.ifa.draw.framework.Locator"],
-          fields: if(version < 0, do: [int: :type])
+          fields: if(version < 0, do: [type: :int], else: [])
         },
         "fs.PartitionFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
@@ -291,7 +296,7 @@ defmodule Renewex.Grammar do
                 inner_radius: :float,
                 filled: :boolean
               ],
-              else: nil
+              else: []
             )
         },
         "de.renew.gui.CircleDecoration" => %{
@@ -378,7 +383,8 @@ defmodule Renewex.Grammar do
         "de.renew.gui.CPNDrawing" => %{
           super: "CH.ifa.draw.standard.StandardDrawing",
           interfaces: ["CH.ifa.draw.framework.Figure"],
-          fields: if(version >= 2, do: [icon: {:storable, "CH.ifa.draw.framework.Figure"}])
+          fields:
+            if(version >= 2, do: [icon: {:storable, "CH.ifa.draw.framework.Figure"}], else: [])
         },
         "de.renew.sdnet.gui.SDNDrawing" => %{
           super: "de.renew.gui.CPNDrawing",

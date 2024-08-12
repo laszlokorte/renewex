@@ -1,0 +1,84 @@
+7 
+    de.renew.gui.CPNDrawing 53 
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 61 "FillColor" "Color" 0 0 0 4 240 238 278 193 277 199 240 242  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 1 "FillColor" "Color" 255 255 255 19 52 173 104  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 4 "FillColor" "Color" 255 255 255 55 78 121 67  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 5 "FillColor" "Color" 255 255 255 43 87 25 12  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 6 "FillColor" "Color" 255 255 255 43 102 25 12  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 7 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 76 81 ":WorkflowClient" "Helvetica" 4 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 3 -23 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 9 "FillColor" "Color" 0 0 0 73 102 85 38  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 80 104 "_:PALMImpl\n\nuser=\"Olaf\"   " "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 10 "FillColor" "Color" 255 255 255 278 40 190 209  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 11 "FillColor" "Color" 255 255 255 318 68 121 67  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 12 "FillColor" "Color" 255 255 255 306 77 25 12  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 13 "FillColor" "Color" 255 255 255 306 92 25 12  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 337 71 ":WorkflowServer" "Helvetica" 4 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 3 -23 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 15 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 295 47 "server: Sparc" "Helvetica" 4 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator -42 -90 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 17 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 343 94 "_:TaskBroker" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 18 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 343 113 "_:Role" "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 19 "FillColor" "Color" 255 255 255 316 172 129 54  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 20 "FillColor" "Color" 255 255 255 304 181 25 12  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 21 "FillColor" "Color" 255 255 255 304 196 25 12  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 23 "FillColor" "Color" 0 0 0 334 196 104 20  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 24 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 341 198 "_:CPNApplication" "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 22 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 362 175 ":Renew" "Helvetica" 4 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator 3 -17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 25 "LineStyle" "Int" 10 2 379 135 379 172 NULL 
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.standard.ChopBoxConnector REF 23   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 30 "LineStyle" "Int" 10 2 176 103 306 84 NULL 
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 24 56 "workstation1: PC" "Helvetica" 4 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator -35 -41 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 33 2 19 52 55 30 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 34 2 191 52 227 30 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 35 2 191 155 227 133 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 36 2 55 30 227 30 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 37 2 227 30 227 135 NULL NULL  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 38 "FillColor" "Color" 255 255 255 46 202 173 104  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 39 "FillColor" "Color" 255 255 255 82 228 121 67  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 40 "FillColor" "Color" 255 255 255 70 237 25 12  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 41 "FillColor" "Color" 255 255 255 70 252 25 12  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 42 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 103 231 ":WorkflowClient" "Helvetica" 4 12 0 REF 48 
+            CH.ifa.draw.standard.OffsetLocator 3 -23 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 43 "FillColor" "Color" 0 0 0 100 252 85 38  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 44 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 107 254 "_:PALMImpl\n\nuser=\"Frank\"" "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 46 "LineStyle" "Int" 10 2 178 228 312 104 NULL 
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 48  
+            CH.ifa.draw.standard.ChopBoxConnector REF 14   
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 48 2 46 202 82 180 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 49 2 218 202 254 180 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 50 2 218 305 254 283 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 51 2 82 180 254 180 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 52 2 254 180 254 285 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 47 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 55 206 "intel: PC" "Helvetica" 4 12 0 REF 47 
+            CH.ifa.draw.standard.OffsetLocator -54 -41 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 53 2 279 40 315 18 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 54 2 467 40 503 18 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 55 2 467 248 503 226 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 56 2 315 18 503 18 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 57 2 503 18 503 227 NULL NULL  
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 60 "FillColor" "Color" 0 0 0 4 214 83 278 68 278 71 214 86  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 64 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 214 52 "«ethernet»" "Helvetica" 0 12 0 REF 73 
+            CH.ifa.draw.standard.OffsetLocator -3 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 62 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 223 245 "«internet»" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -9 35 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 65 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 395 114 "..." "Helvetica" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 21 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  -7 349 557 370 

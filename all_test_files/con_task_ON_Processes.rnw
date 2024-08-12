@@ -1,0 +1,56 @@
+7 
+    de.renew.gui.CPNDrawing 21 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 4 2 90 268 105 268 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 14 203 "\n[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]]\n\n" "Helvetica" 0 12 0 NULL NULL 1 8 "m" "m:b1" "m:b2" "m:b3" "m:b4" "m:b5" "m:b6" ""
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 3 "FigureWithID" "Int" 21 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 110 261 "e1" "Helvetica" 0 12 0 NULL NULL    REF 4
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 7 2 263 164 301 164 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 161 42 "\n[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]\n b1: #1a[ON::e1\n        m: [b1: [ON::E]\n            b2: [ON::Tok]\n            b4: [ON::Tok]]]\n b2: #1a\n b4: #1a]\n" "Helvetica" 0 12 0 NULL NULL 1 13 "m:b3" "b1:m:b1" "m:b4" "b1:m:b4" "m:b5" "" "m" "b1:m:b2" "b1" "b1:m" "m:b6" "m:b2" "m:b1"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 6 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 301 5 "\n[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]\n b1: #1c[ON::e1\n        m: [b1: [ON::E]\n            b2: [ON::Tok]\n            b4: [ON::Tok]]\n        b2: #2c[ON::e2\n               m: [b2: [ON::E]\n                   b3: [ON::Tok]]]]\n b2: #1c\n b3: #2c\n b4: #1c]\n" "Helvetica" 0 12 0 NULL NULL 1 17 "m:b6" "m:b3" "b1:m:b1" "b1" "m" "b1:m:b2" "b1:b2" "" "m:b1" "m:b4" "b1:m" "m:b5" "m:b2" "b1:b2:m:b2" "b1:b2:m" "b1:b2:m:b3" "b1:m:b4"
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 275 157 "e2" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 10 2 253 498 301 499 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 22 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 151 375 "[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]\n b1: #1b[ON::e1\n        m: [b1: [ON::E]\n            b2: [ON::Tok]\n            b4: [ON::Tok]]]\n b2: #1b\n b4: #1b]\n" "Helvetica" 0 12 0 NULL NULL 1 13 "b1" "b1:m:b4" "m:b1" "m" "m:b2" "m:b4" "" "m:b3" "m:b5" "b1:m:b1" "b1:m:b2" "b1:m" "m:b6"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 9 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 301 341 "\n[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]\n b1: #1d[ON::e1\n        m: [b1: [ON::E]\n            b2: [ON::Tok]\n            b4: [ON::Tok]]\n        b4: #2d[ON::e3\n               m: [b4: [ON::E]\n                   b5: [ON::Tok]]]]\n b2: #1d\n b4: #1d\n b5: #2d]\n" "Helvetica" 0 12 0 NULL NULL 1 17 "b1" "b1:m:b1" "b1:b4" "m:b4" "m:b5" "m:b6" "b1:b4:m:b4" "m:b3" "b1:b4:m" "b1:m:b2" "b1:b4:m:b5" "m" "b1:m" "b1:m:b4" "m:b2" "" "m:b1"
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 11 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 270 491 "e3" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 12 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 14 2 429 246 465 308 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 3 "FigureWithID" "Int" 13 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 470 301 "e4" "Helvetica" 0 12 0 NULL NULL    REF 21
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 15 2 429 390 465 311 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 21  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 29   
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 16 2 489 308 505 308 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 29  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 12 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 505 37 "\n[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]\n b1: #3e[ON::e1\n        m: [b1: [ON::E]\n            b2: [ON::Tok]\n            b4: [ON::Tok]]\n        b2: #4e[ON::e2\n               m: [b2: [ON::E]\n                   b3: [ON::Tok\n                        val: #1e[]]]\n               b3: #2e[ON::e4\n                      m: [b3: [ON::E]\n                          b5: [ON::E]\n                          b6: [ON::Tok]]]]\n        b4: #5e[ON::e3\n               m: [b4: [ON::E]\n                   b5: [ON::Tok\n                        val: #1e]]\n               b5: #2e]]\n b2: #3e\n b3: #4e\n b4: #3e\n b5: #5e\n b6: #2e]\n" "Helvetica" 0 12 0 NULL NULL 1 27 "m:b3" "b1:b2:m" "m:b4" "m:b5" "m:b6" "m" "b1" "b1:m" "b1:b4:m:b4" "b1:b4:m:b5" "b1:b2:b3:m:b3" "b1:b4" "b1:b2:b3:m:b5" "b1:b2:m:b2" "b1:b2:b3:m:b6" "b1:m:b1" "" "b1:b2:b3:m" "b1:b2:m:b3" "b1:b2:m:b3:val" "b1:b2:b3" "b1:b4:m" "m:b1" "b1:b2" "b1:m:b2" "b1:m:b4" "m:b2"    REF 29 REF 38
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 19 2 659 311 737 312 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 38  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 18 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 737 0 "\n[ON::Proc\n m: [b1: [ON::Tok]\n     b2: [ON::E]\n     b3: [ON::E]\n     b4: [ON::E]\n     b5: [ON::E]\n     b6: [ON::E]]\n b1: #4f[ON::e1\n        m: [b1: [ON::E]\n            b2: [ON::Tok]\n            b4: [ON::Tok]]\n        b1: #1f[ON::e5\n               m: [b1: [ON::Tok]\n                   b6: [ON::E]]]\n        b2: #5f[ON::e2\n               m: [b2: [ON::E]\n                   b3: [ON::Tok\n                        val: #2f[]]]\n               b3: #3f[ON::e4\n                      m: [b3: [ON::E]\n                          b5: [ON::E]\n                          b6: [ON::Tok]]\n                      b6: #1f]]\n        b4: #6f[ON::e3\n               m: [b4: [ON::E]\n                   b5: [ON::Tok\n                        val: #2f]]\n               b5: #3f]]\n b2: #4f\n b3: #5f\n b4: #4f\n b5: #6f\n b6: #3f]\n" "Helvetica" 0 12 0 NULL NULL 1 31 "m" "b1:b4:m" "m:b2" "b1:b2:b3:m" "b1:b1:m" "b1:b2:b3:m:b3" "b1:b2:m:b3:val" "b1:b2:b3:m:b5" "b1:b2:b3" "b1:b1:m:b6" "b1:b2:b3:m:b6" "" "m:b1" "b1:m:b4" "b1:b2" "m:b3" "b1:b4" "m:b4" "m:b5" "b1:b1:m:b1" "m:b6" "b1" "b1:b2:m:b2" "b1:b2:m" "b1:b4:m:b4" "b1:m:b1" "b1:b4:m:b5" "b1:m" "b1:b2:m:b3" "b1:b1" "b1:m:b2"
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 20 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 691 304 "e5" "Helvetica" 0 12 0 REF 39 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 43 REF 6 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 23 2 129 268 161 219 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 24 2 124 276 156 375 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 19   REF 10 REF 19 NULL  71 23 1028 710 

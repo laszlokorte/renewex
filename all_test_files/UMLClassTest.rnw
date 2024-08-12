@@ -1,0 +1,3 @@
+7 
+    de.renew.gui.CPNDrawing 1 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 37 32 "«interface»\nTestgy\nfgdfgdfgdf\n_dsfs: sehr statisch\ndfdsfsdf\n\n\\fjdbgjkdfbgkdfj(dfs,dsf): Tjndjf\nfjdjkdfbgkdfj(dfs,dsf): Tjnff\n" "Helvetica" 0 12 0 NULL NULL  NULL  0 97 323 600

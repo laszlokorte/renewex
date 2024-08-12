@@ -1,0 +1,7 @@
+7 
+    de.renew.gui.CPNDrawing 1 
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.contrib.TriangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 1 29 27 50 30 0  
+            CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 4 45 37 "$ID" "Helvetica" 0 12 0 REF 2 
+                CH.ifa.draw.standard.OffsetLocator 0 2 
+                    CH.ifa.draw.standard.RelativeLocator 0.5 0.5     REF 1  13 268 210 137 

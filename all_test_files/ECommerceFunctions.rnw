@@ -1,0 +1,72 @@
+8 
+    de.renew.gui.CPNDrawing 36 
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 105 "FillColor" "Color" 255 199 158 12 71 466 59  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 106 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 10 93 473 38  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 71 "FillColor" "Color" 255 199 158 44 135 403 161 50 50  
+        CH.ifa.draw.figures.GroupFigure 7 
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 64 "FillColor" "Color" 64 64 64 385 194 9 43  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 65 "FillColor" "Color" 64 64 64 366 211 46 9  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 66 "FillColor" "Color" 64 64 64 4 407 228 401 234 371 202 377 196  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 67 "FillColor" "Color" 64 64 64 4 403 197 409 203 376 235 370 229  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 68 "FillColor" "Color" 192 192 192 372 200 34 31  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 69 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 4 396 203 401 206 382 228 378 224  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 70 "FillColor" "Color" 64 64 64 385 211 9 9   
+        CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 1 "FigureWithID" "Int" 1 293 193 44 49 "Contract.gif"  
+        CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 1 "FigureWithID" "Int" 72 224 193 41 44 "ContractUnsigned.gif"  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 73 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 242 203 "?" "SansSerif" 0 18 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator 3 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 10 "FillColor" "Color" 255 255 255 70 232 49 12  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 7 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 71 195 48 43  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 5 "FillColor" "Color" 192 192 192 70 186 49 12  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 8 2 70 192 70 238 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 11 2 119 192 119 238 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 74 "FrameColor" "Color" 64 64 64 "FillColor" "Color" 192 192 192 147 196 46 44  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 75 "FrameColor" "Color" 64 64 64 "FillColor" "Color" 255 255 255 158 206 25 24  
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 78 "FrameColor" "Color" 192 192 192 "FillColor" "Color" 64 64 64 3 173 213 158 203 168 189  
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 79 "FrameColor" "Color" 192 192 192 "FillColor" "Color" 64 64 64 3 163 219 168 235 151 241  
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 80 "FrameColor" "Color" 192 192 192 "FillColor" "Color" 64 64 64 3 174 222 190 215 196 231  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 17 "FillColor" "Color" 0 0 0 2 129 215 219 215 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 84 "FillColor" "Color" 0 0 0 2 265 215 292 215 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 85 "FillColor" "Color" 0 0 0 2 334 215 361 215 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 87 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 150 266 "Makeln" "SansSerif" 1 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 88 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 212 266 "Verhandeln" "SansSerif" 1 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 89 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 288 266 "Signieren" "SansSerif" 1 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 90 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 360 266 "Ausführen" "SansSerif" 1 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 86 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 63 258 "Katalog der\nAngebote" "SansSerif" 1 12 0 NULL NULL  
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 91 2 90 110 90 182 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 92 2 100 110 100 182 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  NULL "CH.ifa.draw.figures.ArrowTip"   
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 93 2 165 110 165 182 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 94 2 175 110 175 182 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  NULL "CH.ifa.draw.figures.ArrowTip"   
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 95 2 239 110 239 182 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 96 2 249 110 249 182 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  NULL "CH.ifa.draw.figures.ArrowTip"   
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 97 2 310 110 310 182 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 98 2 320 110 320 182 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  NULL "CH.ifa.draw.figures.ArrowTip"   
+        CH.ifa.draw.figures.GroupFigure 2 
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 102 2 384 110 384 182 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+            CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 103 2 394 110 394 182 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  NULL "CH.ifa.draw.figures.ArrowTip"   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 107 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 183 10 "Markt-Teilnehmer" "SansSerif" 1 14 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 104 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 185 83 "COSMOS Service" "SansSerif" 1 14 0 NULL NULL  
+        CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 1 "FigureWithID" "Int" 108 149 15 29 47 "SheParticipant.gif"  
+        CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 1 "FigureWithID" "Int" 109 315 15 23 47 "HeParticipant.gif"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 110 "FillColor" "Color" 0 0 0 2 182 48 194 76 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 111 "FillColor" "Color" 0 0 0 2 309 49 296 75 NULL 
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "CH.ifa.draw.figures.ArrowTip"  NULL  0 125 516 363

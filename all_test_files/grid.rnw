@@ -1,0 +1,278 @@
+5 
+    de.renew.gui.CPNDrawing 96 
+        de.renew.gui.PlaceFigure "no_attributes" 85 55 20 20 NULL  
+        de.renew.gui.ArcConnection "no_attributes" 2 105 65 142 66 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 142 59 24 16 NULL    REF 6 
+        de.renew.gui.ArcConnection "no_attributes" 2 166 66 216 65 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 215 55 20 20 NULL    REF 11 
+        de.renew.gui.ArcConnection "no_attributes" 2 235 66 272 68 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 272 61 24 16 NULL    REF 16 
+        de.renew.gui.ArcConnection "no_attributes" 2 296 69 342 71 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 341 61 20 20 NULL    REF 21 
+        de.renew.gui.ArcConnection "no_attributes" 2 361 71 394 71 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 21  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 394 64 24 16 NULL    REF 26 
+        de.renew.gui.TransitionFigure "no_attributes" 81 105 24 16 NULL  
+        de.renew.gui.ArcConnection "no_attributes" 2 105 112 155 109 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 154 98 20 20 NULL    REF 32 
+        de.renew.gui.ArcConnection "no_attributes" 2 174 109 211 111 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 211 104 24 16 NULL    REF 37 
+        de.renew.gui.ArcConnection "no_attributes" 2 235 112 281 114 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 280 104 20 20 NULL    REF 42 
+        de.renew.gui.ArcConnection "no_attributes" 2 300 114 333 114 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 333 107 24 16 NULL    REF 47 
+        de.renew.gui.ArcConnection "no_attributes" 2 357 115 396 118 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 47  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 395 108 20 20 NULL    REF 52 
+        de.renew.gui.ArcConnection "no_attributes" 2 95 75 93 105 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27   
+        de.renew.gui.ArcConnection "no_attributes" 2 155 75 163 99 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 32   
+        de.renew.gui.ArcConnection "no_attributes" 2 225 75 223 104 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   
+        de.renew.gui.ArcConnection "no_attributes" 2 285 77 290 105 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 42   
+        de.renew.gui.ArcConnection "no_attributes" 2 351 81 346 107 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 21  
+            CH.ifa.draw.standard.ChopBoxConnector REF 47   
+        de.renew.gui.ArcConnection "no_attributes" 2 405 80 405 109 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 26  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 52   
+        de.renew.gui.PlaceFigure "no_attributes" 77 151 20 20 NULL  
+        de.renew.gui.ArcConnection "no_attributes" 2 97 161 134 162 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 77  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 134 155 24 16 NULL    REF 82 
+        de.renew.gui.ArcConnection "no_attributes" 2 158 162 208 161 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 82  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 207 151 20 20 NULL    REF 87 
+        de.renew.gui.ArcConnection "no_attributes" 2 227 162 264 164 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 87  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 264 157 24 16 NULL    REF 92 
+        de.renew.gui.ArcConnection "no_attributes" 2 288 165 334 167 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 92  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 333 157 20 20 NULL    REF 97 
+        de.renew.gui.ArcConnection "no_attributes" 2 353 167 386 167 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 97  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 386 160 24 16 NULL    REF 102 
+        de.renew.gui.TransitionFigure "no_attributes" 73 198 24 16 NULL  
+        de.renew.gui.ArcConnection "no_attributes" 2 97 205 147 204 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 103  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 146 194 20 20 NULL    REF 108 
+        de.renew.gui.ArcConnection "no_attributes" 2 166 205 203 207 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 108  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 203 200 24 16 NULL    REF 113 
+        de.renew.gui.ArcConnection "no_attributes" 2 227 208 273 210 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 113  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 272 200 20 20 NULL    REF 118 
+        de.renew.gui.ArcConnection "no_attributes" 2 292 210 325 210 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 118  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 325 203 24 16 NULL    REF 123 
+        de.renew.gui.ArcConnection "no_attributes" 2 349 211 388 214 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 123  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 387 204 20 20 NULL    REF 128 
+        de.renew.gui.ArcConnection "no_attributes" 2 87 171 85 198 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 77  
+            CH.ifa.draw.standard.ChopBoxConnector REF 103   
+        de.renew.gui.ArcConnection "no_attributes" 2 147 171 155 195 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 82  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 108   
+        de.renew.gui.ArcConnection "no_attributes" 2 217 171 215 200 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 87  
+            CH.ifa.draw.standard.ChopBoxConnector REF 113   
+        de.renew.gui.ArcConnection "no_attributes" 2 277 173 282 201 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 92  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 118   
+        de.renew.gui.ArcConnection "no_attributes" 2 343 177 338 203 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 97  
+            CH.ifa.draw.standard.ChopBoxConnector REF 123   
+        de.renew.gui.ArcConnection "no_attributes" 2 397 176 397 205 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 102  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 128   
+        de.renew.gui.PlaceFigure "no_attributes" 78 241 20 20 NULL  
+        de.renew.gui.ArcConnection "no_attributes" 2 98 251 135 252 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 153  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 135 245 24 16 NULL    REF 158 
+        de.renew.gui.ArcConnection "no_attributes" 2 159 252 209 251 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 158  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 208 241 20 20 NULL    REF 163 
+        de.renew.gui.ArcConnection "no_attributes" 2 228 252 265 254 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 163  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 265 247 24 16 NULL    REF 168 
+        de.renew.gui.ArcConnection "no_attributes" 2 289 255 335 257 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 168  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 334 247 20 20 NULL    REF 173 
+        de.renew.gui.ArcConnection "no_attributes" 2 354 257 387 257 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 173  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 387 250 24 16 NULL    REF 178 
+        de.renew.gui.TransitionFigure "no_attributes" 74 288 24 16 NULL  
+        de.renew.gui.ArcConnection "no_attributes" 2 98 295 148 294 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 179  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 147 284 20 20 NULL    REF 184 
+        de.renew.gui.ArcConnection "no_attributes" 2 167 295 204 297 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 184  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 204 290 24 16 NULL    REF 189 
+        de.renew.gui.ArcConnection "no_attributes" 2 228 298 274 300 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 189  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 273 290 20 20 NULL    REF 194 
+        de.renew.gui.ArcConnection "no_attributes" 2 293 300 326 300 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 194  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 326 293 24 16 NULL    REF 199 
+        de.renew.gui.ArcConnection "no_attributes" 2 350 301 389 304 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 199  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 388 294 20 20 NULL    REF 204 
+        de.renew.gui.ArcConnection "no_attributes" 2 88 261 86 288 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 153  
+            CH.ifa.draw.standard.ChopBoxConnector REF 179   
+        de.renew.gui.ArcConnection "no_attributes" 2 148 261 156 285 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 158  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 184   
+        de.renew.gui.ArcConnection "no_attributes" 2 218 261 216 290 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 163  
+            CH.ifa.draw.standard.ChopBoxConnector REF 189   
+        de.renew.gui.ArcConnection "no_attributes" 2 278 263 283 291 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 168  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 194   
+        de.renew.gui.ArcConnection "no_attributes" 2 344 267 339 293 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 173  
+            CH.ifa.draw.standard.ChopBoxConnector REF 199   
+        de.renew.gui.ArcConnection "no_attributes" 2 398 266 398 295 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 178  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 204   
+        de.renew.gui.ArcConnection "no_attributes" 2 91 121 88 152 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 77   
+        de.renew.gui.ArcConnection "no_attributes" 2 85 214 88 242 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 103  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 153   
+        de.renew.gui.ArcConnection "no_attributes" 2 155 214 148 245 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 108  
+            CH.ifa.draw.standard.ChopBoxConnector REF 158   
+        de.renew.gui.ArcConnection "no_attributes" 2 215 216 218 242 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 113  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 163   
+        de.renew.gui.ArcConnection "no_attributes" 2 282 220 277 247 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 118  
+            CH.ifa.draw.standard.ChopBoxConnector REF 168   
+        de.renew.gui.ArcConnection "no_attributes" 2 338 219 343 248 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 123  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 173   
+        de.renew.gui.ArcConnection "no_attributes" 2 397 224 398 250 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 128  
+            CH.ifa.draw.standard.ChopBoxConnector REF 178   
+        de.renew.gui.ArcConnection "no_attributes" 2 405 128 399 160 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 52  
+            CH.ifa.draw.standard.ChopBoxConnector REF 102   
+        de.renew.gui.ArcConnection "no_attributes" 2 344 123 343 158 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 47  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 97   
+        de.renew.gui.ArcConnection "no_attributes" 2 288 124 278 157 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector REF 92   
+        de.renew.gui.ArcConnection "no_attributes" 2 222 120 218 152 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 87   
+        de.renew.gui.ArcConnection "no_attributes" 2 162 118 148 155 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector REF 82   NULL  -10 102 645 600 

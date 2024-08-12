@@ -44,9 +44,13 @@ defmodule Renewex.Hierarchy do
   def interfaces_of(_grammar, nil), do: []
 
   def interfaces_of(grammar, name) do
-    Enum.concat(
-      grammar.hierarchy[name].interfaces,
-      interfaces_of(grammar, get_super(grammar, name))
-    )
+    if Map.has_key?(grammar.hierarchy, name) do
+      Enum.concat(
+        grammar.hierarchy[name].interfaces,
+        interfaces_of(grammar, get_super(grammar, name))
+      )
+    else
+      raise "Uknown grammar rular '#{name}'"
+    end
   end
 end

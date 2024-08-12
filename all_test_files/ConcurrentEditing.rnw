@@ -1,0 +1,112 @@
+5 
+    de.renew.gui.CPNDrawing 39 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 72 76 72 48 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 38 76 "UniAccount\nlogin: String" "Dialog" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 35 16 "Account\nname: String" "Dialog" 0 12 0 NULL NULL   0  REF 4
+        de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 35 125 75 36 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 109 143 141 143 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 141 135 24 16 NULL    REF 12 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 158 135 179 107 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 174 89 20 20 NULL    REF 17 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 159 151 179 176 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 174 173 20 20 NULL    REF 22 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 194 183 220 183 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 22  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 220 175 24 16 NULL    REF 27 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 194 99 220 99 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 220 91 24 16 NULL    REF 32 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 244 99 299 99 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 298 89 20 20 NULL    REF 37 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 244 183 299 183 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 298 173 20 20 NULL    REF 42 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 315 176 336 151 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 331 135 24 16 NULL    REF 47 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 314 107 336 135 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37  
+            CH.ifa.draw.standard.ChopBoxConnector REF 47   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 355 143 444 143 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 47  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 443 133 20 20 NULL    REF 56 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "MarkingAppearance" "Int" 2 "FontName" "String" "Dialog" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "FALSE" 277 52 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "MarkingAppearance" "Int" 2 "FontName" "String" "Dialog" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "FALSE" 299 201 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "MarkingAppearance" "Int" 2 "FontName" "String" "Dialog" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "FALSE" 62 133 20 20 NULL  REF 6 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 359 135 "(x+y)@login" "Dialog" 0 12 0 REF 52 
+            CH.ifa.draw.standard.OffsetLocator -5 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 118 134 "x" "Dialog" 0 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator -4 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 159 110 "x" "Dialog" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator -6 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 156 156 "x" "Dialog" 0 12 0 
+            de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 158 135 179 107 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+                CH.ifa.draw.standard.ChopBoxConnector 
+                    de.renew.gui.TransitionFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 141 135 24 16 NULL   
+                CH.ifa.draw.figures.ChopEllipseConnector 
+                    de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 174 89 20 20 NULL    
+            CH.ifa.draw.standard.OffsetLocator -9 43 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 202 174 "x" "Dialog" 0 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator -2 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 203 90 "x" "Dialog" 0 12 0 REF 28 
+            CH.ifa.draw.standard.OffsetLocator -1 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 329 104 "x" "Dialog" 0 12 0 REF 48 
+            CH.ifa.draw.standard.OffsetLocator 7 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 327 163 "y" "Dialog" 0 12 0 REF 43 
+            CH.ifa.draw.standard.OffsetLocator 5 8 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 41 133 "[Account]" "Dialog" 0 12 0 REF 59 
+            CH.ifa.draw.standard.OffsetLocator -3 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 235 53 "x+" "Dialog" 0 12 0 REF 33 
+            CH.ifa.draw.standard.OffsetLocator -30 -38 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 250 33 "[UniAccount\n name: #1\n login: #1]" "Dialog" 0 12 0 REF 57 
+            CH.ifa.draw.standard.OffsetLocator -1 -5 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 237 202 "x+" "Dialog" 0 12 0 
+            de.renew.gui.ArcConnection "attributes" "attributes" 1 "FontName" "String" "Dialog" 2 194 183 239 183 NULL 
+                CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+                CH.ifa.draw.figures.ChopEllipseConnector 
+                    de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 174 173 20 20 NULL   
+                CH.ifa.draw.standard.ChopBoxConnector 
+                    de.renew.gui.TransitionFigure "attributes" "attributes" 2 "FontName" "String" "Dialog" "FillColor" "Color" 255 255 255 239 175 24 16 NULL    
+            CH.ifa.draw.standard.OffsetLocator 27 27 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 252 196 "[Account\n name: (\"wienberg\")]" "Dialog" 0 12 0 REF 58 
+            CH.ifa.draw.standard.OffsetLocator 3 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  85 134 510 297 

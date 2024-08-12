@@ -1,0 +1,30 @@
+11 
+    de.renew.gui.CPNDrawing 13 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8820 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 203 362 "dwf-action-workitem\n\nwork-item:dwf-action-content\nexpected-result-content-type:String" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8824 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 376 436 "dwf-action-content\n\nrole:String" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 255 "FigureWithID" "Int" 8825 2 443 527 443 470 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8829 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 367 527 "simple-string-content\n\ncontent:String" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  1  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8827 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 687 362 "dwf-action-result\n\nwork-item:dwf-action-content\nresult:dwf-action-content" "SansSerif" 0 12 0 NULL NULL  REF 6
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 204 204 204 255 "FigureWithID" "Int" 8814 402 195 84 48 8 8  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8815 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 415 211 "concept" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 8830 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 255 22 27 "package de.renew.sonarnetprototype.ontology;" "SansSerif" 0 12 0 NULL NULL 1  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8826 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 255 255 255 461 362 "dwf-action-workitem-set\n\nwork-items:dwf-action-workitem*" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 8831 "FillColor" "Color" 255 255 255 255 4 315 362 315 294 443 294 443 227 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 8832 "FillColor" "Color" 255 255 255 255 4 561 362 561 294 443 294 443 227 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 8833 "FillColor" "Color" 255 255 255 255 4 777 362 777 294 443 294 443 227 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 8834 "FillColor" "Color" 255 255 255 255 2 443 436 443 227 NULL
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  1  NULL  251 67 1266 845 

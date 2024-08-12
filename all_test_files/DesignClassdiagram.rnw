@@ -1,0 +1,59 @@
+7 
+    de.renew.gui.CPNDrawing 22 
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 29 2 324 282 395 341 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 28 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 32 14 "«implementationClass»\nFeatureStructure\n\n+ getJavaObject(): Object\n+ subsumes(FeatureStructure): boolean\n+ subsumedBy(FeatureStructure): boolean\n+ unify(FeatureStructure): FeatureStructure\n+ unify(FeatureStructure, Path): FeatureStructure\n+ equate(Path, Path): FeatureStructure\n+ canUnify(FeatureStructure): boolean\n+ featureNames(): Name[*]\n+ hasFeature(Name): boolean\n+ at(Path): FeatureStructure\n+ unpackingAt(Path): Object\n+ canInstantiate(): boolean\n+ instantiate(): FeatureStructure\n+ change(Name, FeatureStructure): FeatureStructure\n+ getNodes(): Node[*]\n+ onePathTo(Node): Path\n+ reduce()" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 27 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 400 307 "«interface»\nType\n\n_+ TOP: ConjunctiveType {frozen}\n_+ ANY: ConjunctiveType {frozen}\n_+ NONE: ConjunctiveType {frozen}\n\ngetName(): String\ngetFullName(): String\nisExtensional(): boolean\nisInstanceType(): boolean\ngetInstanceType(): Type\nisApprop(Name): boolean\nappropType(Name): Type\nappropFeatureNames(): Name[*]\nsubsumes(Type): boolean\nunify(Type): Type\ncanUnify(Type): boolean\nmostGeneralExtensionalSupertype(Type): Type\nnewNode(): Node\nequals(Object): boolean" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 31 2 258 453 395 453 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 30 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 97 391 "«interface»\nNode\n\nfeatureNames(): Name[*]\nhasFeature(Name): boolean\ndelta(Name): Node\ndelta(Path): Node\nsetFeature(Name, Node)\nduplicate(): Node" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 32 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 315 446 "type" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 33 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 347 304 "/type" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 34 2 175 303 175 391 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 35 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 165 340 "root" "Helvetica" 0 12 0 REF 18 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 38 2 435 832 360 832 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 41 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 440 747 "«implementationClass»\nConceptSet\n\n/empty: boolean\n/size: int\n\naddConcept(Concept)\nunite(ConceptSet)\njoinConcept(Concept)\njoin()\njoinConcepts(ConceptEnumeration)\nmeetConcept(Concept)\nmeet()" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 26 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 31 733 "«interface»\nConcept\n\ngetName(): String\ngetNamespace(): String\ngetFullName(): String\nisExtensional(): boolean\nisApprop(Name): boolean\nappropParsedType(Name): ParsedType\nappropType(Name): Type\nappropFeatureNames(): collections.CollectionEnumeration\nisa(Concept): boolean\nisNotA(Concept): boolean\nextensionalSuperconcepts(): ConceptEnumeration" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 40 "LineStyle" "Int" 10 "FillColor" "Color" 255 255 255 2 533 625 533 599 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 37 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 400 625 "«implementationClass»\nConjunctiveType\n\n_+ getType(collections.Set): Type\n_+ getType(String): Type\n+ addConcept(Concept)\n# getOnlyInstantiableJavaConcept(): JavaConcept" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  0  
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 42 2 536 719 536 747 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 34  
+            CH.ifa.draw.standard.ChopBoxConnector REF 28   REF 34 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 43 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 511 723 "concepts" "Helvetica" 0 12 0 REF 36 
+            CH.ifa.draw.standard.OffsetLocator 0 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 28 REF 30 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 39 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 378 815 "concepts" "Helvetica" 0 12 0 REF 25 
+            CH.ifa.draw.standard.OffsetLocator 6 -10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 44 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 364 815 "*" "Helvetica" 0 12 0 REF 25 
+            CH.ifa.draw.standard.OffsetLocator -31 -10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 2 "FigureWithID" "Int" 45 "LineStyle" "Int" 10 3 395 573 394 574 258 498 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 46 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 292 527 "«instantiate»" "Helvetica" 0 12 0 REF 49 
+            CH.ifa.draw.standard.OffsetLocator 1 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 36 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 403 14 "«implementationClass»\nPath\n\n_+ EPSILON: Path {frozen}\n\n_+ nth(int): Path\n+ features(): Name[*]\n+ length(): int\n+ isEmpty(): boolean\n+ at(int): Name\n+ append(Name): Path\n+ append(String): Path\n+ prepend(Name): Path\n+ prepend(String): Path\n+ butLast(): Path\n+ last(): Name\n+ butFirst(): Path\n+ first(): Name\n+ toString(): String" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 47 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 564 14 "«implementationClass»\nName\n\n_+ EMPTY: Name {frozen}\n+ name: String" "Helvetica" 0 12 0 NULL NULL  REF 10 REF 6 REF 4 NULL  2 73 821 667

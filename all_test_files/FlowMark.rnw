@@ -1,0 +1,119 @@
+7 
+    de.renew.gui.CPNDrawing 30 
+        CH.ifa.draw.figures.GroupFigure 7 
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 21 "FillColor" "Color" 64 64 64 230 342 9 43  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 22 "FillColor" "Color" 64 64 64 211 359 46 9  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 23 "FillColor" "Color" 64 64 64 4 252 376 246 382 216 350 222 344  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 24 "FillColor" "Color" 64 64 64 4 248 345 254 351 221 383 215 377  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 25 "FillColor" "Color" 192 192 192 217 348 34 31  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 26 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 4 241 351 246 354 227 376 223 372  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 27 "FillColor" "Color" 64 64 64 230 359 9 9   
+        CH.ifa.draw.figures.GroupFigure 7 
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 2 "FillColor" "Color" 64 64 64 49 185 9 43  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 3 "FillColor" "Color" 64 64 64 30 202 46 9  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 5 "FillColor" "Color" 64 64 64 4 71 219 65 225 35 193 41 187  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 6 "FillColor" "Color" 64 64 64 4 67 188 73 194 40 226 34 220  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 1 "FillColor" "Color" 192 192 192 36 191 34 31  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 4 60 194 65 197 46 219 42 215  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 7 "FillColor" "Color" 64 64 64 49 202 9 9   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 29 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 27 182 52 49  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 30 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 208 339 52 49  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 31 3 53 230 53 363 209 363 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 32 "LineStyle" "Int" 10 3 59 229 83 335 209 359 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 28 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 14 232 "Kreditantrag" "Helvetica" 0 14 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator 0 34 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 33 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 53 364 "Kreditart=\"privat\"" "Helvetica" 0 14 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator -25 76 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.GroupFigure 7 
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 34 "FillColor" "Color" 64 64 64 230 16 9 43  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 35 "FillColor" "Color" 64 64 64 211 33 46 9  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 36 "FillColor" "Color" 64 64 64 4 252 50 246 56 216 24 222 18  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 37 "FillColor" "Color" 64 64 64 4 248 19 254 25 221 57 215 51  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 38 "FillColor" "Color" 192 192 192 217 22 34 31  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 39 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 4 241 25 246 28 227 50 223 46  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 40 "FillColor" "Color" 64 64 64 230 33 9 9   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 49 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 208 13 52 49  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 50 3 53 183 53 37 209 37 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 41   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 51 "LineStyle" "Int" 10 3 57 183 74 61 209 41 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 41   
+        CH.ifa.draw.figures.GroupFigure 7 
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 64 "FillColor" "Color" 64 64 64 230 127 9 43  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 65 "FillColor" "Color" 64 64 64 211 144 46 9  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 66 "FillColor" "Color" 64 64 64 4 252 161 246 167 216 135 222 129  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 67 "FillColor" "Color" 64 64 64 4 248 130 254 136 221 168 215 162  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 68 "FillColor" "Color" 192 192 192 217 133 34 31  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 69 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 4 241 136 246 139 227 161 223 157  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 70 "FillColor" "Color" 64 64 64 230 144 9 9   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 71 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 208 124 52 49  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 72 3 70 189 108 148 209 148 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 58   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 73 "LineStyle" "Int" 10 3 76 197 129 172 210 154 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 58   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 74 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 164 171 "Liegenschaft schätzen" "Helvetica" 0 14 0 REF 58 
+            CH.ifa.draw.standard.OffsetLocator 0 31 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 75 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 73 129 "Kreditart=\"hypothek\"" "Helvetica" 0 14 0 REF 59 
+            CH.ifa.draw.standard.OffsetLocator -1 -31 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.GroupFigure 7 
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 78 "FillColor" "Color" 64 64 64 413 164 9 43  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 79 "FillColor" "Color" 64 64 64 394 181 46 9  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 80 "FillColor" "Color" 64 64 64 4 435 198 429 204 399 172 405 166  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 2 "FigureWithID" "Int" 81 "FillColor" "Color" 64 64 64 4 431 167 437 173 404 205 398 199  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 82 "FillColor" "Color" 192 192 192 400 170 34 31  
+            CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 83 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 4 424 173 429 176 410 198 406 194  
+            CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 84 "FillColor" "Color" 64 64 64 413 181 9 9   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 85 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 391 161 52 49  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 86 3 260 148 326 148 394 176 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 58  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 81   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 87 "LineStyle" "Int" 10 3 259 154 318 169 392 182 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 58  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 81   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 90 "LineStyle" "Int" 10 3 260 41 382 60 411 163 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 41  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 81   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 91 "LineStyle" "Int" 10 3 260 360 390 337 414 209 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 81   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 92 3 260 363 417 363 417 209 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 81   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 93 3 260 37 417 37 417 162 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 41  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 81   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 88 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 366 219 "Kredit gewähren" "Helvetica" 0 14 0 REF 81 
+            CH.ifa.draw.standard.OffsetLocator 0 42 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 54 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 147 60 "Grundbuchauszug einholen" "Helvetica" 0 14 0 REF 41 
+            CH.ifa.draw.standard.OffsetLocator 0 31 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 55 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 152 387 "Lohnbestätigung einholen" "Helvetica" 0 14 0 REF 18 
+            CH.ifa.draw.standard.OffsetLocator 0 32 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 53 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 53 19 "Kreditart=\"hypothek\"" "Helvetica" 0 14 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator -13 -83 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  0 125 521 482 

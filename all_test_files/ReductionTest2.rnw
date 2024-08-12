@@ -1,0 +1,7 @@
+6 
+    de.renew.gui.CPNDrawing 3 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 66 46 245 170 NULL  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 132 92 "[Test a:[Test a:[Test a:[Test,Any]]]]" "Helvetica" 0 12 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 3 310 16 "Test\na: Test" "Helvetica" 0 12 0 NULL NULL  NULL  0 95 512 302

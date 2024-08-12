@@ -1,0 +1,4 @@
+7 
+    de.renew.gui.CPNDrawing 2 
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 15 40 "[Proc\n m: [\n p1: <[] [B]>\n p2: [E]\n p3: [E]\n p4: [E]\n p5: [E]]\n]" "Helvetica" 0 12 0 NULL NULL 1 11 "m:p1:tl:tl" "m:p1:tl:hd" "m:p1:hd" "m:p2" "m" "m:p1:tl" "m:p3" "m:p4" "m:p1" "m:p5" ""
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "Visibility" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 2 15 11 "access _ProcessConceptSystem;" "Helvetica" 0 12 0 NULL NULL 1  NULL  144 98 260 223 

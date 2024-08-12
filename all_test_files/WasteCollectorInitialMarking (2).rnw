@@ -1,0 +1,37 @@
+6 
+    de.renew.gui.CPNDrawing 13 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 25 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 "Visibility" "Boolean" "FALSE" 18 9 393 179 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 48 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 "Visibility" "Boolean" "FALSE" 18 197 562 476 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 211 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 152 "Initial Plans:" "Helvetica" 1 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator -245 -276 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 74 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 87 "[Located what:[robot] at:[a]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -163 11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 70 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 37 "[Adjacent left:[a] right:[b]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -172 -39 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 212 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 12 "Initial Beliefs:" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -157 -79 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 72 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 86 87 "[Located what:[bin] at:[b]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -102 11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 75 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 237 398 "[Plan\n trigger:[NewGoal\n            belief:#5[Located\n                    what:[robot]\n                    at:#2]\n            intention: #3]\n context:<[Located \n           what:[robot]\n           at:#4]\n          [Direction left:#4 right:#2]>\n intention:<[MoveRight]\n            [NewGoal\n            belief:#5] | #3>]" "Helvetica" 0 9 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator 30 51 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 67 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 398 "[Plan\n trigger:[NewGoal\n            belief:#5[Located\n                    what:[robot]\n                    at:#2]\n            intention: #3]\n context:<[Located\n           what:[robot]\n           at:#4]\n           [Direction left:#2 right:#4]>\n intention:<[MoveLeft]\n            [NewGoal\n            belief:#5] | #3>]" "Helvetica" 0 9 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator -191 51 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 69 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 68 37 "[Adjacent left:[b] right:[c]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -124 -39 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 68 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 143 37 "[Rule\n goal:[Direction left:#1 right:#2]\n subgoals:\n  <[Adjacent left:#1 right:#3]\n   [Adjacent left:#3 right:#2]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 8 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 213 310 37 "[Rule\n goal:[Direction left:#1 right:#2]\n subgoals:\n  <[Adjacent left:#1 right:#2]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 151 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 66 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 20 177 "[Plan\n trigger:[NewBelief\n          belief:#5[Located\n                       what:#4[Waste]\n                       at:#1[Lane]]\n          intention: #3]\n context:<[Located\n           what:[bin]\n           at:#2]>\n intention:\n        <[Assert\n           belief: #5]\n          [Lock]\n          [NewGoal\n            belief:[Located\n                    what:[robot]\n                    at:#1]]\n           [Pick what:#4]\n           [Unlock]\n           [Lock]\n           [NewGoal\n           belief:[Located\n                    what:[robot]\n                    at:#2]]\n           [Drop what:#4]\n           [Unlock]\n           | #3>]" "Helvetica" 0 9 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator -3 -153 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  0 97 617 635 

@@ -1,0 +1,237 @@
+11 
+    de.renew.gui.CPNDrawing 111 
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 254 "FillColor" "Color" 255 255 255 255 315 304 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 255 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 338 281 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 256 "FillColor" "Color" 255 255 255 255 364 238 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 257 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 327 223 22 21  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 258 "FillColor" "Color" 255 255 255 255 361 304 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 259 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 338 254 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 260 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 312 237 0 0  
+        de.renew.netcomponents.NetComponentFigure "attributes" "attributes" 5 "LineStyle" "String" "1 2" "FigureWithID" "Int" 261 "FrameColor" "Color" 255 199 158 255 "figureType" "String" "ActorFigure" "FillColor" "Color" 255 199 158 255 13 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 262 2 338 281 361 304 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 2  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 5   REF 1 REF 2 REF 3 REF 4 REF 5 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 263 2 338 281 315 304 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 2  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 264 2 338 243 338 254 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 4  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 6   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 265 2 338 254 338 281 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 6  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 2   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 266 2 338 254 364 238 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 6  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 3   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 267 2 312 237 338 254 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 6   REF 6 REF 7  REF 9 REF 12 REF 15 REF 18 REF 21 REF 24 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 283 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 318 307 "Client" "SansSerif" 0 14 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator -1 82 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 284 "FillColor" "Color" 255 255 255 255 1064 670 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 285 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 1087 647 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 286 "FillColor" "Color" 255 255 255 255 1113 604 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 287 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 1076 589 22 21  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 288 "FillColor" "Color" 255 255 255 255 1110 670 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 289 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 1087 620 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 290 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 1061 603 0 0  
+        de.renew.netcomponents.NetComponentFigure "attributes" "attributes" 5 "LineStyle" "String" "1 2" "FigureWithID" "Int" 291 "FrameColor" "Color" 255 199 158 255 "figureType" "String" "ActorFigure" "FillColor" "Color" 255 199 158 255 13 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 292 2 1087 647 1110 670 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 31  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 34   REF 30 REF 31 REF 32 REF 33 REF 34 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 293 2 1087 647 1064 670 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 31  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 30   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 294 2 1087 609 1087 620 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 33  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 35   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 295 2 1087 620 1087 647 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 35  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 31   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 296 2 1087 620 1113 604 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 35  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 32   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 297 2 1061 603 1087 620 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 36  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 35   REF 35 REF 36  REF 38 REF 41 REF 44 REF 47 REF 50 REF 53 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 298 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 1023 673 "Directory Manager" "SansSerif" 0 14 0 REF 33 
+            CH.ifa.draw.standard.OffsetLocator -1 82 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 299 "FillColor" "Color" 255 255 255 255 918 278 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 300 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 941 255 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 301 "FillColor" "Color" 255 255 255 255 967 212 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 302 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 930 197 22 21  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 303 "FillColor" "Color" 255 255 255 255 964 278 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 304 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 941 228 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 305 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 915 211 0 0  
+        de.renew.netcomponents.NetComponentFigure "attributes" "attributes" 5 "LineStyle" "String" "1 2" "FigureWithID" "Int" 306 "FrameColor" "Color" 255 199 158 255 "figureType" "String" "ActorFigure" "FillColor" "Color" 255 199 158 255 13 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 307 2 941 255 964 278 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 60  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 63   REF 59 REF 60 REF 61 REF 62 REF 63 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 308 2 941 255 918 278 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 60  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 59   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 309 2 941 217 941 228 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 62  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 64   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 310 2 941 228 941 255 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 64  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 60   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 311 2 941 228 967 212 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 64  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 61   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 312 2 915 211 941 228 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 65  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 64   REF 64 REF 65  REF 67 REF 70 REF 73 REF 76 REF 79 REF 82 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 313 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 889 281 "Policy Manager" "SansSerif" 0 14 0 REF 62 
+            CH.ifa.draw.standard.OffsetLocator -1 82 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 590 108 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 633 125 "Login/Logout" "SansSerif" 0 12 0 REF 88 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 314 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 631 689 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 315 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 654 706 "provide Information" "SansSerif" 0 12 0 REF 92 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 316 2 364 253 625 151 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 88   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 317 2 722 151 915 227 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 88  
+            CH.ifa.draw.standard.ChopBoxConnector REF 66   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 318 2 364 294 696 691 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 92   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 320 2 779 699 1061 635 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 92  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 321 "FillColor" "Color" 255 255 255 255 920 415 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 322 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 943 392 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 323 "FillColor" "Color" 255 255 255 255 969 349 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 324 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 932 334 22 21  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 325 "FillColor" "Color" 255 255 255 255 966 415 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 326 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 943 365 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 327 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 917 348 0 0  
+        de.renew.netcomponents.NetComponentFigure "attributes" "attributes" 5 "LineStyle" "String" "1 2" "FigureWithID" "Int" 328 "FrameColor" "Color" 255 199 158 255 "figureType" "String" "ActorFigure" "FillColor" "Color" 255 199 158 255 13 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 329 2 943 392 966 415 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 109  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 112   REF 108 REF 109 REF 110 REF 111 REF 112 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 330 2 943 392 920 415 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 109  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 108   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 331 2 943 354 943 365 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 111  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 113   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 332 2 943 365 943 392 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 113  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 109   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 333 2 943 365 969 349 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 113  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 110   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 334 2 917 348 943 365 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 114  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 113   REF 113 REF 114  REF 116 REF 119 REF 122 REF 125 REF 128 REF 131 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 335 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 903 418 "Data server" "SansSerif" 0 14 0 REF 111 
+            CH.ifa.draw.standard.OffsetLocator -1 82 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 336 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 590 188 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 337 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 632 205 "register User" "SansSerif" 0 12 0 REF 137 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 338 2 364 259 601 223 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 137   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 339 2 752 219 915 235 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 137  
+            CH.ifa.draw.standard.ChopBoxConnector REF 66   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 340 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 596 261 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 341 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 632 278 "delete Account" "SansSerif" 0 12 0 REF 147 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 342 2 364 265 599 281 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 147   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 343 2 749 273 915 242 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 147  
+            CH.ifa.draw.standard.ChopBoxConnector REF 66   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 344 "FillColor" "Color" 255 255 255 255 948 880 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 345 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 971 857 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 346 "FillColor" "Color" 255 255 255 255 997 814 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 347 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 960 799 22 21  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 2 "FigureWithID" "Int" 348 "FillColor" "Color" 255 255 255 255 994 880 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 349 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 971 830 0 0  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 350 "ArrowMode" "Int" 0 "FillColor" "Color" 255 255 255 255 945 813 0 0  
+        de.renew.netcomponents.NetComponentFigure "attributes" "attributes" 5 "LineStyle" "String" "1 2" "FigureWithID" "Int" 351 "FrameColor" "Color" 255 199 158 255 "figureType" "String" "ActorFigure" "FillColor" "Color" 255 199 158 255 13 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 352 2 971 857 994 880 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 158  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 161   REF 157 REF 158 REF 159 REF 160 REF 161 
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 353 2 971 857 948 880 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 158  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 157   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 354 2 971 819 971 830 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 160  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 162   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 355 2 971 830 971 857 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 162  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 158   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 356 2 971 830 997 814 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 162  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 159   
+            CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 357 2 945 813 971 830 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+                CH.ifa.draw.figures.ChopEllipseConnector REF 163  
+                CH.ifa.draw.figures.ChopEllipseConnector REF 162   REF 162 REF 163  REF 165 REF 168 REF 171 REF 174 REF 177 REF 180 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 358 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 958 883 "GUI" "SansSerif" 0 14 0 REF 160 
+            CH.ifa.draw.standard.OffsetLocator -1 82 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 359 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 1003 741 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 360 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 1026 758 "Update Information" "SansSerif" 0 12 0 REF 186 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 361 2 997 822 1053 787 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 164  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 186   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 362 2 1086 742 1086 670 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 186  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 363 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 601 350 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 364 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 656 367 "put Files " "SansSerif" 0 12 0 REF 196 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 365 2 364 271 629 357 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 196   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 366 2 767 374 917 374 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 196  
+            CH.ifa.draw.standard.ChopBoxConnector REF 115   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 367 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 607 434 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 368 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 664 451 "get Files" "SansSerif" 0 12 0 REF 206 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 369 2 364 277 653 438 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 206   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 370 2 745 441 917 383 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 206  
+            CH.ifa.draw.standard.ChopBoxConnector REF 115   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 371 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 607 542 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 372 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 639 559 "request Storage" "SansSerif" 0 12 0 REF 216 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 373 2 364 285 665 544 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 216   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 374 2 763 578 1061 625 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 216  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 3 "FigureWithID" "Int" 375 "figureType" "String" "UsecaseFigure" "FillColor" "Color" 255 255 255 255 1000 470 166 48  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 376 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 1027 487 "register Capability" "SansSerif" 0 12 0 REF 226 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 377 2 969 396 1057 472 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 115  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 226   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 378 2 1084 518 1085 589 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 226  
+            CH.ifa.draw.standard.ChopBoxConnector REF 37   NULL  0 24 1366 720 

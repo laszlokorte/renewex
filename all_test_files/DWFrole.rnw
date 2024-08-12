@@ -1,0 +1,6 @@
+11 
+    de.renew.gui.CPNDrawing 2 
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "LineStyle" "String" "10" "FigureWithID" "Int" 4578 2 30 28 30 573 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 4632 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 255 199 158 255 -3 -1 "roleName" "SansSerif" 0 15 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -2 -291 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  0 161 578 600 

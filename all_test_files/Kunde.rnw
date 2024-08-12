@@ -1,0 +1,69 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 25 
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 259 153 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 291 143 ":new()" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 33 -11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 291 157 "konto: new Konto" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 67 3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "attributes" "attributes" 1 "TraceMode" "Boolean" "FALSE" 215 240 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 266 169 230 242 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 8   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 214 196 "konto" "Helvetica" 0 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator -19 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 259 311 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 231 258 265 311 NULL NULL 0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 8  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 212 273 "konto" "Helvetica" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator -21 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 284 312 "konto:einzahlen(100,m)" "Helvetica" 0 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 77 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "attributes" "attributes" 1 "TraceMode" "Boolean" "FALSE" 261 238 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 271 169 271 239 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 26   
+        CH.ifa.draw.cpn.ArcConnection 2 271 258 271 311 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 26  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        CH.ifa.draw.cpn.PlaceFigure "attributes" "attributes" 1 "TraceMode" "Boolean" "FALSE" 261 359 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 271 327 271 360 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 16  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 35   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 278 334 "m" "Helvetica" 0 12 0 REF 36 
+            CH.ifa.draw.standard.OffsetLocator 12 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 259 410 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 271 379 271 410 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 35  
+            CH.ifa.draw.standard.ChopBoxConnector REF 43   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 290 411 "m:done()" "Helvetica" 0 12 0 REF 43 
+            CH.ifa.draw.standard.OffsetLocator 43 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "attributes" "attributes" 1 "TraceMode" "Boolean" "FALSE" 261 461 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 271 426 271 462 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 43  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 51   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 285 462 "Fertig" "Helvetica" 1 12 0 REF 51 
+            CH.ifa.draw.standard.OffsetLocator 30 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 284 173 "konto: new(10)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 50 19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 175 241 "Konto" "Helvetica" 1 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator -33 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 3 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 278 384 "m" "Helvetica" 0 12 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator 12 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

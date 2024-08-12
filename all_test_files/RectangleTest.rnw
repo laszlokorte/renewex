@@ -1,0 +1,6 @@
+7 
+    de.renew.gui.CPNDrawing 2 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 1 51 31 114 106 NULL  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 102 75 "#1(new java.awt.Rectangle())" "Helvetica" 0 12 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 0  NULL  0 95 318 254 

@@ -1,0 +1,20 @@
+7 
+    de.renew.gui.CPNDrawing 7 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 92 55 "Window\ntoolkit: Toolkit {readOnly}\nshowing: boolean {readOnly}\nlocale: Locale {readOnly}\nwarningString: String {readOnly}\nfocusOwner: Component {readOnly}\n\naddNotify()\npack()\nshow()\ndispose()\ntoFront()\ntoBack()\nsetCursor(Cursor)\naddWindowListener(WindowListener)\nremoveWindowListener(WindowListener)\npostEvent(Event):boolean\n" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FigureWithID" "Int" 3 "FillColor" "Color" 255 255 255 2 205 353 205 295 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 134 353 "Frame\ntitle: String\niconImage: Image\nmenuBar: MenuBar\nresizable: boolean\ncursorType: int {readOnly}\n\naddNotify()\nremove(MenuComponent)\ndispose()\nsetCursor(int)\n" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  0  REF 5 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 5 "LineStyle" "Int" 10 "FillColor" "Color" 255 255 255 2 283 360 423 237 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector REF 5  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 4 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 386 177 "java.awt.MenuContainer\nfont: Font\n\nremove(MenuComponent)\npostEvent(Event):boolean\n" "Helvetica" 0 12 0 NULL NULL   0  REF 11
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 2 "FigureWithID" "Int" 6 "LineStyle" "Int" 10 2 381 197 324 189 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.standard.ChopBoxConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 7 328 291 "«realize»" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  0 97 573 560 

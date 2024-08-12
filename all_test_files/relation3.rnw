@@ -1,0 +1,74 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 27 
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 200 166 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 197 147 ":new()" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -1 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 202 507 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 433 237 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 464 238 ":father(X,Y)" "Helvetica" 0 12 0 REF 6 
+            CH.ifa.draw.standard.OffsetLocator 51 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 434 381 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 466 384 ":grandfather(X,Z)" "Helvetica" 0 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 68 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 470 403 "this:father(X,Y)" "Helvetica" 0 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 66 21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 470 421 "this:father(Y,Z)" "Helvetica" 0 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 66 39 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 435 312 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 445 253 445 313 NULL NULL 0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 20   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 448 274 "[X,Y]" "Helvetica" 0 12 0 REF 21 
+            CH.ifa.draw.standard.OffsetLocator 17 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 200 402 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 202 291 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 212 182 212 292 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 28   
+        CH.ifa.draw.cpn.ArcConnection 2 212 311 212 402 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 28  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27   
+        CH.ifa.draw.cpn.ArcConnection 3 224 178 348 221 439 316 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 20   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 296 175 "[\"John\",\"James\"]" "Helvetica" 0 12 0 REF 37 
+            CH.ifa.draw.standard.OffsetLocator 12 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.ArcConnection 3 220 182 307 265 437 319 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 20   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 285 292 "[\"Jack\",\"John\"]" "Helvetica" 0 12 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator -1 49 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 157 293 "trigger" "Helvetica" 1 12 0 REF 28 
+            CH.ifa.draw.standard.OffsetLocator -36 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 462 315 "knowledge" "Helvetica" 1 12 0 REF 20 
+            CH.ifa.draw.standard.OffsetLocator 48 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 232 504 "result" "Helvetica" 1 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 37 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.ArcConnection 2 212 418 212 508 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 5   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 228 401 "this:father(x,\"John\")" "Helvetica" 0 12 0 REF 27 
+            CH.ifa.draw.standard.OffsetLocator 71 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 227 418 "this:grandfather(x,y)" "Helvetica" 0 12 0 REF 27 
+            CH.ifa.draw.standard.OffsetLocator 71 15 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 224 456 "y" "Helvetica" 0 12 0 REF 60 
+            CH.ifa.draw.standard.OffsetLocator 15 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

@@ -1,0 +1,10 @@
+7 
+    de.renew.gui.CPNDrawing 8 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 25 25 15 "_wasteGUI:Frame\n\nvisible=true\ntitle=\"Waste Creation\"                    \n \n \n \n \n \n \n \n \n   \n \n \n \n  \n \n \n " "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 28 36 140 "_component[1]:Panel\n\n                                               \n \n \n \n \n \n \n " "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 27 36 103 "_component[0]:Choice\n\nitems=<\"Dirt\" \"Can\" \"Paper\">" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 31 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 46 240 "_component[2]:Button\n\nlabel=\"C\"" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 30 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 46 201 "_component[1]:Button\n\nlabel=\"B\"" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 32 36 283 "_layout:BorderLayout" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 26 36 66 "_background:Color\n\nRGB=808080" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 29 46 162 "_component[0]:Button\n\nlabel=\"A\"" "Helvetica" 0 12 0 NULL NULL  NULL  -2 153 272 376

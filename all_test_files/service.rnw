@@ -1,0 +1,32 @@
+10 
+    de.renew.sdnet.gui.SDNDrawing 12 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 1 29 66 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 2 3 49 76 84 76 84 110 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 3 72 110 24 16 NULL    REF 6 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 4 3 83 126 83 158 49 158 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 5 29 148 20 20 NULL    REF 11 
+        de.renew.sdnet.gui.figure.SDNPlaceTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 7 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 25 170 "typing: <top>" "Arial" 1 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 2 19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   4  
+        de.renew.sdnet.gui.figure.SDNPlaceTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 6 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 15 49 "typing: <bottom>" "Arial" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 3 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   4  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 8 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 15 12 "var <bottom> v1;" "SansSerif" 0 12 0 NULL NULL 1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 9 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 78 70 "v1" "SansSerif" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 18 -15 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 10 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 77 150 "v1" "SansSerif" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 17 16 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.sdnet.gui.figure.SDNPlaceTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 11 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 31 85 "fusion: :in" "Arial" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -2 16 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   5  
+        de.renew.sdnet.gui.figure.SDNPlaceTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 12 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 28 134 "fusion: :out" "Arial" 1 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator -1 -17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   5  NULL  0 166 562 768 

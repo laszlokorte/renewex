@@ -1,0 +1,13 @@
+10 
+    de.renew.gui.CPNDrawing 5 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 2 90 68 20 20 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 3 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 95 87 "n" "SansSerif" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -1 16 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 5 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 93 100 "i_n" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 1 29 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 4 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 6 114 "i_n n ((n & 1) != 0): n, (n >> 1)#n" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 4 43 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 7 5 "int n = 8;\n\ntypedef int (1..n) i_n;" "SansSerif" 0 12 0 NULL NULL 1  NULL  0 141 232 176 

@@ -1,0 +1,25 @@
+6 
+    de.renew.gui.CPNDrawing 10 
+        de.renew.gui.TransitionFigure "attributes" "attributes" 6 "FigureWithID" "Int" 81 "TraceMode" "Boolean" "TRUE" "FontName" "String" "Dialog" "FrameColor" "Color" 0 0 0 "FontSize" "Int" 12 "FillColor" "Color" 192 192 192 24 49 70 20 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 123 "TraceMode" "Boolean" "TRUE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 42 52 "Callee" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 139 "TraceMode" "Boolean" "TRUE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 38 142 42 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 140 "TraceMode" "Boolean" "TRUE" 2 58 162 58 217 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 5  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 4 "FigureWithID" "Int" 141 "TraceMode" "Boolean" "TRUE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 48 216 20 20 NULL    REF 10 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 148 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 43 145 "Caller" "Helvetica" 1 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 149 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 22 182 "RESULT@v1" "Helvetica" 0 12 0 REF 6 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 147 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 100 25 "TMP0=[Any v0:[Link\n param:<>] ]+[Any v0:(v0)];\n//System.out.println(\"Callee TMP0: \"+TMP0);\n:s(v0,TMP0@v0,UL);\n//System.out.println(\"Callee UL: \"+UL);\nRESULT = TMP0.unify(UL,\"v0\")" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 159 11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 144 "TraceMode" "Boolean" "TRUE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 16 5 "access _Links;" "Helvetica" 0 12 0 NULL NULL 1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 146 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 101 120 "TMP0=\n[Any v0:[Link rcv: (this)\n param: #1<>] v1:#1[] v2:[Link\n rcv: (this)\n param: #1<>] ];\n//System.out.println(\"Caller TMP0: \"+TMP0);\nTMP0@v0@rcv: s(TMP0@v0,DL1,RESULT@v0);\nTMP1=TMP0.unify(DL1,\"v0\");\n//System.out.println(\"Caller TMP1: \"+TMP1);\nTMP1@v2@rcv: s(TMP1@v2,DL2,RESULT@v2);\nTMP2=TMP1.unify(DL2,\"v2\");\nRESULT=TMP2" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 173 58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  124 95 435 356 

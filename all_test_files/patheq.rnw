@@ -1,0 +1,36 @@
+7 
+    de.renew.gui.CPNDrawing 16 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 12 4 127 48 142 75 192 75 215 48 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 3 "FigureWithID" "Int" 25 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 104 41 "{p }" "Symbol" 0 12 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 22 "FrameColor" "Color" 0 0 0 "TextAlignment" "Int" 1 "FillColor" "Color" 255 255 255 220 33 "{p p , p  p¢}\n={p, p¢}" "Symbol" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 17 2 16 48 40 48 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "Visibility" "Boolean" "FALSE" "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 16 8 41 " " "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 3 "FigureWithID" "Int" 18 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 45 41 "{e}" "Symbol" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 20 2 65 48 99 48 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 12  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 4   
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 24 4 127 48 142 22 196 22 215 48 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 4  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 26 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 170 6 "p" "Symbol" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator 2 -22 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 10 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 166 75 "p¢" "Symbol" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 2 21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 4 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 31 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 75 31 "p" "Symbol" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator -4 -10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 53 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 172 81 "2" "Serif" 0 8 0 NULL NULL  REF 6 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 52 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 176 12 "2" "Serif" 0 8 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 54 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 231 39 "1   2      1    2" "Serif" 0 8 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 51 82 37 "1" "Serif" 0 8 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 55 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 116 46 "1" "Serif" 0 8 0 NULL NULL  REF 12 NULL  0 153 341 146 

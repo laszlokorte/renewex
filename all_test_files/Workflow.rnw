@@ -1,0 +1,175 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 66 
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 215 73 "A \"Flat\" Workflow without Resources" "Helvetica" 2 12 0 NULL NULL 0  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 107 233 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 162 235 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 230 233 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 289 235 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 361 202 20 20  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 361 265 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 418 204 24 16  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 418 267 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 477 202 20 20  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 477 265 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 515 235 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 559 233 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 557 344 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 559 456 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 491 409 24 16  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 491 458 24 16  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 491 509 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 439 407 20 20  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 439 456 20 20  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 439 507 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 383 409 24 16  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 383 458 24 16  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 383 509 24 16  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 322 455 20 20  
+        CH.ifa.draw.cpn.ArcConnection 2 127 243 162 243 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        CH.ifa.draw.cpn.ArcConnection 2 186 243 231 243 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 3  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 4   
+        CH.ifa.draw.cpn.ArcConnection 2 250 243 289 243 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 5   
+        CH.ifa.draw.cpn.ArcConnection 2 313 237 363 216 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 5  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6   
+        CH.ifa.draw.cpn.ArcConnection 2 313 248 363 272 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 5  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7   
+        CH.ifa.draw.cpn.ArcConnection 2 381 275 418 275 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 9   
+        CH.ifa.draw.cpn.ArcConnection 2 381 212 418 212 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   
+        CH.ifa.draw.cpn.ArcConnection 2 442 212 478 212 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10   
+        CH.ifa.draw.cpn.ArcConnection 2 442 275 478 275 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 9  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11   
+        CH.ifa.draw.cpn.ArcConnection 2 495 270 516 251 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector REF 12   
+        CH.ifa.draw.cpn.ArcConnection 2 495 218 516 235 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 12   
+        CH.ifa.draw.cpn.ArcConnection 2 539 243 560 243 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 13   
+        CH.ifa.draw.cpn.ArcConnection 2 569 253 569 344 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 13  
+            CH.ifa.draw.standard.ChopBoxConnector REF 14   
+        CH.ifa.draw.cpn.ArcConnection 2 569 360 569 457 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 14  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 15   
+        CH.ifa.draw.cpn.ArcConnection 2 562 461 513 425 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 15  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        CH.ifa.draw.cpn.ArcConnection 2 560 466 515 466 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 15  
+            CH.ifa.draw.standard.ChopBoxConnector REF 17   
+        CH.ifa.draw.cpn.ArcConnection 2 562 472 513 509 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 15  
+            CH.ifa.draw.standard.ChopBoxConnector REF 18   
+        CH.ifa.draw.cpn.ArcConnection 2 491 517 459 517 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 21   
+        CH.ifa.draw.cpn.ArcConnection 2 491 466 459 466 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 17  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 20   
+        CH.ifa.draw.cpn.ArcConnection 2 491 417 459 417 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 16  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 19   
+        CH.ifa.draw.cpn.ArcConnection 2 440 417 407 417 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 19  
+            CH.ifa.draw.standard.ChopBoxConnector REF 22   
+        CH.ifa.draw.cpn.ArcConnection 2 384 425 340 460 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 22  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25   
+        CH.ifa.draw.cpn.ArcConnection 2 440 466 407 466 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 20  
+            CH.ifa.draw.standard.ChopBoxConnector REF 23   
+        CH.ifa.draw.cpn.ArcConnection 2 383 465 342 465 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 23  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25   
+        CH.ifa.draw.cpn.ArcConnection 2 440 517 407 517 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 21  
+            CH.ifa.draw.standard.ChopBoxConnector REF 24   
+        CH.ifa.draw.cpn.ArcConnection 2 385 509 340 471 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 24  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 155 216 "record" "Helvetica" 1 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 286 217 "print" "Helvetica" 1 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator -2 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 414 184 "verify" "Helvetica" 1 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 404 290 "complete" "Helvetica" 1 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 0 23 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 512 217 "collect" "Helvetica" 1 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 4 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 503 344 "examine" "Helvetica" 1 12 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator -42 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 489 391 "dec1" "Helvetica" 1 12 0 REF 16 
+            CH.ifa.draw.standard.OffsetLocator 0 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 488 440 "dec2" "Helvetica" 1 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator -1 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 489 490 "dec3" "Helvetica" 1 12 0 REF 18 
+            CH.ifa.draw.standard.OffsetLocator 0 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 371 391 "summon" "Helvetica" 1 12 0 REF 22 
+            CH.ifa.draw.standard.OffsetLocator 1 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 376 441 "charge" "Helvetica" 1 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator 1 -17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 380 490 "suspend" "Helvetica" 1 12 0 REF 24 
+            CH.ifa.draw.standard.OffsetLocator 9 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 105 175 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 117 191 117 234 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 166  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 104 157 ":new()" "Helvetica" 0 12 0 REF 166 
+            CH.ifa.draw.standard.OffsetLocator 0 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

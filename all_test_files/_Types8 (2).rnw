@@ -1,0 +1,117 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 49 
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 506 432 "event\nBELIEF:belief" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 376 194 "belief" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 207 176 "object\nLOCATION: location" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 219 419 "plan\nTRIGGER: eventIntention\nCONTEXT: NEList\nINTENT: NEList" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 377 423 "eventIntention\nEVENT: event\nINTENT: NEList" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 466 486 "newBelief" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 535 486 "newGoal" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 116 177 "location" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 425 142 "pick\nOBJECT: object" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 322 141 "drop\nOBJECT: object" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 126 325 "*robot" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 194 329 "*bin" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 251 331 "*waste" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 266 331 244 284 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 13  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 228 269 "thing" "Helvetica" 0 12 0 NULL NULL 0    
+        fs.IsaConnection 2 209 329 236 284 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.standard.ChopBoxConnector REF 18   
+        fs.IsaConnection 2 147 325 170 286 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 150 271 "container" "Helvetica" 0 12 0 NULL NULL 0    
+        fs.IsaConnection 2 556 486 548 462 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        fs.IsaConnection 2 501 486 526 462 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 97 226 "*a" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 133 227 "*b" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 108 226 132 192 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 36  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   
+        fs.IsaConnection 2 138 227 137 192 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 37  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   REF 18 
+        fs.IsaConnection 2 243 269 258 206 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 364 246 "fact" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 446 214 "rule\nGOAL: fact\nSUBGOALS: NEList" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 376 246 388 209 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 50  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        fs.IsaConnection 2 441 217 411 207 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 51  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 473 280 "sameLocation\nOBJ1: object\nOBJ2: object" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 468 287 388 258 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 60  
+            CH.ifa.draw.standard.ChopBoxConnector REF 50   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 352 79 "act" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 363 141 360 94 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 65   
+        fs.IsaConnection 2 445 142 371 94 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 9  
+            CH.ifa.draw.standard.ChopBoxConnector REF 65   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 320 306 "adjacent\nLEFT: location\nRIGHT: location" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 366 306 372 261 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 74  
+            CH.ifa.draw.standard.ChopBoxConnector REF 50   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 170 226 "*c" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 169 226 143 192 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 79  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 281 382 "direction" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 532 138 "move\nFROM: location\nTO: location" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 527 144 373 90 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 85  
+            CH.ifa.draw.standard.ChopBoxConnector REF 65   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 272 264 "*nothing" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 291 264 268 206 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 90  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 437 337 "carrying\nOBJECT: object" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 463 337 381 261 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 95  
+            CH.ifa.draw.standard.ChopBoxConnector REF 50   REF 27 
+        fs.IsaConnection 2 172 271 140 192 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   
+        fs.IsaConnection 2 183 271 247 206 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        fs.IsaConnection 2 201 329 179 286 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 12  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27   
+        fs.IsaConnection 2 311 382 341 351 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 84  
+            CH.ifa.draw.standard.ChopBoxConnector REF 74    

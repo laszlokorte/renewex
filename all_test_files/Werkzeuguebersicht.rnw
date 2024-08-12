@@ -1,0 +1,160 @@
+8 
+    de.renew.gui.CPNDrawing 72 
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 433 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 10 840 525  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 434 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 15 105 95 325  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 435 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 120 105 95 325  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 436 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 225 105 95 325  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 437 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 330 105 95 325  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 438 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 354 190 "jalopy" "SansSerif" 0 18 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 0 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 439 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 435 105 95 325  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 440 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 451 190 "javadoc" "SansSerif" 0 18 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 0 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 441 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 540 105 95 325  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 442 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 645 105 95 325  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 5 "FigureWithID" "Int" 443 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "FontSize" "Int" 18 "Visibility" "Boolean" "TRUE" 120 170 630 10  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 5 "FigureWithID" "Int" 444 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 "FontSize" "Int" 18 "Visibility" "Boolean" "TRUE" 120 105 725 65  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 445 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 146 189 "javac\nrmic" "SansSerif" 0 18 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 -54 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 446 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 247 190 "javacc" "SansSerif" 0 18 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 0 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 447 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 137 280 "Code\nübersetzen" "SansSerif" 0 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 448 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 349 279 "Quellcode\neinheitlich\ngestalten" "SansSerif" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 0 37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 449 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 49 190 "cvs" "SansSerif" 0 18 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 0 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 450 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 563 189 "latex\nbibtex" "SansSerif" 0 18 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator 0 -54 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 451 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 658 279 "Plugin distri-\nbutionsfertig\nverpacken" "SansSerif" 0 12 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator 0 37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 452 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 241 280 "Parsercode\ngenerieren" "SansSerif" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 0 30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 453 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 32 280 "Quellcode-\nverwaltung" "SansSerif" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 0 30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 454 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 192 192 192 750 105 95 325  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 455 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 785 190 "ant" "SansSerif" 0 18 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator 0 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 456 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 757 280 "Aufgaben\nautomatisieren" "SansSerif" 0 12 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator 0 30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 457 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 682 190 "jar" "SansSerif" 0 18 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator 0 -65 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 458 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 264 239 "1.1" "SansSerif" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 459 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 358 239 "1.0b10" "SansSerif" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 460 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 50 239 "1.11" "SansSerif" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 461 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 159 239 "1.4" "SansSerif" 0 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 462 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 474 239 "1.4" "SansSerif" 0 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 463 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 784 239 "1.5.3" "SansSerif" 0 12 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 112 219 147 "FigureWithID" "Int" 464 20 320 85 55 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 235 199 158 "FigureWithID" "Int" 465 125 340 190 30 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 35 142 104 "FigureWithID" "Int" 466 440 390 85 30 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 235 199 158 "FigureWithID" "Int" 467 335 340 85 30 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 235 199 158 "FigureWithID" "Int" 468 545 340 85 30 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 235 199 158 "FigureWithID" "Int" 469 650 340 85 30 18 18  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 470 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 673 347 "ant dist" "SansSerif" 0 12 0 REF 77 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 471 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 554 347 "ant latexdoc" "SansSerif" 0 12 0 REF 76 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 472 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 189 347 "ant compile" "SansSerif" 0 12 0 REF 73 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 473 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 350 347 "ant format" "SansSerif" 0 12 0 REF 75 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 235 199 158 "FigureWithID" "Int" 474 280 120 185 40 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 35 142 104 "FigureWithID" "Int" 475 335 390 85 30 18 18  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 255 0 "FigureWithID" "Int" 476 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 348 397 "ant format" "SansSerif" 0 12 0 REF 91 
+            CH.ifa.draw.standard.OffsetLocator -2 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 35 142 104 "FigureWithID" "Int" 477 650 375 85 45 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 35 142 104 "FigureWithID" "Int" 478 480 120 185 40 18 18  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 255 0 "FigureWithID" "Int" 479 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 520 123 "ant -projecthelp\nant clean" "SansSerif" 0 12 0 REF 96 
+            CH.ifa.draw.standard.OffsetLocator -10 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 480 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 684 239 "1.4" "SansSerif" 0 12 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 0 0 "FigureWithID" "Int" 481 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 554 372 "Zur Zeit\nnur im\nCore-Plugin" "SansSerif" 0 12 0 REF 76 
+            CH.ifa.draw.standard.OffsetLocator 0 42 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 255 0 "FigureWithID" "Int" 483 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 659 380 "ant all\nant <Plugin>" "SansSerif" 0 12 0 REF 95 
+            CH.ifa.draw.standard.OffsetLocator 1 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 484 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 452 279 "API-Doku-\nmentation\ngenerieren" "SansSerif" 0 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 0 37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 485 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 559 280 "Handbuch\nsetzen" "SansSerif" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator 0 30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 486 "TextAlignment" "Int" 1 "FillColor" "Color" 112 219 147 410 490 185 40 18 18  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 0 0 0 "FigureWithID" "Int" 487 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 448 493 "Überall, je nach \nBedarf, einzusetzen" "SansSerif" 0 12 0 REF 115 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 488 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 321 123 "ant -projecthelp\nant clean" "SansSerif" 0 12 0 REF 90 
+            CH.ifa.draw.standard.OffsetLocator -9 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 489 "TextAlignment" "Int" 1 "FillColor" "Color" 235 199 158 20 490 185 40 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 "FigureWithID" "Int" 490 "TextAlignment" "Int" 1 "FillColor" "Color" 35 142 104 215 490 185 40 18 18  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 255 0 "FigureWithID" "Int" 491 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 238 493 "Wird im obersten Renew-\nVerzeichnis angeboten" "SansSerif" 0 12 0 REF 123 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 492 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 41 493 "Steht in jedem Plugin-\nverzeichnis zur Verfügung" "SansSerif" 0 12 0 REF 122 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 493 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 15 15 "Renew-Entwicklung:\nVerwendete Werkzeuge und Kommandos" "SansSerif" 0 32 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 0 0 "FigureWithID" "Int" 494 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 337 "*" "SansSerif" 0 28 0 REF 73 
+            CH.ifa.draw.standard.OffsetLocator 40 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 0 0 "FigureWithID" "Int" 495 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 693 369 "*" "SansSerif" 0 28 0 REF 106 
+            CH.ifa.draw.standard.OffsetLocator 5 -10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 496 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 724 517 "Ant-Standardaufgabe" "SansSerif" 0 12 0 
+            CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 0 0 "FigureWithID" "Int" 498 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 707 502 "*" "SansSerif" 0 28 0 REF 123 
+                CH.ifa.draw.standard.OffsetLocator 405 10 
+                    CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+            CH.ifa.draw.standard.OffsetLocator 70 5 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 497 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 760 15 "Stand:\n30. April 2003" "SansSerif" 0 12 0 NULL NULL  REF 138 
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 499 "FillColor" "Color" 235 199 158 20 375 85 23 18 18  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 500 "FillColor" "Color" 35 142 104 20 397 85 23 18 18  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 501 "TextColor" "Color" 255 255 0 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 31 400 "ant commit" "SansSerif" 0 12 0 REF 145 
+            CH.ifa.draw.standard.OffsetLocator -2 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 502 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 31 378 "ant commit" "SansSerif" 0 12 0 REF 144 
+            CH.ifa.draw.standard.OffsetLocator -2 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 504 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 20 460 "Farblegende:" "SansSerif" 0 18 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 255 255 0 "FigureWithID" "Int" 505 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 451 397 "ant javadoc" "SansSerif" 0 12 0 REF 74 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextColor" "Color" 0 0 0 "FigureWithID" "Int" 503 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 31 321 "cvs add\ncvs remove\ncvs update" "SansSerif" 0 12 0 REF 72 
+            CH.ifa.draw.standard.OffsetLocator 0 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  1 148 917 598 

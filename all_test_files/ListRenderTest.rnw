@@ -1,0 +1,6 @@
+7 
+    de.renew.gui.CPNDrawing 2 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 26 39 141 112 NULL  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 47 10 "[Any a:#1< <Any>[]> b:#1 c:<Any[] [x:(\"Any\") y:(\"Any\")]> d:#2<Any []> e:#2 f:#3[Any x:<[Any a:[Any]]>] g:#3]" "Helvetica" 0 12 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 0 37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 18 "a:hd" "a:tl:tl" "a:tl:hd" "c:tl:hd" "f:x:hd" "d:hd" "a:tl" "c:tl" "f:x" "d" "a" "c:tl:hd:y" "c:tl:hd:x" "f" "" "c:hd" "f:x:hd:a" "c"  NULL  0 95 365 405 

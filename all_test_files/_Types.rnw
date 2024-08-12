@@ -1,0 +1,122 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 45 
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 84 151 "Parents\nmother: Mother\nfather: Father" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 374 88 "Person\nsex: Sex\nchildren: ChildList" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 450 154 "Woman\nsex: Female" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 530 154 "Man\nsex: Male" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 467 154 445 133 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        fs.IsaConnection 2 525 155 473 133 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 319 154 "Parent\nchildren: NEChildList" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 388 154 405 133 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 13  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 294 254 "Mother" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 512 254 "Father" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 217 154 "Child\nparents: Parents" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 302 154 369 130 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 20  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        fs.IsaConnection 2 326 254 455 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        fs.IsaConnection 2 318 254 366 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        fs.IsaConnection 2 517 254 401 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 19  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        fs.IsaConnection 2 531 254 551 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 19  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 224 254 "Daughter" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 268 254 445 183 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        fs.IsaConnection 2 250 254 259 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 463 254 "Son" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 480 254 542 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 50  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 458 254 296 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 50  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 278 317 "MotherAndDaughter" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 456 317 "FatherAndSon" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 493 317 476 269 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 60  
+            CH.ifa.draw.standard.ChopBoxConnector REF 50   
+        fs.IsaConnection 2 499 317 525 269 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 60  
+            CH.ifa.draw.standard.ChopBoxConnector REF 19   
+        fs.IsaConnection 2 323 317 259 269 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 59  
+            CH.ifa.draw.standard.ChopBoxConnector REF 41   
+        fs.IsaConnection 2 331 317 315 269 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 59  
+            CH.ifa.draw.standard.ChopBoxConnector REF 18   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 352 254 "ParentAndChild" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.IsaConnection 2 384 254 283 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 77  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.IsaConnection 2 393 254 379 184 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 77  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        fs.IsaConnection 2 340 317 388 269 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 59  
+            CH.ifa.draw.standard.ChopBoxConnector REF 77   
+        fs.IsaConnection 2 483 317 407 269 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 60  
+            CH.ifa.draw.standard.ChopBoxConnector REF 77   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 134 384 "Sex" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 94 426 "Male" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 176 425 "Female" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.IsaConnection 2 114 426 137 399 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 95  
+            CH.ifa.draw.standard.ChopBoxConnector REF 94   
+        fs.IsaConnection 2 186 425 154 399 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 96  
+            CH.ifa.draw.standard.ChopBoxConnector REF 94   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 288 389 "ChildList" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 263 427 "NEChildList\nhd: Child\ntl: ChildList" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.IsaConnection 2 302 427 309 404 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 106  
+            CH.ifa.draw.standard.ChopBoxConnector REF 105   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 360 432 "EChildList" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.IsaConnection 2 374 432 325 404 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 111  
+            CH.ifa.draw.standard.ChopBoxConnector REF 105   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 0 0 0 482 371 "*Otto" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.IsaConnection 2 495 371 495 332 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 116  
+            CH.ifa.draw.standard.ChopBoxConnector REF 60    

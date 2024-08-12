@@ -1,0 +1,47 @@
+1 
+    de.renew.gui.CPNDrawing 16 
+        de.renew.gui.TransitionFigure "no_attributes" 129 54 24 16  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 18 ":new()" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -114 -37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 34 "a: new Block(\"A\")" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -82 -21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 50 "b: new Block(\"B\")" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -82 -5 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 66 "c: new Block(\"C\",a)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -76 11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 82 "t: new Table" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -97 27 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 134 "r: new Robot" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -96 79 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "no_attributes" 2 153 61 214 61 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 213 43 95 36    REF 24 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 174 65 "r" "Helvetica" 0 12 0 REF 20 
+            CH.ifa.draw.standard.OffsetLocator -7 11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 98 "t: occupyWith(b)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -86 43 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 116 "t: occupyWith(c)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -86 61 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 151 "r: introduce(a)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -92 96 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 168 "r: introduce(b)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -92 113 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 185 "r: introduce(c)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -92 130 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 10 202 "r: introduce(t)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -94 147 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

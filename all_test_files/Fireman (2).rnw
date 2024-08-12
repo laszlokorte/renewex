@@ -1,0 +1,134 @@
+8 
+    de.renew.gui.CPNDrawing 47 
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 1 154 176 24 16 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FigureWithID" "Int" 3 "TraceMode" "Boolean" "FALSE" 289 228 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 4 "FrameColor" "Color" 0 0 0 2 178 188 291 235 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 5 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 243 201 "b" "SansSerif" 0 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 12 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 6 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 187 170 "b: new Bucket" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 59 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 8 287 304 24 16 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 9 "FrameColor" "Color" 0 0 0 2 299 248 299 304 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FigureWithID" "Int" 10 "TraceMode" "Boolean" "FALSE" 289 384 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 11 "FrameColor" "Color" 0 0 0 2 299 320 299 385 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 13  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18   
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 12 347 303 24 16 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 13 "FrameColor" "Color" 0 0 0 2 359 382 359 319 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 37 349 381 20 20 NULL   
+            CH.ifa.draw.standard.ChopBoxConnector REF 23   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 14 "FrameColor" "Color" 0 0 0 2 358 303 358 251 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 23  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 38 348 231 20 20 NULL    
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 15 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 285 261 "be" "SansSerif" 0 12 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator -7 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 16 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 366 272 "be" "SansSerif" 0 12 0 REF 29 
+            CH.ifa.draw.standard.OffsetLocator 15 3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 17 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 363 348 "bf" "SansSerif" 0 12 0 REF 24 
+            CH.ifa.draw.standard.OffsetLocator 9 6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 18 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 282 345 "bf" "SansSerif" 0 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator -12 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 19 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 194 305 ":exchange(be,bf)" "SansSerif" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator -60 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 20 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 372 304 ":exchange(bf,be)" "SansSerif" 0 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator 58 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 21 318 453 24 16 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 22 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 353 454 ":approachFire()" "SansSerif" 0 12 0 REF 52 
+            CH.ifa.draw.standard.OffsetLocator 65 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 23 320 176 24 16 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 24 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 351 175 ":retreat()" "SansSerif" 0 12 0 REF 56 
+            CH.ifa.draw.standard.OffsetLocator 42 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 25 154 305 24 16 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 26 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 118 314 "b:fill()" "SansSerif" 0 12 0 REF 60 
+            CH.ifa.draw.standard.OffsetLocator -33 9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 27 "FrameColor" "Color" 0 0 0 3 165 321 165 394 290 394 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 60  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 28 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 171 340 "b" "SansSerif" 0 12 0 REF 64 
+            CH.ifa.draw.standard.OffsetLocator -53 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 30 486 306 24 16 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 31 "FrameColor" "Color" 0 0 0 3 369 391 498 391 498 322 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 27  
+            CH.ifa.draw.standard.ChopBoxConnector REF 71   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 32 "FrameColor" "Color" 0 0 0 3 497 306 497 241 368 241 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 71  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 33   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 33 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 486 346 "b" "SansSerif" 0 12 0 REF 72 
+            CH.ifa.draw.standard.OffsetLocator 56 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 34 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 485 276 "b" "SansSerif" 0 12 0 REF 76 
+            CH.ifa.draw.standard.OffsetLocator 56 11 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 35 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 514 298 ":extinguish()" "SansSerif" 0 12 0 REF 71 
+            CH.ifa.draw.standard.OffsetLocator 49 -8 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 36 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 516 315 "b:empty()" "SansSerif" 0 12 0 REF 71 
+            CH.ifa.draw.standard.OffsetLocator 43 9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 27 REF 33 
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 39 "FrameColor" "Color" 0 0 0 2 303 403 326 453 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 52   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 40 "FrameColor" "Color" 0 0 0 2 333 453 356 400 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 52  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 27   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 41 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 301 420 "b" "SansSerif" 0 12 0 REF 92 
+            CH.ifa.draw.standard.OffsetLocator -10 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 42 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 353 420 "b" "SansSerif" 0 12 0 REF 96 
+            CH.ifa.draw.standard.OffsetLocator 12 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 43 "FrameColor" "Color" 0 0 0 3 290 238 166 238 166 305 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 60   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 44 "FrameColor" "Color" 0 0 0 2 327 192 304 230 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 56  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 2   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 45 "FrameColor" "Color" 0 0 0 2 355 233 335 192 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 33  
+            CH.ifa.draw.standard.ChopBoxConnector REF 56   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 46 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 306 199 "b" "SansSerif" 0 12 0 REF 110 
+            CH.ifa.draw.standard.OffsetLocator -6 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 47 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 348 198 "b" "SansSerif" 0 12 0 REF 114 
+            CH.ifa.draw.standard.OffsetLocator 6 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 48 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 175 273 "b" "SansSerif" 0 12 0 REF 106 
+            CH.ifa.draw.standard.OffsetLocator -50 10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 114 175 ":new()" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -35 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "FigureWithID" "Int" 29 "FrameColor" "Color" 255 199 158 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 117 296 ":refill()" "SansSerif" 0 12 0 REF 60 
+            CH.ifa.draw.standard.OffsetLocator -32 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  118 124 645 851 

@@ -1,0 +1,153 @@
+11 
+    de.renew.hierarchicalworkflownets.gui.HNViewDrawing 1 "IO" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  "FillColor" "Color" 192 192 192 255 0 0 24 20 NULL  3 "IO_p1" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 4 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 48.0 0.0  626 94 20 20 NULL  0 "IO_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 2 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -48.0 0.0  0 94 20 20 NULL  0 "IO_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  "FillColor" "Color" 192 192 192 255 52 2 24 16 NULL  3 "IO_t0_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  "FillColor" "Color" 192 192 192 255 112 0 20 20 NULL  2 "IO_t0_p0_p1" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 15 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 15.0  "FillColor" "Color" 192 192 192 255 112 52 20 20 NULL  3 "IO_t0_p0_p1_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "FigureWithID" "Int" 21 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  "FillColor" "Color" 192 192 192 255 164 54 24 16 NULL  2 "IO_t0_p0_p1_t0_t1" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "FigureWithID" "Int" 39 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 13.0  "FillColor" "Color" 192 192 192 255 164 100 24 16 NULL  3 "IO_t0_p0_p1_t0_t1_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 45 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  "FillColor" "Color" 192 192 192 255 224 100 20 20 NULL  2 "IO_t0_p0_p1_t0_t1_p0_p1" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 221 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 15.0  "FillColor" "Color" 192 192 192 255 224 156 20 20 NULL  2 "IO_t0_p0_p1_t0_t1_p0_p1_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 226 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -24.0 0.0  "FillColor" "Color" 192 192 192 255 356 155 20 20 NULL  3 "IO_t0_p0_p1_t0_t1_p0_p1_p0_p1" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 234 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 48.0 0.0  410 155 20 20 NULL  0 "IO_t0_p0_p1_t0_t1_p0_p1_p0_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 232 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -48.0 0.0  "FillColor" "Color" 112 219 147 255 302 155 20 20 NULL  0 "IO_t0_p0_p1_t0_t1_p0_p1_p0_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 233 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  354 157 24 16 NULL  0 "IO_t0_p0_p1_t0_t1_p0_p1_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 227 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -83.0 30.0  "FillColor" "Color" 192 192 192 255 219 186 24 16 NULL  3 "IO_t0_p0_p1_t0_t1_p0_p1_t0_t1" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 243 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 5.0 0.0  224 190 24 16 NULL  0 "IO_t0_p0_p1_t0_t1_p0_p1_t0_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 241 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 129.0 0.0  346 190 28 16 NULL  0 "IO_t0_p0_p1_t0_t1_p0_p1_t0_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 242 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 66.0 0.0  287 188 20 20 NULL  0 "IO_t0_p0_p1_t0_t1_p0_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 220 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 -15.0  317 104 20 20 NULL  0 "IO_t0_p0_p1_t0_t1_t1" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 46 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 48.0 0.0  462 148 24 16 NULL  0 "IO_t0_p0_p1_t0_t1_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 44 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -46.0 0.0  164 148 28 16 NULL  0 "IO_t0_p0_p1_t0_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "FigureWithID" "Int" 38 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 -12.0  "FillColor" "Color" 192 192 192 255 304 51 24 16 NULL  3 "IO_t0_p0_p1_t0_t0_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 137 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 0.0  317 52 20 20 NULL  0 "IO_t0_p0_p1_t0_t0_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 136 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -46.0 0.0  257 54 28 16 NULL  0 "IO_t0_p0_p1_t0_t0_t1" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 138 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 48.0 0.0  369 54 24 16 NULL  0 "IO_t0_p0_p1_p1" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 22 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 48.0 0.0  518 120 20 20 NULL  0 "IO_t0_p0_p1_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 20 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -48.0 0.0  "FillColor" "Color" 112 219 147 255 112 120 20 20 NULL  0 "IO_t0_p0_p0" 
+        de.renew.hierarchicalworkflownets.gui.HNPlaceFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 14 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 0.0 -15.0  "FillColor" "Color" 112 219 147 255 315 0 20 20 NULL  0 "IO_t0_t0" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 3 "lp" "UNKNOWN" "FigureWithID" "Int" 7 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d -46.0 0.0  52 96 28 16 NULL  0 "IO_t0_t1" 
+        de.renew.hierarchicalworkflownets.gui.HNTransitionFigure "attributes" "attributes" 4 "lp" "UNKNOWN" "FigureWithID" "Int" 9 "rpir" "Storable" 
+            de.renew.hierarchicalworkflownets.gui.layout.Vec2d 48.0 0.0  "FillColor" "Color" 112 219 147 255 570 96 24 16 NULL  0 22 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 236 2 378 165 411 165 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 27  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 23   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 247 2 412 170 374 190 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 23  
+            CH.ifa.draw.standard.ChopBoxConnector REF 33   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 139 2 285 62 318 62 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 47  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 45   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 245 2 288 198 248 198 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 35  
+            CH.ifa.draw.standard.ChopBoxConnector REF 31   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 140 2 337 62 369 62 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 45  
+            CH.ifa.draw.standard.ChopBoxConnector REF 49   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 256 2 248 192 304 169 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 31  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 120 2 80 98 317 13 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 57  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 55   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 244 2 346 198 307 198 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 33  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 35   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 257 2 322 165 354 165 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25  
+            CH.ifa.draw.standard.ChopBoxConnector REF 27   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 121 2 334 13 570 99 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 55  
+            CH.ifa.draw.standard.ChopBoxConnector REF 59   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 180 2 80 110 114 127 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 57  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 53   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 258 2 192 156 303 165 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 182 2 131 127 257 68 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 53  
+            CH.ifa.draw.standard.ChopBoxConnector REF 47   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 36 2 594 104 627 104 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 59  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 50 2 486 150 520 134 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 39  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 51   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 141 2 393 67 520 127 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 49  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 51   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 13 2 20 104 52 104 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 5  
+            CH.ifa.draw.standard.ChopBoxConnector REF 57   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 37 2 537 127 570 109 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 51  
+            CH.ifa.draw.standard.ChopBoxConnector REF 59   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 181 2 131 134 164 149 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 53  
+            CH.ifa.draw.standard.ChopBoxConnector REF 41   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 222 2 192 152 318 117 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 224 2 337 117 462 152 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37  
+            CH.ifa.draw.standard.ChopBoxConnector REF 39   
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 239 2 430 164 462 158 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 23  
+            CH.ifa.draw.standard.ChopBoxConnector REF 39   1 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 67 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 5 97 "[]" "SansSerif" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   503 242 1293 682 

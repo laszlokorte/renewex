@@ -1,0 +1,36 @@
+6 
+    de.renew.gui.CPNDrawing 16 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FigureWithID" "Int" 58 4 17 254 17 235 45 235 45 216 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 55 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 10 254 "T1" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 4 "FigureWithID" "Int" 3 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 20 126 "Proc\ncp1: Proc\ncp2: Proc\ncp3: Proc\ncp4: Proc\ncp5: Proc" "Dialog" 0 12 0 NULL NULL   1
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FigureWithID" "Int" 59 2 45 254 45 216 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 56 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 38 254 "T2" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FigureWithID" "Int" 60 4 73 254 73 235 45 235 45 216 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 57 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 66 254 "T3" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  1  REF 10 REF 4 REF 15 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FigureWithID" "Int" 62 4 101 254 101 235 45 235 45 216 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 61 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 94 254 "T4" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  1  REF 20 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FigureWithID" "Int" 63 2 180 81 180 53 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 153 81 "ProcEff\npre: Proc\nproc: Proc" "Dialog" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 46 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 161 8 "Eff\npre: M\npost: M" "Helvetica" 0 12 0 NULL NULL   0  REF 27
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 73 8 "E" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 64 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 104 8 "Tr\nrule\neff: Eff" "Helvetica" 0 12 0 NULL NULL  REF 6
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 1 "FigureWithID" "Int" 65 2 45 126 45 98 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 38 8 "M\np1\np2\np3\np4\np5" "Helvetica" 0 12 0 NULL NULL   0  REF 25 REF 34 NULL  8 418 261 324

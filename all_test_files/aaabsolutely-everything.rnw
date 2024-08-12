@@ -1,0 +1,30 @@
+11 
+    de.renew.gui.CPNDrawing 11 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 6 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 15 "FrameColor" "Color" 0 0 0 255 "FontName" "String" "Monospaced" "FillColor" "Color" 112 219 147 255 515 10 20 20 NULL  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 6 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 18 "FrameColor" "Color" 0 0 0 255 "FontName" "String" "Monospaced" "FillColor" "Color" 112 219 147 255 518 167 24 16 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 6 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 23 "FrameColor" "Color" 0 0 0 255 "FontName" "String" "Monospaced" "FillColor" "Color" 112 219 147 255 285 340 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "TextAlignment" "Int" 0 "FigureWithID" "Int" 29 "FontName" "String" "Monospaced" 2 525 30 529 167 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "TextAlignment" "Int" 0 "FigureWithID" "Int" 31 "FontName" "String" "Monospaced" 3 526 167 490 85 521 29 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "TextAlignment" "Int" 0 "FigureWithID" "Int" 33 "FontName" "String" "Monospaced" 2 519 183 303 345 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 30 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 523 101 "x" "Monospaced" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator -1 10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 28 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 538 13 "tests" "Monospaced" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 30 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 32 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 438 77 "(cdr x)" "Monospaced" 0 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator -46 -14 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 5 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 2 8 "(define tests\n  '(arctest\n    assignment-testcase\n    bind-duplicate ;; must throw two exceptions\n    declaration-node-my-x\n    expression2var\n    multi-nested ;; manual intervention needed\n    performance\n    performance-is\n    performance-reverse\n    r5rs\n    simple-is\n    symbol-guard\n    unification-tests\n    unify-channel\n    unify-channel-real-unification ;; does not work yet...\n    ))" "Monospaced" 0 12 0 NULL NULL 1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 34 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 397 282 "(new (car x))" "Monospaced" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 31 25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  603 137 630 576 

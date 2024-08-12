@@ -1,0 +1,29 @@
+11 
+    de.renew.gui.CPNDrawing 13 
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 13 49 181 614 380  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 255 17 60 "import de.renew.lola.*;" "SansSerif" 0 12 0 NULL NULL 1  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 112 219 147 255 70 122 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 3 2 90 132 211 132 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 3 "FigureWithID" "Int" 4 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 112 219 147 255 211 124 24 16 NULL    REF 8 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 5 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 57 150 "[\"a\"]" "SansSerif" 0 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator -9 25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 6 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 126 125 "lolatask" "SansSerif" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 7 2 235 132 340 132 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 8 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 112 219 147 255 339 122 20 20 NULL    REF 19 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 9 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 258 125 "lolaresult" "SansSerif" 0 12 0 REF 15 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 10 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 132 101 "action lolaresult = lolatask;" "SansSerif" 0 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator -5 -24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 12 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 255 53 188 "Syntax error message about linkage problem" "SansSerif" 0 19 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 11 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 255 59 236 "Description: After editing an inscription or when compiling a net, \n  the syntax error window shows up with the follwing message:\n\n        Variable expected, but xxx is class with linkage problem:\n        java.lang.NoClassDefFoundError: some/package/xxx (wrong name: some/package/Xxx) \n\nEnvironments: Windows.\n\nCause: Due to a bug fix from release 2.0.1 to 2.1, the Java Net Compiler no longer ignores a \n    LinkageError reported by the class loader. One situation where the Java class loader reports \n    such an error is when it is queried for a class name and finds a file on a case-insensitive file \n    system (e.g. on Windows machines) that matches the name up to the case. This imposes a \n    problem for Renew when untyped nets are combined with generic imports \n    (e.g. import some.package.*;) or classes in the unnamed package.\n\nWorkaround: There are alternative solutions that free Renew from the need to guess what the \n   meaning of the name is. Either...\n        ... declare all variables,\n        ... use specific imports, or\n        ... rename the variables so that they really differ from any class name." "SansSerif" 0 12 0 NULL NULL  NULL  464 287 838 600 

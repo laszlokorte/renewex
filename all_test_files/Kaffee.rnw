@@ -1,0 +1,14 @@
+10 
+    de.renew.gui.CPNDrawing 5 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 19 "FrameColor" "Color" 0 0 0 "MarkingAppearance" "Int" 2 "FillColor" "Color" 112 219 147 "FontSize" "Int" 24 80 62 20 20 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 20 "FrameColor" "Color" 255 199 158 "MarkingAppearance" "Int" 2 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 30 92 "(string->list \"Kaffee\")" "SansSerif" 0 24 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 65 34 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "FigureWithID" "Int" 21 "MarkingAppearance" "Int" 2 "FontSize" "Int" 24 2 100 72 399 72 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 22 "FrameColor" "Color" 0 0 0 "MarkingAppearance" "Int" 2 "FillColor" "Color" 112 219 147 "FontSize" "Int" 24 399 65 24 16 NULL    REF 9 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 23 "FrameColor" "Color" 255 199 158 "MarkingAppearance" "Int" 2 "TextAlignment" "Int" 0 "FillColor" "Color" 254 254 254 153 21 "`(,a ,b ,c ,d . ,e)" "SansSerif" 0 24 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator -3 -37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  687 141 530 186 

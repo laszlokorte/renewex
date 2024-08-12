@@ -1,0 +1,109 @@
+8 
+    de.renew.gui.CPNDrawing 40 
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 19 2 311 49 311 79 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 276 32 "_t:TupleIndex" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 248 79 "_a:ArityBranch\n\n1 -> {1}\n[1,2] -> {[1,2]}\n[1,3] -> {[1,3]}\n[[4,5],6,7] -> {[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 20 2 261 159 194 213 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 15 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 110 213 "_c2:ComponentBranch\n\nall={[1,2],[1,3]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 21 2 156 248 123 282 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 14 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 56 282 "_c2a0:ArityBranch\n\n1 -> {[1,2],[1,3]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 22 2 188 248 220 282 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 13 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 192 282 "_c2a1:ArityBranch\n\n2 -> {[1,2]}\n3 -> {[1,3]}" "SansSerif" 0 12 0 NULL NULL    REF 11
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 24 2 360 159 425 213 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 7 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 384 213 "_c3:ComponentBranch\n\nall={[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL    REF 26
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 26 2 485 248 541 273 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 26  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 12 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 529 273 "_c3a2:ArityBranch\n\n7 ->{[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 27 2 459 248 510 316 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 26  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 39 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 472 316 "_c3a1:ArityBranch\n\n6 ->{[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 28 2 430 248 396 282 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 26  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 38 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 329 282 "_c3a0:ArityBranch\n\n[4,5] ->{[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 29 2 380 317 380 350 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 23 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 303 350 "_c3a0c2:ComponentBranch\n\nall={[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 30 2 399 385 446 426 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 46  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 37 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 401 426 "_c3a0c2a1:ArityBranch\n\n5 ->{[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 31 2 363 385 323 426 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 46  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 36 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 242 426 "_c3a0c2a0:ArityBranch\n\n4 ->{[[4,5],6,7]}" "SansSerif" 0 12 0 NULL NULL    REF 6 REF 21 REF 16 REF 56 REF 51 REF 41 REF 36 REF 31
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 41 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 451 280 "indexes[1]" "SansSerif" 0 12 0 REF 32 
+            CH.ifa.draw.standard.OffsetLocator -5 5 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 40 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 351 253 "indexes[0]" "SansSerif" 0 12 0 REF 37 
+            CH.ifa.draw.standard.OffsetLocator -34 -5 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 44 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 213 255 "indexes[1]" "SansSerif" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator 37 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 43 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 77 254 "indexes[0]" "SansSerif" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator -34 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 32 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 157 176 "branches[2]" "SansSerif" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator -38 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 33 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 394 167 "branches[3]" "SansSerif" 0 12 0 REF 22 
+            CH.ifa.draw.standard.OffsetLocator 34 -12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 34 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 387 324 "branches[2]" "SansSerif" 0 12 0 REF 42 
+            CH.ifa.draw.standard.OffsetLocator 39 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 46 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 426 390 "indexes[1]" "SansSerif" 0 12 0 REF 47 
+            CH.ifa.draw.standard.OffsetLocator 32 -8 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 45 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 283 394 "indexes[0]" "SansSerif" 0 12 0 REF 52 
+            CH.ifa.draw.standard.OffsetLocator -32 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 49 "LineStyle" "String" "10" 2 526 205 500 213 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.contrib.ChopPolygonConnector 
+                de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 48 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 531 171 "responsible for\npattern [*,*,*]" "SansSerif" 0 12 0 REF 26
+                    CH.ifa.draw.standard.OffsetLocator 139 -39 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5     
+            CH.ifa.draw.standard.ChopBoxConnector REF 26   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 50 "LineStyle" "String" "10" 2 209 453 237 450 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.contrib.ChopPolygonConnector 
+                de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 47 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 108 443 "responsible for\npattern [[*,_],_,_]" "SansSerif" 0 12 0 REF 56
+                    CH.ifa.draw.standard.OffsetLocator -144 20 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5     
+            CH.ifa.draw.standard.ChopBoxConnector REF 56   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 56 "LineStyle" "String" "10" 2 256 384 298 378 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.contrib.ChopPolygonConnector 
+                de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 55 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 156 375 "responsible for\npattern [[*,*],_,_]" "SansSerif" 0 12 0 REF 46
+                    CH.ifa.draw.standard.OffsetLocator -169 28 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5     
+            CH.ifa.draw.standard.ChopBoxConnector REF 46   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 42 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 541 254 "indexes[2]" "SansSerif" 0 12 0 REF 27 
+            CH.ifa.draw.standard.OffsetLocator 56 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 98 REF 92 REF 86 REF 4 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 35 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 286 54 "tree" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -15 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 46 NULL  91 66 982 803 

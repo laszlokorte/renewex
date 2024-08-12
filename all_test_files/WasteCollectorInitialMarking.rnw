@@ -1,0 +1,41 @@
+7 
+    de.renew.gui.CPNDrawing 15 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 25 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 18 9 393 179 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 48 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 "Visibility" "Boolean" "FALSE" 18 197 562 476 NULL  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 74 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 102 "[Located what:[robot] at:[a]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -167 26 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "what" "at" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 72 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 88 102 "[Located what:[bin] at:[b]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -100 26 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "at" "what" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 69 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 70 52 "[Adjacent left:[b] right:[c]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -122 -24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "" "right" "left"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 67 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 395 "[Plan\n trigger:[NewGoal\n            belief:#5[Located\n                    what:#6[robot]\n                    at:#2]\n            intention: #3[*]]\n context:<[Located\n           what:#6\n           at:#4]\n           [InDirection from:#2 to:#4 dir:#7]>\n intention:<[Move dir:#7]\n            [NewGoal\n            belief:#5] | #3>]" "Helvetica" 0 9 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator -196 52 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 17 "context:tl:hd:dir" "context:hd:at" "context:tl:tl" "trigger:belief:at" "context:tl" "trigger" "trigger:intention" "intention:hd" "trigger:belief" "intention:tl" "context" "context:tl:hd" "intention" "" "trigger:belief:what" "context:hd" "intention:tl:hd"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 70 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 52 "[Adjacent left:[a] right:[b]]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -176 -24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "" "left" "right"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 222 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 33 "[Idle]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator -187 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 68 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 175 12 "[Rule\n goal:[InDirection from:#1 to:#2 dir:#4[Left]]\n subgoals:\n  <[Adjacent left:#1 right:#3]\n   [InDirection from:#3 to:#2 dir:#4]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 45 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 11 "subgoals" "subgoals:tl:tl" "subgoals:tl:hd" "subgoals:hd:right" "goal:dir" "" "goal" "goal:from" "subgoals:tl" "subgoals:hd" "goal:to"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 224 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 360 12 "[Rule\n goal:[InDirection from:#1 to:#2 dir:[Right]]\n subgoals:\n  <[InDirection from:#2 to:#1 dir:[Left]]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 205 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 9 "" "goal" "goal:dir" "subgoals:hd" "subgoals" "subgoals:hd:dir" "goal:to" "subgoals:tl" "goal:from"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 213 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 493 12 "[Rule\n goal:[InDirection from:#1 to:#2 dir:[Left]]\n subgoals:\n  <[Adjacent left:#1 right:#2]>]" "Helvetica" 0 9 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 332 -25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 8 "goal" "goal:from" "subgoals:tl" "goal:to" "goal:dir" "" "subgoals" "subgoals:hd"  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 212 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 16 12 "Initial Beliefs:" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -161 -79 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 211 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 16 165 "Initial Plans:" "Helvetica" 1 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator -249 -263 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 66 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 16 191 "[Plan\n trigger:[NewBelief\n          belief:#5[Located\n                       what:#4[Waste]\n                       at:#1[Lane]]\n          intention: #3[*]]\n context:<[Located\n           what:[bin]\n           at:#2]>\n intention:\n        <[Retract belief:[Idle]]\n          [NewGoal\n            belief:[Located\n                    what:#6[robot]\n                    at:#1]]\n           [Pick what:#4]\n           [Assert belief:[Idle]]\n           [Retract belief:[Idle]]\n           [NewGoal\n           belief:[Located\n                    what:#6\n                    at:#2]]\n           [Drop what:#4]\n           [Assert belief:[Idle]]\n           | #3>]" "Helvetica" 0 9 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator 34 -144 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 34 "context" "intention:tl" "" "intention:tl:tl:tl:tl:tl" "intention:tl:tl:tl:tl:tl:tl:hd" "intention:tl:tl:tl:tl:hd" "trigger:intention" "intention:tl:hd:belief" "intention:tl:hd" "intention" "context:hd" "intention:tl:tl:tl:hd" "context:hd:what" "intention:tl:tl:tl:tl:hd:belief" "intention:tl:tl:tl:tl:tl:hd:belief" "intention:tl:tl:tl:tl:tl:tl:tl" "intention:tl:tl:hd" "context:tl" "intention:tl:tl:tl:hd:belief" "intention:hd" "intention:tl:tl:tl:tl" "context:hd:at" "intention:tl:tl:tl:tl:tl:tl:tl:hd:belief" "trigger" "intention:tl:tl:tl:tl:tl:tl" "intention:hd:belief" "intention:tl:hd:belief:what" "trigger:belief:what" "intention:tl:tl:tl:tl:tl:hd" "intention:tl:tl:tl:tl:tl:tl:tl:hd" "intention:tl:tl:tl" "intention:tl:tl" "trigger:belief:at" "trigger:belief"  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "Visibility" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 223 426 532 "access _BDItypes;\naccess _WasteCollectorTypes;" "Helvetica" 0 12 0 NULL NULL 1  NULL  0 97 704 635 

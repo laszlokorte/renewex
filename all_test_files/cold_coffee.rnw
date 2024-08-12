@@ -1,0 +1,3 @@
+10 
+    de.renew.gui.CPNDrawing 1 
+        CH.ifa.draw.figures.ImageFigure "attributes" "attributes" 1 "FigureWithID" "Int" 4 81 30 75 80 "javacup.jpg"  REF 1  975 642 293 215 

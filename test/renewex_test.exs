@@ -6,8 +6,41 @@ defmodule RenewexTest do
   alias Renewex.Parser
   doctest Renewex
 
-  test "initial test" do
-    {:ok, example} = "./example_files/example.rnw" |> File.read()
+  @example_dir "./example_files"
+  @full_examples_dir "./all_test_files"
+  @skips [
+    "BDIFS.rnw",
+    "BDIFS1.rnw",
+    "BDIFS2.rnw",
+    "BDImain (2).rnw",
+    "BDImain8 (2).rnw",
+    "BDImain8.rnw",
+    "CSexample.rnw",
+    # de.uni_hamburg.tgi.renew.marianets.QueryFigure
+    "dining-fair+safe.rnw",
+    "dining.rnw",
+    "mutex (2).rnw",
+    ###
+    "FSsample.rnw",
+    "FSsyntax.rnw",
+    "fsTest.rnw",
+    "fsTest2.rnw",
+    "fsTest3.rnw",
+    "joghurt (2).rnw",
+    "joghurt.rnw",
+    "Main.rnw",
+    "RolesGroupsFlat.rnw",
+    "Types (3).rnw",
+    "Types (4).rnw",
+    "Types5.rnw",
+    "Types8.rnw",
+    "typeTest.rnw",
+    "_student.rnw",
+    "_Types8.rnw"
+  ]
+
+  test "tokenizer" do
+    {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
     assert(3350 == Enum.count(Tokenizer.scan(example)))
   end
 
@@ -20,7 +53,7 @@ defmodule RenewexTest do
     )
   end
 
-  test "hierarchy test" do
+  test "hierarchy" do
     grammar = Renewex.Grammar.new(11)
 
     assert(
@@ -62,8 +95,8 @@ defmodule RenewexTest do
     )
   end
 
-  test "parser test" do
-    {:ok, example} = "./example_files/example.rnw" |> File.read()
+  test "parser example" do
+    {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
 
     parser =
       example
@@ -87,22 +120,22 @@ defmodule RenewexTest do
     assert(list_of_5_bools == [true, false, true, false, true])
   end
 
-  test "test parse storable" do
-    {:ok, example} = "./example_files/example.rnw" |> File.read()
+  test "parse storable" do
+    {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
 
     assert {:ok, %Storable{}, %Parser{}} =
              example
              |> Tokenizer.scan()
              |> Tokenizer.skip_whitespace()
              |> Parser.detect_document_version()
-             |> Parser.parse_storable()
+             |> Parser.parse_storable(nil, false)
   end
 
-  test "test example files" do
-    dir = "./example_files/"
+  test "parse_storable on example files" do
+    dir = "#{@example_dir}/"
     {:ok, files} = File.ls(dir)
 
-    for file <- files do
+    for file <- files |> Enum.filter(&(not Enum.member?(@skips, &1))) do
       assert {:ok, example} = File.read(Path.join(dir, file))
 
       assert {:ok, %Storable{}, parser} =
@@ -110,22 +143,45 @@ defmodule RenewexTest do
                |> Tokenizer.scan()
                |> Tokenizer.skip_whitespace()
                |> Parser.detect_document_version()
-               |> Parser.parse_storable()
+               |> Parser.parse_storable(nil, false)
                |> Parser.try_skip([:int, :int, :int, :int])
 
       assert Parser.is_eof(parser)
     end
   end
 
-  test "integrations" do
-    dir = "./example_files/"
+  test "parse_string on example files" do
+    dir = "#{@example_dir}"
     {:ok, files} = File.ls(dir)
     grammar = Renewex.Grammar.new(11)
 
-    for file <- files do
-      assert {:ok, example} = File.read(Path.join(dir, file))
-      assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example)
-      assert is_list(refs)
+    for file <- files |> Enum.filter(&(not Enum.member?(@skips, &1))) do
+      assert {:ok, example} = File.read(Path.join(dir, file)), "can read #{file}"
+      assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
+      assert is_list(refs), "ref list of #{file} is a list"
+
+      assert Hierarchy.is_descendant_of(
+               grammar,
+               root.class_name,
+               "CH.ifa.draw.standard.AbstractFigure"
+             )
+    end
+  end
+
+  test "all files" do
+    {:ok, files} = File.ls(@full_examples_dir)
+
+    for file <- files |> Enum.filter(&(not Enum.member?(@skips, &1))) do
+      assert {:ok, example} = File.read(Path.join(@full_examples_dir, file)), "can read #{file}"
+
+      assert %Parser{grammar: grammar} =
+               example
+               |> Tokenizer.scan()
+               |> Tokenizer.skip_whitespace()
+               |> Parser.detect_document_version()
+
+      assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
+      assert is_list(refs), "ref list of #{file} is a list"
 
       assert Hierarchy.is_descendant_of(
                grammar,

@@ -17,12 +17,14 @@ defmodule Renewex.Parser do
     }
   end
 
-  def detect_document_version([{:int, version} | tokens]) do
-    Renewex.Parser.new(tokens, Grammar.new(version))
-  end
-
   def detect_document_version(tokens) do
-    Renewex.Parser.new(tokens, Grammar.new(-1))
+    case Enum.take(tokens, 1) do
+      [{:int, version}] ->
+        Renewex.Parser.new(Stream.drop(tokens, 1) |> Enum.to_list(), Grammar.new(version))
+
+      _ ->
+        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new(-1))
+    end
   end
 
   def detect_and_parse_document(tokens) do
@@ -83,9 +85,10 @@ defmodule Renewex.Parser do
   def parse_storable(
         %Renewex.Parser{
           tokens: [{current_type, current_value} | rest_tokens],
-          ref_list: ref_list
+          ref_list: parent_ref_list
         } = parser,
-        expected_type \\ nil
+        expected_type \\ nil,
+        return_ref \\ true
       ) do
     next_parser = %Renewex.Parser{
       parser
@@ -107,15 +110,19 @@ defmodule Renewex.Parser do
                Hierarchy.interfaces_of(parser.grammar, class_name),
                expected_type
              ) do
-          with {:ok, result, p} <-
-                 parse_grammar_rule(next_parser, class_name, Storable.new(class_name)) do
-            {:ok, result,
+          with {:ok, result, %Renewex.Parser{ref_list: child_ref_list} = p} <-
+                 parse_grammar_rule(
+                   %Renewex.Parser{next_parser | ref_list: []},
+                   class_name,
+                   Storable.new(class_name)
+                 ) do
+            {:ok, if(return_ref, do: {:ref, Enum.count(parent_ref_list)}, else: result),
              %Renewex.Parser{
                p
-               | ref_list: [result | ref_list]
+               | ref_list: Enum.concat(child_ref_list, [result | parent_ref_list])
              }}
           else
-            err -> err
+            err -> dbg(err)
           end
         else
           {:error, {class_name, expected_type}, next_parser}
@@ -143,8 +150,8 @@ defmodule Renewex.Parser do
         end
       end
 
-    with {:ok, storable, parser} <- base,
-         {:ok, value, parser} <- Grammar.parse(parser, rule, storable) do
+    with {:ok, storable, next_parser} <- base,
+         {:ok, value, parser} <- Grammar.parse(next_parser, rule, storable) do
       {:ok, value, parser}
     else
       err -> err
@@ -160,9 +167,10 @@ defmodule Renewex.Parser do
         _, {:error, _, _} = a ->
           a
 
-        _, {:ok, list, parser} ->
-          with {:ok, next, p} <- fun.(parser) do
-            {:ok, [next | list], p}
+        i, {:ok, list, parser} ->
+          case fun.(parser) do
+            {:ok, next, p} -> {:ok, [next | list], p}
+            {:err, e, p} -> {:err, {:list, i, e}, p}
           end
 
         _, _ ->

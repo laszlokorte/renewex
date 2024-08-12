@@ -8,7 +8,7 @@ defmodule Renewex do
            |> Tokenizer.scan()
            |> Tokenizer.skip_whitespace()
            |> Parser.detect_document_version()
-           |> Parser.parse_storable()
+           |> Parser.parse_storable(nil, false)
            |> Parser.try_skip([:int, :int, :int, :int]),
          {:ok, refs} <- Parser.finalize(parser) do
       {:ok, root, refs}

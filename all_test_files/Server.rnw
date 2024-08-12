@@ -1,0 +1,22 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 8 
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 332 108 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 331 171 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 342 128 342 171 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 332 226 20 20  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 331 294 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 342 187 342 227 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7   
+        CH.ifa.draw.cpn.ArcConnection 2 342 246 342 294 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   
+        CH.ifa.draw.cpn.ArcConnection 4 355 302 400 302 400 118 352 118 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 8  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1    

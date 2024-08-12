@@ -29,7 +29,7 @@ defmodule Renewex.Tokenizer do
            end)
            |> Enum.join("|")
            |> then(&"(?:#{&1})")
-           |> Regex.compile!()
+           |> Regex.compile!("um")
 
   @token_types Regex.names(@pattern) |> Enum.map(&String.to_atom/1)
 
@@ -38,13 +38,12 @@ defmodule Renewex.Tokenizer do
   end
 
   def scan(input) do
-    for captures <- Regex.scan(@pattern, input, capture: :all_names) do
+    Regex.scan(@pattern, input, capture: :all_names)
+    |> Stream.map(fn captures ->
       Enum.zip(@token_types, captures)
-      |> Enum.find_value(fn
-        {_, ""} -> nil
-        {type, value} -> {type, cast_value(type, value)}
-      end)
-    end
+      |> Enum.filter(fn {_, value} -> value != "" end)
+      |> Enum.find_value(fn {type, value} -> {type, cast_value(type, value)} end)
+    end)
   end
 
   def skip_whitespace(tokens) do

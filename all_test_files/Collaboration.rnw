@@ -1,0 +1,45 @@
+7 
+    de.renew.gui.CPNDrawing 17 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 2 18 92 "Fakultät" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 4 325 41 "/Student:Person" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 1 100 41 "/Lehrer:Person" "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 9 3 95 49 40 49 40 92 NULL NULL 
+            CH.ifa.draw.standard.ChopBoxConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 10 3 142 57 142 99 199 99 NULL NULL 
+            CH.ifa.draw.standard.ChopBoxConnector REF 3  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 3 204 92 "Lehrveranstaltung" "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 11 3 313 99 370 99 370 57 NULL NULL 
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 12 2 320 49 190 49 NULL NULL 
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 13 189 100 "*" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 21 29 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 16 317 100 "*" "Helvetica" 0 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator -22 29 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 17 362 62 "*  hörer" "Helvetica" 0 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 41 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 14 133 62 "1  vortragender" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 4 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    REF 10 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 19 193 33 "mentor" "Helvetica" 0 12 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator -43 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 20 263 33 "schützling" "Helvetica" 0 12 0 REF 14 
+            CH.ifa.draw.standard.OffsetLocator 35 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 18 3 33 "fakultätsmitglied" "Helvetica" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator -19 -30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 21 86 50 "*" "Helvetica" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 21 -13 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 22 30 75 "1" "Helvetica" 0 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator -34 12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  0 153 470 187 

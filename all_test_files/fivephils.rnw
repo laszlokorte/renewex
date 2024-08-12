@@ -1,0 +1,252 @@
+11 
+    de.renew.gui.CPNDrawing 90 
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 5 "FigureWithID" "Int" 926 "FrameColor" "Color" 255 199 158 255 "LineStyle" "String" "10" "FillColor" "Color" 216 216 216 255 "FontName" "String" "DejaVu Sans Mono" 250 36 110 110  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 5 "FigureWithID" "Int" 927 "FrameColor" "Color" 255 199 158 255 "LineStyle" "String" "10" "FillColor" "Color" 216 216 216 255 "FontName" "String" "DejaVu Sans Mono" 305 163 110 110  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 5 "FigureWithID" "Int" 928 "FrameColor" "Color" 255 199 158 255 "LineStyle" "String" "10" "FillColor" "Color" 216 216 216 255 "FontName" "String" "DejaVu Sans Mono" 180 250 110 110  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 5 "FigureWithID" "Int" 929 "FrameColor" "Color" 255 199 158 255 "LineStyle" "String" "10" "FillColor" "Color" 216 216 216 255 "FontName" "String" "DejaVu Sans Mono" 70 168 110 110  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 5 "FigureWithID" "Int" 930 "FrameColor" "Color" 255 199 158 255 "LineStyle" "String" "10" "FillColor" "Color" 216 216 216 255 "FontName" "String" "DejaVu Sans Mono" 108 36 110 110  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 931 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 112 219 147 255 363 130 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 932 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 102 204 255 255 346 223 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 933 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 112 219 147 255 313 284 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 934 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 112 219 147 255 88 133 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 935 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 112 219 147 255 143 287 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 6 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FigureWithID" "Int" 936 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 102 204 255 255 206 295 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 937 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 102 204 255 255 112 197 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 6 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FigureWithID" "Int" 938 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 102 204 255 255 309 90 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 939 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 312 106 284 126 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 13  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 940 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 262 126 24 16 NULL    REF 18 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 941 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 286 134 364 140 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6   
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 942 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 200 0 255 282 72 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 943 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 200 0 255 354 194 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 944 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 200 0 255 244 295 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 945 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 200 0 255 118 229 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 946 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 276 126 290 91 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 23   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 947 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 348 229 319 211 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 948 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 295 196 24 16 NULL    REF 35 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 949 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 319 204 355 204 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 35  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 24   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 950 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 373 209 398 223 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 24  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 951 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 398 222 24 16 NULL    REF 44 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 952 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 398 230 366 233 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 44  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 953 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 219 297 233 257 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 954 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 224 241 24 16 NULL    REF 53 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 955 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 238 257 252 296 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 53  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 956 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 252 314 238 351 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 25  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 957 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 224 351 24 16 NULL    REF 62 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 958 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 233 351 219 314 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 62  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 11   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 959 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 132 207 164 204 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 12  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 960 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 164 196 24 16 NULL    REF 71 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 961 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 165 212 136 234 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 71  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 26   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 962 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 119 239 82 236 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 26  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 963 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 58 228 24 16 NULL    REF 80 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 964 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 82 229 114 212 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 80  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 12   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 965 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 315 196 367 147 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 35  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 966 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 308 212 322 285 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 35  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 8   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 967 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 248 255 315 290 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 53  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 8   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 968 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 224 255 162 293 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 53  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 969 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 174 212 155 288 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 71  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 970 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 165 196 106 149 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 71  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 9   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 971 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 300 77 325 59 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 23  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 972 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 325 43 24 16 NULL    REF 113 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 973 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 334 59 322 92 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 113  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 13   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 974 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 370 132 340 59 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 113   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 975 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 377 149 406 222 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 44   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 976 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 331 289 399 238 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 8  
+            CH.ifa.draw.standard.ChopBoxConnector REF 44   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 977 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 316 300 246 351 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 8  
+            CH.ifa.draw.standard.ChopBoxConnector REF 62   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 978 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 161 303 225 351 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 62   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 979 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 146 292 80 244 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 80   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 980 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 96 153 72 228 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 9  
+            CH.ifa.draw.standard.ChopBoxConnector REF 80   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 981 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 285 75 "()" "DejaVu Sans Mono" 0 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 982 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 357 197 "()" "DejaVu Sans Mono" 0 12 0 REF 24 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 983 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 247 298 "()" "DejaVu Sans Mono" 0 12 0 REF 25 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 984 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 121 232 "()" "DejaVu Sans Mono" 0 12 0 REF 26 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 985 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 366 133 "()" "DejaVu Sans Mono" 0 12 0 REF 6 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 986 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 316 287 "()" "DejaVu Sans Mono" 0 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 987 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 146 290 "()" "DejaVu Sans Mono" 0 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 988 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 91 136 "()" "DejaVu Sans Mono" 0 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.ArcConnection "attributes" "attributes" 4 "FigureWithID" "Int" 989 "FontStyle" "Int" 0 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" 2 269 126 236 60 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 999 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 112 219 147 255 221 41 20 20 NULL    
+        de.renew.gui.ArcConnection "attributes" "attributes" 4 "FigureWithID" "Int" 990 "FontStyle" "Int" 0 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" 2 241 51 325 51 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 174  
+            CH.ifa.draw.standard.ChopBoxConnector REF 113   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 991 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 253 147 "1 drop" "DejaVu Sans Mono" 1 12 0 REF 18 
+            CH.ifa.draw.standard.OffsetLocator 0 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 992 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 316 24 "1 take" "DejaVu Sans Mono" 1 12 0 REF 113 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 993 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 399 243 "2 take" "DejaVu Sans Mono" 1 12 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator 10 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 994 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 255 255 255 276 177 "2 drop" "DejaVu Sans Mono" 1 12 0 REF 35 
+            CH.ifa.draw.standard.OffsetLocator -10 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 995 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 215 222 "3 drop" "DejaVu Sans Mono" 1 12 0 REF 53 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 996 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 215 372 "3 take" "DejaVu Sans Mono" 1 12 0 REF 62 
+            CH.ifa.draw.standard.OffsetLocator 0 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 997 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 165 177 "4 drop" "DejaVu Sans Mono" 1 12 0 REF 71 
+            CH.ifa.draw.standard.OffsetLocator 10 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 998 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 39 249 "4 take" "DejaVu Sans Mono" 1 12 0 REF 80 
+            CH.ifa.draw.standard.OffsetLocator -10 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  REF 174 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 6 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FigureWithID" "Int" 1000 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 102 204 255 255 168 72 20 20 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 7 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" "FrameColor" "Color" 0 0 0 255 "FigureWithID" "Int" 1001 "FontStyle" "Int" 0 "TraceMode" "Boolean" "FALSE" "FillColor" "Color" 255 200 0 255 138 91 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 1002 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 182 91 195 126 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 203  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 1003 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 187 126 24 16 NULL    REF 209 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 1004 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 187 126 156 106 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 209  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 204   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 1005 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 145 93 129 59 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 204  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 5 "FigureWithID" "Int" 1006 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 114 43 24 16 NULL    REF 218 
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 1007 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 138 58 170 78 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 218  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 203   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 1008 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 202 126 228 60 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 209  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 174   
+        de.renew.gui.ArcConnection "attributes" "attributes" 5 "FigureWithID" "Int" 1009 "FontStyle" "Int" 0 "FontSize" "Int" 12 "TraceMode" "Boolean" "FALSE" "FontName" "String" "DejaVu Sans Mono" 2 222 51 138 51 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 174  
+            CH.ifa.draw.standard.ChopBoxConnector REF 218   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 1010 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 141 94 "()" "DejaVu Sans Mono" 0 12 0 REF 204 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 1011 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 "TraceMode" "Boolean" "FALSE" 224 44 "()" "DejaVu Sans Mono" 0 12 0 REF 174 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1012 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 178 147 "5 drop" "DejaVu Sans Mono" 1 12 0 REF 209 
+            CH.ifa.draw.standard.OffsetLocator 0 20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1013 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 1 "FillColor" "Color" 255 199 158 255 105 24 "5 take" "DejaVu Sans Mono" 1 12 0 REF 218 
+            CH.ifa.draw.standard.OffsetLocator 0 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.ArcConnection "attributes" "attributes" 4 "FigureWithID" "Int" 1014 "FontStyle" "Int" 0 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" 2 101 134 123 59 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 9  
+            CH.ifa.draw.standard.ChopBoxConnector REF 218   
+        de.renew.gui.ArcConnection "attributes" "attributes" 4 "FigureWithID" "Int" 1015 "FontStyle" "Int" 0 "FontSize" "Int" 12 "FontName" "String" "DejaVu Sans Mono" 2 187 135 108 143 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 209  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 9   NULL  556 182 503 442 

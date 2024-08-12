@@ -1,0 +1,29 @@
+7 
+    de.renew.gui.CPNDrawing 15 
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 2 224 40 15 14  
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 3 24 24 "von Knoten zu\nUnifikationsknoten" "Helvetica" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 5 224 55 15 14  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "Int" 10 "FigureWithID" "Int" 6 2 131 41 224 46 NULL NULL 
+            CH.ifa.draw.contrib.ChopPolygonConnector REF 2  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "LineStyle" "Int" 10 "FigureWithID" "Int" 7 2 154 79 224 63 NULL NULL 
+            CH.ifa.draw.contrib.ChopPolygonConnector 
+                de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 4 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 17 76 "von Unifikationsknoten\nzu Mengen von Knoten" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   REF 9 
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 11 224 70 15 14  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 12 "LineStyle" "Int" 10 2 153 128 224 81 NULL NULL 
+            CH.ifa.draw.contrib.ChopPolygonConnector 
+                de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 13 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 60 133 "von Unifikations-\naufgaben" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 11   REF 14 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 15 18 282 "UnifyItem\n\notherNode: Node" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FigureWithID" "Int" 17 4 65 282 65 265 118 265 118 248 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector REF 16  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 14 66 196 "\\ToDoItem\n\nnode: Node\n\ndoIt(EquivRelation)" "Helvetica" 0 12 0 NULL NULL   1
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 16 140 283 "RetypeItem\n\ntype: Type" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FigureWithID" "Int" 18 4 172 283 172 265 118 265 118 248 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector REF 22  
+            CH.ifa.draw.standard.ChopBoxConnector REF 21  1  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 1 229 10 "«implementationClass»\nEquivRelation\n\n- tie: collections.UpdatableMap\n- eit: collections.UpdatableMap\n- todo: java.util.Stack\n\n_+ unify(FeatureStructure, FeatureStructure): Node\n_+ unify(FeatureStructure, Path, FeatureStructure): Node\n_+ unify(FeatureStructure, Path, Path): Node\n_+ canUnify(FeatureStructure, FeatureStructure): boolean\n+ getUnificator(Node): Node\n+ unify(Node, Node)\n+ rebuild(Node): Node\n# unifyOne(Node, Node)\n# retypeOne(Node, Type)\n- addUnification(Node, Node)\n- addRetyping(Node, Type)\n- nextToDoItem(): ToDoItem\n- map(Node, Node)\n- addAllFeatures(Node, Node)\n- addRetypings(Node)" "Helvetica" 0 12 0 NULL NULL  REF 21 NULL  0 153 629 381

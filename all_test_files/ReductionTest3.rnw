@@ -1,0 +1,6 @@
+6 
+    de.renew.gui.CPNDrawing 2 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 243 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 24 50 227 226 NULL  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 244 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 120 127 "[Any\nv0:#1\nv1:#1\nv2:[]]\n" "Helvetica" 0 12 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  0 92 316 340 

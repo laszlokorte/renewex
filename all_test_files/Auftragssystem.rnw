@@ -1,0 +1,37 @@
+7 
+    de.renew.gui.CPNDrawing 14 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 1 "ArrowMode" "Int" 2 34 84 "a1" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 3 2 48 85 110 36 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 2 "ArrowMode" "Int" 2 110 23 "a2" "Helvetica" 0 12 0 NULL NULL    REF 6 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 5 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 186 23 "a4" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 7 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 262 23 "a6" "Helvetica" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 9 2 48 91 110 91 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 4 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 110 84 "a3" "Helvetica" 0 12 0 NULL NULL    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 10 2 124 85 186 36 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 11 2 124 91 186 91 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 6 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 186 84 "a5" "Helvetica" 0 12 0 NULL NULL    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 12 2 200 85 262 36 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 22  
+            CH.ifa.draw.standard.ChopBoxConnector REF 8   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 13 2 200 91 262 91 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 22  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 8 "ArrowMode" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 262 84 "a7" "Helvetica" 0 12 0 NULL NULL    
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 14 2 124 33 262 88 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.standard.ChopBoxConnector REF 31   REF 13 REF 22 REF 31 NULL  0 97 346 176 

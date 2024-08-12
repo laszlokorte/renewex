@@ -1,0 +1,13 @@
+7 
+    de.renew.gui.CPNDrawing 5 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 28 "LineStyle" "Int" 10 "FillColor" "Color" 255 255 255 4 230 276 230 247 331 247 331 218 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 27 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 158 276 "«implementationClass»\nJavaConcept\n\n+ getJavaClass(): Class\n+ canInstantiate(): boolean" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 26 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 224 19 "«interface»\nConcept\n\ngetName(): String\ngetNamespace(): String\ngetFullName(): String\nisExtensional(): boolean\nisApprop(Name): boolean\nappropParsedType(Name): ParsedType\nappropType(Name): Type\nappropFeatureNames(): Name[*]\nisa(Concept): boolean\nisNotA(Concept): boolean\nextensionalSuperconcepts(): Concept[*]" "Helvetica" 0 12 0 NULL NULL   1
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 30 "LineStyle" "Int" 10 "FillColor" "Color" 255 255 255 4 438 277 438 247 331 247 331 218 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 29 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 347 277 "«implementationClass»\nConceptImpl\n\n+ setName(String): boolean\n+ addIsa(ConceptImpl)\n+ addApprop(Name, ParsedType)\n+ setApprops(OrderedTable)\n+ getPartitions(): Partition[*]" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  1  REF 10 REF 6 REF 4 NULL  0 152 740 451 

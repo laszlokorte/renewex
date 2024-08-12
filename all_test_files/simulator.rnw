@@ -1,0 +1,28 @@
+8 
+    de.renew.gui.CPNDrawing 10 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 102 93 "«interface»\nSimulator\n\n_+ statusStopped: int {frozen}\n_+ statusStepComplete: int {frozen}\n_+ statusLastComplete: int {frozen}\n_+ statusCurrentlyDisabled: int {frozen}\n_+ statusDisabled: int {frozen}\n\nisActive(): boolean\nstartRun()\nstopRun()\nterminateRun()\nstep(): int\nrefresh()" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 3 "LineStyle" "String" "10" "FillColor" "Color" 255 255 255 3 256 364 204 364 204 296 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.fs.IsaArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 261 357 "SequentialSimulator" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  0  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 6 "LineStyle" "String" "10" "FillColor" "Color" 255 255 255 3 264 332 204 332 204 296 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.fs.IsaArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 5 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 269 324 "ParallelSimulator" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  0  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "FigureWithID" "Int" 7 "LineStyle" "String" "10" "FillColor" "Color" 255 255 255 3 253 398 204 398 204 296 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.fs.IsaArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 4 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 258 390 "ConcurrentSimulator" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 1  0  REF 5 REF 10 
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 8 4 372 331 395 331 395 195 312 195 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 9 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 336 250 "simulators" "SansSerif" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator 11 -6 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 10 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 1 "FillColor" "Color" 254 254 254 323 200 "1..*" "SansSerif" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator -21 -56 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 15 NULL  83 168 605 876 

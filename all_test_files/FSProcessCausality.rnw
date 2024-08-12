@@ -1,0 +1,69 @@
+6 
+    de.renew.gui.CPNDrawing 24 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 3 "FigureWithID" "Int" 356 "TextColor" "Color" 192 192 192 "FrameColor" "Color" 0 0 0 2 75 78 188 78 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 373 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 45 71 "Proc" "Helvetica" 0 12 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 398 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 193 71 "T1" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 3 "FigureWithID" "Int" 379 "TextColor" "Color" 192 192 192 "FrameColor" "Color" 0 0 0 2 212 81 283 106 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 382 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 288 102 "T2" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 3 "FigureWithID" "Int" 403 "TextColor" "Color" 192 192 192 "FrameColor" "Color" 0 0 0 2 212 75 283 51 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 408 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 288 41 "T4" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 415 "FrameColor" "Color" 0 0 0 2 307 109 357 109 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 11  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 417 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 362 103 "T2" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 433 3 307 51 373 51 414 75 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 16  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 434 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 419 71 "T3" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 436 2 381 107 414 81 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 21  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 26   
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 681 "FrameColor" "Color" 0 0 0 2 25 77 40 77 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 679 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 255 255 255 "FillColor" "Color" 255 255 255 17 72 " " "Helvetica" 0 9 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 4   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 416 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 323 101 "p2" "Helvetica" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator -2 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 2 "FigureWithID" "Int" 712 "FrameColor" "Color" 0 0 0 3 75 75 98 51 283 51 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 4  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 16   REF 4 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 1 "FigureWithID" "Int" 715 4 75 78 100 29 375 29 414 78 NULL
+            de.renew.gui.fs.AssocArrowTip 0.6 12.0 10.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 4  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 26   REF 34 REF 11 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 413 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 249 52 "p4" "Helvetica" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 9 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 381 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 246 89 "p2" "Helvetica" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 6 3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 713 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 187 43 "p5" "Helvetica" 0 12 0 REF 39 
+            CH.ifa.draw.standard.OffsetLocator 15 -13 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 380 "TextColor" "Color" 0 0 0 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 131 55 "p1\np2\np4" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 7 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 437 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 391 89 "p2" "Helvetica" 0 12 0 REF 27 
+            CH.ifa.draw.standard.OffsetLocator 1 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 6 REF 26 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 435 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 388 44 "p5" "Helvetica" 0 12 0 REF 22 
+            CH.ifa.draw.standard.OffsetLocator 35 -12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 716 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 388 21 "p3" "Helvetica" 0 12 0 REF 43 
+            CH.ifa.draw.standard.OffsetLocator 151 -25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 16 REF 21 NULL  60 95 489 187 

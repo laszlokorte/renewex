@@ -1,0 +1,93 @@
+1 
+    de.renew.gui.CPNDrawing 36 
+        de.renew.gui.PlaceFigure "no_attributes" 160 80 120 30  
+        de.renew.gui.ArcConnection "no_attributes" 2 220 110 220 167 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "no_attributes" 185 167 70 13    REF 6 
+        de.renew.gui.PlaceFigure "no_attributes" 97 231 120 110  
+        de.renew.gui.ArcConnection "no_attributes" 2 216 180 184 238 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7   
+        de.renew.gui.PlaceFigure "no_attributes" 245 229 120 110  
+        de.renew.gui.ArcConnection "no_attributes" 2 224 180 272 240 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 12   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 405 125 "Person\nname: String\naddress: Address" "Helvetica" 0 12 0 NULL NULL  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 380 200 "BusinessPerson\nbusinessAddress: Address" "Helvetica" 0 12 0 NULL NULL  
+        fs.IsaConnection "no_attributes" 2 453 200 453 170 NULL 
+            fs.IsaArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 17   
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 520 115 "Address\nstreet: String\nzip: int" "Helvetica" 0 12 0 NULL NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 194 88 "[Contract]" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        fs.ConceptFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 310 70 "Contract\nsigner: Person\nnotary: Person" "Helvetica" 0 12 0 NULL NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 217 131 "c" "Helvetica" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 197 202 "c" "Helvetica" 0 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 245 203 "c" "Helvetica" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.PlaceFigure "no_attributes" 96 448 120 110  
+        de.renew.gui.PlaceFigure "no_attributes" 244 451 120 110  
+        de.renew.gui.TransitionFigure "no_attributes" 124 386 70 13  
+        de.renew.gui.ArcConnection "no_attributes" 2 158 341 158 386 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 39   
+        de.renew.gui.ArcConnection "no_attributes" 2 158 399 157 449 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 39  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37   
+        de.renew.gui.TransitionFigure "no_attributes" 271 386 70 13  
+        de.renew.gui.ArcConnection "no_attributes" 2 306 339 305 386 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 12  
+            CH.ifa.draw.standard.ChopBoxConnector REF 48   
+        de.renew.gui.ArcConnection "no_attributes" 2 305 399 305 452 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 48  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 38   
+        de.renew.gui.TransitionFigure "no_attributes" 197 602 70 13  
+        de.renew.gui.ArcConnection "no_attributes" 2 189 549 227 602 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 37  
+            CH.ifa.draw.standard.ChopBoxConnector REF 57   
+        de.renew.gui.ArcConnection "no_attributes" 2 272 552 236 602 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 38  
+            CH.ifa.draw.standard.ChopBoxConnector REF 57   
+        de.renew.gui.ArcConnection "no_attributes" 2 232 615 232 666 NULL 
+            CH.ifa.draw.figures.ArrowTip  
+            CH.ifa.draw.standard.ChopBoxConnector REF 57  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "no_attributes" 172 665 120 110    REF 70 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 304 356 "c" "Helvetica" 0 12 0 REF 49 
+            CH.ifa.draw.standard.OffsetLocator 2 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 120 402 "c+[Contract\n    signer:[Person\n              name:(\"Frank\")]]" "Helvetica" 0 12 0 REF 44 
+            CH.ifa.draw.standard.OffsetLocator 35 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 155 355 "c" "Helvetica" 0 12 0 REF 40 
+            CH.ifa.draw.standard.OffsetLocator 0 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 313 404 "c+[Contract\n    signer: #1\n    notary: #1]" "Helvetica" 0 12 0 REF 53 
+            CH.ifa.draw.standard.OffsetLocator 45 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 201 568 "c1" "Helvetica" 0 12 0 REF 58 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 246 570 "c2" "Helvetica" 0 12 0 REF 62 
+            CH.ifa.draw.standard.OffsetLocator -1 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 255 255 215 633 "c1+c2" "Helvetica" 0 12 0 REF 66 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

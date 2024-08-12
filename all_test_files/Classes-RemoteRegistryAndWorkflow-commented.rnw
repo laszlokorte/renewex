@@ -1,0 +1,114 @@
+10 
+    de.renew.gui.CPNDrawing 49 
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 165 "FillColor" "Color" 255 232 232 674 14 905 935  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 220 255 220 "FigureWithID" "Int" 124 63 494 461 455  
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FillColor" "Color" 215 255 255 "FigureWithID" "Int" 125 65 12 491 404  
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 2 "LineStyle" "String" "" "FigureWithID" "Int" 126 2 950 457 950 221 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 138 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 783 457 "RemoteObjectHelper\n\nobjects: java.util.Map {readOnly}\nremoteObjects: java.util.Map {readOnly}\nlocalObjects: java.util.Map {readOnly}\n\nconnectedTo(RemoteServerRegistry$ServerDescriptor)\ndisconnectedFrom(RemoteServerRegistry$ServerDescriptor)\naddLocalObject(Object): String\nremoveLocalObject(String)\naddObserver(RemoteObjectHelperObserver)\nremoveObserver(RemoteObjectHelperObserver)\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 149 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 818 149 "<<interface>>\nde.renew.remote.RemoteObjectHelperListener\n\nnotifyObjectAdded(String, Object)\nnotifyObjectRemoved(String)" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 127 2 950 637 950 762 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 151 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 738 762 "RemoteServerRegistry\n\n- _remoteObjects: Map<String, java.rmi.Remote>\n\ncatchUpOnPreviousConnects(RemoteServerRegistryListener)\nregisterObjectIfPossible(String, java.rmi.Remote, java.util.Properties): boolean\nregisterObjectIfPossible(String, java.rmi.Remote): boolean\nregisterObject(String, java.rmi.Remote): boolean\nregisterObject(String, java.rmi.Remote, java.util.Properties): boolean\nunregisterObject(java.rmi.Remote)\n" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 128 2 450 547 778 547 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 147 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 222 526 "WorkflowPlugin\n\n- _managerHelper: RemoteObjectHelper\n\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 129 2 333 570 333 734 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 140 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 162 734 "WorkflowManagerExtension\n\nsimulationSetup(de.renew.application.SimulationEnvironment)\nsimulationTerminated()\n" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 130 3 510 759 539 759 778 635 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 24  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 132 2 404 335 344 242 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 137 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 342 335 "AdminTool\n\nshutdown: boolean {readOnly}\nstart: boolean {readOnly}\n\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 139 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 165 147 "LoginDialog\n\ncurrentManager: de.renew.access.Manager {readOnly}\nloginInfo: de.renew.access.LoginInfo {readOnly}\n\nnotifyObjectAdded(String, Object)\nnotifyObjectRemoved(String)\n" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 133 2 232 336 286 242 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 136 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 133 336 "AgendaGUI\n\nshutdown: boolean {readOnly}\nstart: boolean {readOnly}\n\n" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector REF 34   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 134 2 344 526 409 396 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 32   
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 135 2 319 526 235 397 NULL
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 18  
+            CH.ifa.draw.standard.ChopBoxConnector REF 38   REF 38 REF 32 REF 7 REF 34 REF 24 
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FigureWithID" "Int" 141 "FillColor" "Color" 255 255 204 2 1239 786 1169 786 NULL 
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 142 2 1239 839 1169 839 NULL 
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip"  
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 143 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 1244 810 "register / unregister:\n  Hilfsmethoden, die die Naming.rebind()-Aufrufe ersetzen.\n  Sie veroeffentlichen das Objekt in Abhaengigkeit von dem\n  de.renew.remote-Property, das entweder den aktuellen\n  Programmeinstellungen oder den Simulation-Properties\n  entnommen wird." "SansSerif" 0 12 0 NULL NULL
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 3 "FigureWithID" "Int" 144 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 204 2 333 838 333 792 NULL 
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip"  
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 145 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 1244 708 "catchUpOnPreviousConnects:\n  Ruft die connectedTo-Methode des RemoteServer-\n  RegistryListener fuer alle bekannten Server auf.\n  Die Methode erspart dem Listener die\n  Sonderbehandlung mit allServers()." "SansSerif" 0 12 0 NULL NULL  REF 18
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 148 3 163 576 163 544 216 544 NULL 
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip"  REF 9 
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 204 "FigureWithID" "Int" 150 2 1181 533 1122 533 NULL 
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip"  REF 14 
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 153 190 444 "Startet und verwaltet die Tools.\nWeiterhin ueber die Kommandozeile oder ueber das Menue" "SansSerif" 0 10 0 REF 18
+            CH.ifa.draw.standard.OffsetLocator 3 -85 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 154 223 276 "Ueberlassen die Auswahl des Servers\nund den Loginprozess dem LoginDialog" "SansSerif" 0 10 0 NULL NULL
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 155 243 670 "Registriert die Extension und\nuebergibt ihr den RemoteObjectHelper" "SansSerif" 0 10 0 REF 20
+            CH.ifa.draw.standard.OffsetLocator 7 37 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 156 878 687 "Registriert sich als Listener" "SansSerif" 0 10 0 REF 10
+            CH.ifa.draw.standard.OffsetLocator 5 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 157 912 314 "benutzt fuer\nklassisches\nObserver-Pattern" "SansSerif" 0 10 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 6 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 3 "FigureWithID" "Int" 158 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 204 2 308 91 308 146 NULL 
+            de.renew.gui.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.IsaArrowTip"  
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 204 "FigureWithID" "Int" 159 192 35 "LoginDialog:\n  - Auswahl des Managers zum Einloggen\n  - Verbinden zu neuen Servern" "SansSerif" 0 12 0 REF 34
+            CH.ifa.draw.standard.OffsetLocator -3 -129 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 162 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 99 843 "WorkflowManagerExtension:\n  Kuemmert sich um die Registrierung des WorkflowManager-Objekts\n  beim Start der Simulation und die Deregistrierung beim Beenden." "SansSerif" 0 12 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator 1 152 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 163 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 161 923 "Bestandteile des Workflow-Plugins" "SansSerif" 0 18 0 NULL NULL  
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 164 "FillColor" "Color" 192 192 192 "FrameColor" "Color" 0 0 0 558 703 "ruft auf:\n  addLocalObject\n  removeLocalObject" "SansSerif" 0 10 0 REF 25
+            CH.ifa.draw.standard.OffsetLocator -31 32 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 146 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 1186 452 "RemoteObjectHelper:\n  Verwaltet eine Liste von Objekten, die dem uebergebenen\n  Servicenamen entsprechen.\n  Die Klasse (+ Observer-Interface) ist einfacher zu handhaben\n  als die RemoteServerRegistry,  da nur solche Events nach\n  aussen getragen werden, die von belang sind (-> Servicename)\n  und das Exception-Handling beim Verbinden intern ablauft.\n\n  Der Liste von \"Remote\"-Objekten koennen auch lokale Objekte\n  untergeschoben werden, deren Behandlung sich nach aussen\n  nicht von echten Remote-Objekten unterscheidet." "SansSerif" 0 12 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 242 69 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 166 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 923 28 "Neue Klassen und Aenderungen in de.renew.remote" "SansSerif" 0 18 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 160 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 77 30 "Grafische\nAnzeige" "SansSerif" 0 18 0 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 170 3 466 241 747 241 747 762 NULL 
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 171 3 466 202 788 202 788 457 NULL 
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 2 "LineStyle" "String" "1 2" "FigureWithID" "Int" 172 4 358 147 358 115 943 115 943 149 NULL 
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 175 3 466 153 800 153 800 457 
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  NULL "de.renew.gui.AssocArrowTip"  
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 176 574 128 "Meldet neue\nRMI-Objekte" "SansSerif" 0 10 0 REF 96
+            CH.ifa.draw.standard.OffsetLocator -15 -158 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 167 "FillColor" "Color" 192 192 192 "FrameColor" "Color" 0 0 0 572 185 "Registriert sich\nals Listener" "SansSerif" 0 10 0 REF 92
+            CH.ifa.draw.standard.OffsetLocator -6 -125 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 "FigureWithID" "Int" 174 571 242 "Registriert neue\nRMI-Server" "SansSerif" 0 10 0 REF 90
+            CH.ifa.draw.standard.OffsetLocator 16 -240 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 152 "FillColor" "Color" 255 255 204 "FrameColor" "Color" 0 0 0 87 581 "WorkflowPlugin:\n  Fast keine Aenderungen, ausser zum\n  Erstellen der Menueeintraege und in den\n  inneren Start*-Klassen." "SansSerif" 0 12 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator -87 -101 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        de.renew.gui.fs.UMLNoteFigure "attributes" "attributes" 3 "FigureWithID" "Int" 161 "FillColor" "Color" 192 192 192 "FrameColor" "Color" 0 0 0 534 518 "Erstellt Objekt, um\nes an die Extension\nund (ueber die GUIs) an\nden LoginDialog zu geben." "SansSerif" 0 10 0 REF 15
+            CH.ifa.draw.standard.OffsetLocator -11 4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    NULL  0 26 1280 968 

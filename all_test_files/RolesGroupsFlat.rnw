@@ -1,0 +1,189 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 60 
+        fs.PartitionFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 0 0 255 426 80 164 33  
+        fs.PartitionFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 0 0 255 288 83 122 27  
+        fs.PartitionFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 0 0 255 71 79 193 27  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 84 83 "Eindhoven" "Helvetica" 2 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator -49 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 183 83 "Amsterdam" "Helvetica" 2 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 52 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 297 87 "Sales" "Helvetica" 2 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator -32 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 342 87 "Purchases" "Helvetica" 2 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 27 -2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 438 88 "Secretary" "Helvetica" 2 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -39 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 446 158 "Manager" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 504 88 "Office_worker" "Helvetica" 2 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 38 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 524 160 "Sales_clerk" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.IsaConnection 2 554 160 543 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 23  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.IsaConnection 2 478 158 533 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 19  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 344 171 "*Kees" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 401 225 "*Pim" "Helvetica" 2 12 0 
+            fs.IsaConnection 2 224 324 531 103 NULL 
+                CH.ifa.draw.figures.ArrowTip  0 0 0 
+                CH.ifa.draw.standard.ChopBoxConnector 
+                    fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 202 324 "*Jan" "Helvetica" 2 12 0 NULL NULL 0   
+                CH.ifa.draw.standard.ChopBoxConnector REF 20   
+            CH.ifa.draw.standard.OffsetLocator 42 19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 364 289 "*Kevin" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 114 253 "*Mies" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 444 225 "*Truus" "Helvetica" 2 12 0 
+            fs.IsaConnection 2 245 374 544 175 NULL 
+                CH.ifa.draw.figures.ArrowTip  0 0 0 
+                CH.ifa.draw.standard.ChopBoxConnector 
+                    fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 218 374 "*Anita" "Helvetica" 2 12 0 NULL NULL 0   
+                CH.ifa.draw.standard.ChopBoxConnector REF 23   
+            CH.ifa.draw.standard.OffsetLocator 73 -42 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   0  REF 37 
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 300 320 "*Sjaak" "Helvetica" 2 12 0 NULL NULL 0  REF 47 
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 397 165 "*Koos" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 396 329 "*Ivone" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 472 326 "*Ad" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.ConceptFigure "attributes" "attributes" 2 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 325 382 "*Frank" "Helvetica" 2 12 0 NULL NULL 0  
+        fs.IsaConnection 2 339 171 134 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 361 171 370 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        fs.IsaConnection 2 369 171 454 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 32  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        fs.IsaConnection 2 420 225 464 173 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 33  
+            CH.ifa.draw.standard.ChopBoxConnector REF 19   
+        fs.IsaConnection 2 411 225 373 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 33  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        fs.IsaConnection 2 462 225 469 173 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 43  
+            CH.ifa.draw.standard.ChopBoxConnector REF 19   
+        fs.IsaConnection 2 453 225 320 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 43  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 443 225 131 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 43  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 398 225 129 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 33  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 381 289 371 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.standard.ChopBoxConnector REF 13   
+        fs.IsaConnection 2 387 289 535 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.IsaConnection 2 372 289 123 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 41  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 144 253 448 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        fs.IsaConnection 2 137 253 304 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 128 253 114 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 42  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 418 165 459 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 52  
+            CH.ifa.draw.standard.ChopBoxConnector REF 16   
+        fs.IsaConnection 2 403 165 322 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 52  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 395 165 232 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 52  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   REF 34 
+        fs.IsaConnection 2 217 324 309 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 37  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 211 324 116 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 37  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 325 320 534 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 51  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.IsaConnection 2 317 320 312 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 51  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 311 320 119 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 51  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   
+        fs.IsaConnection 2 417 329 537 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 53  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.IsaConnection 2 410 329 315 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 53  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 407 329 220 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 53  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        fs.IsaConnection 2 483 326 539 103 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 54  
+            CH.ifa.draw.standard.ChopBoxConnector REF 20   
+        fs.IsaConnection 2 476 326 317 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 54  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 473 326 222 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 54  
+            CH.ifa.draw.standard.ChopBoxConnector REF 7   
+        fs.IsaConnection 2 231 374 116 98 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 47  
+            CH.ifa.draw.standard.ChopBoxConnector REF 4   REF 44 
+        fs.IsaConnection 2 236 374 310 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 47  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10   
+        fs.IsaConnection 2 350 382 548 175 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 55  
+            CH.ifa.draw.standard.ChopBoxConnector REF 23   
+        fs.IsaConnection 2 342 382 313 102 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 55  
+            CH.ifa.draw.standard.ChopBoxConnector REF 10    

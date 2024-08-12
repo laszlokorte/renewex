@@ -1,0 +1,110 @@
+7 
+    de.renew.gui.CPNDrawing 42 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 6 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 31 22 50 22 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 23 15 " " "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 7 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 55 15 "NEList" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 8 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 72 30 72 62 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 9 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 69 62 "A" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 10 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 72 77 72 106 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 11  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 11 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 69 106 "B" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 12 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 77 77 97 106 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 11  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 13 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 98 106 "C" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 17 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 96 22 121 22 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 6  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 18 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 126 15 "NEList" "SansSerif" 1 12 0 NULL NULL    REF 21
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 15 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 82 81 "c" "SansSerif" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator -2 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 22 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 143 30 143 62 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 26  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 23 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 140 62 "B" "SansSerif" 1 12 0 NULL NULL    REF 34
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 24 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 167 22 192 22 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 26  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 25 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 197 15 "EList" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 26 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 169 15 " tl " "SansSerif" 0 12 0 REF 35 
+            CH.ifa.draw.standard.OffsetLocator -4 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 27 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 136 35 "hd" "Helvetica" 0 12 0 REF 30 
+            CH.ifa.draw.standard.OffsetLocator 0 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 69 81 "b" "SansSerif" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 0 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 4 
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 28 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 31 144 65 144 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 48 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 23 137 " " "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 46 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 70 137 "+" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 29 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 73 152 73 184 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 54  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 43 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 69 184 "A" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 30 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 72 199 72 227 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 59  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 47 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 69 227 "B" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 31 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 77 199 94 227 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 59  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 33 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 95 227 "C" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 32 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 82 144 133 144 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 54  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 45 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 138 137 "+" "SansSerif" 1 12 0 NULL NULL    REF 69
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 35 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 141 152 141 184 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 74  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 36 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 137 184 "B" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.fs.FeatureConnection "attributes" "attributes" 4 "FigureWithID" "Int" 37 "FontName" "String" "SansSerif" "FontStyle" "Int" 0 "Visibility" "Boolean" "TRUE" 2 150 144 193 144 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 74  
+            CH.ifa.draw.figures.ShortestDistanceConnector 
+                de.renew.gui.fs.FSNodeFigure "attributes" "attributes" 4 "FigureWithID" "Int" 39 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 "Visibility" "Boolean" "TRUE" 198 137 "<>" "SansSerif" 1 12 0 NULL NULL
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 38 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 98 137 " tl " "SansSerif" 0 12 0 REF 70 
+            CH.ifa.draw.standard.OffsetLocator -3 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 41 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 134 157 "hd" "Helvetica" 0 12 0 REF 75 
+            CH.ifa.draw.standard.OffsetLocator 0 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 44 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 69 203 "b" "SansSerif" 0 12 0 REF 60 
+            CH.ifa.draw.standard.OffsetLocator 0 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 74 REF 54 REF 52 REF 79 REF 84 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 40 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 162 137 " tl " "SansSerif" 0 12 0 REF 80 
+            CH.ifa.draw.standard.OffsetLocator -3 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 19 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 99 15 " tl " "SansSerif" 0 12 0 REF 22 
+            CH.ifa.draw.standard.OffsetLocator -3 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 6 REF 26 REF 39 REF 16 REF 64 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 34 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 81 203 "c" "SansSerif" 0 12 0 REF 65 
+            CH.ifa.draw.standard.OffsetLocator -1 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 11 REF 59 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 16 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 65 35 "hd" "SansSerif" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 0 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 42 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 "Visibility" "Boolean" "TRUE" 66 157 "hd" "SansSerif" 0 12 0 REF 55 
+            CH.ifa.draw.standard.OffsetLocator 0 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  3 155 294 298 

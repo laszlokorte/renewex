@@ -1,0 +1,71 @@
+10 
+    de.renew.gui.CPNDrawing 25 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 8 "TextAlignment" "Int" 2 "FigureWithID" "Int" 301 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 0 0 0 "FontName" "String" "Dialog" "FontSize" "Int" 12 "FontStyle" "Int" 0 "FillColor" "Color" 112 219 147 275 214 15 17 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 6 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 302 "FontName" "String" "Dialog" "FontSize" "Int" 12 "FontStyle" "Int" 0 2 287 227 448 393 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 8 "TextAlignment" "Int" 2 "FigureWithID" "Int" 303 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 0 0 0 "FontName" "String" "Dialog" "FontSize" "Int" 12 "FontStyle" "Int" 0 "FillColor" "Color" 112 219 147 444 393 24 16 NULL    REF 6 
+        de.renew.gui.ArcConnection "attributes" "attributes" 6 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 304 "FontName" "String" "Dialog" "FontSize" "Int" 12 "FontStyle" "Int" 0 2 277 218 55 35 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 8 "TextAlignment" "Int" 2 "FigureWithID" "Int" 305 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 0 0 0 "FontName" "String" "Dialog" "FontSize" "Int" 12 "FontStyle" "Int" 0 "FillColor" "Color" 112 219 147 34 19 24 16 NULL    REF 11 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 306 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 373 326 "3" "Dialog" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 10 23 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 307 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 72 62 "2\n4" "Dialog" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator -90 -49 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 308 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 390 324 "1" "Dialog" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 27 21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 309 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 67 263 "(let loop ((i 10)     (acc '())\n;;; Interface comment on baseline\n;;; not automatically wrapped\n;; indent to next line\n;; this too\n(x 0)(y 0)\n; single item comment\n;continued\n(z 0)(k 0))\n       \n\n  (if (< i 0)      (reverse acc)      (loop\n        (- i 1) \n        (cons\n i acc)        0        0        0        0)))" "Dialog" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -110 153 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 4 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 310 "FontName" "String" "Dialog" "FontSize" "Int" 12 2 262 175 280 216 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 323 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 183 100 "(let ((x 1)(y 2)(z 3)(i 4)\n      (j 5)\n      (k 6)\n      (m 7))\n  (+ x y z i j k m))" "Dialog" 0 12 0 REF 1 
+                    CH.ifa.draw.standard.OffsetLocator -35 -85 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 4 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 311 "FontName" "String" "Dialog" "FontSize" "Int" 12 2 170 194 276 221 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 317 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 122 158 "(\niota\n 10\n           )" "Dialog" 0 12 0 REF 1 
+                    CH.ifa.draw.standard.OffsetLocator -136 -34 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 4 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 312 "FontName" "String" "Dialog" "FontSize" "Int" 12 2 384 133 288 218 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 314 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 344 103 "(;; useless comment\n)" "Dialog" 0 12 0 REF 1 
+                    CH.ifa.draw.standard.OffsetLocator 119 -104 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 4 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 313 "FontName" "String" "Dialog" "FontSize" "Int" 12 2 397 277 288 225 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 322 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 325 277 "(let ((x 1) (y 2) (z 3)) (+ x y z))" "Dialog" 0 12 0 REF 1 
+                    CH.ifa.draw.standard.OffsetLocator 131 62 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   REF 38 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "FigureWithID" "Int" 315 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 283 195 "2" "Dialog" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 5 -20 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 0 "FigureWithID" "Int" 316 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 273 239 "3" "Dialog" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -5 24 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 32 
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "FigureWithID" "Int" 318 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 244 215 "\n1" "Dialog" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -34 8 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 0 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 319 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 120 5 "Completely broken indentation, spurious whitespace\nand wrong alignment.Currently this can only be fixed\nwhen compiling the net, since the syntax checker knows\nnothing about the node, and I'm not willing to extend\nthe text entry widget (yet)." "Dialog" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 4 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 320 "FontName" "String" "Dialog" "FontSize" "Int" 12 2 253 263 279 228 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 21  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 2 "FigureWithID" "Int" 321 "MarkingAppearance" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 302 208 "4" "Dialog" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 24 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  REF 44 REF 26 
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 4 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 325 "FontName" "String" "Dialog" "FontSize" "Int" 12 2 289 222 384 216 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "TextAlignment" "Int" 1 "MarkingAppearance" "Int" 2 "FigureWithID" "Int" 324 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 384 192 ";from a square\n[]\n; to a circle :)" "Dialog" 0 12 0 REF 1 
+                    CH.ifa.draw.standard.OffsetLocator 145 -8 
+                        CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1    REF 67 NULL  750 141 530 600 

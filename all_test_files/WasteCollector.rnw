@@ -1,0 +1,191 @@
+7 
+    de.renew.gui.CPNDrawing 69 
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 110 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 95 565 500 94 NULL  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 102 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 95 448 426 94 NULL  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 1 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 184 84 78 25 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 4 "FigureWithID" "Int" 25 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 323 152 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "FigureWithID" "Int" 31 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 2 106 144 191 109 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 5 "FigureWithID" "Int" 10 "MarkingAppearance" "Int" 2 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 8 127 106 68 NULL   
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 39 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 95 216 426 94 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 4 "FigureWithID" "Int" 48 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 323 84 20 20 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "FigureWithID" "Int" 49 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 2 324 94 262 95 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 10  
+            CH.ifa.draw.standard.ChopBoxConnector REF 3   
+        de.renew.gui.ArcConnection "attributes" "attributes" 3 "FigureWithID" "Int" 50 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 2 324 162 270 162 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 51 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 176 141 94 43 NULL    REF 19 
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 81 "TraceMode" "Boolean" "FALSE" 3 61 195 61 256 95 256 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 9   
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 93 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 95 332 426 94 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 95 "TraceMode" "Boolean" "FALSE" 3 61 195 61 372 95 372 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 23   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 104 "TraceMode" "Boolean" "FALSE" 3 61 195 61 488 95 488 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2   
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 112 "TraceMode" "Boolean" "FALSE" 3 61 195 61 604 95 604 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        de.renew.gui.TransitionFigure "attributes" "attributes" 4 "FigureWithID" "Int" 116 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 192 192 192 99 52 68 41 NULL  
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 120 "TraceMode" "Boolean" "FALSE" 2 85 132 116 93 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 33   REF 7 
+        de.renew.gui.ArcConnection "attributes" "attributes" 2 "FigureWithID" "Int" 178 "TraceMode" "Boolean" "FALSE" 2 114 161 176 162 NULL NULL 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 7  
+            CH.ifa.draw.standard.ChopBoxConnector REF 19   
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 192 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 288 88 "#1" "Helvetica" 0 12 0 REF 11
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 195 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 103 73 "[Link\n rcv: #4\n param: #1]" "Helvetica" 0 12 0 REF 33
+            CH.ifa.draw.standard.OffsetLocator -10 9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "rcv" "param" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 198 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 292 156 "#1" "Helvetica" 0 12 0 REF 15
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 199 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 140 155 "#4" "Helvetica" 0 12 0 REF 37
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 212 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 347 147 "Initial\nBeliefs" "Helvetica" 1 12 0 REF 4 
+            CH.ifa.draw.standard.OffsetLocator 33 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 69 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 737 41 "[Adjacent left:[b] right:[c]]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 431 -96 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "right" "" "left"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 72 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 740 94 "[Located what:[bin] at:[b]]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 437 -43 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "" "what" "at"  
+        CH.ifa.draw.figures.GroupFigure 4 
+            CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 239 "FillColor" "Color" 0 0 255 8 66 30 10 8 8  
+            CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 240 "FillColor" "Color" 0 0 255 15 48 17 15  
+            CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FigureWithID" "Int" 241 "FillColor" "Color" 0 0 255 15 36 17 9 8 8  
+            CH.ifa.draw.figures.PolyLineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 242 26 32 53 33 53 38 53 39 53 40 53 44 60 44 62 44 64 43 63 40 63 38 64 38 65 38 67 38 66 39 65 39 64 43 65 46 66 47 66 48 66 48 67 49 67 49 68 48 70 48 71 43 57 NULL NULL   
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 68 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 805 41 "[Rule\n goal:[InDirection from:#1 to:#2 dir:#4[Left]]\n subgoals:\n  <[Adjacent left:#1 right:#3]\n   [InDirection from:#3 to:#2 dir:#4]>]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 569 -44 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 11 "goal:dir" "goal" "subgoals:tl:tl" "subgoals:hd" "subgoals" "subgoals:hd:right" "" "subgoals:tl:hd" "goal:from" "subgoals:tl" "goal:to"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 193 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 189 88 "[Link\n rcv: #4\n param: #1[Plan]]" "Helvetica" 0 12 0 REF 3
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "rcv" "param" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 197 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 105 55 "[Link\n param: #1[Event]]" "Helvetica" 0 12 0 REF 33
+            CH.ifa.draw.standard.OffsetLocator 0 -9 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 2 "param" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 200 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 182 145 "[Link\n rcv: #4\n param: [Assert\n                belief:#1]]" "Helvetica" 0 12 0 REF 19
+            CH.ifa.draw.standard.OffsetLocator 0 1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 4 "param" "rcv" "param:belief" ""  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 94 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 95 314 "moveLeft" "Helvetica" 1 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator -187 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 103 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 95 430 "pick" "Helvetica" 1 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator -201 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 111 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 95 547 "drop" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -237 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 168 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 103 337 "<Link\n[rcv: #4\n param: [Move dir:[Left]]]\n[rcv: #4\n param:<[Retract belief: [Located what:#6[robot] at:#1]]\n [Adjacent left:#2 right:#1]\n [Assert belief: [Located what:#6 at:#2]]>]>" "Helvetica" 0 11 0 REF 23
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 20 "tl" "tl:hd:param:hd:belief:at" "tl:tl" "tl:hd:param:tl:tl:hd:belief" "" "tl:hd:param:tl" "tl:hd:param:tl:hd:left" "tl:hd" "hd:rcv" "hd:param" "tl:hd:param:tl:hd" "tl:hd:param:tl:tl" "tl:hd:param:tl:tl:tl" "hd" "tl:hd:param:hd" "tl:hd:param:tl:tl:hd" "tl:hd:param:hd:belief:what" "tl:hd:param:hd:belief" "hd:param:dir" "tl:hd:param"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 169 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 104 453 "<Link\n[rcv: #4\n param: [Pick what:#2]]\n[rcv: #4\n param:<[Located what:#6[robot] at:#1]\n [Retract belief:[Located what:#2 at:#1]]\n [Assert belief: [Located what:#2 at:#6]]>]>" "Helvetica" 0 11 0 REF 2
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 19 "tl:hd:param:tl:hd:belief" "hd" "tl:hd:param:hd:what" "hd:param:what" "tl:hd:param:hd" "tl" "tl:hd:param:tl:tl:tl" "tl:hd:param:hd:at" "tl:hd:param:tl:tl:hd:belief" "tl:hd:param:tl" "tl:hd:param" "tl:hd:param:tl:tl" "hd:rcv" "tl:hd:param:tl:hd" "hd:param" "tl:hd" "tl:tl" "" "tl:hd:param:tl:tl:hd"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 170 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 102 570 "<Link\n[rcv: #4\n param: [Drop\n                what:#2]]\n[rcv: #4\n param:<[Located what:#3[bin] at:#1]\n [Located what:#6[robot] at:#1]\n [Retract belief:[Located what:#2 at:#6]]\n [Assert belief: [Located what:#2 at:#3]]>]>" "Helvetica" 0 11 0 REF 1
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 22 "tl:hd:param:tl" "tl:hd:param:tl:hd" "hd:param" "tl:tl" "" "tl:hd:param:tl:tl:tl:hd:belief" "tl:hd:param:hd:what" "hd" "tl:hd:param:tl:tl:hd:belief" "tl:hd:param:tl:tl:tl" "tl:hd:param:tl:tl:hd" "tl:hd:param:hd:at" "tl:hd:param:tl:hd:what" "hd:rcv" "tl" "tl:hd:param:hd" "tl:hd:param:tl:tl" "tl:hd:param:tl:tl:tl:tl" "tl:hd" "hd:param:what" "tl:hd:param:tl:tl:tl:hd" "tl:hd:param"  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 236 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 261 321 " action System.out.println(\"Moving Left.\")" "Helvetica" 0 12 0 REF 23 
+            CH.ifa.draw.standard.OffsetLocator 61 -51 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 237 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 237 438 " action System.out.println(\"Picking up Waste.\")" "Helvetica" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 54 -50 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 238 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 237 554 " action System.out.println(\"Dropping Waste.\")" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 14 -51 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 243 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 1146 41 "[Rule\n goal:[InDirection from:#1 to:#2 dir:[Right]]\n subgoals:\n  <[InDirection from:#2 to:#1 dir:[Left]]>]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 880 -44 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 9 "subgoals" "subgoals:tl" "" "subgoals:hd:dir" "goal:from" "goal:to" "goal" "goal:dir" "subgoals:hd"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 243 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 658 151 "[Idle]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 338 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 219 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 406 36 "access _BDItypes;\naccess _WasteCollectorTypes;\nimport de.renew.formalism.fsnet.*;" "Helvetica" 0 12 0 NULL NULL 1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 74 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 658 96 "[Located what:[robot] at:[a]]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 361 -41 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "at" "what" ""  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 5 "FigureWithID" "Int" 211 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "TRUE" 317 54 "Initial\nPlans" "Helvetica" 1 12 0 REF 10 
+            CH.ifa.draw.standard.OffsetLocator 0 -25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 180 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 199 68 "initPlans" "Helvetica" 1 12 0 REF 3 
+            CH.ifa.draw.standard.OffsetLocator 0 -21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 182 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 207 125 "initKB" "Helvetica" 1 12 0 REF 19 
+            CH.ifa.draw.standard.OffsetLocator 0 -30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 235 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 254 205 " action System.out.println(\"Moving Right.\")" "Helvetica" 0 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 59 -51 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 167 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 100 221 "<Link\n[rcv: #4\n param: [Move dir:[Right]]]\n[rcv: #4\n param:<[Retract belief: [Located what:#6[robot] at:#1]]\n [Adjacent left:#1 right:#2]\n [Assert belief: [Located what:#6 at:#2]]>]>" "Helvetica" 0 11 0 REF 9
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 20 "hd" "tl:hd:param" "tl:hd" "tl:hd:param:hd:belief:what" "tl:hd:param:hd" "tl:hd:param:tl:hd:right" "hd:param:dir" "tl:hd:param:hd:belief:at" "tl:hd:param:tl:tl" "tl:hd:param:tl" "hd:rcv" "tl:hd:param:tl:tl:tl" "tl:tl" "hd:param" "" "tl:hd:param:tl:hd" "tl:hd:param:tl:tl:hd:belief" "tl" "tl:hd:param:tl:tl:hd" "tl:hd:param:hd:belief"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 244 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 17 144 "[!FSNetInstance\n of:( \"BDIAgent\")]" "Helvetica" 0 12 0 REF 7
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 2 "" "of"  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 29 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 36 113 "BDIAgent" "Helvetica" 1 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator 1 -41 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 196 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 97 105 "#4" "Helvetica" 0 12 0 REF 34
+            CH.ifa.draw.standard.OffsetLocator 2 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 194 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 140 122 "#4" "Helvetica" 0 12 0 REF 5
+            CH.ifa.draw.standard.OffsetLocator -3 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 119 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 117 36 "super" "Helvetica" 1 12 0 REF 33 
+            CH.ifa.draw.standard.OffsetLocator 0 -29 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 67 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 670 417 "[Plan\n trigger:[NewGoal\n            belief:#5[Located\n                    what:#6[robot]\n                    at:#2]\n            intention: #3[*]]\n context:<[Located\n           what:#6\n           at:#4]\n           [InDirection from:#2 to:#4 dir:#7]>\n intention:<[Move dir:#7]\n            [NewGoal\n            belief:#5] | #3>]" "Helvetica" 0 11 0 REF 10
+            CH.ifa.draw.standard.OffsetLocator 431 427 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 17 "" "context:tl:hd:dir" "trigger:belief:what" "intention:hd" "trigger" "trigger:intention" "context:tl:hd" "intention:tl:hd" "context" "trigger:belief" "intention" "intention:tl" "context:hd:at" "trigger:belief:at" "context:tl:tl" "context:tl" "context:hd"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 70 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 659 41 "[Adjacent left:[a] right:[b]]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 353 -96 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 3 "left" "right" ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 217 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 1016 41 "[Rule\n goal:[InDirection from:#1 to:#2 dir:[Left]]\n subgoals:\n  <[Adjacent left:#1 right:#2]>]" "Helvetica" 0 11 0 REF 4
+            CH.ifa.draw.standard.OffsetLocator 744 -52 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 8 "goal:to" "goal" "goal:dir" "" "subgoals:tl" "subgoals" "subgoals:hd" "goal:from"  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 5 "FigureWithID" "Int" 66 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 "Visibility" "Boolean" "FALSE" 669 187 "[Plan\n trigger:[NewBelief\n          belief:#5[Located\n                       what:#4[Waste]\n                       at:#1[Lane]]\n          intention: #3[*]]\n context:<[Located\n           what:[bin]\n           at:#2]>\n intention:\n        <[Retract belief:[Idle]]\n          [NewGoal\n            belief:[Located\n                    what:#6[robot]\n                    at:#1]]\n           [Pick what:#4]\n           [Assert belief:[Idle]]\n           [Retract belief:[Idle]]\n           [NewGoal\n           belief:[Located\n                    what:#6\n                    at:#2]]\n           [Drop what:#4]\n           [Assert belief:[Idle]]\n           | #3>]" "Helvetica" 0 11 0 REF 10
+            CH.ifa.draw.standard.OffsetLocator 688 206 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 34 "trigger:belief:at" "intention:tl:tl:tl:tl:tl:tl" "intention:tl:tl:hd" "context:hd" "intention:tl:tl" "context:tl" "intention:tl:tl:tl:tl:tl:tl:tl" "context:hd:what" "intention" "intention:tl:tl:tl:tl:tl:tl:hd" "intention:tl:tl:tl:tl:hd:belief" "intention:tl:hd" "intention:tl" "trigger" "trigger:belief:what" "trigger:intention" "intention:tl:tl:tl:tl:tl:tl:tl:hd:belief" "context" "intention:tl:tl:tl:tl:tl:hd" "intention:hd" "intention:tl:tl:tl:tl:hd" "intention:tl:tl:tl:tl:tl:tl:tl:hd" "intention:tl:tl:tl" "context:hd:at" "intention:tl:tl:tl:tl" "intention:tl:hd:belief" "intention:tl:hd:belief:what" "intention:tl:tl:tl:tl:tl:hd:belief" "intention:tl:tl:tl:hd" "trigger:belief" "intention:tl:tl:tl:tl:tl" "intention:tl:tl:tl:hd:belief" "intention:hd:belief" ""  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "FigureWithID" "Int" 45 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 95 198 "moveRight" "Helvetica" 1 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator -183 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 202 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 74 249 "#4" "Helvetica" 0 12 0 REF 20
+            CH.ifa.draw.standard.OffsetLocator 1 30 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 208 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 74 365 "#4" "Helvetica" 0 12 0 REF 24
+            CH.ifa.draw.standard.OffsetLocator 1 88 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 209 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 74 481 "#4" "Helvetica" 0 12 0 REF 27
+            CH.ifa.draw.standard.OffsetLocator 1 146 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 4 "FigureWithID" "Int" 210 "TraceMode" "Boolean" "FALSE" "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 74 598 "#4" "Helvetica" 0 12 0 REF 30
+            CH.ifa.draw.standard.OffsetLocator 1 205 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 244 2 521 495 554 495 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 2  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 2 "FigureWithID" "Int" 245 "FillColor" "Color" 192 192 192 553 485 20 20 NULL    REF 176 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 246 3 563 505 563 544 495 565 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 176  
+            CH.ifa.draw.standard.ChopBoxConnector REF 1   
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FillColor" "Color" 255 199 158 "FrameColor" "Color" 255 199 158 "FigureWithID" "Int" 248 540 469 "carrying" "Helvetica" 1 12 0 REF 176 
+            CH.ifa.draw.standard.OffsetLocator 0 -19 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 249 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 254 254 254 559 536 "#2" "Helvetica" 0 12 0 REF 177
+            CH.ifa.draw.standard.OffsetLocator 35 7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 247 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 254 254 254 531 489 "#2" "Helvetica" 0 12 0 REF 172
+            CH.ifa.draw.standard.OffsetLocator -1 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1 1 ""  REF 61  30 19 638 709 

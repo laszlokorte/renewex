@@ -1,0 +1,8 @@
+7 
+    de.renew.gui.CPNDrawing 4 
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 102 95 75 81 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 141 108 "((ConjunctiveType)([String].getType())).concepts().nextConcept();\n((ConjunctiveType)([Test].getType().appropType(new Name(\"a\")))).concepts().nextConcept()" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 250 -12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 3 "FigureWithID" "Int" 4 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 276 19 "access JavaConceptTest;\nimport de.uni_hamburg.fs.*;" "Helvetica" 0 12 0 NULL NULL 1  
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 183 26 "Test\na: String" "Helvetica" 0 12 0 NULL NULL  NULL  9 176 707 253

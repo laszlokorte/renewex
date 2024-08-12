@@ -1,0 +1,5 @@
+7 
+    de.renew.gui.CPNDrawing 3 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 166 29 "_t2\n\n/auszeichnung=gelb\nbeginn=4.10.1999, 11 Uhr\nbeschreibung=\"Geburtstagsfeier\"\ndauer=4h\nhyperlink=\"http://.../einladung.html\"\nverschiebbar=false\ntyp=privat" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FillColor" "Color" 255 255 255 "FrameColor" "Color" 0 0 0 "FigureWithID" "Int" 1 52 81 "_t1:Termin" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 58 29 "_:Termin" "Helvetica" 0 12 0 NULL NULL  NULL  0 95 418 233

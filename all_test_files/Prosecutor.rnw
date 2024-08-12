@@ -1,0 +1,32 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 12 
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 102 93 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 130 78 "decide summon" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 61 -15 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 132 94 ":process(t)" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 46 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 131 111 "t:decide(\"summon\")" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 70 17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 103 159 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 135 144 "decide charge" "Helvetica" 1 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 60 -15 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 133 159 ":process(t)" "Helvetica" 0 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 46 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 133 175 "t:decide(\"charge\")" "Helvetica" 0 12 0 REF 11 
+            CH.ifa.draw.standard.OffsetLocator 66 15 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 105 212 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 134 195 "decide suspend" "Helvetica" 1 12 0 REF 21 
+            CH.ifa.draw.standard.OffsetLocator 62 -17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 134 210 ":process(t)" "Helvetica" 0 12 0 REF 21 
+            CH.ifa.draw.standard.OffsetLocator 45 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 133 226 "t:decide(\"suspend\")" "Helvetica" 0 12 0 REF 21 
+            CH.ifa.draw.standard.OffsetLocator 69 13 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

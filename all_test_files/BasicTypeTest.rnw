@@ -1,0 +1,7 @@
+6 
+    de.renew.gui.CPNDrawing 3 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 289 33 "X\nb: String" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.PlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 112 219 147 222 139 20 20 NULL  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 3 "FigureWithID" "Int" 3 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 176 171 "[Any b:[{\"a\" .. \"h\"}]]+[Any b:(\"a\")]" "Helvetica" 0 12 0 REF 2 
+            CH.ifa.draw.standard.OffsetLocator 25 29 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  0 97 467 283 

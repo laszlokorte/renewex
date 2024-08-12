@@ -1,0 +1,132 @@
+
+    CH.ifa.draw.cpn.CPNDrawing 47 
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 140 237 20 20  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 95 238 "Beliefs" "Helvetica" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator -35 -1 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 364 496 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 411 500 ":belief(elist,elist)" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 79 3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 404 483 "elist = new fs.FS(\"elist\")" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 91 -14 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 187 292 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 157 254 191 292 NULL NULL 0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 12   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 219 289 ":belief(X,Y)" "Helvetica" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 50 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 180 266 "B" "Helvetica" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator 10 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 219 306 "Y = B.unify(X)" "Helvetica" 0 12 0 REF 12 
+            CH.ifa.draw.standard.OffsetLocator 57 13 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 265 122 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 147 65 ":new()" "Helvetica" 0 12 0 REF 25 
+            CH.ifa.draw.standard.OffsetLocator -117 -58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.ArcConnection 3 265 130 150 132 150 238 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 25  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 95 102 "fs.parse(\"[atPlace OBJECT:[robot] PLACE:[a]]\")" "Helvetica" 0 12 0 REF 29 
+            CH.ifa.draw.standard.OffsetLocator 14 -75 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 116 84 "fs = new fs.FS()" "Helvetica" 0 12 0 REF 25 
+            CH.ifa.draw.standard.OffsetLocator -120 -39 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 365 144 20 20  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 394 146 "Queries" "Helvetica" 1 12 0 REF 39 
+            CH.ifa.draw.standard.OffsetLocator 41 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.ArcConnection 2 289 132 366 153 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 25  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 39   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 319 119 "fs.parse(\"[atSamePlace OBJ1:[robot] OBJ2: [thing]]\")" "Helvetica" 0 12 0 REF 43 
+            CH.ifa.draw.standard.OffsetLocator 132 -16 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 364 193 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 375 164 375 193 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 39  
+            CH.ifa.draw.standard.ChopBoxConnector REF 50   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 382 167 "q" "Helvetica" 0 12 0 REF 51 
+            CH.ifa.draw.standard.OffsetLocator 10 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 398 194 "this:belief(q,a)" "Helvetica" 0 12 0 REF 50 
+            CH.ifa.draw.standard.OffsetLocator 60 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.PlaceFigure "no_attributes" 366 252 20 20  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 392 254 "Answers" "Helvetica" 1 12 0 REF 61 
+            CH.ifa.draw.standard.OffsetLocator 41 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        CH.ifa.draw.cpn.ArcConnection 2 376 209 376 253 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 50  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 61   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 385 220 "a" "Helvetica" 0 12 0 REF 65 
+            CH.ifa.draw.standard.OffsetLocator 12 -4 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.ArcConnection 3 265 131 163 145 151 238 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 25  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 67 141 "fs.parse(\"[atPlace OBJECT:[bin] PLACE:[a]]\")" "Helvetica" 0 12 0 REF 72 
+            CH.ifa.draw.standard.OffsetLocator -21 -36 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.ArcConnection 3 265 134 177 168 153 239 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 25  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 70 161 "fs.parse(\"[atPlace OBJECT:[waste] PLACE:[b]]\")" "Helvetica" 0 12 0 REF 79 
+            CH.ifa.draw.standard.OffsetLocator -11 -18 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.ArcConnection 2 268 138 157 241 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.standard.ChopBoxConnector REF 25  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 -169 179 "fs.parse(\"[rule GOAL:[atSamePlace OBJ1: #1 OBJ2: #2] SUBGOALS: <[atPlace OBJECT: #1 PLACE: #3] [atPlace OBJECT: #2 PLACE: #3]>]\")\n" "Helvetica" 0 12 0 REF 86 
+            CH.ifa.draw.standard.OffsetLocator 1 -3 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 364 322 24 16  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 404 280 ":belief(X,Y)" "Helvetica" 0 12 0 REF 93 
+            CH.ifa.draw.standard.OffsetLocator 58 -43 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 406 318 "this:belief(X.at(\"HEAD\"),Xha)" "Helvetica" 0 12 0 REF 93 
+            CH.ifa.draw.standard.OffsetLocator 108 -5 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 399 339 "X1 = X.unify(new fs.FS(\"HEAD\",Xha))" "Helvetica" 0 12 0 REF 93 
+            CH.ifa.draw.standard.OffsetLocator 123 16 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 398 359 "this:belief(X.at(\"TAIL\"),Xta)" "Helvetica" 0 12 0 REF 93 
+            CH.ifa.draw.standard.OffsetLocator 93 36 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 390 381 "Y = X1.unify(new fs.FS(\"TAIL\",Xta))" "Helvetica" 0 12 0 REF 93 
+            CH.ifa.draw.standard.OffsetLocator 108 58 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 402 297 "new fs.FS(\"nelist\").subsumes(X)" "Helvetica" 0 12 0 REF 93 
+            CH.ifa.draw.standard.OffsetLocator 112 -26 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.TransitionFigure "no_attributes" 139 347 24 16  
+        CH.ifa.draw.cpn.ArcConnection 2 150 257 150 347 NULL NULL 0 0 0 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.standard.ChopBoxConnector REF 112   
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 154 320 "R" "Helvetica" 0 12 0 REF 113 
+            CH.ifa.draw.standard.OffsetLocator 8 25 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 139 369 ":belief(X,Y)" "Helvetica" 0 12 0 REF 112 
+            CH.ifa.draw.standard.OffsetLocator 18 21 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 93 409 "this:belief(R1.at(\"SUBGOALS\"),SGa)" "Helvetica" 0 12 0 REF 112 
+            CH.ifa.draw.standard.OffsetLocator 41 61 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 97 392 "R1 = R.unify(new fs.FS(\"GOAL\",X))" "Helvetica" 0 12 0 REF 112 
+            CH.ifa.draw.standard.OffsetLocator 40 44 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        CH.ifa.draw.cpn.CPNTextFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 90 427 "Y = R1.unify(new fs.FS(\"SUBGOALS\",SGa)).at(\"GOAL\")" "Helvetica" 0 12 0 REF 112 
+            CH.ifa.draw.standard.OffsetLocator 88 79 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1   

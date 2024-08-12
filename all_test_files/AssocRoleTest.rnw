@@ -1,0 +1,4 @@
+7 
+    de.renew.gui.CPNDrawing 2 
+        de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 7 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 167 13 "Test\na: String\nb: Test" "Helvetica" 0 12 0 NULL NULL
+        de.renew.gui.fs.FSFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 78 125 "[AssocRoleTest::Test]" "Helvetica" 0 12 0 NULL NULL 1 1 ""  NULL  0 97 332 270

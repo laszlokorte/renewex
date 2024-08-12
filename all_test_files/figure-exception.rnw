@@ -1,0 +1,7 @@
+10 
+    de.renew.gui.CPNDrawing 3 
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 13 136 123 24 16 NULL  
+        de.renew.gui.DeclarationFigure "attributes" "attributes" 4 "FigureWithID" "Int" 15 "FrameColor" "Color" 255 199 158 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 3 4 "(import s2j)\n(define-java-classes\n  (<ch.ifa.draw.standard.figure-exception>\n   |CH.ifa.draw.standard.FigureException|)\n  <de.renew.gui.gui-plugin>)\n(define-generic-java-methods\n  get-current\n  process-figure-exception)" "SansSerif" 0 12 0 NULL NULL 1  
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 0 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 2 138 "(process-figure-exception\n (get-current (java-null <de.renew.gui.gui-plugin>))\n (java-new <ch.ifa.draw.standard.figure-exception>\n           (->jstring \"Foo\"))\n (->jboolean #t))" "SansSerif" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 7 44 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  750 141 402 259 

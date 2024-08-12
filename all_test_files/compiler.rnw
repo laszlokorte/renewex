@@ -1,0 +1,21 @@
+8 
+    de.renew.gui.CPNDrawing 8 
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "LineStyle" "String" "10" "FigureWithID" "Int" 3 "FillColor" "Color" 255 255 255 2 260 229 260 201 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.fs.IsaArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 1 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 117 229 "JavaNetCompiler\n\n- allowDangerousArcs: boolean\n- allowTimeInscriptions: boolean\n- wantEarlyTokens: boolean\n\n# makeParser(java.lang.String): InscriptionParser" "SansSerif" 0 12 0 NULL NULL
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 80 44 "«interface»\nShadowCompiler\n\ncompile(ShadowNetSystem): ShadowLookup\ngetLintNames(): String[]\nlint(int, ShadowNetSystem, ShadowNet, ShadowNet)\ncheckDeclarationNode(String, boolean): String\ncheckArcInscription(String, boolean, ShadowNet): String\ncheckTransitionInscription(String, boolean, ShadowNet): String\ncheckPlaceInscription(String, boolean, ShadowNet): String" "SansSerif" 0 12 0 NULL NULL   0
+        de.renew.gui.fs.AssocConnection "attributes" "attributes" 1 "FigureWithID" "Int" 6 2 407 275 575 275 NULL
+            de.renew.gui.fs.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.fs.AssocArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 4  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 10 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 580 266 "JavaNetParser" "SansSerif" 0 12 0 NULL NULL
+        de.renew.gui.CPNTextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 9 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 254 254 254 462 255 "«create»" "SansSerif" 0 12 0 REF 7 
+            CH.ifa.draw.standard.OffsetLocator -4 -12 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.gui.fs.IsaConnection "attributes" "attributes" 3 "LineStyle" "String" "10" "FigureWithID" "Int" 11 "FillColor" "Color" 255 255 255 2 624 266 624 208 NULL
+            de.renew.gui.fs.IsaArrowTip 0.6 15.0 12.0 0  "de.renew.gui.fs.IsaArrowTip"
+            CH.ifa.draw.standard.ChopBoxConnector REF 11  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.fs.ConceptFigure "attributes" "attributes" 3 "FigureWithID" "Int" 5 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 255 255 470 34 "«interface»\nInscriptionParser\n\nsetDeclarationNode(ParsedDeclarationNode)\nsetLookup(ShadowLookup)\nDeclarationNode(): ParsedDeclarationNode\nPlaceInscription(): CollectionEnumeration\nArcInscription(): CollectionEnumeration\nTransitionInscription(boolean): CollectionEnumeration\nVariableInscription(): TypedExpression\ntryParseChannelInscription(): ChannelInscription" "SansSerif" 0 12 0 NULL NULL   0  REF 6 REF 4 REF 19 REF 11 NULL  2 151 1207 873

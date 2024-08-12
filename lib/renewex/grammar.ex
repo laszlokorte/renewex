@@ -1,6 +1,6 @@
 defmodule Renewex.Grammar do
   @moduledoc """
-  This module defines the grammar to parse [Renew](http://renew.de) *.rnw files.
+  This module defines the grammar to parse [Renew](http://renew.de) `*.rnw` files.
 
   The Renew grammar is version dependent and depends on the Java class hierarchy defined in renew.
 
@@ -609,18 +609,18 @@ defmodule Renewex.Grammar do
   end
 
   @doc """
-    Applies a specific rul to the current parser state.
+  Applies a specific rul to the current parser state.
 
-    ## Parameters
-    - parser: the current state of the parser
-    - rule: the name of the parser rule to apply. The parse rule is a java class name that must be defined in the grammars hierarchy.
-    - into: an `Storable` struct into which the parsed values shall be appended
+  ## Parameters
+  - parser: the current state of the parser
+  - rule: the name of the parser rule to apply. The parse rule is a java class name that must be defined in the grammars hierarchy.
+  - into: an `Storable` struct into which the parsed values shall be appended
 
-    ## Returns
-    - {:ok, %Storable{into | fields: parsed_fields}, next_parse_state} if the rule was applied successfully.
-      Where `parsed_fields` contain the values that have been parsed by the rule and next_parse_state is the 
-      state of the parser after having consumed the tokens processed by the parse rule
-    - {:error, reason, next_parse_state} if the rule could not be applied for some reason.
+  ## Returns
+  - `{:ok, %Storable{into | fields: parsed_fields}, next_parse_state}` if the rule was applied successfully.
+    Where `parsed_fields` contain the values that have been parsed by the rule and next_parse_state is the 
+    state of the parser after having consumed the tokens processed by the parse rule
+  - `{:error, reason, next_parse_state}` if the rule could not be applied for some reason.
   """
   def parse(parser, rule, into)
 
@@ -874,6 +874,13 @@ defmodule Renewex.Grammar do
   Checks if for the given grammar and given class name the skip skip_super flag is set.
   If the skip_super flag is set, the grammar rules of the parent class shall not be applied during parsing.
   This corresponds to NOT calling `super.read()` in the java implementation of the class.
+
+  ## Parameters
+  - grammar: the current state of the parser
+  - rule: name of the grammar rule
+
+  ## Returns
+  - if the the :skip_user flag has been set for the given rule in the given grammar.
   """
   def should_skip_super(grammar, rule) do
     Map.get(grammar.hierarchy[rule], :skip_super, false)

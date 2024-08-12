@@ -1,64 +1,85 @@
 defmodule Renewex.Hierarchy do
   @moduledoc """
+  The grammar for parsing a [Renew](http://renew.de) `*.rnw` file is defined by the 
+  object oriented class hierarchy of java classes in the original Java Renew implementation.
 
+  In order to parse all Renew `*.rnw` files correctly, this hierarchical model has to be reproduced 
+  as desribed in the Renewex.Grammar module. 
+
+  This module provides utility functions to query the hierarchy of a given Renewex.Grammar. For example you can query if Java 
+  class of a given name is defined inside the hierarchy or if some class a sub class of another class.
   """
+  alias Renewex.Grammar
 
   @doc """
-
+  Check if a class of a given name is defined inside the hierarchy of the given grammar.
   """
-  def is_defined(grammar, name) do
+  def is_defined(%Grammar{} = grammar, name) do
     Keyword.has_key?(grammar.hierarchy, name)
   end
 
   @doc """
-
+  Get the name of the super class of the given class inside the given hierarchy.
   """
-  def get_super(grammar, name) do
+  def get_super(%Grammar{} = grammar, name) do
     Map.get(grammar.hierarchy[name], :super, nil)
   end
 
   @doc """
-
+  Check if one class is a subtype of another class or interface.
   """
-  def is_child_of(grammar, child, parent) do
-    not is_nil(child) and
-      (parent == get_super(grammar, child) or
-         is_child_of(grammar, get_super(grammar, child), parent))
+  def is_subtype_of(%Grammar{} = grammar, subtype, supertype) do
+    not is_nil(subtype) and
+      (supertype == get_super(grammar, subtype) or
+         is_subtype_of(grammar, get_super(grammar, subtype), supertype))
   end
 
   @doc """
-
+  Get a list of all classes in the grammars hierarchy that have no super class.
   """
-  def roots(grammar) do
+  def roots(%Grammar{} = grammar) do
     grammar.hierarchy |> Map.keys() |> Enum.filter(fn k -> is_nil(get_super(grammar, k)) end)
   end
 
   @doc """
-
+  Get a list of all classes defined in the grammars hierarchy.
   """
-  def all_rules(grammar) do
+  def all_rules(%Grammar{} = grammar) do
     grammar.hierarchy |> Map.keys()
   end
 
   @doc """
-
+  Get a list of all supetypes of one or many given supertypes defined in the grammar hierarchy.
   """
-  def descendants_of(grammar, kinds) do
+  def subtypes_of(grammar, supertypes)
+
+  def subtypes_of(%Grammar{} = grammar, supertypes) when is_list(supertypes) do
     grammar
     |> all_rules
     |> Enum.filter(fn
-      k -> Enum.any?(kinds, fn kind -> k == kind or is_child_of(grammar, k, kind) end)
+      k -> Enum.any?(supertypes, fn super -> k == super or is_subtype_of(grammar, k, super) end)
+    end)
+  end
+
+  def subtypes_of(%Grammar{} = grammar, supertype) when is_binary(supertype) do
+    grammar
+    |> all_rules
+    |> Enum.filter(fn
+      k -> k == supertype or is_subtype_of(grammar, k, supertype)
     end)
   end
 
   @doc """
-
+  Check if a given class is defined as a subtype of another class in the hierarchy of the grammar.
   """
-  def is_descendant_of(grammar, child, parent) do
-    Enum.member?(descendants_of(grammar, [parent]), child)
+  def is_descendant_of(%Grammar{} = grammar, subtype, supertype) do
+    Enum.member?(subtypes_of(grammar, [supertype]), subtype)
   end
 
-  def implementors_of(grammar, interface) do
+  @doc """
+  The the list of all classes that are defined to implement a given interface inside the hierarchy of the grammar.
+  """
+  def implementors_of(%Grammar{} = grammar, interface) do
     grammar
     |> all_rules
     |> Enum.filter(fn
@@ -67,29 +88,31 @@ defmodule Renewex.Hierarchy do
   end
 
   @doc """
-
+  Get the list of all interfaces that a given class is defined to implement by the hierarchy of the given grammar.
   """
-  def interfaces_of(_grammar, nil), do: []
+  def interfaces_of(grammar, name)
 
-  def interfaces_of(grammar, name) do
+  def interfaces_of(%Grammar{}, nil), do: []
+
+  def interfaces_of(%Grammar{} = grammar, name) do
     if Map.has_key?(grammar.hierarchy, name) do
       Enum.concat(
         grammar.hierarchy[name].interfaces,
         interfaces_of(grammar, get_super(grammar, name))
       )
     else
-      raise "Uknown grammar rular '#{name}'"
+      nil
     end
   end
 
   @doc """
 
   """
-  def is_of_type(grammar, child, parent) do
-    child == parent or
+  def is_implementation_of(%Grammar{} = grammar, subtype, interface) do
+    subtype == interface or
       Enum.member?(
-        interfaces_of(grammar, child),
-        parent
+        interfaces_of(grammar, subtype),
+        interface
       )
   end
 end

@@ -53,7 +53,7 @@ defmodule RenewexTest do
     )
 
     assert(
-      Renewex.Hierarchy.descendants_of(grammar, [
+      Renewex.Hierarchy.subtypes_of(grammar, [
         "de.renew.gui.fs.IsaConnection",
         "de.renew.gui.ArcConnection"
       ]) ==

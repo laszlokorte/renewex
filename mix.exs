@@ -37,7 +37,9 @@ defmodule Renewex.MixProject do
     [
       name: "renewex",
       files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
-                license* CHANGELOG* changelog* src)
+                license* CHANGELOG* changelog* src),
+      license: "MIT",
+      links: %{"GitHub" => "https://github.com/laszlokorte/renewex"}
     ]
   end
 end

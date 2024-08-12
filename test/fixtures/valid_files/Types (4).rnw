@@ -1,8 +1,8 @@
 
     CH.ifa.draw.cpn.CPNDrawing 84 
-        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 168 149 "Käufer" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 168 149 "KÃ¤ufer" "Helvetica" 0 12 0 NULL NULL 0  
         fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 214 96 "Person" "Helvetica" 0 12 0 NULL NULL 0  
-        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 244 148 "Verkäufer" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 244 148 "VerkÃ¤ufer" "Helvetica" 0 12 0 NULL NULL 0  
         fs.IsaConnection 2 192 149 226 111 NULL 
             CH.ifa.draw.figures.ArrowTip  0 0 0 
             CH.ifa.draw.standard.ChopBoxConnector REF 1  
@@ -62,12 +62,12 @@
             CH.ifa.draw.standard.ChopBoxConnector REF 50   
         fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 485 273 "Farbe" "Helvetica" 0 12 0 NULL NULL 0  
         fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 377 311 "metallic" "Helvetica" 0 12 0 NULL NULL 0  
-        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 444 319 "grün" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 444 319 "grÃ¼n" "Helvetica" 0 12 0 NULL NULL 0  
         fs.IsaConnection 2 463 319 493 288 NULL 
             CH.ifa.draw.figures.ArrowTip  0 0 0 
             CH.ifa.draw.standard.ChopBoxConnector REF 63  
             CH.ifa.draw.standard.ChopBoxConnector REF 61   
-        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 399 371 "grünMetallic" "Helvetica" 0 12 0 NULL NULL 0  
+        fs.TypeFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 "FillColor" "Color" 255 199 158 399 371 "grÃ¼nMetallic" "Helvetica" 0 12 0 NULL NULL 0  
         fs.IsaConnection 2 428 371 402 326 NULL 
             CH.ifa.draw.figures.ArrowTip  0 0 0 
             CH.ifa.draw.standard.ChopBoxConnector REF 68  

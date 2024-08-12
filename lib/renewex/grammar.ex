@@ -239,6 +239,11 @@ defmodule Renewex.Grammar do
           super: "CH.ifa.draw.figures.TextFigure",
           interfaces: []
         },
+        "de.uni_hamburg.tgi.renew.marianets.QueryFigure" => %{
+          super: "CH.ifa.draw.figures.TextFigure",
+          interfaces: [],
+          fields: [unknown: :int, unknown: :int]
+        },
         "de.renew.gui.fs.AssocConnection" => %{
           super: "de.renew.gui.fs.ConceptConnection",
           interfaces: []
@@ -271,7 +276,8 @@ defmodule Renewex.Grammar do
           fields: [fOffsetX: :float, fOffsetY: :float]
         },
         "CH.ifa.draw.figures.PolyLineFigure" => %{
-          super: if(version >= 1, do: "CH.ifa.draw.figures.AttributeFigure"),
+          super: "CH.ifa.draw.figures.AttributeFigure",
+          skip_super: version < 1,
           interfaces: ["CH.ifa.draw.figures.PolyLineable"],
           fields:
             Enum.concat([
@@ -333,7 +339,7 @@ defmodule Renewex.Grammar do
         },
         "de.renew.gui.fs.FSFigure" => %{
           super:
-            if(version <= 5,
+            if(version > -1 and version <= 5,
               do: "CH.ifa.draw.figures.TextFigure",
               else: "de.renew.gui.CPNTextFigure"
             ),
@@ -367,7 +373,7 @@ defmodule Renewex.Grammar do
         "fs.TypeFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
           interfaces: [],
-          fields: [type: :string]
+          fields: [type: :int]
         },
         "CH.ifa.draw.figures.LineFigure" => %{
           super: "CH.ifa.draw.figures.PolyLineFigure",
@@ -551,6 +557,8 @@ defmodule Renewex.Grammar do
   @doc """
 
   """
+  def parse(parser, rule, into)
+
   def parse(parser, "CH.ifa.draw.figures.FigureAttributes", into) do
     {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
 
@@ -566,9 +574,6 @@ defmodule Renewex.Grammar do
      }, next_parser}
   end
 
-  @doc """
-
-  """
   def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
     case Parser.parse_primitive(parser, :string) do
       {:ok, "attributes", next_parser} ->
@@ -589,9 +594,6 @@ defmodule Renewex.Grammar do
     end
   end
 
-  @doc """
-
-  """
   def parse(parser, "de.renew.gui.fs.FSFigure", into) do
     if parser.grammar.version <= 5 do
       {:ok,

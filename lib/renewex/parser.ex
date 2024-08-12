@@ -119,12 +119,18 @@ defmodule Renewex.Parser do
 
   """
   def parse_storable(
+        parser,
+        expected_type \\ nil,
+        return_ref \\ true
+      )
+
+  def parse_storable(
         %Renewex.Parser{
           tokens: [{current_type, current_value} | rest_tokens],
           ref_list: parent_ref_list
         } = parser,
-        expected_type \\ nil,
-        return_ref \\ true
+        expected_type,
+        return_ref
       ) do
     next_parser = %Renewex.Parser{
       parser
@@ -155,7 +161,7 @@ defmodule Renewex.Parser do
                | ref_list: Enum.concat(child_ref_list, [result | parent_ref_list])
              }}
           else
-            err -> dbg(err)
+            err -> err
           end
         else
           {:error, {class_name, expected_type}, next_parser}
@@ -164,6 +170,27 @@ defmodule Renewex.Parser do
       _ ->
         {:error, {current_type, current_value}, next_parser}
     end
+  end
+
+  def parse_storable(
+        %Renewex.Parser{
+          tokens: [current_token | rest_tokens]
+        } = parser,
+        expected_type,
+        _return_ref
+      ) do
+    {:error, {current_token, {:class_name, expected_type}},
+     %Renewex.Parser{parser | tokens: rest_tokens}}
+  end
+
+  def parse_storable(
+        %Renewex.Parser{
+          tokens: []
+        } = parser,
+        expected_type,
+        _return_ref
+      ) do
+    {:error, {:eof, {:class_name, expected_type}}, parser}
   end
 
   @doc """
@@ -210,7 +237,7 @@ defmodule Renewex.Parser do
         i, {:ok, list, parser} ->
           case fun.(parser) do
             {:ok, next, p} -> {:ok, [next | list], p}
-            {:err, e, p} -> {:err, {:list, i, e}, p}
+            {:error, e, p} -> {:error, {:list, {i, count}, e}, p}
           end
 
         _, _ ->
@@ -262,6 +289,10 @@ defmodule Renewex.Parser do
   """
   def try_skip({:ok, result, %Renewex.Parser{} = parser}, skips) do
     {:ok, result, try_skip(parser, skips)}
+  end
+
+  def try_skip({:error, _, %Renewex.Parser{}} = err, _) do
+    err
   end
 
   def try_skip(%Renewex.Parser{tokens: tokens} = parser, skips) do

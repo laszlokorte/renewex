@@ -6,38 +6,10 @@ defmodule RenewexTest do
   alias Renewex.Parser
   doctest Renewex
 
-  @example_dir "./example_files"
-  @full_examples_dir "./all_test_files"
-  @skips [
-    "BDIFS.rnw",
-    "BDIFS1.rnw",
-    "BDIFS2.rnw",
-    "BDImain (2).rnw",
-    "BDImain8 (2).rnw",
-    "BDImain8.rnw",
-    "CSexample.rnw",
-    # de.uni_hamburg.tgi.renew.marianets.QueryFigure
-    "dining-fair+safe.rnw",
-    "dining.rnw",
-    "mutex (2).rnw",
-    ###
-    "FSsample.rnw",
-    "FSsyntax.rnw",
-    "fsTest.rnw",
-    "fsTest2.rnw",
-    "fsTest3.rnw",
-    "joghurt (2).rnw",
-    "joghurt.rnw",
-    "Main.rnw",
-    "RolesGroupsFlat.rnw",
-    "Types (3).rnw",
-    "Types (4).rnw",
-    "Types5.rnw",
-    "Types8.rnw",
-    "typeTest.rnw",
-    "_student.rnw",
-    "_Types8.rnw"
-  ]
+  @example_dir Path.join([__DIR__, "fixtures", "selected_examples"])
+  @full_examples_dir Path.join([__DIR__, "fixtures", "valid_files"])
+  @invalid_examples_dir Path.join([__DIR__, "fixtures", "invalid_files"])
+  @invalid_encodings_dir Path.join([__DIR__, "fixtures", "not_unicode"])
 
   test "tokenizer" do
     {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
@@ -135,7 +107,9 @@ defmodule RenewexTest do
     dir = "#{@example_dir}/"
     {:ok, files} = File.ls(dir)
 
-    for file <- files |> Enum.filter(&(not Enum.member?(@skips, &1))) do
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
       assert {:ok, example} = File.read(Path.join(dir, file))
 
       assert {:ok, %Storable{}, parser} =
@@ -155,7 +129,9 @@ defmodule RenewexTest do
     {:ok, files} = File.ls(dir)
     grammar = Renewex.Grammar.new(11)
 
-    for file <- files |> Enum.filter(&(not Enum.member?(@skips, &1))) do
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
       assert {:ok, example} = File.read(Path.join(dir, file)), "can read #{file}"
       assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
       assert is_list(refs), "ref list of #{file} is a list"
@@ -171,7 +147,9 @@ defmodule RenewexTest do
   test "all files" do
     {:ok, files} = File.ls(@full_examples_dir)
 
-    for file <- files |> Enum.filter(&(not Enum.member?(@skips, &1))) do
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
       assert {:ok, example} = File.read(Path.join(@full_examples_dir, file)), "can read #{file}"
 
       assert %Parser{grammar: grammar} =
@@ -188,6 +166,34 @@ defmodule RenewexTest do
                root.class_name,
                "CH.ifa.draw.standard.AbstractFigure"
              )
+    end
+  end
+
+  @tag :invalids
+  test "invalid files" do
+    {:ok, files} = File.ls(@invalid_examples_dir)
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
+      assert {:ok, example} = File.read(Path.join(@invalid_examples_dir, file)),
+             "can read #{file}"
+
+      assert {:error, _, _} = Renewex.parse_string(example), "can not parse #{file}"
+    end
+  end
+
+  @tag :encoding
+  test "invalid encodings" do
+    {:ok, files} = File.ls(@invalid_encodings_dir)
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
+      assert {:ok, example} = File.read(Path.join(@invalid_encodings_dir, file)),
+             "can read #{file}"
+
+      assert_raise ArgumentError, fn ->
+        Renewex.parse_string(example)
+      end
     end
   end
 end

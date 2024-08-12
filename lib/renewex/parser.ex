@@ -38,7 +38,7 @@ defmodule Renewex.Parser do
         Renewex.Parser.new(Stream.drop(tokens, 1) |> Enum.to_list(), Grammar.new(version))
 
       _ ->
-        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new())
+        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new(Grammar.min_version()))
     end
   end
 

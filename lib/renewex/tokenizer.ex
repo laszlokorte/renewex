@@ -126,10 +126,6 @@ defmodule Renewex.Tokenizer do
   # takes a string that contains a string literal and returns the string it represents.
   # Eg takes "\"Hello\\nWorld\"" and returns "Hello\nWorld"
   defp read_string_literal(string_literal) do
-    with {:ok, string} when is_binary(string) <- Code.string_to_quoted(string_literal) do
-      string
-    else
-      _ -> raise "Not a valid string literal"
-    end
+    Macro.unescape_string(String.slice(string_literal, 1, String.length(string_literal) - 2))
   end
 end

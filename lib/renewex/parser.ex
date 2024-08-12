@@ -169,7 +169,7 @@ defmodule Renewex.Parser do
           raise "Expect function to return tuple {:ok, value, parser} or {:error, reason}"
       end)
     else
-      {:ok, []}
+      {:ok, [], parser}
     end
   end
 

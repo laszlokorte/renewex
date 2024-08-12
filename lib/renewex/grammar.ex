@@ -96,7 +96,7 @@ defmodule Renewex.Grammar do
         "de.renew.hierarchicalworkflownets.gui.layout.Vec2d" => %{
           super: nil,
           interfaces: [],
-          fields: [x: :int, y: :int]
+          fields: [x: :float, y: :float]
         },
         "CH.ifa.draw.figures.EllipseFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
@@ -608,14 +608,14 @@ defmodule Renewex.Grammar do
 
   def parse(parser, rule, into) do
     if Map.has_key?(parser.grammar.hierarchy[rule], :fields) do
-      {:ok, new_fields, next_parser} =
-        parse_fields(parser, parser.grammar.hierarchy[rule].fields, into.fields)
-
-      {:ok,
-       %Storable{
-         into
-         | fields: new_fields
-       }, next_parser}
+      with {:ok, new_fields, next_parser} <-
+             parse_fields(parser, parser.grammar.hierarchy[rule].fields, into.fields) do
+        {:ok,
+         %Storable{
+           into
+           | fields: new_fields
+         }, next_parser}
+      end
     else
       {:ok, into, parser}
     end
@@ -823,7 +823,7 @@ defmodule Renewex.Grammar do
           Parser.parse_storable(next_parser)
 
         "UNKNOWN" ->
-          :unknown
+          {:ok, :unknown, next_parser}
       end
 
     {:ok, {key, type, value}, next_parser}

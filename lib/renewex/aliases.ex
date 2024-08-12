@@ -1,4 +1,8 @@
 defmodule Renewex.Aliases do
+  @moduledoc """
+
+  """
+
   @aliases %{
     "de.renew.gui.fs.AssocArrowTip" => "de.renew.gui.AssocArrowTip",
     "de.renew.gui.fs.IsaArrowTip" => "de.renew.gui.IsaArrowTip",
@@ -12,5 +16,8 @@ defmodule Renewex.Aliases do
     "CH.ifa.draw.cpn.CPNTextFigure" => "de.renew.gui.CPNTextFigure"
   }
 
+  @doc """
+
+  """
   def resolve_alias(name), do: Map.get(@aliases, name, name)
 end

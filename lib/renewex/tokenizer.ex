@@ -1,4 +1,7 @@
 defmodule Renewex.Tokenizer do
+  @moduledoc """
+
+  """
   @tokens [
     %{name: :white, pattern: ~r/\s+/},
     %{name: :float, pattern: ~r/-?\d+\.\d+/},
@@ -33,10 +36,16 @@ defmodule Renewex.Tokenizer do
 
   @token_types Regex.names(@pattern) |> Enum.map(&String.to_atom/1)
 
+  @doc """
+
+  """
   def token_types do
     @token_types
   end
 
+  @doc """
+
+  """
   def scan(input) do
     Regex.scan(@pattern, input, capture: :all_names)
     |> Stream.map(fn captures ->
@@ -46,6 +55,9 @@ defmodule Renewex.Tokenizer do
     end)
   end
 
+  @doc """
+
+  """
   def skip_whitespace(tokens) do
     tokens
     |> Enum.filter(fn
@@ -54,6 +66,9 @@ defmodule Renewex.Tokenizer do
     end)
   end
 
+  @doc """
+
+  """
   def cast_value(type, value) do
     case type do
       :white -> value
@@ -63,11 +78,11 @@ defmodule Renewex.Tokenizer do
       :null -> nil
       :ref -> Integer.parse(value, 10) |> elem(0)
       :class_name -> value
-      :string -> Renewex.Tokenizer.read_string_literal(value)
+      :string -> read_string_literal(value)
     end
   end
 
-  def read_string_literal(v) do
+  defp read_string_literal(v) do
     with {:ok, s} when is_binary(s) <- Code.string_to_quoted(v) do
       s
     end

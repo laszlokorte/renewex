@@ -1,4 +1,8 @@
 defmodule Renewex.Parser do
+  @moduledoc """
+
+  """
+
   alias Renewex.Parser
   alias Renewex.Hierarchy
   alias Renewex.Storable
@@ -7,8 +11,22 @@ defmodule Renewex.Parser do
   alias Renewex.Grammar
   defstruct [:grammar, :tokens, :ref_list]
 
+  @min_version -1
   @auto_version 11
 
+  @doc """
+
+  """
+  def min_version, do: @min_version
+
+  @doc """
+
+  """
+  def auto_version, do: @auto_version
+
+  @doc """
+
+  """
   def new(tokens, grammar) do
     %Renewex.Parser{
       grammar: grammar,
@@ -17,26 +35,38 @@ defmodule Renewex.Parser do
     }
   end
 
+  @doc """
+
+  """
   def detect_document_version(tokens) do
     case Enum.take(tokens, 1) do
       [{:int, version}] ->
         Renewex.Parser.new(Stream.drop(tokens, 1) |> Enum.to_list(), Grammar.new(version))
 
       _ ->
-        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new(-1))
+        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new(@min_version))
     end
   end
 
+  @doc """
+
+  """
   def detect_and_parse_document(tokens) do
     detect_document_version(tokens)
     |> Parser.parse_storable(nil)
   end
 
+  @doc """
+
+  """
   def parse_document(tokens, version \\ @auto_version) do
     Renewex.Parser.new(tokens, Grammar.new(version))
     |> Parser.parse_storable(nil)
   end
 
+  @doc """
+
+  """
   defp parse_token(
          %Renewex.Parser{} = parser,
          type
@@ -70,6 +100,9 @@ defmodule Renewex.Parser do
     def unquote(:parse_primitive)(parser, unquote(name)), do: parse_token(parser, unquote(name))
   end)
 
+  @doc """
+
+  """
   def parse_primitive(parser, :boolean) do
     with {:ok, bool, next_parser} <- parse_token(parser, :boolean) do
       {:ok, bool, next_parser}
@@ -82,6 +115,9 @@ defmodule Renewex.Parser do
     end
   end
 
+  @doc """
+
+  """
   def parse_storable(
         %Renewex.Parser{
           tokens: [{current_type, current_value} | rest_tokens],
@@ -105,11 +141,8 @@ defmodule Renewex.Parser do
       :class_name ->
         class_name = Aliases.resolve_alias(current_value)
 
-        if is_nil(expected_type) or class_name == expected_type or
-             Enum.member?(
-               Hierarchy.interfaces_of(parser.grammar, class_name),
-               expected_type
-             ) do
+        if is_nil(expected_type) or
+             Hierarchy.is_of_type(parser.grammar, class_name, expected_type) do
           with {:ok, result, %Renewex.Parser{ref_list: child_ref_list} = p} <-
                  parse_grammar_rule(
                    %Renewex.Parser{next_parser | ref_list: []},
@@ -133,21 +166,25 @@ defmodule Renewex.Parser do
     end
   end
 
+  @doc """
+
+  """
   def parse_grammar_rule(parser, rule) do
     parse_grammar_rule(parser, rule, Storable.new(rule))
   end
 
   def parse_grammar_rule(parser, rule, storable) do
     base =
-      if Grammar.skip_super(parser.grammar, rule) do
-        {:ok, storable, parser}
-      else
-        if super_rule =
-             Hierarchy.get_super(parser.grammar, rule) do
-          parse_grammar_rule(parser, super_rule, storable)
-        else
+      cond do
+        Grammar.should_skip_super(parser.grammar, rule) ->
           {:ok, storable, parser}
-        end
+
+        super_rule =
+            Hierarchy.get_super(parser.grammar, rule) ->
+          parse_grammar_rule(parser, super_rule, storable)
+
+        true ->
+          {:ok, storable, parser}
       end
 
     with {:ok, storable, next_parser} <- base,
@@ -158,6 +195,9 @@ defmodule Renewex.Parser do
     end
   end
 
+  @doc """
+
+  """
   def parse_list(parser, fun) do
     {:ok, count, parser} = parse_primitive(parser, :int)
 
@@ -181,6 +221,9 @@ defmodule Renewex.Parser do
     end
   end
 
+  @doc """
+
+  """
   def skip_any(%Renewex.Parser{tokens: []}), do: {:error, :eof}
 
   def skip_any(%Renewex.Parser{tokens: [_ | rest]} = parser),
@@ -197,9 +240,15 @@ defmodule Renewex.Parser do
     end
   end
 
+  @doc """
+
+  """
   def is_eof(%Renewex.Parser{tokens: []}), do: true
   def is_eof(%Renewex.Parser{tokens: [_ | _]}), do: false
 
+  @doc """
+
+  """
   def finalize(%Renewex.Parser{tokens: [], ref_list: ref_list}) do
     {:ok, Enum.reverse(ref_list)}
   end
@@ -208,6 +257,9 @@ defmodule Renewex.Parser do
     {:error, current_token}
   end
 
+  @doc """
+
+  """
   def try_skip({:ok, result, %Renewex.Parser{} = parser}, skips) do
     {:ok, result, try_skip(parser, skips)}
   end

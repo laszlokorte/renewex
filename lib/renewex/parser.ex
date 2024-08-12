@@ -11,19 +11,6 @@ defmodule Renewex.Parser do
   alias Renewex.Grammar
   defstruct [:grammar, :tokens, :ref_list]
 
-  @min_version -1
-  @auto_version 11
-
-  @doc """
-
-  """
-  def min_version, do: @min_version
-
-  @doc """
-
-  """
-  def auto_version, do: @auto_version
-
   @doc """
 
   """
@@ -44,7 +31,7 @@ defmodule Renewex.Parser do
         Renewex.Parser.new(Stream.drop(tokens, 1) |> Enum.to_list(), Grammar.new(version))
 
       _ ->
-        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new(@min_version))
+        Renewex.Parser.new(tokens |> Enum.to_list(), Grammar.new())
     end
   end
 
@@ -59,14 +46,11 @@ defmodule Renewex.Parser do
   @doc """
 
   """
-  def parse_document(tokens, version \\ @auto_version) do
+  def parse_document(tokens, version \\ Grammar.latest_version()) do
     Renewex.Parser.new(tokens, Grammar.new(version))
     |> Parser.parse_storable(nil)
   end
 
-  @doc """
-
-  """
   defp parse_token(
          %Renewex.Parser{} = parser,
          type

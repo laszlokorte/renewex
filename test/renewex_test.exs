@@ -144,6 +144,7 @@ defmodule RenewexTest do
     end
   end
 
+  @tag :slow
   test "all files" do
     {:ok, files} = File.ls(@full_examples_dir)
 
@@ -169,7 +170,6 @@ defmodule RenewexTest do
     end
   end
 
-  @tag :invalids
   test "invalid files" do
     {:ok, files} = File.ls(@invalid_examples_dir)
     assert Enum.count(files) > 0, "test files exist"
@@ -182,7 +182,6 @@ defmodule RenewexTest do
     end
   end
 
-  @tag :encoding
   test "invalid encodings" do
     {:ok, files} = File.ls(@invalid_encodings_dir)
     assert Enum.count(files) > 0, "test files exist"

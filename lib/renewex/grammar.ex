@@ -1,26 +1,59 @@
 defmodule Renewex.Grammar do
   @moduledoc """
+  This module defines the grammar to parse [Renew](http://renew.de) *.rnw files.
 
+  The Renew grammar is version dependent and depends on the Java class hierarchy defined in renew.
+
+  This module defines a struct to describe the class hierarchy and some specialized function to parse specific classes.
   """
 
   alias Renewex.Storable
   alias Renewex.Parser
+
+  @doc """
+    The earliest version of Renew to be used for files that do not specify their own version explicitly.
+  """
+  @min_version -1
+  def min_version, do: @min_version
+
+  @doc """
+    The latest version of Renew to be used preferably.
+  """
+  @latest_version 11
+  def latest_version, do: @latest_version
+
+  @doc """
+  This struct describes the class hierarchy for a specific version of [Renew](http://renew.de) that should be applied as grammar.
+  The `version` field is an integer between -1 (the original renew version) and 11 (the newest Renew version at the time of writing this comment).
+
+  The `hierarchy` field contains a `Map` from Java class names to class descriptions. It mirrors the Java class definitions defined in Renew.
+  This is done because the grammar that is used for reading and writing Renew files is implicitly defined via the Java implementation.
+  In order to match the grammar exactly this Java class hierarchy is reenacted.
+  """
   defstruct [:version, :hierarchy]
 
   @doc """
-
+  Constructs a new grammar struct for the given version.
   """
-  def new(version) do
+  def new(version \\ latest_version()) do
     %Renewex.Grammar{
       version: version,
       hierarchy: %{
         "CH.ifa.draw.standard.AbstractFigure" => %{
+          # This class has no super class in Java
           super: nil,
+          # This class implements two interfaces in Java
           interfaces: ["CH.ifa.draw.framework.Figure", "CH.ifa.draw.framework.ParentFigure"]
         },
         "CH.ifa.draw.standard.CompositeFigure" => %{
+          # This java class is defined as sub class of another class (`CH.ifa.draw.standard.AbstractFigure`)
+          # When reading a serialized object of this class 
+          # the parser for the parent class is applied first.
+          # This mirrors the `super.read()` Java code in the original Renew implementation.
           super: "CH.ifa.draw.standard.AbstractFigure",
           interfaces: ["CH.ifa.draw.framework.Figure"],
+          # This class has one field (`figures`) that is serialized.
+          # The field is a list of serialized objects (each of type `CH.ifa.draw.framework.Figure`)
           fields: [figures: {:list, {:storable, "CH.ifa.draw.framework.Figure"}}]
         },
         "CH.ifa.draw.figures.GroupFigure" => %{
@@ -41,6 +74,7 @@ defmodule Renewex.Grammar do
         "CH.ifa.draw.figures.RectangleFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
           interfaces: [],
+          # This class containes 4 primitive fields of type integer
           fields: [x: :int, y: :int, w: :int, h: :int]
         },
         "CH.ifa.draw.contrib.DiamondFigure" => %{
@@ -52,7 +86,12 @@ defmodule Renewex.Grammar do
           skip_super: true,
           interfaces: [],
           fields: [
+            # this field is of type `de.renew.hierarchicalworkflownets.gui.HNModel`
+            # but will not prefixed with its class name.
+            # So instead of `:storable` the `:rule` symbol causes the parsing rule to 
+            # be explizitly applied 
             hn_model: {:rule, "de.renew.hierarchicalworkflownets.gui.HNModel"},
+            # figures is a list of storables
             figures: {:list, {:storable, "CH.ifa.draw.framework.Figure"}}
           ]
         },
@@ -92,7 +131,10 @@ defmodule Renewex.Grammar do
         "CH.ifa.draw.contrib.PolygonFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
           interfaces: ["CH.ifa.draw.figures.PolyLineable"],
-          fields: [points: {:list, [x: :int, y: :int]}]
+          fields: [
+            # The `points` field is a list of (int, int) tuples
+            points: {:list, [x: :int, y: :int]}
+          ]
         },
         "de.renew.hierarchicalworkflownets.gui.HNTransitionFigure" => %{
           super: "de.renew.gui.TransitionFigure",
@@ -101,11 +143,13 @@ defmodule Renewex.Grammar do
         "de.renew.hierarchicalworkflownets.gui.layout.Vec2d" => %{
           super: nil,
           interfaces: [],
+          # a vec2d consists of two float typed fields (x and y)
           fields: [x: :float, y: :float]
         },
         "CH.ifa.draw.figures.EllipseFigure" => %{
           super: "CH.ifa.draw.figures.AttributeFigure",
           interfaces: [],
+          # an EllipseFigure consists of four integer fields (x, y, w[idth], [h]eight)
           fields: [x: :int, y: :int, w: :int, h: :int]
         },
         "CH.ifa.draw.figures.RoundRectangleFigure" => %{
@@ -122,6 +166,7 @@ defmodule Renewex.Grammar do
           ],
           fields:
             if(version >= 4,
+              # in version 4 and later the TransitionFigure as an additional field to reference its `highlight_figure`
               do: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}],
               else: []
             )
@@ -135,6 +180,7 @@ defmodule Renewex.Grammar do
           ],
           fields:
             if(version >= 3,
+              # in version 3 and later the PlaceFigure as an additional field to reference its `highlight_figure`
               do: [highlight_figure: {:storable, "CH.ifa.draw.framework.Figure"}],
               else: []
             )
@@ -242,6 +288,9 @@ defmodule Renewex.Grammar do
         "de.uni_hamburg.tgi.renew.marianets.QueryFigure" => %{
           super: "CH.ifa.draw.figures.TextFigure",
           interfaces: [],
+          # `QueryFigure` is a TextFigure with two additional fields of type `int`
+          # But not sure what these fields are.
+          # Maybe width and height?
           fields: [unknown: :int, unknown: :int]
         },
         "de.renew.gui.fs.AssocConnection" => %{
@@ -259,7 +308,11 @@ defmodule Renewex.Grammar do
         "de.renew.bpmn.roundtrip.RoundtripNetComponentFigure" => %{
           super: "de.renew.netcomponents.NetComponentFigure",
           interfaces: [],
-          fields: [skip: [:ref, :string]]
+          # when parsing an RoundtripNetComponentFigure
+          # we expect to see either a ref or a string but we do not want to store
+          # the parsed values but skip them.
+          # The `nil` key signifies the field to be skipped.
+          fields: [nil: [:ref, :string]]
         },
         "CH.ifa.draw.standard.OffsetLocator" => %{
           super: "CH.ifa.draw.figures.AbstractLocator",
@@ -281,13 +334,14 @@ defmodule Renewex.Grammar do
           interfaces: ["CH.ifa.draw.figures.PolyLineable"],
           fields:
             Enum.concat([
+              # The PolyLineFigure has different fields depending on the version of Renew
               [
                 points: {:list, [x: :int, y: :int]},
                 start_decoration: {:storable, "CH.ifa.draw.figures.LineDecoration"},
                 end_decoration: {:storable, "CH.ifa.draw.figures.LineDecoration"}
               ],
               if(version >= 8, do: [arrow_name: :string], else: []),
-              if(version == Renewex.Parser.min_version(), do: [frame_color: :color_rgb], else: [])
+              if(version == min_version(), do: [frame_color: :color_rgb], else: [])
             ])
         },
         "CH.ifa.draw.figures.LineConnection" => %{
@@ -339,7 +393,7 @@ defmodule Renewex.Grammar do
         },
         "de.renew.gui.fs.FSFigure" => %{
           super:
-            if(version > -1 and version <= 5,
+            if(version > min_version() and version <= 5,
               do: "CH.ifa.draw.figures.TextFigure",
               else: "de.renew.gui.CPNTextFigure"
             ),
@@ -430,7 +484,7 @@ defmodule Renewex.Grammar do
             "de.renew.diagram.RepresentableLifeLineLogicFigure",
             "de.renew.diagram.ISplitFigure"
           ],
-          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, skip: [:string]]
+          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, nil: [:string]]
         },
         "de.renew.diagram.VSplitFigure" => %{
           super: "de.renew.diagram.LifeLineLogicFigure",
@@ -443,7 +497,7 @@ defmodule Renewex.Grammar do
         "de.renew.diagram.HSplitFigure" => %{
           super: "de.renew.diagram.DiagramFigure",
           interfaces: [],
-          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, skip: [:string]]
+          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, nil: [:string]]
         },
         "de.renew.diagram.VSplitCenterConnector" => %{
           super: "CH.ifa.draw.standard.AbstractConnector",
@@ -555,10 +609,23 @@ defmodule Renewex.Grammar do
   end
 
   @doc """
+    Applies a specific rul to the current parser state.
 
+    ## Parameters
+    - parser: the current state of the parser
+    - rule: the name of the parser rule to apply. The parse rule is a java class name that must be defined in the grammars hierarchy.
+    - into: an `Storable` struct into which the parsed values shall be appended
+
+    ## Returns
+    - {:ok, %Storable{into | fields: parsed_fields}, next_parse_state} if the rule was applied successfully.
+      Where `parsed_fields` contain the values that have been parsed by the rule and next_parse_state is the 
+      state of the parser after having consumed the tokens processed by the parse rule
+    - {:error, reason, next_parse_state} if the rule could not be applied for some reason.
   """
   def parse(parser, rule, into)
 
+  # The FigureAttributes class has some custom parser logic that is not simply derived from the class hierarchy
+  # Instead it is defined in this function
   def parse(parser, "CH.ifa.draw.figures.FigureAttributes", into) do
     {:ok, "attributes", next_parser} = Parser.parse_primitive(parser, :string)
 
@@ -574,6 +641,8 @@ defmodule Renewex.Grammar do
      }, next_parser}
   end
 
+  # The AttributeFigure class has some custom parser logic that is not simply derived from the class hierarchy
+  # Instead it is defined in this function
   def parse(parser, "CH.ifa.draw.figures.AttributeFigure", into) do
     case Parser.parse_primitive(parser, :string) do
       {:ok, "attributes", next_parser} ->
@@ -594,6 +663,8 @@ defmodule Renewex.Grammar do
     end
   end
 
+  # The FSFigure class has some custom parser logic that is not simply derived from the class hierarchy
+  # Instead it is defined in this function
   def parse(parser, "de.renew.gui.fs.FSFigure", into) do
     if parser.grammar.version <= 5 do
       {:ok,
@@ -630,9 +701,8 @@ defmodule Renewex.Grammar do
     end
   end
 
-  @doc """
-
-  """
+  # If the custom parse functions defined above do not match, this generic function uses the 
+  # class definitions defined in the grammar hierarchy to apply some generic parse rules. 
   def parse(parser, rule, into) do
     if Map.has_key?(parser.grammar.hierarchy[rule], :fields) do
       with {:ok, new_fields, next_parser} <-
@@ -648,16 +718,17 @@ defmodule Renewex.Grammar do
     end
   end
 
-  @doc """
-
-  """
+  # Applies parser rules according to the given fields definition.
+  # The fields definitions is defined per java class name in the grammars hierarchy.
   defp parse_fields(parser, fields, into) do
     Enum.reduce(fields, {:ok, into, parser}, fn
-      {:skip, [_ | _] = types}, {:ok, into, parser} ->
+      # Skip the field if the fields name/key is nil
+      {nil, [_ | _] = types}, {:ok, into, parser} ->
         with {:ok, nil, next_parser} <- Parser.skip_any(parser, types) do
           {:ok, into, next_parser}
         end
 
+      # If the type of the field is :list, continue reading the fields value as list
       {field_name, {:list, list_type}}, {:ok, into, parser} ->
         with {:ok, value, next_parser} <- parse_list_field(parser, list_type) do
           {:ok,
@@ -665,6 +736,7 @@ defmodule Renewex.Grammar do
            |> put_in([field_name], value), next_parser}
         end
 
+      # If the type of the field is :color_rgb, continue to the the rgb values
       {field_name, :color_rgb}, {:ok, into, parser} ->
         with {:ok, color, next_parser} <- parse_color_rgb(parser) do
           {:ok,
@@ -672,6 +744,7 @@ defmodule Renewex.Grammar do
            |> put_in([field_name], color), next_parser}
         end
 
+      # If the type of the field is :color_rgba, continue to the the rgba values
       {field_name, :color_rgba}, {:ok, into, parser} ->
         with {:ok, color, next_parser} <- parse_color_rgba(parser) do
           {:ok,
@@ -679,22 +752,29 @@ defmodule Renewex.Grammar do
            |> put_in([field_name], color), next_parser}
         end
 
-      {field_name, {:storable, of_type}}, {:ok, into, parser} ->
+      # If the type of the field is :storable, continue parsing the storable of a specified type.
+      # If `of_type` is nil, accept whatever storable is indicated by the next token
+      # If `of_type` is a name of some interface, check if the storable that is parsed implements
+      # that interface according to the grammars java class hierarchy.
+      {field_name, {:storable, of_type}}, {:ok, into, parser} when is_binary(of_type) ->
         with {:ok, value, next_parser} <- Parser.parse_storable(parser, of_type) do
           {:ok,
            into
            |> put_in([field_name], value), next_parser}
         end
 
-      {field_name, {:rule, of_type}}, {:ok, into, parser} ->
+      # If the field is of type :rule, containue parsing according the the specified rule.
+      # The rule must be a class name definied in the grammars hierarchy.
+      {field_name, {:rule, of_type}}, {:ok, into, parser} when is_binary(of_type) ->
         with {:ok, value, next_parser} <- Parser.parse_grammar_rule(parser, of_type) do
           {:ok,
            into
            |> put_in([field_name], value), next_parser}
         end
 
-      {field_name, field_type}, {:ok, into, parser} ->
-        with {:ok, value, next_parser} <- Parser.parse_primitive(parser, field_type) do
+      # If the field is of some primitive type, try to parse one token of this type.
+      {field_name, primitive_type}, {:ok, into, parser} when is_atom(primitive_type) ->
+        with {:ok, value, next_parser} <- Parser.parse_primitive(parser, primitive_type) do
           {:ok,
            into
            |> put_in([field_name], value), next_parser}
@@ -705,44 +785,40 @@ defmodule Renewex.Grammar do
     end)
   end
 
-  @doc """
-
-  """
-  defp parse_list_field(parser, list_type) do
+  # This function parses a list of values according to a type spec describing the
+  # a single item of the list.
+  defp parse_list_field(parser, type_spec) do
+    # Try to parse a list of items, with each item matching the type spec.
     Parser.parse_list(parser, fn
       p ->
-        case list_type do
+        case type_spec do
+          # If the type_spec is a storable, try to parse a storable as list item
           {:storable, type} ->
             Parser.parse_storable(p, type)
 
+          # If the type_spec is a grammar rule, try to apply the given grammar rule to parse the list item
           {:rule, type} ->
             Parser.parse_grammar_rule(p, type)
 
+          # If the type_spec is some primitive type, try to read a single token of that type. 
           primitive when is_atom(primitive) ->
             Parser.parse_primitive(p, primitive)
 
+          # If the type_spec is a list, try to read multiple values according to the types described by the list
           multiples when is_list(multiples) ->
             parse_fields(p, multiples, [])
         end
     end)
   end
 
-  @doc """
-
-  """
-  def serialize(_parser, "CH.ifa.draw.figures.FigureAttributes") do
-  end
-
-  def serialize(_parser, "CH.ifa.draw.figures.AttributeFigure") do
-  end
-
-  def serialize(_parser, "de.renew.gui.fs.FSFigure") do
-  end
-
-  @doc """
-
-  """
-  def parse_attribute(parser) do
+  # Parser for reading Figure attributes according to the Renew java implementation.
+  # An attribute is expected to be an n-tuple [(v_1,v_2,..v_n)] with n >= 2.
+  # With v_1 containing the name/key of the attribute, v_2 containing the type of the attribute
+  # and the remaining v_3...v_n containg the attribute values depending on the type.
+  # 
+  # For example an attribute of type "Color" contains Red, Green, and Blue channel values as integers
+  # as v_3,v_4 and v_5. And an additional alpha value as v_6 for renew version > 10.
+  defp parse_attribute(parser) do
     {:ok, key, next_parser} = Parser.parse_primitive(parser, :string)
     {:ok, type, next_parser} = Parser.parse_primitive(next_parser, :string)
 
@@ -775,10 +851,8 @@ defmodule Renewex.Grammar do
     {:ok, {key, type, value}, next_parser}
   end
 
-  @doc """
-
-  """
-  def parse_color_rgba(parser) do
+  # Helper function to parse 4 color channels: rgba
+  defp parse_color_rgba(parser) do
     {:ok, r, next_parser} = Parser.parse_primitive(parser, :int)
     {:ok, g, next_parser} = Parser.parse_primitive(next_parser, :int)
     {:ok, b, next_parser} = Parser.parse_primitive(next_parser, :int)
@@ -787,10 +861,8 @@ defmodule Renewex.Grammar do
     {:ok, {:rgba, r, g, b, a}, next_parser}
   end
 
-  @doc """
-
-  """
-  def parse_color_rgb(parser) do
+  # Helper function to parse 3 color channels: rgb
+  defp parse_color_rgb(parser) do
     {:ok, r, next_parser} = Parser.parse_primitive(parser, :int)
     {:ok, g, next_parser} = Parser.parse_primitive(next_parser, :int)
     {:ok, b, next_parser} = Parser.parse_primitive(next_parser, :int)
@@ -799,7 +871,9 @@ defmodule Renewex.Grammar do
   end
 
   @doc """
-
+  Checks if for the given grammar and given class name the skip skip_super flag is set.
+  If the skip_super flag is set, the grammar rules of the parent class shall not be applied during parsing.
+  This corresponds to NOT calling `super.read()` in the java implementation of the class.
   """
   def should_skip_super(grammar, rule) do
     Map.get(grammar.hierarchy[rule], :skip_super, false)

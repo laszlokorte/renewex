@@ -13,7 +13,7 @@ defmodule Renewex.Parser do
   alias Renewex.Aliases
   alias Renewex.Tokenizer
   alias Renewex.Grammar
-  defstruct [:grammar, :tokens, :ref_list]
+  defstruct [:grammar, :tokens, :ref_stack, :ref_count]
 
   @doc """
   Constructs a new parser state for a given list of tokens and a given grammar.
@@ -22,7 +22,8 @@ defmodule Renewex.Parser do
     %Renewex.Parser{
       grammar: grammar,
       tokens: tokens,
-      ref_list: []
+      ref_stack: [],
+      ref_count: 0
     }
   end
 
@@ -134,7 +135,8 @@ defmodule Renewex.Parser do
   def parse_storable(
         %Renewex.Parser{
           tokens: [{current_type, current_value} | rest_tokens],
-          ref_list: parent_ref_list
+          ref_stack: parent_ref_stack,
+          ref_count: parent_ref_count
         } = parser,
         expected_type,
         return_ref
@@ -156,16 +158,27 @@ defmodule Renewex.Parser do
 
         if is_nil(expected_type) or
              Hierarchy.is_implementation_of(parser.grammar, class_name, expected_type) do
-          with {:ok, result, %Renewex.Parser{ref_list: child_ref_list} = p} <-
+          with {:ok, result,
+                %Renewex.Parser{ref_stack: child_ref_stack, ref_count: child_ref_count} = p} <-
                  parse_grammar_rule(
-                   %Renewex.Parser{next_parser | ref_list: []},
+                   %Renewex.Parser{
+                     next_parser
+                     | ref_stack: [:incomplete_parsed | parent_ref_stack],
+                       ref_count: parent_ref_count + 1
+                   },
                    class_name,
                    Storable.new(class_name)
                  ) do
-            {:ok, if(return_ref, do: {:ref, Enum.count(parent_ref_list)}, else: result),
+            {:ok, if(return_ref, do: {:ref, Enum.count(parent_ref_stack)}, else: result),
              %Renewex.Parser{
                p
-               | ref_list: Enum.concat(child_ref_list, [result | parent_ref_list])
+               | ref_stack:
+                   Enum.concat(
+                     Enum.slice(child_ref_stack, 0, child_ref_count - 1 - parent_ref_count),
+                     [
+                       result | parent_ref_stack
+                     ]
+                   )
              }}
           else
             err -> err
@@ -305,8 +318,8 @@ defmodule Renewex.Parser do
   Expect the list of tokens to be empty and return the reversed list of parsed objects.
   If the list of tokens is not empty, return an error.
   """
-  def finalize(%Renewex.Parser{tokens: [], ref_list: ref_list}) do
-    {:ok, Enum.reverse(ref_list)}
+  def finalize(%Renewex.Parser{tokens: [], ref_stack: ref_stack}) do
+    {:ok, Enum.reverse(ref_stack)}
   end
 
   def finalize(%Renewex.Parser{tokens: [current_token | _]}) do

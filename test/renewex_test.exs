@@ -95,12 +95,15 @@ defmodule RenewexTest do
   test "parse storable" do
     {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
 
-    assert {:ok, %Storable{}, %Parser{}} =
+    assert {:ok, %Storable{} = root, %Parser{ref_stack: ref_stack}} =
              example
              |> Tokenizer.scan()
              |> Tokenizer.skip_whitespace()
              |> Parser.detect_document_version()
              |> Parser.parse_storable(nil, false)
+
+    assert root == Enum.at(ref_stack, -1)
+    assert not Enum.any?(ref_stack, &(&1 == :incomplete_parsed))
   end
 
   test "parse_storable on example files" do
@@ -136,6 +139,9 @@ defmodule RenewexTest do
       assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
       assert is_list(refs), "ref list of #{file} is a list"
 
+      assert root == Enum.at(refs, 0)
+      assert not Enum.any?(refs, &(&1 == :incomplete_parsed))
+
       assert Hierarchy.is_descendant_of(
                grammar,
                root.class_name,
@@ -161,6 +167,9 @@ defmodule RenewexTest do
 
       assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
       assert is_list(refs), "ref list of #{file} is a list"
+
+      assert root == Enum.at(refs, 0)
+      assert not Enum.any?(refs, &(&1 == :incomplete_parsed))
 
       assert Hierarchy.is_descendant_of(
                grammar,

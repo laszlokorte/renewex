@@ -4,7 +4,7 @@ defmodule Renewex.MixProject do
   def project do
     [
       app: :renewex,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -30,16 +30,18 @@ defmodule Renewex.MixProject do
   end
 
   defp description() do
-    "A parser for [Renew](http://renew.de/) `*.rnw` files in Elixir."
+    "A parser for Renew files (*.rnw) written in Elixir."
   end
 
   defp package() do
     [
       name: "renewex",
-      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
-                license* CHANGELOG* changelog* src),
+      files: ~w(lib .formatter.exs mix.exs README*),
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/laszlokorte/renewex"}
+      links: %{
+        "GitHub" => "https://github.com/laszlokorte/renewex",
+        "Renew" => "http://www.renew.de"
+      }
     ]
   end
 end

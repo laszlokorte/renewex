@@ -883,6 +883,10 @@ defmodule Renewex.Grammar do
   - if the the :skip_user flag has been set for the given rule in the given grammar.
   """
   def should_skip_super(grammar, rule) do
-    Map.get(grammar.hierarchy[rule], :skip_super, false)
+    if Map.has_key?(grammar.hierarchy, rule) do
+      Map.get(grammar.hierarchy[rule], :skip_super, false)
+    else
+      false
+    end
   end
 end

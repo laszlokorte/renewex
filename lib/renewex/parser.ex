@@ -212,24 +212,28 @@ defmodule Renewex.Parser do
   end
 
   def parse_grammar_rule(parser, rule, storable) do
-    base =
-      cond do
-        Grammar.should_skip_super(parser.grammar, rule) ->
-          {:ok, storable, parser}
+    if Hierarchy.is_defined(parser.grammar, rule) do
+      base =
+        cond do
+          Grammar.should_skip_super(parser.grammar, rule) ->
+            {:ok, storable, parser}
 
-        super_rule =
-            Hierarchy.get_super(parser.grammar, rule) ->
-          parse_grammar_rule(parser, super_rule, storable)
+          super_rule =
+              Hierarchy.get_super(parser.grammar, rule) ->
+            parse_grammar_rule(parser, super_rule, storable)
 
-        true ->
-          {:ok, storable, parser}
+          true ->
+            {:ok, storable, parser}
+        end
+
+      with {:ok, storable, next_parser} <- base,
+           {:ok, value, parser} <- Grammar.parse(next_parser, rule, storable) do
+        {:ok, value, parser}
+      else
+        err -> err
       end
-
-    with {:ok, storable, next_parser} <- base,
-         {:ok, value, parser} <- Grammar.parse(next_parser, rule, storable) do
-      {:ok, value, parser}
     else
-      err -> err
+      {:error, rule, parser}
     end
   end
 

@@ -15,7 +15,7 @@ defmodule Renewex.Hierarchy do
   Check if a class of a given name is defined inside the hierarchy of the given grammar.
   """
   def is_defined(%Grammar{} = grammar, name) do
-    Keyword.has_key?(grammar.hierarchy, name)
+    Map.has_key?(grammar.hierarchy, name)
   end
 
   @doc """

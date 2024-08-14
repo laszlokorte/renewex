@@ -92,6 +92,7 @@ defmodule RenewexTest do
     assert(list_of_5_bools == [true, false, true, false, true])
   end
 
+  @tag :manual
   test "parse storable" do
     {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
 
@@ -104,6 +105,10 @@ defmodule RenewexTest do
 
     assert root == Enum.at(ref_stack, -1)
     assert not Enum.any?(ref_stack, &(&1 == :incomplete_parsed))
+
+    assert root.fields.figures
+           |> Enum.chunk_every(2, 1, :discard)
+           |> Enum.all?(fn [{:ref, a}, {:ref, b}] -> a < b end)
   end
 
   test "parse_storable on example files" do
@@ -128,14 +133,13 @@ defmodule RenewexTest do
   end
 
   test "parse_string on example files" do
-    dir = "#{@example_dir}"
-    {:ok, files} = File.ls(dir)
+    {:ok, files} = File.ls(@example_dir)
     grammar = Renewex.Grammar.new(11)
 
     assert Enum.count(files) > 0, "test files exist"
 
     for file <- files do
-      assert {:ok, example} = File.read(Path.join(dir, file)), "can read #{file}"
+      assert {:ok, example} = File.read(Path.join(@example_dir, file)), "can read #{file}"
       assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
       assert is_list(refs), "ref list of #{file} is a list"
 

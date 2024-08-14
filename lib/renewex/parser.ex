@@ -260,20 +260,25 @@ defmodule Renewex.Parser do
     {:ok, count, parser} = parse_primitive(parser, :int)
 
     if count > 0 do
-      1..count
-      |> Enum.reduce({:ok, [], parser}, fn
-        _, {:error, _, _} = a ->
-          a
+      with {:ok, list, next_parser} <-
+             1..count
+             |> Enum.reduce({:ok, [], parser}, fn
+               _, {:error, _, _} = a ->
+                 a
 
-        i, {:ok, list, parser} ->
-          case fun.(parser) do
-            {:ok, next, p} -> {:ok, [next | list], p}
-            {:error, e, p} -> {:error, {:list, {i, count}, e}, p}
-          end
+               i, {:ok, list, parser} ->
+                 case fun.(parser) do
+                   {:ok, next, p} -> {:ok, [next | list], p}
+                   {:error, e, p} -> {:error, {:list, {i, count}, e}, p}
+                 end
 
-        _, _ ->
-          raise "Expect function to return tuple {:ok, value, parser} or {:error, reason}"
-      end)
+               _, _ ->
+                 raise "Expect function to return tuple {:ok, value, parser} or {:error, reason}"
+             end) do
+        {:ok, Enum.reverse(list), next_parser}
+      else
+        err -> err
+      end
     else
       {:ok, [], parser}
     end

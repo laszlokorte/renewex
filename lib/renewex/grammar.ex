@@ -867,7 +867,7 @@ defmodule Renewex.Grammar do
     {:ok, g, next_parser} = Parser.parse_primitive(next_parser, :int)
     {:ok, b, next_parser} = Parser.parse_primitive(next_parser, :int)
 
-    {:ok, {:rgba, r, g, b}, next_parser}
+    {:ok, {:rgb, r, g, b}, next_parser}
   end
 
   @doc """

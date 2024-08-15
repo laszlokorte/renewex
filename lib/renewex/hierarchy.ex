@@ -28,6 +28,10 @@ defmodule Renewex.Hierarchy do
   @doc """
   Check if one class is a subtype of another class or interface.
   """
+  def is_subtype_of(grammar, subtype, supertype)
+
+  def is_subtype_of(%Grammar{} = grammar, same, same), do: is_defined(grammar, same)
+
   def is_subtype_of(%Grammar{} = grammar, subtype, supertype) do
     not is_nil(subtype) and
       (supertype == get_super(grammar, subtype) or
@@ -67,13 +71,6 @@ defmodule Renewex.Hierarchy do
     |> Enum.filter(fn
       k -> k == supertype or is_subtype_of(grammar, k, supertype)
     end)
-  end
-
-  @doc """
-  Check if a given class is defined as a subtype of another class in the hierarchy of the grammar.
-  """
-  def is_descendant_of(%Grammar{} = grammar, subtype, supertype) do
-    Enum.member?(subtypes_of(grammar, [supertype]), subtype)
   end
 
   @doc """

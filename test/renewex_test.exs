@@ -146,7 +146,7 @@ defmodule RenewexTest do
       assert root == Enum.at(refs, 0)
       assert not Enum.any?(refs, &(&1 == :incomplete_parsed))
 
-      assert Hierarchy.is_descendant_of(
+      assert Hierarchy.is_subtype_of(
                grammar,
                root.class_name,
                "CH.ifa.draw.standard.AbstractFigure"
@@ -175,7 +175,7 @@ defmodule RenewexTest do
       assert root == Enum.at(refs, 0)
       assert not Enum.any?(refs, &(&1 == :incomplete_parsed))
 
-      assert Hierarchy.is_descendant_of(
+      assert Hierarchy.is_subtype_of(
                grammar,
                root.class_name,
                "CH.ifa.draw.standard.AbstractFigure"

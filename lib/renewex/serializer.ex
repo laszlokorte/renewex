@@ -1,5 +1,4 @@
 defmodule Renewex.Serializer do
-  alias Renewex.Parser
   alias Renewex.Serializer
   alias Renewex.Hierarchy
   alias Renewex.Storable
@@ -30,47 +29,86 @@ defmodule Renewex.Serializer do
       ) do
     %Serializer{grammar: %Grammar{version: version}} = serializer
 
-    if version == -1 do
-      serialize(serializer, storable)
+    with {:ok, ser} <- serialize_storable(serializer, storable) do
+      if version == -1 do
+        {:ok, ser}
+      else
+        {:ok, prepend(ser, Integer.to_string(version))}
+      end
     else
-      prepend(serialize(serializer, storable), Integer.to_string(version))
+      err -> err
     end
   end
 
   def serialize_document(%Serializer{} = serializer, storable, {x, y, w, h})
       when is_integer(x) and is_integer(y) and is_integer(w) and is_integer(h) do
     size = Enum.map([x, y, w, h], &Integer.to_string/1) |> Enum.intersperse(" ")
-    append(serialize_document(serializer, storable, nil), size)
-  end
 
-  def serialize(serializer, storable)
-
-  def serialize(%Serializer{} = serializer, :null) do
-    append(serializer, "NULL")
-  end
-
-  def serialize(%Serializer{used_refs: used_refs, refs: all_refs} = serializer, {:ref, ref})
-      when is_integer(ref) do
-    case Map.get(used_refs, ref) do
-      nil ->
-        storable = Enum.at(all_refs, ref)
-        new_ref = map_size(used_refs) + 1
-
-        serialize(
-          %Serializer{used_refs: Map.put(used_refs, ref, new_ref)},
-          storable
-        )
-
-      idx when is_integer(idx) ->
-        append(serializer, ["REF", Integer.to_string(idx)])
+    with {:ok, ser} <- serialize_document(serializer, storable, nil) do
+      {:ok, append(ser, size)}
+    else
+      err -> err
     end
   end
 
-  def serialize(
+  def serialize_storable(serializer, storable, expected_rule \\ nil)
+
+  def serialize_storable(%Serializer{} = serializer, :null, _) do
+    {:ok, append(serializer, "NULL")}
+  end
+
+  def serialize_storable(
+        %Serializer{used_refs: used_refs, refs: all_refs} = serializer,
+        {:ref, ref},
+        expected_rule
+      )
+      when is_integer(ref) do
+    storable = Enum.at(all_refs, ref)
+
+    if is_nil(expected_rule) or
+         Hierarchy.is_implementation_of(serializer.grammar, storable.class_name, expected_rule) or
+         Hierarchy.is_subtype_of(serializer.grammar, storable.class_name, expected_rule) do
+      case Map.get(used_refs, ref) do
+        nil ->
+          new_ref = map_size(used_refs) + 1
+
+          serialize_storable(
+            %Serializer{used_refs: Map.put(used_refs, ref, new_ref)},
+            storable,
+            expected_rule
+          )
+
+        idx when is_integer(idx) ->
+          {:ok, append(serializer, ["REF", Integer.to_string(idx)])}
+      end
+    else
+      {:error, {storable.class_name, expected_rule}}
+    end
+  end
+
+  def serialize_storable(
         %Serializer{} = serializer,
-        %Storable{class_name: class_name, fields: fields}
+        %Storable{class_name: class_name, fields: fields},
+        expected_rule
       ) do
-    serialize_grammar_rule(append(serializer, class_name), class_name, fields)
+    if is_nil(expected_rule) or
+         Hierarchy.is_implementation_of(serializer.grammar, class_name, expected_rule) or
+         Hierarchy.is_subtype_of(serializer.grammar, class_name, expected_rule) do
+      serialize_grammar_rule(append(serializer, class_name), class_name, fields)
+    else
+      {:error, {class_name, expected_rule}}
+    end
+  end
+
+  def serialize_list(%Serializer{} = serializer, list, ser_fn) do
+    list
+    |> Enum.reduce({:ok, append_value(serializer, Enum.count(list), :int)}, fn
+      item, {:ok, ser} ->
+        ser_fn.(item, ser)
+
+      _, {:error, _} = e ->
+        e
+    end)
   end
 
   def serialize_grammar_rule(%Serializer{} = serializer, rule, fields) do
@@ -81,15 +119,22 @@ defmodule Renewex.Serializer do
 
         super_rule =
             Hierarchy.get_super(serializer.grammar, rule) ->
-          serialize_grammar_rule(serializer, super_rule, fields)
-          |> Grammar.serialize(rule, fields)
+          with {:ok, ser} <- serialize_grammar_rule(serializer, super_rule, fields) do
+            ser |> Grammar.serialize(rule, fields)
+          else
+            e -> e
+          end
 
         true ->
           Grammar.serialize(serializer, rule, fields)
       end
     else
-      raise "unexpected"
+      {:error, rule}
     end
+  end
+
+  def append_value(%Serializer{} = serializer, value, expected_type, space \\ true) do
+    append(serializer, to_io_list(value, expected_type), space)
   end
 
   def append(%Serializer{output: prev_output} = serializer, new_out, space \\ true) do
@@ -111,6 +156,16 @@ defmodule Renewex.Serializer do
           if(not Enum.empty?(prev_output) and space, do: [" "], else: []) | prev_output
         ]
     }
+  end
+
+  def to_io_list(value, :string) when is_binary(value), do: value
+  def to_io_list(value, :float) when is_float(value), do: Float.to_string(value)
+  def to_io_list(value, :storable) when is_nil(value), do: "NULL"
+  def to_io_list(value, :int) when is_integer(value), do: Integer.to_string(value)
+  def to_io_list(value, :boolean) when is_boolean(value), do: if(value, do: "true", else: "false")
+
+  def get_output_string({:ok, %Serializer{output: output}}) do
+    :erlang.iolist_to_binary(output)
   end
 
   def get_output_string(%Serializer{output: output}) do

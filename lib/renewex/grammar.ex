@@ -871,8 +871,132 @@ defmodule Renewex.Grammar do
     {:ok, {:rgb, r, g, b}, next_parser}
   end
 
-  def serialize(%Serializer{grammar: grammar} = serializer, rule, fields) do
+  defp serialize_color_rgba(ser, {:rgba, r, g, b, a}) do
+    ser
+    |> Serializer.append_value(r, :int)
+    |> Serializer.append_value(g, :int)
+    |> Serializer.append_value(b, :int)
+    |> Serializer.append_value(a, :int)
+    |> then(&{:ok, &1})
+  end
+
+  defp serialize_color_rgba(_, color) do
+    {:error, {:rgba, color}}
+  end
+
+  defp serialize_color_rgb(ser, {:rgba, r, g, b}) do
+    ser
+    |> Serializer.append_value(r, :int)
+    |> Serializer.append_value(g, :int)
+    |> Serializer.append_value(b, :int)
+    |> then(&{:ok, &1})
+  end
+
+  defp serialize_color_rgb(_, color) do
+    {:error, {:rgb, color}}
+  end
+
+  def serialize(
+        %Serializer{grammar: grammar} = serializer,
+        "CH.ifa.draw.figures.FigureAttributes",
+        field_values
+      ) do
     serializer
+    |> Serializer.append("attributes")
+    |> Serializer.serialize_list(field_values.attributes, fn
+      {name, type, value}, ser ->
+        next_ser =
+          ser
+          |> Serializer.append_value(name, :string)
+          |> Serializer.append_value(type, :string)
+
+        case type do
+          "Color" ->
+            if(grammar.version < 11,
+              do: serialize_color_rgb(next_ser, value),
+              else: serialize_color_rgba(next_ser, value)
+            )
+
+          "Boolean" ->
+            {:ok, Serializer.append_value(next_ser, value, :boolean)}
+
+          "String" ->
+            {:ok, Serializer.append_value(next_ser, value, :string)}
+
+          "Int" ->
+            {:ok, Serializer.append_value(next_ser, value, :int)}
+
+          "Storable" ->
+            Serializer.serialize_storable(next_ser, value)
+
+          "UNKNOWN" ->
+            {:ok, Serializer.append(ser, "UNKNOWN")}
+        end
+    end)
+  end
+
+  def serialize(
+        %Serializer{} = serializer,
+        "CH.ifa.draw.figures.AttributeFigure",
+        field_values
+      ) do
+    case Map.get(field_values, :attributes) do
+      nil ->
+        serializer
+        |> Serializer.append("no_attributes")
+
+      attrs ->
+        serializer
+        |> Serializer.append("attributes")
+        |> Serializer.serialize_grammar_rule("CH.ifa.draw.figures.FigureAttributes", %{
+          attributes: attrs
+        })
+    end
+  end
+
+  def serialize(%Serializer{grammar: grammar} = serializer, rule, field_values) do
+    fields = Map.get(grammar.hierarchy[rule], :fields, [])
+
+    serialize_fields(serializer, fields, field_values)
+  end
+
+  def serialize_fields(serializer, fields, field_values) do
+    fields
+    |> Enum.reduce({:ok, serializer}, fn
+      {nil, _}, {:ok, %Serializer{} = ser} ->
+        {:ok, ser}
+
+      {field_name, {:list, list_type}}, {:ok, %Serializer{} = ser} ->
+        serialize_list_field(ser, field_values[field_name], list_type)
+
+      {field_name, {:storable, rule}}, {:ok, %Serializer{} = ser} ->
+        Serializer.serialize_storable(ser, field_values[field_name], rule)
+
+      {field_name, field_type}, {:ok, %Serializer{} = ser} ->
+        {:ok, Serializer.append_value(ser, field_values[field_name], field_type)}
+
+      _, e ->
+        e
+    end)
+  end
+
+  defp serialize_list_field(serializer, list, type_spec) do
+    Serializer.serialize_list(serializer, list, fn item, ser ->
+      case type_spec do
+        {:storable, rule} ->
+          Serializer.serialize_storable(ser, item, rule)
+
+        {:rule, rule} ->
+          Serializer.serialize_grammar_rule(ser, rule, item)
+
+        primitive when is_atom(primitive) ->
+          Serializer.append_value(ser, item, primitive)
+
+        # If the type_spec is a list, try to read multiple values according to the types described by the list
+        multiples when is_list(multiples) ->
+          parse_fields(ser, multiples, item)
+      end
+    end)
   end
 
   @doc """

@@ -23,10 +23,10 @@ defmodule Renewex.Storable do
   @doc """
   Returns a new Storable struct representing an object of the given class_name.
   """
-  def new(class_name) do
+  def new(class_name, %{} = fields \\ %{}) when is_binary(class_name) do
     %Storable{
       class_name: class_name,
-      fields: %{}
+      fields: fields
     }
   end
 end

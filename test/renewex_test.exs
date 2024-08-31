@@ -214,13 +214,44 @@ defmodule RenewexTest do
     grammar = Renewex.Grammar.new(11)
     serializer = Serializer.new([], grammar)
 
-    IO.puts(
-      serializer
-      |> Serializer.serialize_document(
-        Storable.new("de.renew.diagram.HorizontalConnector"),
-        {42, 32, 108, 128}
-      )
-      |> Serializer.get_output_string()
-    )
+    document =
+      Storable.new("CH.ifa.draw.standard.StandardDrawing", %{
+        figures: [
+          Storable.new("CH.ifa.draw.figures.RoundRectangleFigure", %{
+            x: 4,
+            y: 8,
+            w: 15,
+            h: 16,
+            arc_width: 23,
+            arc_height: 42,
+            attributes: [
+              {"Fill", "Color", {:rgba, 32, 64, 128, 255}},
+              {"Stroke", "Int", 4},
+              {"Visible", "Boolean", true}
+            ]
+          })
+        ]
+      })
+
+    size = {42, 32, 108, 128}
+
+    expected_output =
+      [
+        "11 CH.ifa.draw.standard.StandardDrawing 1 ",
+        "CH.ifa.draw.figures.RoundRectangleFigure attributes attributes 3 ",
+        "Fill Color 32 64 128 255 ",
+        "Stroke Int 4 ",
+        "Visible Boolean true ",
+        "4 8 15 16 23 42 42 32 108 128"
+      ]
+      |> Enum.join()
+
+    assert expected_output ==
+             Serializer.serialize_document(
+               serializer,
+               document,
+               size
+             )
+             |> Serializer.get_output_string()
   end
 end

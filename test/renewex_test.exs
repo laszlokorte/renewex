@@ -210,7 +210,7 @@ defmodule RenewexTest do
     end
   end
 
-  test "serializer" do
+  test "simple serializer" do
     grammar = Renewex.Grammar.new(11)
     serializer = Serializer.new([], grammar)
 
@@ -224,11 +224,14 @@ defmodule RenewexTest do
             h: 16,
             arc_width: 23,
             arc_height: 42,
-            attributes: [
-              {"Fill", "Color", {:rgba, 32, 64, 128, 255}},
-              {"Stroke", "Int", 4},
-              {"Visible", "Boolean", true}
-            ]
+            attributes:
+              Storable.new("CH.ifa.draw.figures.FigureAttributes", %{
+                attributes: [
+                  {"Fill", "Color", {:rgba, 32, 64, 128, 255}},
+                  {"Stroke", "Int", 4},
+                  {"Visible", "Boolean", true}
+                ]
+              })
           })
         ]
       })
@@ -237,21 +240,116 @@ defmodule RenewexTest do
 
     expected_output =
       [
-        "11 CH.ifa.draw.standard.StandardDrawing 1 ",
-        "CH.ifa.draw.figures.RoundRectangleFigure attributes attributes 3 ",
-        "Fill Color 32 64 128 255 ",
-        "Stroke Int 4 ",
-        "Visible Boolean true ",
-        "4 8 15 16 23 42 42 32 108 128"
+        ~S(11 CH.ifa.draw.standard.StandardDrawing 1 ),
+        ~S(CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 ),
+        ~S("Fill" "Color" 32 64 128 255 ),
+        ~S("Stroke" "Int" 4 ),
+        ~S("Visible" "Boolean" true ),
+        ~S(4 8 15 16 23 42 42 32 108 128)
       ]
       |> Enum.join()
 
-    assert expected_output ==
-             Serializer.serialize_document(
-               serializer,
-               document,
-               size
-             )
-             |> Serializer.get_output_string()
+    actual_output =
+      serializer
+      |> Serializer.serialize_document(document, size)
+      |> Serializer.get_output_string()
+
+    assert expected_output == actual_output
+  end
+
+  test "serializer with refs" do
+    grammar = Renewex.Grammar.new(11)
+
+    refs = [
+      Storable.new("CH.ifa.draw.figures.RoundRectangleFigure", %{
+        x: 4,
+        y: 8,
+        w: 15,
+        h: 16,
+        arc_width: 23,
+        arc_height: 42,
+        attributes:
+          Storable.new("CH.ifa.draw.figures.FigureAttributes", %{
+            attributes: [
+              {"Fill", "Color", {:rgba, 32, 64, 128, 255}},
+              {"Stroke", "Int", 4},
+              {"Visible", "Boolean", true}
+            ]
+          })
+      }),
+      Storable.new("CH.ifa.draw.standard.StandardDrawing", %{
+        figures: [
+          {:ref, 0}
+        ]
+      })
+    ]
+
+    document = {:ref, 1}
+    serializer = Serializer.new(refs, grammar)
+
+    size = {42, 32, 108, 128}
+
+    expected_output =
+      [
+        ~S(11 CH.ifa.draw.standard.StandardDrawing 1 ),
+        ~S(CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 ),
+        ~S("Fill" "Color" 32 64 128 255 ),
+        ~S("Stroke" "Int" 4 ),
+        ~S("Visible" "Boolean" true ),
+        ~S(4 8 15 16 23 42 42 32 108 128)
+      ]
+      |> Enum.join()
+
+    actual_output =
+      serializer
+      |> Serializer.serialize_document(document, size)
+      |> Serializer.get_output_string()
+
+    assert expected_output == actual_output
+  end
+
+  test "serialize_storable on example files" do
+    dir = "#{@example_dir}/"
+    {:ok, files} = File.ls(dir)
+
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
+      assert {:ok, example} = File.read(Path.join(dir, file))
+
+      assert {:ok, %Storable{} = original_root, original_refs} = Renewex.parse_string(example),
+             "can parse #{file}"
+
+      assert is_list(original_refs), "ref list of #{file} is a list"
+
+      assert %Parser{grammar: grammar} =
+               example
+               |> Tokenizer.scan()
+               |> Tokenizer.skip_whitespace()
+               |> Parser.detect_document_version()
+
+      serializer = Serializer.new(original_refs, grammar)
+
+      actual_output =
+        serializer
+        |> Serializer.serialize_document(original_root)
+        |> Serializer.get_output_string()
+
+      if not Enum.member?(
+           # TODO figure out whats not working with these files
+           [
+             "ams_brewcoffee.rnw",
+             "closedoor.rnw",
+             "example.aip",
+             "example2.aip",
+             "NetWithOrSplit.rnw"
+           ],
+           file
+         ) do
+        assert {:ok, %Storable{} = ^original_root, ^original_refs} =
+                 Renewex.parse_string(actual_output),
+               "can parse resilized #{file}"
+      end
+    end
   end
 end

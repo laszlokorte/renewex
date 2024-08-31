@@ -53,7 +53,7 @@ defmodule Renewex.Serializer do
 
   def serialize_storable(serializer, storable, expected_rule \\ nil)
 
-  def serialize_storable(%Serializer{} = serializer, :null, _) do
+  def serialize_storable(%Serializer{} = serializer, nil, _) do
     {:ok, append(serializer, "NULL")}
   end
 
@@ -73,13 +73,13 @@ defmodule Renewex.Serializer do
           new_ref = map_size(used_refs) + 1
 
           serialize_storable(
-            %Serializer{used_refs: Map.put(used_refs, ref, new_ref)},
+            %Serializer{serializer | used_refs: Map.put(used_refs, ref, new_ref)},
             storable,
             expected_rule
           )
 
         idx when is_integer(idx) ->
-          {:ok, append(serializer, ["REF", Integer.to_string(idx)])}
+          {:ok, append(serializer, ["REF ", Integer.to_string(idx)])}
       end
     else
       {:error, {storable.class_name, expected_rule}}
@@ -108,6 +108,10 @@ defmodule Renewex.Serializer do
 
       _, {:error, _} = e ->
         e
+
+      item, e ->
+        dbg(ser_fn)
+        raise e
     end)
   end
 
@@ -122,7 +126,7 @@ defmodule Renewex.Serializer do
           with {:ok, ser} <- serialize_grammar_rule(serializer, super_rule, fields) do
             ser |> Grammar.serialize(rule, fields)
           else
-            e -> e
+            {:error, e} -> {:error, e}
           end
 
         true ->
@@ -158,7 +162,9 @@ defmodule Renewex.Serializer do
     }
   end
 
-  def to_io_list(value, :string) when is_binary(value), do: value
+  def to_io_list(value, :string) when is_binary(value),
+    do: inspect(value, charlists: :as_charlists)
+
   def to_io_list(value, :float) when is_float(value), do: Float.to_string(value)
   def to_io_list(value, :storable) when is_nil(value), do: "NULL"
   def to_io_list(value, :int) when is_integer(value), do: Integer.to_string(value)

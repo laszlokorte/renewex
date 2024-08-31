@@ -884,7 +884,7 @@ defmodule Renewex.Grammar do
     {:error, {:rgba, color}}
   end
 
-  defp serialize_color_rgb(ser, {:rgba, r, g, b}) do
+  defp serialize_color_rgb(ser, {:rgb, r, g, b}) do
     ser
     |> Serializer.append_value(r, :int)
     |> Serializer.append_value(g, :int)
@@ -902,7 +902,7 @@ defmodule Renewex.Grammar do
         field_values
       ) do
     serializer
-    |> Serializer.append("attributes")
+    |> Serializer.append_value("attributes", :string)
     |> Serializer.serialize_list(field_values.attributes, fn
       {name, type, value}, ser ->
         next_ser =
@@ -943,14 +943,13 @@ defmodule Renewex.Grammar do
     case Map.get(field_values, :attributes) do
       nil ->
         serializer
-        |> Serializer.append("no_attributes")
+        |> Serializer.append_value("no_attributes", :string)
+        |> then(&{:ok, &1})
 
       attrs ->
         serializer
-        |> Serializer.append("attributes")
-        |> Serializer.serialize_grammar_rule("CH.ifa.draw.figures.FigureAttributes", %{
-          attributes: attrs
-        })
+        |> Serializer.append_value("attributes", :string)
+        |> Serializer.serialize_grammar_rule("CH.ifa.draw.figures.FigureAttributes", attrs.fields)
     end
   end
 
@@ -972,6 +971,9 @@ defmodule Renewex.Grammar do
       {field_name, {:storable, rule}}, {:ok, %Serializer{} = ser} ->
         Serializer.serialize_storable(ser, field_values[field_name], rule)
 
+      {field_name, {:rule, rule}}, {:ok, %Serializer{} = ser} ->
+        Serializer.serialize_grammar_rule(ser, rule, field_values[field_name].fields)
+
       {field_name, field_type}, {:ok, %Serializer{} = ser} ->
         {:ok, Serializer.append_value(ser, field_values[field_name], field_type)}
 
@@ -990,11 +992,11 @@ defmodule Renewex.Grammar do
           Serializer.serialize_grammar_rule(ser, rule, item)
 
         primitive when is_atom(primitive) ->
-          Serializer.append_value(ser, item, primitive)
+          {:ok, Serializer.append_value(ser, item, primitive)}
 
         # If the type_spec is a list, try to read multiple values according to the types described by the list
         multiples when is_list(multiples) ->
-          parse_fields(ser, multiples, item)
+          serialize_fields(ser, multiples, item)
       end
     end)
   end

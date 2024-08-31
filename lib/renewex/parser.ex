@@ -19,7 +19,7 @@ defmodule Renewex.Parser do
   Constructs a new parser state for a given list of tokens and a given grammar.
   """
   def new(tokens, grammar) do
-    %Renewex.Parser{
+    %Parser{
       grammar: grammar,
       tokens: tokens,
       ref_stack: [],
@@ -62,23 +62,23 @@ defmodule Renewex.Parser do
 
   # Given the current state of a parser, read a single token of the given type.
   defp parse_token(
-         %Renewex.Parser{} = parser,
+         %Parser{} = parser,
          type
        ) do
     case parser do
-      %Renewex.Parser{tokens: [{^type, value} | rest_tokens]} ->
+      %Parser{tokens: [{^type, value} | rest_tokens]} ->
         {:ok, value,
-         %Renewex.Parser{
+         %Parser{
            parser
            | tokens: rest_tokens
          }}
 
-      %Renewex.Parser{tokens: []} ->
+      %Parser{tokens: []} ->
         {:error, :eof, parser}
 
-      %Renewex.Parser{tokens: [{actual_type, actual_value} | rest_tokens]} ->
+      %Parser{tokens: [{actual_type, actual_value} | rest_tokens]} ->
         {:error, {actual_type, actual_value},
-         %Renewex.Parser{
+         %Parser{
            parser
            | tokens: rest_tokens
          }}
@@ -133,7 +133,7 @@ defmodule Renewex.Parser do
       )
 
   def parse_storable(
-        %Renewex.Parser{
+        %Parser{
           tokens: [{current_type, current_value} | rest_tokens],
           ref_stack: parent_ref_stack,
           ref_count: parent_ref_count
@@ -141,7 +141,7 @@ defmodule Renewex.Parser do
         expected_type,
         return_ref
       ) do
-    next_parser = %Renewex.Parser{
+    next_parser = %Parser{
       parser
       | tokens: rest_tokens
     }
@@ -159,10 +159,9 @@ defmodule Renewex.Parser do
         if is_nil(expected_type) or
              Hierarchy.is_implementation_of(parser.grammar, class_name, expected_type) or
              Hierarchy.is_subtype_of(parser.grammar, class_name, expected_type) do
-          with {:ok, result,
-                %Renewex.Parser{ref_stack: child_ref_stack, ref_count: child_ref_count} = p} <-
+          with {:ok, result, %Parser{ref_stack: child_ref_stack, ref_count: child_ref_count} = p} <-
                  parse_grammar_rule(
-                   %Renewex.Parser{
+                   %Parser{
                      next_parser
                      | ref_stack: [:incomplete_parsed | parent_ref_stack],
                        ref_count: parent_ref_count + 1
@@ -171,7 +170,7 @@ defmodule Renewex.Parser do
                    Storable.new(class_name)
                  ) do
             {:ok, if(return_ref, do: {:ref, Enum.count(parent_ref_stack)}, else: result),
-             %Renewex.Parser{
+             %Parser{
                p
                | ref_stack:
                    Enum.concat(
@@ -194,18 +193,17 @@ defmodule Renewex.Parser do
   end
 
   def parse_storable(
-        %Renewex.Parser{
+        %Parser{
           tokens: [current_token | rest_tokens]
         } = parser,
         expected_type,
         _return_ref
       ) do
-    {:error, {current_token, {:class_name, expected_type}},
-     %Renewex.Parser{parser | tokens: rest_tokens}}
+    {:error, {current_token, {:class_name, expected_type}}, %Parser{parser | tokens: rest_tokens}}
   end
 
   def parse_storable(
-        %Renewex.Parser{
+        %Parser{
           tokens: []
         } = parser,
         expected_type,
@@ -290,10 +288,10 @@ defmodule Renewex.Parser do
   """
   def skip_any(parser)
 
-  def skip_any(%Renewex.Parser{tokens: []}), do: {:error, :eof}
+  def skip_any(%Parser{tokens: []}), do: {:error, :eof}
 
-  def skip_any(%Renewex.Parser{tokens: [_ | rest]} = parser),
-    do: %Renewex.Parser{parser | tokens: rest}
+  def skip_any(%Parser{tokens: [_ | rest]} = parser),
+    do: %Parser{parser | tokens: rest}
 
   @doc """
   Given the current state of a parser expect the next tokens type to be one of the given types. Then skip it.
@@ -302,33 +300,33 @@ defmodule Renewex.Parser do
   def skip_any(parser, of_types)
 
   def skip_any(
-        %Renewex.Parser{tokens: [{current_type, _} = current_token | rest]} = parser,
+        %Parser{tokens: [{current_type, _} = current_token | rest]} = parser,
         skippables
       ) do
     if Enum.member?(skippables, current_type) do
-      {:ok, nil, %Renewex.Parser{parser | tokens: rest}}
+      {:ok, nil, %Parser{parser | tokens: rest}}
     else
-      {:error, current_token, %Renewex.Parser{parser | tokens: rest}}
+      {:error, current_token, %Parser{parser | tokens: rest}}
     end
   end
 
-  def skip_any(%Renewex.Parser{tokens: []}, _), do: {:error, :eof}
+  def skip_any(%Parser{tokens: []}, _), do: {:error, :eof}
 
   @doc """
   Check if the list of tokens of the given parser state is empty.
   """
-  def is_eof(%Renewex.Parser{tokens: []}), do: true
-  def is_eof(%Renewex.Parser{tokens: [_ | _]}), do: false
+  def is_eof(%Parser{tokens: []}), do: true
+  def is_eof(%Parser{tokens: [_ | _]}), do: false
 
   @doc """
   Expect the list of tokens to be empty and return the reversed list of parsed objects.
   If the list of tokens is not empty, return an error.
   """
-  def finalize(%Renewex.Parser{tokens: [], ref_stack: ref_stack}) do
+  def finalize(%Parser{tokens: [], ref_stack: ref_stack}) do
     {:ok, Enum.reverse(ref_stack)}
   end
 
-  def finalize(%Renewex.Parser{tokens: [current_token | _]}) do
+  def finalize(%Parser{tokens: [current_token | _]}) do
     {:error, current_token}
   end
 
@@ -340,22 +338,22 @@ defmodule Renewex.Parser do
   Another of try_skip that takes not just a parser but a tupkle of {:ok, result, parser} or {:error, result, parser}.
   If `{:error, ...}` simply return the input. If {:ok, result, parser} apply try_skip to the parser.
   """
-  def try_skip(%Renewex.Parser{tokens: tokens} = parser, skips) do
+  def try_skip(%Parser{tokens: tokens} = parser, skips) do
     matching_skips =
       Enum.zip_with(tokens, skips, fn {actual_type, _}, skip_type -> skip_type == actual_type end)
 
     if Enum.all?(matching_skips) and Enum.count(matching_skips) == Enum.count(skips) do
-      %Renewex.Parser{parser | tokens: Enum.drop(parser.tokens, Enum.count(skips))}
+      %Parser{parser | tokens: Enum.drop(parser.tokens, Enum.count(skips))}
     else
       parser
     end
   end
 
-  def try_skip({:ok, result, %Renewex.Parser{} = parser}, skips) do
+  def try_skip({:ok, result, %Parser{} = parser}, skips) do
     {:ok, result, try_skip(parser, skips)}
   end
 
-  def try_skip({:error, _, %Renewex.Parser{}} = err, _) do
+  def try_skip({:error, _, %Parser{}} = err, _) do
     err
   end
 end

@@ -4,6 +4,7 @@ defmodule RenewexTest do
   alias Renewex.Storable
   alias Renewex.Tokenizer
   alias Renewex.Parser
+  alias Renewex.Serializer
   doctest Renewex
 
   @example_dir Path.join([__DIR__, "fixtures", "selected_examples"])
@@ -207,5 +208,19 @@ defmodule RenewexTest do
         Renewex.parse_string(example)
       end
     end
+  end
+
+  test "serializer" do
+    grammar = Renewex.Grammar.new(11)
+    serializer = Serializer.new([], grammar)
+
+    IO.puts(
+      serializer
+      |> Serializer.serialize_document(
+        Storable.new("de.renew.diagram.HorizontalConnector"),
+        {42, 32, 108, 128}
+      )
+      |> Serializer.get_output_string()
+    )
   end
 end

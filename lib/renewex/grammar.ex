@@ -7,6 +7,7 @@ defmodule Renewex.Grammar do
   This module defines a struct to describe the class hierarchy and some specialized function to parse specific classes.
   """
 
+  alias Renewex.Serializer
   alias Renewex.Storable
   alias Renewex.Parser
 
@@ -868,6 +869,10 @@ defmodule Renewex.Grammar do
     {:ok, b, next_parser} = Parser.parse_primitive(next_parser, :int)
 
     {:ok, {:rgb, r, g, b}, next_parser}
+  end
+
+  def serialize(%Serializer{grammar: grammar} = serializer, rule, fields) do
+    serializer
   end
 
   @doc """

@@ -313,7 +313,7 @@ defmodule Renewex.Grammar do
           # we expect to see either a ref or a string but we do not want to store
           # the parsed values but skip them.
           # The `nil` key signifies the field to be skipped.
-          fields: [nil: [:ref, :string]]
+          fields: [nil: [:ref, :string, default: {:string, "SKIPPED_WHILE_PARSING"}]]
         },
         "CH.ifa.draw.standard.OffsetLocator" => %{
           super: "CH.ifa.draw.figures.AbstractLocator",
@@ -485,7 +485,10 @@ defmodule Renewex.Grammar do
             "de.renew.diagram.RepresentableLifeLineLogicFigure",
             "de.renew.diagram.ISplitFigure"
           ],
-          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, nil: [:string]]
+          fields: [
+            decorationf: {:storable, "de.renew.diagram.FigureDecoration"},
+            nil: [:string, default: {:string, "de.renew.diagram.FigureDecoration"}]
+          ]
         },
         "de.renew.diagram.VSplitFigure" => %{
           super: "de.renew.diagram.LifeLineLogicFigure",
@@ -498,7 +501,10 @@ defmodule Renewex.Grammar do
         "de.renew.diagram.HSplitFigure" => %{
           super: "de.renew.diagram.DiagramFigure",
           interfaces: [],
-          fields: [decoration: {:storable, "de.renew.diagram.FigureDecoration"}, nil: [:string]]
+          fields: [
+            decoration: {:storable, "de.renew.diagram.FigureDecoration"},
+            nil: [:string, default: {:string, "de.renew.diagram.FigureDecoration"}]
+          ]
         },
         "de.renew.diagram.VSplitCenterConnector" => %{
           super: "CH.ifa.draw.standard.AbstractConnector",
@@ -918,7 +924,8 @@ defmodule Renewex.Grammar do
             )
 
           "Boolean" ->
-            {:ok, Serializer.append_value(next_ser, value, :boolean)}
+            {:ok,
+             Serializer.append_value(next_ser, if(value, do: "true", else: "false"), :string)}
 
           "String" ->
             {:ok, Serializer.append_value(next_ser, value, :string)}
@@ -930,7 +937,10 @@ defmodule Renewex.Grammar do
             Serializer.serialize_storable(next_ser, value)
 
           "UNKNOWN" ->
-            {:ok, Serializer.append(ser, "UNKNOWN")}
+            ser
+            |> Serializer.append_value(name, :string)
+            |> Serializer.append_value("UNKNOWN", :string)
+            |> then(&{:ok, &1})
         end
     end)
   end
@@ -953,6 +963,24 @@ defmodule Renewex.Grammar do
     end
   end
 
+  def serialize(
+        %Serializer{} = serializer,
+        "de.renew.gui.fs.FSFigure",
+        field_values
+      ) do
+    if serializer.grammar.version <= 5 do
+      {:ok, serializer}
+    else
+      if serializer.grammar.version > 6 do
+        Serializer.serialize_list(serializer, field_values.paths, fn item, ser ->
+          Serializer.append_value(ser, item, :string)
+        end)
+      else
+        {:ok, serializer}
+      end
+    end
+  end
+
   def serialize(%Serializer{grammar: grammar} = serializer, rule, field_values) do
     fields = Map.get(grammar.hierarchy[rule], :fields, [])
 
@@ -962,8 +990,12 @@ defmodule Renewex.Grammar do
   def serialize_fields(serializer, fields, field_values) do
     fields
     |> Enum.reduce({:ok, serializer}, fn
-      {nil, _}, {:ok, %Serializer{} = ser} ->
-        {:ok, ser}
+      {nil, types}, {:ok, %Serializer{} = ser} ->
+        with {type, value} <- Keyword.get(types, :default) do
+          {:ok, Serializer.append_value(ser, value, type)}
+        else
+          _ -> {:ok, ser}
+        end
 
       {field_name, {:list, list_type}}, {:ok, %Serializer{} = ser} ->
         serialize_list_field(ser, field_values[field_name], list_type)
@@ -973,6 +1005,12 @@ defmodule Renewex.Grammar do
 
       {field_name, {:rule, rule}}, {:ok, %Serializer{} = ser} ->
         Serializer.serialize_grammar_rule(ser, rule, field_values[field_name].fields)
+
+      {field_name, :color_rgb}, {:ok, %Serializer{} = ser} ->
+        serialize_color_rgb(ser, field_values[field_name])
+
+      {field_name, :color_rgba}, {:ok, %Serializer{} = ser} ->
+        serialize_color_rgba(ser, field_values[field_name])
 
       {field_name, field_type}, {:ok, %Serializer{} = ser} ->
         {:ok, Serializer.append_value(ser, field_values[field_name], field_type)}

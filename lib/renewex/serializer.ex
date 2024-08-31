@@ -108,10 +108,6 @@ defmodule Renewex.Serializer do
 
       _, {:error, _} = e ->
         e
-
-      item, e ->
-        dbg(ser_fn)
-        raise e
     end)
   end
 
@@ -168,7 +164,7 @@ defmodule Renewex.Serializer do
   def to_io_list(value, :float) when is_float(value), do: Float.to_string(value)
   def to_io_list(value, :storable) when is_nil(value), do: "NULL"
   def to_io_list(value, :int) when is_integer(value), do: Integer.to_string(value)
-  def to_io_list(value, :boolean) when is_boolean(value), do: if(value, do: "true", else: "false")
+  def to_io_list(value, :boolean) when is_boolean(value), do: if(value, do: "1", else: "0")
 
   def get_output_string({:ok, %Serializer{output: output}}) do
     :erlang.iolist_to_binary(output)

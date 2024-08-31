@@ -113,13 +113,12 @@ defmodule RenewexTest do
   end
 
   test "parse_storable on example files" do
-    dir = "#{@example_dir}/"
-    {:ok, files} = File.ls(dir)
+    {:ok, files} = File.ls(@example_dir)
 
     assert Enum.count(files) > 0, "test files exist"
 
     for file <- files do
-      assert {:ok, example} = File.read(Path.join(dir, file))
+      assert {:ok, example} = File.read(Path.join(@example_dir, file))
 
       assert {:ok, %Storable{}, parser} =
                example
@@ -244,7 +243,7 @@ defmodule RenewexTest do
         ~S(CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 ),
         ~S("Fill" "Color" 32 64 128 255 ),
         ~S("Stroke" "Int" 4 ),
-        ~S("Visible" "Boolean" true ),
+        ~S("Visible" "Boolean" "true" ),
         ~S(4 8 15 16 23 42 42 32 108 128)
       ]
       |> Enum.join()
@@ -295,7 +294,7 @@ defmodule RenewexTest do
         ~S(CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 ),
         ~S("Fill" "Color" 32 64 128 255 ),
         ~S("Stroke" "Int" 4 ),
-        ~S("Visible" "Boolean" true ),
+        ~S("Visible" "Boolean" "true" ),
         ~S(4 8 15 16 23 42 42 32 108 128)
       ]
       |> Enum.join()
@@ -309,13 +308,12 @@ defmodule RenewexTest do
   end
 
   test "serialize_storable on example files" do
-    dir = "#{@example_dir}/"
-    {:ok, files} = File.ls(dir)
+    {:ok, files} = File.ls(@example_dir)
 
     assert Enum.count(files) > 0, "test files exist"
 
     for file <- files do
-      assert {:ok, example} = File.read(Path.join(dir, file))
+      assert {:ok, example} = File.read(Path.join(@example_dir, file))
 
       assert {:ok, %Storable{} = original_root, original_refs} = Renewex.parse_string(example),
              "can parse #{file}"
@@ -335,21 +333,42 @@ defmodule RenewexTest do
         |> Serializer.serialize_document(original_root)
         |> Serializer.get_output_string()
 
-      if not Enum.member?(
-           # TODO figure out whats not working with these files
-           [
-             "ams_brewcoffee.rnw",
-             "closedoor.rnw",
-             "example.aip",
-             "example2.aip",
-             "NetWithOrSplit.rnw"
-           ],
-           file
-         ) do
-        assert {:ok, %Storable{} = ^original_root, ^original_refs} =
-                 Renewex.parse_string(actual_output),
-               "can parse resilized #{file}"
-      end
+      assert {:ok, %Storable{} = ^original_root, ^original_refs} =
+               Renewex.parse_string(actual_output),
+             "can reparse reserialized #{file}"
+    end
+  end
+
+  @tag :slow
+  test "serialize_storable on all files" do
+    {:ok, files} = File.ls(@full_examples_dir)
+
+    assert Enum.count(files) > 0, "test files exist"
+
+    for file <- files do
+      assert {:ok, example} = File.read(Path.join(@full_examples_dir, file))
+
+      assert {:ok, %Storable{} = original_root, original_refs} = Renewex.parse_string(example),
+             "can parse #{file}"
+
+      assert is_list(original_refs), "ref list of #{file} is a list"
+
+      assert %Parser{grammar: grammar} =
+               example
+               |> Tokenizer.scan()
+               |> Tokenizer.skip_whitespace()
+               |> Parser.detect_document_version()
+
+      serializer = Serializer.new(original_refs, grammar)
+
+      actual_output =
+        serializer
+        |> Serializer.serialize_document(original_root)
+        |> Serializer.get_output_string()
+
+      assert {:ok, %Storable{} = ^original_root, ^original_refs} =
+               Renewex.parse_string(actual_output),
+             "can reparse reserialized #{file}"
     end
   end
 end

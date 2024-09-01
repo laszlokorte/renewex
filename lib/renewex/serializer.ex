@@ -3,6 +3,7 @@ defmodule Renewex.Serializer do
   alias Renewex.Hierarchy
   alias Renewex.Storable
   alias Renewex.Grammar
+  alias Renewex.Tokenizer
 
   defstruct [
     :grammar,
@@ -102,7 +103,7 @@ defmodule Renewex.Serializer do
 
   def serialize_list(%Serializer{} = serializer, list, ser_fn) do
     list
-    |> Enum.reduce({:ok, append_value(serializer, Enum.count(list), :int)}, fn
+    |> Enum.reduce({:ok, append_token(serializer, {:int, Enum.count(list)})}, fn
       item, {:ok, ser} ->
         ser_fn.(item, ser)
 
@@ -133,8 +134,8 @@ defmodule Renewex.Serializer do
     end
   end
 
-  def append_value(%Serializer{} = serializer, value, expected_type, space \\ true) do
-    append(serializer, to_io_list(value, expected_type), space)
+  def append_token(%Serializer{} = serializer, {type, value}, space \\ true) do
+    append(serializer, Tokenizer.token_to_binary(type, value), space)
   end
 
   def append(%Serializer{output: prev_output} = serializer, new_out, space \\ true) do
@@ -157,14 +158,6 @@ defmodule Renewex.Serializer do
         ]
     }
   end
-
-  def to_io_list(value, :string) when is_binary(value),
-    do: inspect(value, charlists: :as_charlists)
-
-  def to_io_list(value, :float) when is_float(value), do: Float.to_string(value)
-  def to_io_list(value, :storable) when is_nil(value), do: "NULL"
-  def to_io_list(value, :int) when is_integer(value), do: Integer.to_string(value)
-  def to_io_list(value, :boolean) when is_boolean(value), do: if(value, do: "1", else: "0")
 
   def get_output_string({:ok, %Serializer{output: output}}) do
     :erlang.iolist_to_binary(output)

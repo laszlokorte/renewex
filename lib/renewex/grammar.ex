@@ -879,10 +879,10 @@ defmodule Renewex.Grammar do
 
   defp serialize_color_rgba(ser, {:rgba, r, g, b, a}) do
     ser
-    |> Serializer.append_value(r, :int)
-    |> Serializer.append_value(g, :int)
-    |> Serializer.append_value(b, :int)
-    |> Serializer.append_value(a, :int)
+    |> Serializer.append_token({:int, r})
+    |> Serializer.append_token({:int, g})
+    |> Serializer.append_token({:int, b})
+    |> Serializer.append_token({:int, a})
     |> then(&{:ok, &1})
   end
 
@@ -892,9 +892,9 @@ defmodule Renewex.Grammar do
 
   defp serialize_color_rgb(ser, {:rgb, r, g, b}) do
     ser
-    |> Serializer.append_value(r, :int)
-    |> Serializer.append_value(g, :int)
-    |> Serializer.append_value(b, :int)
+    |> Serializer.append_token({:int, r})
+    |> Serializer.append_token({:int, g})
+    |> Serializer.append_token({:int, b})
     |> then(&{:ok, &1})
   end
 
@@ -908,13 +908,13 @@ defmodule Renewex.Grammar do
         field_values
       ) do
     serializer
-    |> Serializer.append_value("attributes", :string)
+    |> Serializer.append_token({:string, "attributes"})
     |> Serializer.serialize_list(field_values.attributes, fn
       {name, type, value}, ser ->
         next_ser =
           ser
-          |> Serializer.append_value(name, :string)
-          |> Serializer.append_value(type, :string)
+          |> Serializer.append_token({:string, name})
+          |> Serializer.append_token({:string, type})
 
         case type do
           "Color" ->
@@ -925,21 +925,21 @@ defmodule Renewex.Grammar do
 
           "Boolean" ->
             {:ok,
-             Serializer.append_value(next_ser, if(value, do: "true", else: "false"), :string)}
+             Serializer.append_token(next_ser, {:string, if(value, do: "true", else: "false")})}
 
           "String" ->
-            {:ok, Serializer.append_value(next_ser, value, :string)}
+            {:ok, Serializer.append_token(next_ser, {:string, value})}
 
           "Int" ->
-            {:ok, Serializer.append_value(next_ser, value, :int)}
+            {:ok, Serializer.append_token(next_ser, {:int, value})}
 
           "Storable" ->
             Serializer.serialize_storable(next_ser, value)
 
           "UNKNOWN" ->
             ser
-            |> Serializer.append_value(name, :string)
-            |> Serializer.append_value("UNKNOWN", :string)
+            |> Serializer.append_token({:string, name})
+            |> Serializer.append_token({:string, "UNKNOWN"})
             |> then(&{:ok, &1})
         end
     end)
@@ -953,12 +953,12 @@ defmodule Renewex.Grammar do
     case Map.get(field_values, :attributes) do
       nil ->
         serializer
-        |> Serializer.append_value("no_attributes", :string)
+        |> Serializer.append_token({:string, "no_attributes"})
         |> then(&{:ok, &1})
 
       attrs ->
         serializer
-        |> Serializer.append_value("attributes", :string)
+        |> Serializer.append_token({:string, "attributes"})
         |> Serializer.serialize_grammar_rule("CH.ifa.draw.figures.FigureAttributes", attrs.fields)
     end
   end
@@ -973,7 +973,7 @@ defmodule Renewex.Grammar do
     else
       if serializer.grammar.version > 6 do
         Serializer.serialize_list(serializer, field_values.paths, fn item, ser ->
-          {:ok, Serializer.append_value(ser, item, :string)}
+          {:ok, Serializer.append_token(ser, {:string, item})}
         end)
       else
         {:ok, serializer}
@@ -992,7 +992,7 @@ defmodule Renewex.Grammar do
     |> Enum.reduce({:ok, serializer}, fn
       {nil, types}, {:ok, %Serializer{} = ser} ->
         with {type, value} <- Keyword.get(types, :default) do
-          {:ok, Serializer.append_value(ser, value, type)}
+          {:ok, Serializer.append_token(ser, {type, value})}
         else
           _ -> {:ok, ser}
         end
@@ -1013,7 +1013,7 @@ defmodule Renewex.Grammar do
         serialize_color_rgba(ser, field_values[field_name])
 
       {field_name, field_type}, {:ok, %Serializer{} = ser} ->
-        {:ok, Serializer.append_value(ser, field_values[field_name], field_type)}
+        {:ok, Serializer.append_token(ser, {field_type, field_values[field_name]})}
 
       _, e ->
         e
@@ -1030,7 +1030,7 @@ defmodule Renewex.Grammar do
           Serializer.serialize_grammar_rule(ser, rule, item)
 
         primitive when is_atom(primitive) ->
-          {:ok, Serializer.append_value(ser, item, primitive)}
+          {:ok, Serializer.append_token(ser, {primitive, item})}
 
         # If the type_spec is a list, try to read multiple values according to the types described by the list
         multiples when is_list(multiples) ->

@@ -340,7 +340,6 @@ defmodule RenewexTest do
   end
 
   @tag :slow
-  @tag :foo
   test "serialize_storable on all files" do
     {:ok, files} = File.ls(@full_examples_dir)
 
@@ -363,112 +362,14 @@ defmodule RenewexTest do
 
       serializer = Serializer.new(original_refs, grammar)
 
-      if not Enum.member?(
-           [
-             "AssocRoleTest.rnw",
-             "BDIAgent (2).rnw",
-             "BDIAgent (3).rnw",
-             "BDIarchitecture.rnw",
-             "ClassifierTest.rnw",
-             "con-task-ON.rnw",
-             "con-task_ON_List.rnw",
-             "ConcurrentEditing-FSNet-XFS.rnw",
-             "ContractExample.rnw",
-             "con_taskFSNetObjectSystem.rnw",
-             "con_taskJFSNetObjectSystem.rnw",
-             "con_task_EOS_ProcessAVM.rnw",
-             "con_task_InitProcess.rnw",
-             "con_task_NextProcess.rnw",
-             "con_task_ON_Processes.rnw",
-             "con_task_SN_Processes.rnw",
-             "DerivedTransitionRule-t1.rnw",
-             "DerivedTransitionRule-t2-t4.rnw",
-             "DerivedTransitionRule-t2.rnw",
-             "DutchJusticeDpt.rnw",
-             "DutchJusticeDptSimulator.rnw",
-             "FSandUMLRenderTest.rnw",
-             "FSInstantiationTest.rnw",
-             "FSInstantiationTest2.rnw",
-             "FSProcess-Val.rnw",
-             "FSProcess0.rnw",
-             "FSProcess1.rnw",
-             "FSProcess2.rnw",
-             "FSProcess3.rnw",
-             "FSProcess4.rnw",
-             "FSProcess5.rnw",
-             "InstantiationTest.rnw",
-             "ItemListenerTest.rnw",
-             "JavaContractObjectModel.rnw",
-             "JavaMatchingTest2.rnw",
-             "KB (2).rnw",
-             "KB (3).rnw",
-             "ListRenderTest.rnw",
-             "ListReverse-FSNet-Ref.rnw",
-             "ListReverse-FSNet-Val.rnw",
-             "ListReverseSimple-FSNet-Arc.rnw",
-             "ListReverseSimple-FSNet-Inside.rnw",
-             "ListReverseSimple-FSNet-Many.rnw",
-             "ListReverseSimple-FSNet-Standard.rnw",
-             "ListReverseSimple-FSNet-Tag.rnw",
-             "ListReverseSimple-FSNet-UML.rnw",
-             "ListReverse_Ref.rnw",
-             "ListReverse_Val.rnw",
-             "MyUMLAggregates.rnw",
-             "NewInstantiationTest.rnw",
-             "NonWelltypableUni.rnw",
-             "ON.rnw",
-             "OptimisticFSNet.rnw",
-             "OrderProcessing.rnw",
-             "OrderProcessingCWF.rnw",
-             "OrderProcessingCWFsimulator.rnw",
-             "OrderProcessingMulti.rnw",
-             "OrderProcessingSimple.rnw",
-             "PlaceTypeTest.rnw",
-             "ProcessTransitionRule-t1.rnw",
-             "ProcessTransitionRule-t2.rnw",
-             "ProcessTransitionRule-t3.rnw",
-             "ProcessTransitionRule-t4.rnw",
-             "ReachabilityGraph-Ref.rnw",
-             "ReachabilityGraph-Val.rnw",
-             "Sentence-FS-UML.rnw",
-             "Sentence-FS.rnw",
-             "ShowTagsTest.rnw",
-             "SimpleChoice.rnw",
-             "SimpleChoicePTS.rnw",
-             "SimplestFSNet.rnw",
-             "SN.rnw",
-             "Stock.rnw",
-             "TokenObjectExample.rnw",
-             "UMLObjectAssoc.rnw",
-             "UnificationFSNet.rnw",
-             "UniversalEFSNet-Both.rnw",
-             "UniversalEFSNet-Ref.rnw",
-             "UniversalEFSNet-Val.rnw",
-             "UniversalEFSNet.rnw",
-             "UniversalRuleApplication.rnw",
-             "WasteCollector (2).rnw",
-             "WasteCollector.rnw",
-             "WasteCollectorInitialBeliefs.rnw",
-             "WasteCollectorInitialMarking.rnw",
-             "WasteCollectorInitialPlans.rnw",
-             "Weitz_simple_FSNet.rnw",
-             "World (2).rnw",
-             "World.rnw",
-             "WorldGUI.rnw",
-             "_UniversalEFSNet-Both.rnw",
-             "_UniversalEFSNet.rnw"
-           ],
-           file
-         ) do
-        actual_output =
-          serializer
-          |> Serializer.serialize_document(original_root)
-          |> Serializer.get_output_string()
+      actual_output =
+        serializer
+        |> Serializer.serialize_document(original_root)
+        |> Serializer.get_output_string()
 
-        assert {:ok, %Storable{} = ^original_root, ^original_refs} =
-                 Renewex.parse_string(actual_output),
-               "can reparse reserialized #{file}"
-      end
+      assert {:ok, %Storable{} = ^original_root, ^original_refs} =
+               Renewex.parse_string(actual_output),
+             "can reparse reserialized #{file}"
     end
   end
 end

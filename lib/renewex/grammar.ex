@@ -877,6 +877,7 @@ defmodule Renewex.Grammar do
     {:ok, {:rgb, r, g, b}, next_parser}
   end
 
+  # Helper
   defp serialize_color_rgba(ser, {:rgba, r, g, b, a}) do
     ser
     |> Serializer.append_token({:int, r})
@@ -886,10 +887,12 @@ defmodule Renewex.Grammar do
     |> then(&{:ok, &1})
   end
 
+  # Helper
   defp serialize_color_rgba(_, color) do
     {:error, {:rgba, color}}
   end
 
+  # Helper
   defp serialize_color_rgb(ser, {:rgb, r, g, b}) do
     ser
     |> Serializer.append_token({:int, r})
@@ -898,10 +901,21 @@ defmodule Renewex.Grammar do
     |> then(&{:ok, &1})
   end
 
+  # Helper
   defp serialize_color_rgb(_, color) do
     {:error, {:rgb, color}}
   end
 
+  @doc """
+
+  """
+  def serialize(
+        serializer,
+        rule,
+        field_values
+      )
+
+  #
   def serialize(
         %Serializer{grammar: grammar} = serializer,
         "CH.ifa.draw.figures.FigureAttributes",
@@ -945,6 +959,7 @@ defmodule Renewex.Grammar do
     end)
   end
 
+  #
   def serialize(
         %Serializer{} = serializer,
         "CH.ifa.draw.figures.AttributeFigure",
@@ -963,6 +978,7 @@ defmodule Renewex.Grammar do
     end
   end
 
+  #
   def serialize(
         %Serializer{} = serializer,
         "de.renew.gui.fs.FSFigure",
@@ -981,13 +997,15 @@ defmodule Renewex.Grammar do
     end
   end
 
+  #
   def serialize(%Serializer{grammar: grammar} = serializer, rule, field_values) do
     fields = Map.get(grammar.hierarchy[rule], :fields, [])
 
     serialize_fields(serializer, fields, field_values)
   end
 
-  def serialize_fields(serializer, fields, field_values) do
+  # doc
+  defp serialize_fields(serializer, fields, field_values) do
     fields
     |> Enum.reduce({:ok, serializer}, fn
       {nil, types}, {:ok, %Serializer{} = ser} ->
@@ -1020,6 +1038,7 @@ defmodule Renewex.Grammar do
     end)
   end
 
+  # 
   defp serialize_list_field(serializer, list, type_spec) do
     Serializer.serialize_list(serializer, list, fn item, ser ->
       case type_spec do

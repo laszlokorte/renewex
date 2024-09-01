@@ -1,10 +1,16 @@
 defmodule Renewex.Serializer do
+  @moduledoc """
+
+  """
   alias Renewex.Serializer
   alias Renewex.Hierarchy
   alias Renewex.Storable
   alias Renewex.Grammar
   alias Renewex.Tokenizer
 
+  @doc """
+
+  """
   defstruct [
     :grammar,
     :refs,
@@ -12,6 +18,9 @@ defmodule Renewex.Serializer do
     :output
   ]
 
+  @doc """
+
+  """
   def new(refs, grammar) do
     %Serializer{
       grammar: grammar,
@@ -21,6 +30,9 @@ defmodule Renewex.Serializer do
     }
   end
 
+  @doc """
+
+  """
   def serialize_document(serializer, storable, size \\ nil)
 
   def serialize_document(
@@ -52,6 +64,9 @@ defmodule Renewex.Serializer do
     end
   end
 
+  @doc """
+
+  """
   def serialize_storable(serializer, storable, expected_rule \\ nil)
 
   def serialize_storable(%Serializer{} = serializer, nil, _) do
@@ -101,6 +116,9 @@ defmodule Renewex.Serializer do
     end
   end
 
+  @doc """
+
+  """
   def serialize_list(%Serializer{} = serializer, list, ser_fn) do
     list
     |> Enum.reduce({:ok, append_token(serializer, {:int, Enum.count(list)})}, fn
@@ -112,6 +130,9 @@ defmodule Renewex.Serializer do
     end)
   end
 
+  @doc """
+
+  """
   def serialize_grammar_rule(%Serializer{} = serializer, rule, fields) do
     if Hierarchy.is_defined(serializer.grammar, rule) do
       cond do
@@ -134,10 +155,16 @@ defmodule Renewex.Serializer do
     end
   end
 
+  @doc """
+
+  """
   def append_token(%Serializer{} = serializer, {type, value}, space \\ true) do
     append(serializer, Tokenizer.token_to_binary(type, value), space)
   end
 
+  @doc """
+
+  """
   def append(%Serializer{output: prev_output} = serializer, new_out, space \\ true) do
     %Serializer{
       serializer
@@ -149,6 +176,9 @@ defmodule Renewex.Serializer do
     }
   end
 
+  @doc """
+
+  """
   def prepend(%Serializer{output: prev_output} = serializer, new_out, space \\ true) do
     %Serializer{
       serializer
@@ -159,10 +189,16 @@ defmodule Renewex.Serializer do
     }
   end
 
+  @doc """
+
+  """
   def get_output_string({:ok, %Serializer{output: output}}) do
     :erlang.iolist_to_binary(output)
   end
 
+  @doc """
+
+  """
   def get_output_string(%Serializer{output: output}) do
     :erlang.iolist_to_binary(output)
   end

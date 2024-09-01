@@ -123,17 +123,18 @@ defmodule Renewex.Tokenizer do
     end
   end
 
-  def token_to_binary(type, value)
+  @doc """
 
-  def token_to_binary(:string, value) when is_binary(value),
-    do: inspect(value, charlists: :as_charlists)
-
-  def token_to_binary(:float, value) when is_float(value), do: Float.to_string(value)
-  def token_to_binary(:storable, value) when is_nil(value), do: "NULL"
-  def token_to_binary(:int, value) when is_integer(value), do: Integer.to_string(value)
-
-  def token_to_binary(:boolean, value) when is_boolean(value),
-    do: if(value, do: "1", else: "0")
+  """
+  def token_to_binary(type, value) do
+    case type do
+      :string -> inspect(value, charlists: :as_charlists)
+      :float -> Float.to_string(value)
+      :storable -> "NULL"
+      :int -> Integer.to_string(value)
+      :boolean -> if(value, do: "1", else: "0")
+    end
+  end
 
   # takes a string that contains a string literal and returns the string it represents.
   # Eg takes "\"Hello\\nWorld\"" and returns "Hello\nWorld"

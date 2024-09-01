@@ -973,7 +973,7 @@ defmodule Renewex.Grammar do
     else
       if serializer.grammar.version > 6 do
         Serializer.serialize_list(serializer, field_values.paths, fn item, ser ->
-          Serializer.append_value(ser, item, :string)
+          {:ok, Serializer.append_value(ser, item, :string)}
         end)
       else
         {:ok, serializer}

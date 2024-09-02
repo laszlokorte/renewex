@@ -10,7 +10,7 @@
 
 ## Test cases
 
-The parser has been tested on [on more the 1000 example files.](./test/fixtures/valid_files)
+Both parser and serializer are tested [on more than 1000 example files.](./test/fixtures/valid_files)
 
 ### Running tests
 

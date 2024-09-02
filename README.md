@@ -8,7 +8,11 @@
 
 ---
 
-## Running tests
+## Test cases
+
+The parser has been tested on [on more the 1000 example files.](./test/fixtures/valid_files)
+
+### Running tests
 
 All test:
 ```sh
@@ -16,7 +20,7 @@ mix test
 ```
 
 Only fast tests:
-```
+```sh
 mix test --exclude slow
 ```
 
@@ -43,3 +47,8 @@ IO.puts(Enum.count(document.refs))
 # Write rnw file
 File.write("modified.rnw", serialized)
 ```
+
+
+---
+
+[www.laszlokorte.de](//www.laszlokorte.de)

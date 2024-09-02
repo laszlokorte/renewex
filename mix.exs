@@ -2,7 +2,7 @@ defmodule Renewex.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/laszlokorte/renewex"
-  @version "0.7.0"
+  @version "0.8.0"
 
   def project do
     [
@@ -19,7 +19,7 @@ defmodule Renewex.MixProject do
         # The main page in the docs
         extras: ["README.md"],
         source_url: @source_url,
-        logo: "guides/images/logo.png"
+        logo: "guides/images/logo-square.png"
       ]
     ]
   end

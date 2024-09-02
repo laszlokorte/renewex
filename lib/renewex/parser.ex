@@ -13,6 +13,10 @@ defmodule Renewex.Parser do
   alias Renewex.Aliases
   alias Renewex.Tokenizer
   alias Renewex.Grammar
+
+  @doc """
+
+  """
   defstruct [:grammar, :tokens, :ref_stack, :ref_count]
 
   @doc """
@@ -331,26 +335,27 @@ defmodule Renewex.Parser do
   end
 
   @doc """
-  Given the current state of a parser try to skip multiple tokens of the expected types.
-  If n types are given and the next n tokens match these types, the tokens are skipped.
-  If anything does not match the original parser state is returned.
 
-  Another of try_skip that takes not just a parser but a tupkle of {:ok, result, parser} or {:error, result, parser}.
-  If `{:error, ...}` simply return the input. If {:ok, result, parser} apply try_skip to the parser.
   """
-  def try_skip(%Parser{tokens: tokens} = parser, skips) do
+  def get_version(%Parser{grammar: grammar}) do
+    grammar.version
+  end
+
+  @doc """
+  """
+  def try_parse(%Parser{tokens: tokens} = parser, skips) do
     matching_skips =
       Enum.zip_with(tokens, skips, fn {actual_type, _}, skip_type -> skip_type == actual_type end)
 
     if Enum.all?(matching_skips) and Enum.count(matching_skips) == Enum.count(skips) do
-      %Parser{parser | tokens: Enum.drop(parser.tokens, Enum.count(skips))}
+      {matching_skips, %Parser{parser | tokens: Enum.drop(parser.tokens, Enum.count(skips))}}
     else
-      parser
+      {:none, parser}
     end
   end
 
   def try_skip({:ok, result, %Parser{} = parser}, skips) do
-    {:ok, result, try_skip(parser, skips)}
+    {:ok, result, try_parse(parser, skips) |> elem(1)}
   end
 
   def try_skip({:error, _, %Parser{}} = err, _) do

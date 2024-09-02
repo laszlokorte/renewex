@@ -132,7 +132,7 @@ defmodule RenewexTest do
     end
   end
 
-  test "parse_string on example files" do
+  test "parse_document on example files" do
     {:ok, files} = File.ls(@example_dir)
     grammar = Renewex.Grammar.new(11)
 
@@ -140,7 +140,10 @@ defmodule RenewexTest do
 
     for file <- files do
       assert {:ok, example} = File.read(Path.join(@example_dir, file)), "can read #{file}"
-      assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
+
+      assert {:ok, %Renewex.Document{root: root, refs: refs}} = Renewex.parse_document(example),
+             "can parse #{file}"
+
       assert is_list(refs), "ref list of #{file} is a list"
 
       assert root == Enum.at(refs, 0)
@@ -169,7 +172,9 @@ defmodule RenewexTest do
                |> Tokenizer.skip_whitespace()
                |> Parser.detect_document_version()
 
-      assert {:ok, %Storable{} = root, refs} = Renewex.parse_string(example), "can parse #{file}"
+      assert {:ok, %Renewex.Document{root: root, refs: refs}} = Renewex.parse_document(example),
+             "can parse #{file}"
+
       assert is_list(refs), "ref list of #{file} is a list"
 
       assert root == Enum.at(refs, 0)
@@ -191,7 +196,7 @@ defmodule RenewexTest do
       assert {:ok, example} = File.read(Path.join(@invalid_examples_dir, file)),
              "can read #{file}"
 
-      assert {:error, _, _} = Renewex.parse_string(example), "can not parse #{file}"
+      assert {:error, _, _} = Renewex.parse_document(example), "can not parse #{file}"
     end
   end
 
@@ -204,7 +209,7 @@ defmodule RenewexTest do
              "can read #{file}"
 
       assert_raise ArgumentError, fn ->
-        Renewex.parse_string(example)
+        Renewex.parse_document(example)
       end
     end
   end
@@ -315,7 +320,8 @@ defmodule RenewexTest do
     for file <- files do
       assert {:ok, example} = File.read(Path.join(@example_dir, file))
 
-      assert {:ok, %Storable{} = original_root, original_refs} = Renewex.parse_string(example),
+      assert {:ok, %Renewex.Document{root: original_root, refs: original_refs}} =
+               Renewex.parse_document(example),
              "can parse #{file}"
 
       assert is_list(original_refs), "ref list of #{file} is a list"
@@ -333,8 +339,8 @@ defmodule RenewexTest do
         |> Serializer.serialize_document(original_root)
         |> Serializer.get_output_string()
 
-      assert {:ok, %Storable{} = ^original_root, ^original_refs} =
-               Renewex.parse_string(actual_output),
+      assert {:ok, %Renewex.Document{root: ^original_root, refs: ^original_refs}} =
+               Renewex.parse_document(actual_output),
              "can reparse reserialized #{file}"
     end
   end
@@ -348,8 +354,8 @@ defmodule RenewexTest do
     for file <- files do
       assert {:ok, example} = File.read(Path.join(@full_examples_dir, file))
 
-      assert {:ok, %Storable{} = original_root, original_refs} =
-               Renewex.parse_string(example),
+      assert {:ok, %Renewex.Document{root: original_root, refs: original_refs}} =
+               Renewex.parse_document(example),
              "can parse #{file}"
 
       assert is_list(original_refs), "ref list of #{file} is a list"
@@ -367,8 +373,8 @@ defmodule RenewexTest do
         |> Serializer.serialize_document(original_root)
         |> Serializer.get_output_string()
 
-      assert {:ok, %Storable{} = ^original_root, ^original_refs} =
-               Renewex.parse_string(actual_output),
+      assert {:ok, %Renewex.Document{root: ^original_root, refs: ^original_refs}} =
+               Renewex.parse_document(actual_output),
              "can reparse reserialized #{file}"
     end
   end

@@ -6,7 +6,7 @@ defmodule Renewex.Hierarchy do
   In order to parse all Renew `*.rnw` files correctly, this hierarchical model has to be reproduced 
   as desribed in the Renewex.Grammar module. 
 
-  This module provides utility functions to query the hierarchy of a given Renewex.Grammar. For example you can query if Java 
+  This module provides utility functions to query the hierarchy of a given `Renewex.Grammar`. For example you can query if Java 
   class of a given name is defined inside the hierarchy or if some class a sub class of another class.
   """
   alias Renewex.Grammar
@@ -103,13 +103,13 @@ defmodule Renewex.Hierarchy do
   end
 
   @doc """
-
+  Check if `subtype` is an implementation of given `interface_or_class` or if subtype is identical to the given `interface_or_class`.
   """
-  def is_implementation_of(%Grammar{} = grammar, subtype, interface) do
-    subtype == interface or
+  def is_implementation_of(%Grammar{} = grammar, subtype, interface_or_class) do
+    subtype == interface_or_class or
       Enum.member?(
         interfaces_of(grammar, subtype),
-        interface
+        interface_or_class
       )
   end
 end

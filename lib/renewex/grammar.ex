@@ -624,7 +624,7 @@ defmodule Renewex.Grammar do
   - into: an `Storable` struct into which the parsed values shall be appended
 
   ## Returns
-  - `{:ok, %Storable{into | fields: parsed_fields}, next_parse_state}` if the rule was applied successfully.
+  - `{:ok, Renew.Storable{into | fields: parsed_fields}, next_parse_state}` if the rule was applied successfully.
     Where `parsed_fields` contain the values that have been parsed by the rule and next_parse_state is the 
     state of the parser after having consumed the tokens processed by the parse rule
   - `{:error, reason, next_parse_state}` if the rule could not be applied for some reason.
@@ -877,7 +877,7 @@ defmodule Renewex.Grammar do
     {:ok, {:rgb, r, g, b}, next_parser}
   end
 
-  # Helper
+  # Helper function to serialize 4 color channels: rgba
   defp serialize_color_rgba(ser, {:rgba, r, g, b, a}) do
     ser
     |> Serializer.append_token({:int, r})
@@ -887,12 +887,12 @@ defmodule Renewex.Grammar do
     |> then(&{:ok, &1})
   end
 
-  # Helper
+  # Fallback emits error if the color format does not match
   defp serialize_color_rgba(_, color) do
     {:error, {:rgba, color}}
   end
 
-  # Helper
+  # Helper function to parse 3 color channels: rgb
   defp serialize_color_rgb(ser, {:rgb, r, g, b}) do
     ser
     |> Serializer.append_token({:int, r})
@@ -901,13 +901,22 @@ defmodule Renewex.Grammar do
     |> then(&{:ok, &1})
   end
 
-  # Helper
+  # Fallback emits error if the color format does not match
   defp serialize_color_rgb(_, color) do
     {:error, {:rgb, color}}
   end
 
   @doc """
+  Serialize the given `field_values` according to the given grammar `rule`.
 
+  ## Parameters
+  - `serializer`: The serializer into which output the result is appended.
+  - `rule`: The name of the grammar rule to be used for serializtation. The actual grammar definition comes from the `serializer`.
+  - `field_values`: The map of values to be serialized.
+
+  ## Resturns
+  Either `{:ok, new_serializer}` if the serializtation was successful.
+  Otheriwse `{:error, reason}` if it failed for some `reason`.
   """
   def serialize(
         serializer,
@@ -915,11 +924,12 @@ defmodule Renewex.Grammar do
         field_values
       )
 
-  #
+  # The FigureAttributes class has some custom serializer logic that is not simply derived from the class hierarchy
+  # Instead it is defined in this function
   def serialize(
         %Serializer{grammar: grammar} = serializer,
         "CH.ifa.draw.figures.FigureAttributes",
-        field_values
+        %{} = field_values
       ) do
     serializer
     |> Serializer.append_token({:string, "attributes"})
@@ -959,7 +969,8 @@ defmodule Renewex.Grammar do
     end)
   end
 
-  #
+  # The AttributeFigure class has some custom serializer logic that is not simply derived from the class hierarchy
+  # Instead it is defined in this function
   def serialize(
         %Serializer{} = serializer,
         "CH.ifa.draw.figures.AttributeFigure",
@@ -978,7 +989,8 @@ defmodule Renewex.Grammar do
     end
   end
 
-  #
+  # The FSFigure class has some custom serializer logic that is not simply derived from the class hierarchy
+  # Instead it is defined in this function
   def serialize(
         %Serializer{} = serializer,
         "de.renew.gui.fs.FSFigure",
@@ -997,14 +1009,15 @@ defmodule Renewex.Grammar do
     end
   end
 
-  #
+  # The default implementation of serialize uses the rules defined in the `grammar` of the `serializer` to 
+  # determine the serializtation format.
   def serialize(%Serializer{grammar: grammar} = serializer, rule, field_values) do
     fields = Map.get(grammar.hierarchy[rule], :fields, [])
 
     serialize_fields(serializer, fields, field_values)
   end
 
-  # doc
+  # Opposite of `parse_fields`
   defp serialize_fields(serializer, fields, field_values) do
     fields
     |> Enum.reduce({:ok, serializer}, fn
@@ -1038,7 +1051,7 @@ defmodule Renewex.Grammar do
     end)
   end
 
-  # 
+  # Opposite of `parse_list`
   defp serialize_list_field(serializer, list, type_spec) do
     Serializer.serialize_list(serializer, list, fn item, ser ->
       case type_spec do

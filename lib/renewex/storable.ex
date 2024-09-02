@@ -3,7 +3,7 @@ defmodule Renewex.Storable do
   In the original [Renew](http://renew.de) Java implementation a  `*.rnw` is deserialized 
   into Java Objects of a variaty of classes.
 
-  Each of these classes implement the interface `Storable` that is responsible for reading/writing the token stream.
+  Each of these classes implement the Java interface `CH.ifa.draw.util.Storable` that is responsible for reading/writing the token stream.
 
   This module defines a struct that captures the result of such a deserialization and reproduces that concept of a Java
   class consisting of various fields.

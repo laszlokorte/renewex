@@ -1,9 +1,11 @@
 defmodule Renewex.Parser do
   @moduledoc """
   This module implements the core of the parser for reading [Renew](http://renew.de) `*.rnw` files.
-  The grammar to be used for parsing is defined by Renewex.Grammar.
+  The grammar to be used for parsing is defined by `Renewex.Grammar`.
 
-  This Renewex.Parser manages the overall parser state and provides function to process the whole 
+  The counter part for generating/serializing [Renew](http://renew.de) `*.rnw` files is defined in `Renewex.Serializer`.
+
+  This `Renewex.Parser` manages the overall parser state and provides function to process the whole 
   token stream coming from an `*.rnw` file.
   """
 
@@ -15,8 +17,18 @@ defmodule Renewex.Parser do
   alias Renewex.Grammar
 
   @doc """
+  The state of the parser consists of 4 fields:
 
+  - `grammar`: The grammar definition to be used for serialization.
+  - `tokens`: The list of yet to be processed tokens.
+  - `ref_stack`: A stack (list) of already parsed `Renewex.Storable.__struct__/0` structs. This is used to allow for `Renewex.Storable.__struct__/0`s to 
+    reference each other by index, as required by the [Renew](http://renew.de) file format. 
+    Yet during parsing this stack is in reverse order (to allow fast pushes that the front of the list). 
+      It has be reversed for the referencing indices to be resolved correctly.
+  - `ref_count`: The number of elements inside the `ref_stack`. 
+    This is used to to quick calculations without counting the elements in `ref_stack`.
   """
+  # TODO: Maybe replace the ref_stack list with a Map 
   defstruct [:grammar, :tokens, :ref_stack, :ref_count]
 
   @doc """
@@ -220,7 +232,7 @@ defmodule Renewex.Parser do
   Given a parser state continue parsing by applying the given rule.
   The rule is the name of a java class defined in the parsers grammars hierarchy.
 
-  In contrast to `parse_storable` no NULL or REF values are allowed and the parsed objects must
+  In contrast to `parse_storable` no `"NULL"` or `"REF"` values are allowed and the parsed objects must
   *not* be prefixed with its class name. Instead the given rule explicitly determines which grammar rule to use.
   """
   def parse_grammar_rule(parser, rule) do
@@ -254,10 +266,10 @@ defmodule Renewex.Parser do
   end
 
   @doc """
-  Given the current state of a parser parse a list.
-  The next token must be an integer encoding the length of the list (`l`).
+  Parse a list, given the current state of a parser
+  The next token must be an integer encoding the length of the list `lst`.
   The given function `fun` is a function that must parse single item of the list.
-  It is applied `l` times in a row. 
+  It is applied `lst` times in a row. 
   """
   def parse_list(parser, fun) do
     {:ok, count, parser} = parse_primitive(parser, :int)
@@ -335,21 +347,30 @@ defmodule Renewex.Parser do
   end
 
   @doc """
-
+  Get the version number of the parsers grammar.
   """
   def get_version(%Parser{grammar: grammar}) do
     grammar.version
   end
 
   @doc """
+  Try to read multiple tokes of given `types` at once.
+
+  ## Parameters
+  - `parser`: The current parser state
+  - `types`: A list of token types to read on sequence.
+
+  ## Returns
+  Either `{tokens, new_parser}` with `tokens` being a list of successfully read tokens.
+  Or `{:none, parser}` if the expected sequency of tokens could not been read.
   """
-  def try_parse(%Parser{tokens: tokens} = parser, skips) do
-    matching_skips =
-      Enum.zip_with(tokens, skips, fn {actual_type, _}, skip_type -> skip_type == actual_type end)
+  def try_parse(%Parser{tokens: tokens} = parser, types) do
+    matching_tokens =
+      Enum.zip_with(tokens, types, fn {actual_type, _}, expected -> expected == actual_type end)
 
-    skip_count = Enum.count(skips)
+    skip_count = Enum.count(types)
 
-    if Enum.all?(matching_skips) and Enum.count(matching_skips) == skip_count do
+    if Enum.all?(matching_tokens) and Enum.count(matching_tokens) == skip_count do
       {Enum.take(tokens, skip_count),
        %Parser{parser | tokens: Enum.drop(parser.tokens, skip_count)}}
     else
@@ -357,8 +378,11 @@ defmodule Renewex.Parser do
     end
   end
 
-  def try_skip({:ok, result, %Parser{} = parser}, skips) do
-    {:ok, result, try_parse(parser, skips) |> elem(1)}
+  @doc """
+  Skip a sequence of tokens of given `skip_types`.
+  """
+  def try_skip({:ok, result, %Parser{} = parser}, skip_types) do
+    {:ok, result, try_parse(parser, skip_types) |> elem(1)}
   end
 
   def try_skip({:error, _, %Parser{}} = err, _) do

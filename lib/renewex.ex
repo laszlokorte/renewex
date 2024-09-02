@@ -13,7 +13,7 @@ defmodule Renewex do
   Parses the content of a .rnw file saved by [Renew](http://renew.de).
 
   ## Parameters
-  - `input`: The content of the file as string
+  - `input`: The content of an .rnw file as string
 
   ## Returns
     - `{:ok, root, refs}`: On success, returns the root of the parsed document tree and a list of references.
@@ -37,7 +37,14 @@ defmodule Renewex do
   end
 
   @doc """
+  Convert a document into a serialized binary string according to the [Renew](http://renew.de) (*.rnw) file format.
 
+  ## Parameters
+  - `document`: The renew document to serialize
+
+  ## Returns
+    - `{:ok, string}`: On success, returns the serialized document as string.
+    - `{:error, reason}`: On failure, returns an error tuple with the reason for failure.
   """
   def serialize_document(%Document{version: version, root: root, refs: refs, size: size}) do
     serializer = Serializer.new(refs, Grammar.new(version))
@@ -62,6 +69,12 @@ defmodule Renewex do
     end
   end
 
+  # Parses the integers at the end of a renew document.
+  # These integers represent the position and size of the renew
+  # application window while the document was saved.
+  # 
+  # But renew files are NOT REQUIRED to contains the window dimensions.
+  # This function tries to read for integer tokens or nothing at all.
   defp parse_size(parser) do
     case Parser.try_parse(parser, [:int, :int, :int, :int]) do
       {:none, parser} -> {parser, nil}

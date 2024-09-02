@@ -1,11 +1,12 @@
 defmodule RenewexTest do
   use ExUnit.Case
+  doctest Renewex
+
   alias Renewex.Document
   alias Renewex.Hierarchy
   alias Renewex.Storable
   alias Renewex.Tokenizer
   alias Renewex.Parser
-  doctest Renewex
 
   @example_dir Path.join([__DIR__, "fixtures", "selected_examples"])
   @full_examples_dir Path.join([__DIR__, "fixtures", "valid_files"])
@@ -15,7 +16,11 @@ defmodule RenewexTest do
   describe "tokenizer" do
     test "tokenize example file" do
       {:ok, example} = "#{@example_dir}/example.rnw" |> File.read()
-      assert(3350 == Enum.count(Tokenizer.scan(example)))
+
+      assert(
+        3350 == Enum.count(Tokenizer.scan(example)),
+        "expected example.rnw to consist of 3350 tokens"
+      )
     end
   end
 
@@ -90,7 +95,8 @@ defmodule RenewexTest do
         |> Tokenizer.skip_whitespace()
         |> Parser.detect_document_version()
 
-      assert parser.grammar.version == 11
+      assert parser.grammar.version == 11,
+             "expected to detect example.rnw to be of file format version 11"
     end
 
     test "parse list" do
@@ -103,7 +109,10 @@ defmodule RenewexTest do
                  Parser.parse_primitive(p, :boolean)
                end)
 
-      assert(list_of_5_bools == [true, false, true, false, true])
+      assert(
+        list_of_5_bools == [true, false, true, false, true],
+        "expected list of 5 booleans to be parsed"
+      )
     end
 
     test "refs are assigned correctly" do
@@ -121,7 +130,8 @@ defmodule RenewexTest do
 
       assert root.fields.figures
              |> Enum.chunk_every(2, 1, :discard)
-             |> Enum.all?(fn [{:ref, a}, {:ref, b}] -> a < b end)
+             |> Enum.all?(fn [{:ref, a}, {:ref, b}] -> a < b end),
+             "expected refs to be sorted correctly"
     end
 
     test "parse_storable on selected example files" do
@@ -140,7 +150,8 @@ defmodule RenewexTest do
                  |> Parser.parse_storable(nil, false)
                  |> Parser.try_skip([:int, :int, :int, :int])
 
-        assert Parser.is_eof(parser)
+        assert Parser.is_eof(parser),
+               "expected token stream of '#{file}' to be fully consumed"
       end
     end
 
@@ -165,7 +176,8 @@ defmodule RenewexTest do
                  grammar,
                  root.class_name,
                  "CH.ifa.draw.standard.AbstractFigure"
-               )
+               ),
+               "expected root node of #{file} to be a subtype of AbstractFigure"
       end
     end
 
@@ -196,7 +208,8 @@ defmodule RenewexTest do
                  grammar,
                  root.class_name,
                  "CH.ifa.draw.standard.AbstractFigure"
-               )
+               ),
+               "expected root node of #{file} to be a subtype of AbstractFigure"
       end
     end
 
@@ -208,7 +221,8 @@ defmodule RenewexTest do
         assert {:ok, example} = File.read(Path.join(@invalid_examples_dir, file)),
                "can read #{file}"
 
-        assert {:error, _, _} = Renewex.parse_document(example), "can not parse #{file}"
+        assert {:error, _, _} = Renewex.parse_document(example),
+               "expect #{file} to be invalid and return parsing error"
       end
     end
 
@@ -266,7 +280,7 @@ defmodule RenewexTest do
 
       assert {:ok, actual_output} = Renewex.serialize_document(document)
 
-      assert expected_output == actual_output
+      assert expected_output == actual_output, "expected document to be serialized correctly"
     end
 
     test "serializer with refs" do
@@ -309,7 +323,7 @@ defmodule RenewexTest do
 
       assert {:ok, actual_output} = Renewex.serialize_document(document)
 
-      assert expected_output == actual_output
+      assert expected_output == actual_output, "expected document to be serialized correctly"
     end
 
     test "serialize_storable on example files" do
@@ -330,7 +344,7 @@ defmodule RenewexTest do
 
         assert {:ok, %Renewex.Document{root: ^original_root, refs: ^original_refs}} =
                  Renewex.parse_document(actual_output),
-               "can reparse reserialized #{file}"
+               "expected result of parsing #{file} to be the same as reparsing the result of serializing it"
       end
     end
 
@@ -353,7 +367,7 @@ defmodule RenewexTest do
 
         assert {:ok, %Renewex.Document{root: ^original_root, refs: ^original_refs}} =
                  Renewex.parse_document(actual_output),
-               "can reparse reserialized #{file}"
+               "expected result of parsing #{file} to be the same as reparsing the result of serializing it"
       end
     end
   end

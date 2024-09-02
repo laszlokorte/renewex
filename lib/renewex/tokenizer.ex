@@ -83,7 +83,15 @@ defmodule Renewex.Tokenizer do
   end
 
   @doc """
+  Splits a string it into tokens.
 
+  The string is expected to be in the format of a [Renew](http://renew.de) `*.rnw` file.
+
+  ## Parameters
+  - `input`: The string to be tokenized
+
+  ## Returns
+  A stream of token tuples `{type, value}`. See `Renewex.Tokenizer.token_types` for a list of possible types.
   """
   def scan(input) do
     Regex.scan(@pattern, input, capture: :all_names)
@@ -96,6 +104,12 @@ defmodule Renewex.Tokenizer do
 
   @doc """
   Takes a list of tokens and removes all tokens that are regarded as white space.
+
+  ## Parameters
+  - `tokens`: A stream or list of tokens.
+
+  ## Returns
+  A list of tokens with all whitespace tokens removed.
   """
   def skip_whitespace(tokens) do
     tokens
@@ -108,7 +122,14 @@ defmodule Renewex.Tokenizer do
   end
 
   @doc """
-  Convers a given string into a given type.
+  Converts a given string into a given type.
+
+  ## Parameters
+  - `type`: The type to convert the string into
+  - `string`: The string to be converted
+
+  ## Returns
+  The `string` converted into the given `type`
   """
   def cast_value(type, string) when is_binary(string) do
     case type do
@@ -124,7 +145,14 @@ defmodule Renewex.Tokenizer do
   end
 
   @doc """
+  Converts token value of a given type back into the corresponding binary string.
 
+  ## Parameters
+  - `type`: The type of the token
+  - `string`: The the value of the token
+
+  ## Returns
+  A string representing the given token value
   """
   def token_to_binary(type, value) do
     case type do

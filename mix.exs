@@ -1,20 +1,25 @@
 defmodule Renewex.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/laszlokorte/renewex"
+  @version "0.7.0"
+
   def project do
     [
       app: :renewex,
-      version: "0.7.0",
+      version: @version,
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
       description: description(),
-      source_url: "https://github.com/laszlokorte/renewex",
-      homepage_url: "https://github.com/laszlokorte/renewex",
+      source_url: @source_url,
+      homepage_url: @source_url,
       docs: [
         # The main page in the docs
-        extras: ["README.md"]
+        extras: ["README.md"],
+        source_url: @source_url,
+        logo: "guides/images/logo.png"
       ]
     ]
   end

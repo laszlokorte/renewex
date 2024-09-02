@@ -1,10 +1,12 @@
 # RenewEx
 
+![RenewEx](./guides/images/logo.png)
+
 [Renew](http://renew.de/) file parser in Elixir.
 
----
-
 [![Hex.pm](https://img.shields.io/hexpm/v/renewex.svg)](https://hex.pm/packages/renewex) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/renewex/)
+
+---
 
 ## Running tests
 

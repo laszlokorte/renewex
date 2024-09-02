@@ -33,40 +33,6 @@ defmodule Renewex.Serializer do
   @doc """
 
   """
-  def serialize_document(serializer, storable, size \\ nil)
-
-  def serialize_document(
-        %Serializer{} = serializer,
-        storable,
-        nil
-      ) do
-    %Serializer{grammar: %Grammar{version: version}} = serializer
-
-    with {:ok, ser} <- serialize_storable(serializer, storable) do
-      if version == -1 do
-        {:ok, ser}
-      else
-        {:ok, prepend(ser, Integer.to_string(version))}
-      end
-    else
-      err -> err
-    end
-  end
-
-  def serialize_document(%Serializer{} = serializer, storable, {x, y, w, h})
-      when is_integer(x) and is_integer(y) and is_integer(w) and is_integer(h) do
-    size = Enum.map([x, y, w, h], &Integer.to_string/1) |> Enum.intersperse(" ")
-
-    with {:ok, ser} <- serialize_document(serializer, storable, nil) do
-      {:ok, append(ser, size)}
-    else
-      err -> err
-    end
-  end
-
-  @doc """
-
-  """
   def serialize_storable(serializer, storable, expected_rule \\ nil)
 
   def serialize_storable(%Serializer{} = serializer, nil, _) do
@@ -165,6 +131,13 @@ defmodule Renewex.Serializer do
   @doc """
 
   """
+  def prepend_token(%Serializer{} = serializer, {type, value}, space \\ true) do
+    prepend(serializer, Tokenizer.token_to_binary(type, value), space)
+  end
+
+  @doc """
+
+  """
   def append(%Serializer{output: prev_output} = serializer, new_out, space \\ true) do
     %Serializer{
       serializer
@@ -196,9 +169,6 @@ defmodule Renewex.Serializer do
     :erlang.iolist_to_binary(output)
   end
 
-  @doc """
-
-  """
   def get_output_string(%Serializer{output: output}) do
     :erlang.iolist_to_binary(output)
   end

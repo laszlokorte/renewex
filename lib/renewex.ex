@@ -3,6 +3,8 @@ defmodule Renewex do
   The `Renewex` module provides functionality for parsing [Renew](http://renew.de) source files (*.rnw).
   """
 
+  alias Renewex.Serializer
+  alias Renewex.Grammar
   alias Renewex.Document
   alias Renewex.Parser
   alias Renewex.Tokenizer
@@ -34,10 +36,36 @@ defmodule Renewex do
     end
   end
 
+  @doc """
+
+  """
+  def serialize_document(%Document{version: version, root: root, refs: refs, size: size}) do
+    serializer = Serializer.new(refs, Grammar.new(version))
+
+    with {:ok, ser} <- Serializer.serialize_storable(serializer, root) do
+      ser =
+        if version == -1,
+          do: ser,
+          else: Serializer.prepend_token(ser, {:int, version})
+
+      ser =
+        if size == nil,
+          do: ser,
+          else:
+            Enum.reduce(Tuple.to_list(size), ser, fn s, ser ->
+              Serializer.append_token(ser, {:int, s})
+            end)
+
+      {:ok, Serializer.get_output_string(ser)}
+    else
+      err -> err
+    end
+  end
+
   defp parse_size(parser) do
     case Parser.try_parse(parser, [:int, :int, :int, :int]) do
       {:none, parser} -> {parser, nil}
-      {[x, y, w, h], parser} -> {parser, {x, y, w, h}}
+      {[{:int, x}, {:int, y}, {:int, w}, {:int, h}], parser} -> {parser, {x, y, w, h}}
     end
   end
 end

@@ -1,10 +1,10 @@
 defmodule RenewexTest do
   use ExUnit.Case
+  alias Renewex.Document
   alias Renewex.Hierarchy
   alias Renewex.Storable
   alias Renewex.Tokenizer
   alias Renewex.Parser
-  alias Renewex.Serializer
   doctest Renewex
 
   @example_dir Path.join([__DIR__, "fixtures", "selected_examples"])
@@ -215,10 +215,7 @@ defmodule RenewexTest do
   end
 
   test "simple serializer" do
-    grammar = Renewex.Grammar.new(11)
-    serializer = Serializer.new([], grammar)
-
-    document =
+    root =
       Storable.new("CH.ifa.draw.standard.StandardDrawing", %{
         figures: [
           Storable.new("CH.ifa.draw.figures.RoundRectangleFigure", %{
@@ -240,7 +237,7 @@ defmodule RenewexTest do
         ]
       })
 
-    size = {42, 32, 108, 128}
+    document = Document.new(11, root, [], {42, 32, 108, 128})
 
     expected_output =
       [
@@ -253,17 +250,12 @@ defmodule RenewexTest do
       ]
       |> Enum.join()
 
-    actual_output =
-      serializer
-      |> Serializer.serialize_document(document, size)
-      |> Serializer.get_output_string()
+    assert {:ok, actual_output} = Renewex.serialize_document(document)
 
     assert expected_output == actual_output
   end
 
   test "serializer with refs" do
-    grammar = Renewex.Grammar.new(11)
-
     refs = [
       Storable.new("CH.ifa.draw.figures.RoundRectangleFigure", %{
         x: 4,
@@ -288,10 +280,7 @@ defmodule RenewexTest do
       })
     ]
 
-    document = {:ref, 1}
-    serializer = Serializer.new(refs, grammar)
-
-    size = {42, 32, 108, 128}
+    document = Document.new(11, {:ref, 1}, refs, {42, 32, 108, 128})
 
     expected_output =
       [
@@ -304,10 +293,7 @@ defmodule RenewexTest do
       ]
       |> Enum.join()
 
-    actual_output =
-      serializer
-      |> Serializer.serialize_document(document, size)
-      |> Serializer.get_output_string()
+    assert {:ok, actual_output} = Renewex.serialize_document(document)
 
     assert expected_output == actual_output
   end
@@ -320,24 +306,13 @@ defmodule RenewexTest do
     for file <- files do
       assert {:ok, example} = File.read(Path.join(@example_dir, file))
 
-      assert {:ok, %Renewex.Document{root: original_root, refs: original_refs}} =
+      assert {:ok, %Renewex.Document{root: original_root, refs: original_refs} = document} =
                Renewex.parse_document(example),
              "can parse #{file}"
 
       assert is_list(original_refs), "ref list of #{file} is a list"
 
-      assert %Parser{grammar: grammar} =
-               example
-               |> Tokenizer.scan()
-               |> Tokenizer.skip_whitespace()
-               |> Parser.detect_document_version()
-
-      serializer = Serializer.new(original_refs, grammar)
-
-      actual_output =
-        serializer
-        |> Serializer.serialize_document(original_root)
-        |> Serializer.get_output_string()
+      assert {:ok, actual_output} = Renewex.serialize_document(document)
 
       assert {:ok, %Renewex.Document{root: ^original_root, refs: ^original_refs}} =
                Renewex.parse_document(actual_output),
@@ -354,24 +329,13 @@ defmodule RenewexTest do
     for file <- files do
       assert {:ok, example} = File.read(Path.join(@full_examples_dir, file))
 
-      assert {:ok, %Renewex.Document{root: original_root, refs: original_refs}} =
+      assert {:ok, %Renewex.Document{root: original_root, refs: original_refs} = document} =
                Renewex.parse_document(example),
              "can parse #{file}"
 
       assert is_list(original_refs), "ref list of #{file} is a list"
 
-      assert %Parser{grammar: grammar} =
-               example
-               |> Tokenizer.scan()
-               |> Tokenizer.skip_whitespace()
-               |> Parser.detect_document_version()
-
-      serializer = Serializer.new(original_refs, grammar)
-
-      actual_output =
-        serializer
-        |> Serializer.serialize_document(original_root)
-        |> Serializer.get_output_string()
+      assert {:ok, actual_output} = Renewex.serialize_document(document)
 
       assert {:ok, %Renewex.Document{root: ^original_root, refs: ^original_refs}} =
                Renewex.parse_document(actual_output),

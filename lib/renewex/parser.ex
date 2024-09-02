@@ -347,8 +347,11 @@ defmodule Renewex.Parser do
     matching_skips =
       Enum.zip_with(tokens, skips, fn {actual_type, _}, skip_type -> skip_type == actual_type end)
 
-    if Enum.all?(matching_skips) and Enum.count(matching_skips) == Enum.count(skips) do
-      {matching_skips, %Parser{parser | tokens: Enum.drop(parser.tokens, Enum.count(skips))}}
+    skip_count = Enum.count(skips)
+
+    if Enum.all?(matching_skips) and Enum.count(matching_skips) == skip_count do
+      {Enum.take(tokens, skip_count),
+       %Parser{parser | tokens: Enum.drop(parser.tokens, skip_count)}}
     else
       {:none, parser}
     end

@@ -149,11 +149,12 @@ defmodule Renewex.Hierarchy do
   ## Returns
   If the given class is defined inside the `grammar`:
   A list of all interfaces that the given class implements according to the `grammar` definition.
-  Otherwise returns `:undefined`
+  Otherwise returns `:undefined`.
+  Returns an empty list if `nil` is given as `name`.
   """
   def interfaces_of(grammar, name)
 
-  def interfaces_of(%Grammar{}, nil), do: :undefined
+  def interfaces_of(%Grammar{}, nil), do: []
 
   def interfaces_of(%Grammar{} = grammar, name) do
     if Map.has_key?(grammar.hierarchy, name) do

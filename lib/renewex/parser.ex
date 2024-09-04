@@ -173,8 +173,8 @@ defmodule Renewex.Parser do
         class_name = Aliases.resolve_alias(current_value)
 
         if is_nil(expected_type) or
-             Hierarchy.is_implementation_of(parser.grammar, class_name, expected_type) or
-             Hierarchy.is_subtype_of(parser.grammar, class_name, expected_type) do
+             Hierarchy.is_implementation_of(parser.grammar, class_name, expected_type) == true or
+             Hierarchy.is_subtype_of(parser.grammar, class_name, expected_type) == true do
           with {:ok, result, %Parser{ref_stack: child_ref_stack, ref_count: child_ref_count} = p} <-
                  parse_grammar_rule(
                    %Parser{

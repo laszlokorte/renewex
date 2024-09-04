@@ -1,0 +1,86 @@
+11 
+    de.renew.gui.CPNDrawing 50 
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 12 33 64 62 43  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 13 146 80 89 47 89 20  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 1 "FigureWithID" "Int" 14 286 59 102 57  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 1 "FigureWithID" "Int" 15 433 58 89 55 181.97188043455242 91.36157072321646  
+        CH.ifa.draw.contrib.DiamondFigure "attributes" "attributes" 2 "targetLocation" "String" "hello" "FigureWithID" "Int" 16 35 152 72 56  
+        CH.ifa.draw.contrib.TriangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 17 156 150 67 59 0  
+        CH.ifa.draw.contrib.TriangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 18 298 156 73 50 4  
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 3 "FigureWithID" "Int" 20 "FillColor" "Color" 255 0 255 255 "ArrowMode" "Int" 3 5 443 248 514 191 493 155 465 190 429 172  
+        CH.ifa.draw.figures.PolyLineFigure "attributes" "attributes" 3 "LineWidth" "Int" 4 "FigureWithID" "Int" 21 "LineStyle" "String" "20" 618 13 284 29 266 30 266 31 266 31 265 32 265 33 265 33 264 34 264 35 264 35 263 36 263 36 262 37 262 38 262 39 262 40 261 41 261 42 261 43 260 44 260 46 259 47 259 48 259 49 259 49 258 50 258 51 258 52 258 53 258 53 257 54 257 55 257 56 256 57 256 58 255 59 255 61 254 62 254 63 254 63 253 64 253 65 253 66 253 67 253 67 252 68 252 70 251 71 251 72 251 72 250 73 250 74 250 75 250 76 250 76 249 77 249 78 249 79 249 79 248 80 248 81 248 82 248 83 248 84 248 84 247 85 247 86 247 87 247 88 247 89 247 90 247 91 247 91 246 92 246 93 246 94 246 95 246 96 246 97 246 98 246 99 246 100 246 101 245 102 245 103 245 104 245 105 245 106 245 107 245 108 245 109 245 110 245 111 245 112 245 113 245 114 245 115 245 116 245 117 245 118 245 119 245 120 245 121 245 122 245 123 245 124 245 125 245 126 245 127 245 128 245 129 245 130 245 131 245 132 245 133 245 134 245 135 245 137 245 138 245 139 245 140 245 141 245 142 245 143 245 144 245 145 245 146 245 147 245 148 245 149 245 149 246 150 246 151 246 152 246 153 247 154 247 155 247 156 247 156 248 157 248 158 248 158 249 159 249 160 249 160 250 161 250 162 250 163 250 164 251 165 251 166 251 166 252 167 252 168 253 169 253 170 253 171 254 172 254 172 255 174 255 175 255 175 256 176 256 176 257 177 257 178 257 179 257 179 258 180 258 180 259 181 259 182 259 183 259 183 260 184 261 185 261 186 262 187 262 187 263 188 263 188 264 189 264 189 265 190 265 191 265 191 266 192 266 192 267 193 267 194 268 194 269 195 269 195 270 196 270 196 271 197 271 197 272 198 272 199 273 200 273 200 274 201 275 202 275 203 275 203 276 203 277 204 277 204 278 205 278 206 278 206 279 207 279 207 280 208 280 208 281 209 281 209 282 210 282 210 283 211 283 212 284 212 285 213 285 213 286 214 286 215 287 216 288 217 288 217 289 217 290 218 290 219 290 220 291 220 292 221 292 222 292 223 293 223 294 224 294 225 295 226 295 227 295 227 296 228 296 229 296 229 297 229 298 230 298 231 298 232 298 232 299 233 299 234 299 235 300 236 300 237 300 238 301 239 302 240 302 241 302 241 303 242 303 243 303 244 303 245 303 246 304 247 304 248 304 249 304 249 305 250 305 251 305 252 306 253 306 254 306 255 306 255 307 256 307 257 307 258 307 259 307 260 307 261 307 261 308 262 308 263 308 264 308 265 308 266 308 267 308 268 308 268 309 269 309 270 309 271 309 272 309 273 309 274 310 275 310 276 310 276 311 277 311 278 311 279 311 280 311 281 311 282 311 283 311 284 311 284 312 285 312 286 312 287 312 288 312 289 312 290 312 291 312 292 312 293 312 294 312 295 312 296 312 297 312 298 312 299 312 300 312 300 313 301 313 303 313 304 313 305 313 306 313 307 313 308 313 309 313 310 313 311 313 312 313 313 313 314 313 315 313 316 313 317 313 318 313 319 313 320 313 321 313 321 314 322 314 323 314 324 314 325 314 326 314 327 314 328 314 329 314 330 314 331 314 332 314 333 314 334 314 335 314 336 314 337 314 338 314 339 314 340 314 341 314 343 314 344 314 345 314 346 314 347 314 348 314 349 314 350 314 351 314 352 314 353 314 354 314 355 314 356 314 357 314 358 314 359 314 360 314 361 314 362 314 363 314 364 314 365 314 366 314 367 314 367 313 368 313 369 313 370 313 371 313 372 313 373 313 374 313 375 313 375 312 376 312 377 312 378 312 379 312 380 312 381 312 381 311 382 311 383 311 384 311 384 310 385 310 386 310 387 310 388 310 389 310 389 309 390 309 391 309 392 309 393 309 394 309 395 308 396 308 397 308 398 308 399 308 400 308 400 307 401 307 402 307 403 307 404 307 405 307 406 307 407 306 408 306 408 305 409 305 410 305 411 305 412 305 413 305 413 304 414 304 415 304 416 304 416 303 417 303 418 303 419 303 420 302 421 302 422 302 422 301 423 301 424 301 425 301 425 300 426 300 427 300 428 300 428 299 429 299 431 299 431 298 432 298 433 297 434 297 435 297 436 296 437 296 438 296 439 296 439 295 440 295 441 295 442 294 442 293 443 293 444 293 445 293 445 292 446 292 447 292 448 292 448 291 449 291 450 291 451 290 452 290 453 289 454 289 455 289 455 288 456 288 457 288 458 288 458 287 459 287 460 287 460 286 461 286 462 286 462 285 463 285 464 285 464 284 465 284 466 283 467 283 468 283 468 282 469 282 469 281 470 281 471 281 471 280 472 280 473 280 474 279 475 279 475 278 476 278 477 278 478 278 478 277 480 276 481 276 481 275 482 275 483 275 484 274 485 273 486 273 486 272 487 272 488 272 489 271 490 271 491 270 492 269 493 269 493 268 494 268 495 268 495 267 496 267 497 267 497 266 498 266 499 266 499 265 500 265 500 264 501 264 502 264 502 263 503 263 504 263 504 262 505 262 506 262 506 261 507 261 507 260 508 260 509 260 509 259 510 259 511 259 511 258 512 258 513 258 513 257 514 257 514 256 515 256 515 255 516 255 517 255 517 254 518 254 519 254 519 253 520 252 521 252 522 251 523 251 523 250 524 250 525 250 525 249 526 248 527 248 527 247 528 247 529 246 530 246 531 246 531 245 531 244 532 244 533 244 534 244 534 243 535 242 537 242 537 241 538 240 539 240 540 239 541 239 572 240 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 23 2 280 257 399 255 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 24 2 210 187 310 173 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.contrib.ChopPolygonConnector REF 6  
+            CH.ifa.draw.contrib.ChopPolygonConnector REF 7   
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 25 146 24 89 47 22 47  
+        CH.ifa.draw.contrib.TriangleFigure "attributes" "attributes" 2 "targetLocation" "String" "sfsdf" "FigureWithID" "Int" 27 156 215 67 59 4  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 1 "FigureWithID" "Int" 31 10 346 89 55 181.97188043455242 240.29780108980844  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 1 "FigureWithID" "Int" 32 121 346 89 55 181.97188043455242 281.8967689936385  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 0 "FigureWithID" "Int" 33 248 350 89 55 181.97188043455242 23.951116627740248  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 2 "FrameColor" "Color" 0 0 0 0 "FigureWithID" "Int" 34 363 343 89 55 181.97188043455242 65.4506912277127  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 4 "LineWidth" "Int" 8 "FrameColor" "Color" 0 0 0 99 "FigureWithID" "Int" 35 "ArrowMode" "Int" 3 493 349 89 55 181.97188043455242 148.10278994126247  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 3 "FigureWithID" "Int" 36 "FillColor" "Color" 255 0 0 56 "ArrowMode" "Int" 3 19 444 89 55 77.97044823358056 16.23940101311632  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 3 "FigureWithID" "Int" 37 "FillColor" "Color" 0 255 0 102 "ArrowMode" "Int" 3 151 446 89 55 316.7839607222644 71.75839953036495  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 4 "FrameColor" "Color" 0 0 0 0 "FigureWithID" "Int" 38 "TextColor" "Color" 0 0 0 255 "FillColor" "Color" 0 0 255 97 315 439 89 55 158.71598764858186 63.08653903171245  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 1 "FigureWithID" "Int" 39 473 428 89 55 253.2447392997218 16.23940101311632  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 2 "FigureWithID" "Int" 40 "LineStyle" "String" "1 2" 2 72 446 142 396 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopPieConnector REF 25  
+            CH.ifa.draw.figures.ChopPieConnector REF 21   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 41 2 218 451 270 400 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopPieConnector REF 26  
+            CH.ifa.draw.figures.ChopPieConnector REF 22   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 42 2 379 443 395 396 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopPieConnector REF 27  
+            CH.ifa.draw.figures.ChopPieConnector REF 23   
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 3 "LineWidth" "Int" 1 "FigureWithID" "Int" 43 "LineStyle" "String" "7 3 1 3" 2 559 448 531 403 NULL NULL "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopPieConnector REF 28  
+            CH.ifa.draw.figures.ChopPieConnector REF 24   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 22 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 61 280 "This is a Test" "Georgia" 0 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 6 "FrameColor" "Color" 255 199 158 255 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "TextColor" "Color" 255 0 0 97 "FigureWithID" "Int" 44 "FillColor" "Color" 255 199 158 255 40 323 "Transparent Test" "Georgia" 0 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 45 "TextAlignment" "Int" 0 "Visibility" "Boolean" "FALSE" "FillColor" "Color" 255 199 158 255 28 533 "This Text should be hidden" "SansSerif" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 46 2 61 551 144 546 
+            de.renew.gui.CompositionArrowTip 0.4 11.0 11.0 1  
+            de.renew.gui.CompositionArrowTip 0.4 11.0 11.0 1  "de.renew.gui.CompositionArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 47 2 178 546 261 541 
+            de.renew.gui.IsaArrowTip 0.6 15.0 0.0 0  
+            de.renew.gui.IsaArrowTip 0.6 15.0 0.0 0  "de.renew.gui.IsaArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 48 2 289 544 372 539 
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  
+            de.renew.gui.AssocArrowTip 0.4 11.0 11.0 1  "de.renew.gui.AssocArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 49 2 399 543 482 538 
+            de.renew.gui.DoubleArrowTip 0.4 8.0 8.0 1  
+            de.renew.gui.DoubleArrowTip 0.4 8.0 8.0 1  "de.renew.gui.DoubleArrowTip"  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 50 2 511 539 594 534 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 51 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 35 600 "Left\nAligned" "Georgia" 0 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 53 "TextAlignment" "Int" 2 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 317 601 "Right\nAligned" "Georgia" 0 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 52 "TextAlignment" "Int" 1 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 187 600 "Center\nAligned" "Georgia" 0 20 0 NULL NULL  
+        de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 54 463 597 54 27 NULL  
+        de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 55 559 589 47 43 NULL  
+        de.renew.gui.VirtualPlaceFigure "attributes" "attributes" 3 "FigureWithID" "Int" 56 "FrameColor" "Color" 0 0 0 255 "FillColor" "Color" 112 219 147 255 639 588 47 43 NULL REF 67  
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 57 2 490 624 492 650 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.standard.ChopBoxConnector REF 66  
+            CH.ifa.draw.figures.ChopEllipseConnector 
+                de.renew.gui.PlaceFigure "attributes" "attributes" 1 "FigureWithID" "Int" 58 482 649 20 20 NULL    REF 73 
+        de.renew.gui.ArcConnection "attributes" "attributes" 1 "FigureWithID" "Int" 59 2 502 659 536 659 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 73  
+            CH.ifa.draw.standard.ChopBoxConnector 
+                de.renew.gui.TransitionFigure "attributes" "attributes" 1 "FigureWithID" "Int" 60 536 651 24 16 NULL    REF 78 
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 61 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 34 706 "Underlined" "Georgia" 4 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 62 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 182 708 "Underlined/Bold" "Georgia" 5 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 64 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 40 754 "Italic Bold" "Georgia" 3 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 65 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 29 801 "Italic Underlined" "Georgia" 6 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 66 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 217 799 "Bold/Italic/Underlined" "Georgia" 7 20 0 NULL NULL  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 5 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 63 "TextAlignment" "Int" 0 "targetLocation" "String" "http://www.google.com" "FillColor" "Color" 255 199 158 255 193 754 "Bold" "Georgia" 1 20 0 NULL NULL  NULL  

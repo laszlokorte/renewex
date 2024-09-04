@@ -379,6 +379,10 @@ defmodule Renewex.Grammar do
           super: "CH.ifa.draw.standard.ChopBoxConnector",
           interfaces: ["CH.ifa.draw.framework.Connector"]
         },
+        "CH.ifa.draw.figures.ChopPieConnector" => %{
+          super: "CH.ifa.draw.standard.ChopBoxConnector",
+          interfaces: ["CH.ifa.draw.framework.Connector"]
+        },
         "CH.ifa.draw.standard.AbstractConnector" => %{
           super: nil,
           interfaces: ["CH.ifa.draw.framework.Connector"],
@@ -601,6 +605,10 @@ defmodule Renewex.Grammar do
           interfaces: []
         },
         "de.renew.diagram.SynchronousMessageArrowTip" => %{
+          super: "CH.ifa.draw.figures.ArrowTip",
+          interfaces: []
+        },
+        "de.renew.gui.CompositionArrowTip" => %{
           super: "CH.ifa.draw.figures.ArrowTip",
           interfaces: []
         },

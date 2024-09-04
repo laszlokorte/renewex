@@ -83,6 +83,25 @@ defmodule RenewexTest do
           ]
       )
     end
+
+    test "undefined rules" do
+      grammar = Renewex.Grammar.new(11)
+
+      assert :undefined ==
+               Hierarchy.is_implementation_of(
+                 grammar,
+                 "some.not.defined.Rule",
+                 "some.Interface"
+               ),
+             "expect undefined rules to be reported as not beeing implementation of some interface"
+
+      assert :undefined ==
+               Hierarchy.get_super(
+                 grammar,
+                 "some.not.defined.Rule"
+               ),
+             "expect undefined Rule to have no super type"
+    end
   end
 
   describe "parser" do
@@ -139,7 +158,7 @@ defmodule RenewexTest do
 
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@example_dir, file))
 
         assert {:ok, %Storable{}, parser} =
@@ -161,7 +180,7 @@ defmodule RenewexTest do
 
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@example_dir, file)), "can read #{file}"
 
         assert {:ok, %Renewex.Document{root: root, refs: refs}} = Renewex.parse_document(example),
@@ -187,7 +206,7 @@ defmodule RenewexTest do
 
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@full_examples_dir, file)), "can read #{file}"
 
         assert %Parser{grammar: grammar} =
@@ -217,7 +236,7 @@ defmodule RenewexTest do
       {:ok, files} = File.ls(@invalid_examples_dir)
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@invalid_examples_dir, file)),
                "can read #{file}"
 
@@ -230,7 +249,7 @@ defmodule RenewexTest do
       {:ok, files} = File.ls(@invalid_encodings_dir)
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@invalid_encodings_dir, file)),
                "can read #{file}"
 
@@ -331,7 +350,7 @@ defmodule RenewexTest do
 
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@example_dir, file))
 
         assert {:ok, %Renewex.Document{root: original_root, refs: original_refs} = document} =
@@ -354,7 +373,7 @@ defmodule RenewexTest do
 
       assert Enum.count(files) > 0, "test files exist"
 
-      for file <- files do
+      for file <- skip_excluded_files(files) do
         assert {:ok, example} = File.read(Path.join(@full_examples_dir, file))
 
         assert {:ok, %Renewex.Document{root: original_root, refs: original_refs} = document} =
@@ -370,5 +389,9 @@ defmodule RenewexTest do
                "expected result of parsing #{file} to be the same as reparsing the result of serializing it"
       end
     end
+  end
+
+  defp skip_excluded_files(files) do
+    Enum.filter(files, fn name -> not String.starts_with?(name, "SKIP") end)
   end
 end

@@ -439,6 +439,11 @@ defmodule Renewex.Grammar do
           interfaces: [],
           fields: [rotation: :int]
         },
+        "CH.ifa.draw.figures.PieFigure" => %{
+          super: "CH.ifa.draw.figures.AttributeFigure",
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int, start_angle: :float, end_angle: :float]
+        },
         "CH.ifa.draw.figures.CompositeAttributeFigure" => %{
           super: if(version > 9, do: "CH.ifa.draw.figures.AttributeFigure"),
           interfaces: [],

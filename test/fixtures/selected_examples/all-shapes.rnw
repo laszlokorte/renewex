@@ -1,0 +1,17 @@
+11 
+    de.renew.gui.CPNDrawing 11
+        CH.ifa.draw.figures.RectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 12 33 64 62 43  
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 13 145 63 89 47 30 47  
+        CH.ifa.draw.figures.EllipseFigure "attributes" "attributes" 1 "FigureWithID" "Int" 14 286 59 102 57  
+        CH.ifa.draw.figures.PieFigure "attributes" "attributes" 1 "FigureWithID" "Int" 15 434 59 89 55 180.0 90.0  
+        CH.ifa.draw.contrib.DiamondFigure "attributes" "attributes" 1 "FigureWithID" "Int" 16 35 152 72 56  
+        CH.ifa.draw.contrib.TriangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 17 156 150 67 59 0  
+        CH.ifa.draw.contrib.TriangleFigure "attributes" "attributes" 1 "FigureWithID" "Int" 18 298 156 73 50 4  
+        CH.ifa.draw.contrib.PolygonFigure "attributes" "attributes" 1 "FigureWithID" "Int" 20 5 420 224 511 214 513 172 470 186 448 150  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 4 "FrameColor" "Color" 255 199 158 255 "FigureWithID" "Int" 22 "TextAlignment" "Int" 0 "FillColor" "Color" 255 199 158 255 79 275 "This is a Test" "SansSerif" 0 12 0 NULL NULL  
+        CH.ifa.draw.figures.LineFigure "attributes" "attributes" 1 "FigureWithID" "Int" 23 2 280 257 399 255 NULL NULL "CH.ifa.draw.figures.ArrowTip"  
+        CH.ifa.draw.figures.LineConnection "attributes" "attributes" 1 "FigureWithID" "Int" 24 2 210 187 310 173 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.contrib.ChopPolygonConnector REF 6  
+            CH.ifa.draw.contrib.ChopPolygonConnector REF 7   NULL  

@@ -283,8 +283,11 @@ defmodule Renewex.Parser do
 
                i, {:ok, list, parser} ->
                  case fun.(parser) do
-                   {:ok, next, p} -> {:ok, [next | list], p}
-                   {:error, e, p} -> {:error, {:list, {i, count}, e}, p}
+                   {:ok, next, p} ->
+                     {:ok, [next | list], p}
+
+                   {:error, e, p} ->
+                     {:error, {:list, {i, count}, e}, p}
                  end
 
                _, _ ->

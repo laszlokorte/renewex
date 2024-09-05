@@ -42,27 +42,32 @@ defmodule RenewexTest do
       grammar = Renewex.Grammar.new(11)
 
       assert(
-        Renewex.Hierarchy.implementors_of(grammar, "CH.ifa.draw.figures.PolyLineable") == [
-          "de.renew.gui.DoubleArcConnection",
-          "CH.ifa.draw.figures.PolyLineFigure",
-          "CH.ifa.draw.figures.LineFigure",
-          "de.renew.diagram.SynchronousReplyConnection",
-          "CH.ifa.draw.figures.LineConnection",
-          "de.renew.gui.HollowDoubleArcConnection",
-          "de.renew.diagram.AbstractMessageConnection",
-          "de.renew.diagram.LifeLineConnection",
-          "fs.IsaConnection",
-          "de.renew.gui.ArcConnection",
-          "CH.ifa.draw.figures.ElbowConnection",
-          "de.renew.gui.fs.AssocConnection",
-          "de.renew.gui.InhibitorConnection",
-          "de.renew.gui.fs.IsaConnection",
-          "de.renew.diagram.MessageConnection",
-          "de.renew.diagram.SynchronousMessageConnection",
-          "de.renew.gui.fs.ConceptConnection",
-          "CH.ifa.draw.contrib.PolygonFigure",
-          "de.renew.gui.fs.FeatureConnection"
-        ]
+        Enum.sort(Renewex.Hierarchy.implementors_of(grammar, "CH.ifa.draw.figures.PolyLineable")) ==
+          Enum.sort([
+            "de.renew.gui.DoubleArcConnection",
+            "CH.ifa.draw.figures.PolyLineFigure",
+            "CH.ifa.draw.figures.LineFigure",
+            "de.renew.diagram.SynchronousReplyConnection",
+            "CH.ifa.draw.figures.LineConnection",
+            "de.renew.gui.HollowDoubleArcConnection",
+            "de.renew.diagram.AbstractMessageConnection",
+            "de.renew.diagram.LifeLineConnection",
+            "fs.IsaConnection",
+            "de.renew.gui.ArcConnection",
+            "CH.ifa.draw.figures.ElbowConnection",
+            "de.renew.gui.fs.AssocConnection",
+            "de.renew.gui.InhibitorConnection",
+            "de.renew.gui.fs.IsaConnection",
+            "de.renew.diagram.MessageConnection",
+            "de.renew.diagram.SynchronousMessageConnection",
+            "de.renew.gui.fs.ConceptConnection",
+            "CH.ifa.draw.contrib.PolygonFigure",
+            "de.renew.gui.fs.FeatureConnection",
+            "de.renew.bpmn.figures.AbstractBPMNConnection",
+            "de.renew.bpmn.figures.SequenceFlowConnection",
+            "de.renew.bpmn.figures.MessageFlowConnection",
+            "de.renew.fa.figures.FAArcConnection"
+          ])
       )
     end
 

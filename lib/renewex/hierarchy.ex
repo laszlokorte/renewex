@@ -45,6 +45,8 @@ defmodule Renewex.Hierarchy do
     end
   end
 
+  def get_super(%Grammar{}, :undefined), do: :undefined
+
   @doc """
   Check if one class is a subtype of another class or interface.
 
@@ -62,6 +64,8 @@ defmodule Renewex.Hierarchy do
   def is_subtype_of(%Grammar{} = grammar, same, same), do: is_defined(grammar, same)
 
   def is_subtype_of(%Grammar{}, nil, _), do: false
+
+  def is_subtype_of(%Grammar{}, :undefined, _), do: false
 
   def is_subtype_of(%Grammar{} = grammar, subtype, supertype) do
     not is_nil(subtype) and

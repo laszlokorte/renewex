@@ -315,6 +315,152 @@ defmodule Renewex.Grammar do
           # The `nil` key signifies the field to be skipped.
           fields: [nil: [:ref, :string, default: {:string, "SKIPPED_WHILE_PARSING"}]]
         },
+        "de.renew.bpmn.figures.PoolFigure" => %{
+          super: "de.renew.netcomponents.NetComponentFigure",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNSwimlane",
+            "de.renew.bpmn.figures.MessageFlowConnectable",
+            "de.renew.bpmn.figures.PartialSelectableFigure"
+          ],
+          fields: [x: :int, y: :int, w: :int, h: :int]
+        },
+        "de.renew.bpmn.figures.GatewayFigure" => %{
+          super: "CH.ifa.draw.contrib.DiamondFigure",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNFlowObject",
+            "de.renew.bpmn.figures.SequenceFlowConnectable"
+          ],
+          fields: [type: :int]
+        },
+        "de.renew.bpmn.figures.AbstractBPMNConnection" => %{
+          super: "CH.ifa.draw.figures.LineConnection",
+          interfaces: [
+            "CH.ifa.draw.framework.ConnectionFigure"
+          ],
+          fields: []
+        },
+        "de.renew.bpmn.figures.ActivityFigure" => %{
+          super: "CH.ifa.draw.figures.RoundRectangleFigure",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNFlowObject",
+            "de.renew.bpmn.figures.SequenceFlowConnectable",
+            "de.renew.bpmn.figures.MessageFlowConnectable"
+          ],
+          fields: [type: :int]
+        },
+        "de.renew.bpmn.figures.MessageFlowConnection" => %{
+          super: "de.renew.bpmn.figures.AbstractBPMNConnection",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNConnectingObject"
+          ],
+          fields: []
+        },
+        "de.renew.bpmn.figures.BPMNTextFigure" => %{
+          super: "CH.ifa.draw.figures.TextFigure",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNFigure"
+          ],
+          fields: [type: :int]
+        },
+        "de.renew.bpmn.figures.EventFigure" => %{
+          super: "CH.ifa.draw.figures.EllipseFigure",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNFlowObject",
+            "de.renew.bpmn.figures.SequenceFlowConnectable",
+            "de.renew.bpmn.figures.MessageFlowConnectable"
+          ],
+          fields: [position: :int, type: :int, throwing: :boolean]
+        },
+        "de.renew.bpmn.figures.PoolNameFigure" => %{
+          super: "CH.ifa.draw.figures.TextFigure",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.bpmn.figures.DataFigure" => %{
+          super: "CH.ifa.draw.figures.AttributeFigure",
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int, type: :int]
+        },
+        "de.renew.bpmn.figures.DataStoreFigure" => %{
+          super: "CH.ifa.draw.figures.AttributeFigure",
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int]
+        },
+        "de.renew.bpmn.figures.SequenceFlowConnection" => %{
+          super: "de.renew.bpmn.figures.AbstractBPMNConnection",
+          interfaces: [
+            "de.renew.bpmn.figures.BPMNConnectingObject"
+          ],
+          fields: []
+        },
+        "de.renew.fa.figures.FAStateFigure" => %{
+          super: "CH.ifa.draw.figures.EllipseFigure",
+          interfaces: [],
+          fields:
+            Enum.concat(
+              if(version >= 3,
+                do: [figure: {:storable, "CH.ifa.draw.framework.Figure"}],
+                else: []
+              ),
+              decoration: {:storable, "de.renew.fa.figures.FigureDecoration"},
+              nil: [:ref, :string, default: {:string, "SKIPPED_WHILE_PARSING"}]
+            )
+        },
+        "de.renew.fa.figures.StartDecoration" => %{
+          super: nil,
+          interfaces: ["de.renew.fa.figures.FigureDecoration"],
+          fields: []
+        },
+        "de.renew.fa.figures.EndDecoration" => %{
+          super: nil,
+          interfaces: ["de.renew.fa.figures.FigureDecoration"],
+          fields: []
+        },
+        "de.renew.fa.figures.StartEndDecoration" => %{
+          super: nil,
+          interfaces: ["de.renew.fa.figures.FigureDecoration"],
+          fields: []
+        },
+        "de.renew.fa.figures.NullDecoration" => %{
+          super: nil,
+          interfaces: ["de.renew.fa.figures.FigureDecoration"],
+          fields: []
+        },
+        "de.renew.fa.figures.FATextFigure" => %{
+          super: "de.renew.gui.CPNTextFigure",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.fa.figures.FAWordTextFigure" => %{
+          super: "CH.ifa.draw.figures.TextFigure",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.fa.figures.FAArcConnection" => %{
+          super: "CH.ifa.draw.figures.LineConnection",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.interfacenets.datatypes.InterfaceLabelTextFigure" => %{
+          super: "CH.ifa.draw.figures.TextFigure",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.interfacenets.datatypes.InterfaceBoxFigure" => %{
+          super: "de.renew.interfacenets.datatypes.InterfaceAbstractFigure",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.interfacenets.datatypes.InterfaceFigure" => %{
+          super: "de.renew.interfacenets.datatypes.InterfaceAbstractFigure",
+          interfaces: [],
+          fields: []
+        },
+        "de.renew.interfacenets.datatypes.InterfaceAbstractFigure" => %{
+          super: "CH.ifa.draw.figures.CompositeAttributeFigure",
+          interfaces: [],
+          fields: [x: :int, y: :int, w: :int, h: :int]
+        },
         "CH.ifa.draw.standard.OffsetLocator" => %{
           super: "CH.ifa.draw.figures.AbstractLocator",
           interfaces: ["CH.ifa.draw.framework.Locator"],

@@ -57,7 +57,7 @@ defmodule Renewex.Hierarchy do
 
   ## Returns
   `true` if the class `subtype` is defined as a subtype of the class `supertype` in the given `grammar`.
-  `false` if subtype is `nil` or if its not defiend to be a `subtype` of `supertype`.
+  `false` if subtype is `nil` or `:undefined` or if its not defiend to be a `subtype` of `supertype`.
   """
   def is_subtype_of(grammar, subtype, supertype)
 

@@ -10,7 +10,7 @@
 
 ## Test cases
 
-Both parser and serializer are tested [on more than 1000 example files.](./test/fixtures/valid_files)
+Both parser and serializer are tested [on more than 1000 example files.](https://github.com/laszlokorte/renewex/test/fixtures/valid_files)
 
 ### Running tests
 

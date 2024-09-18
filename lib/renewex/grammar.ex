@@ -641,7 +641,7 @@ defmodule Renewex.Grammar do
             "de.renew.diagram.ISplitFigure"
           ],
           fields: [
-            decorationf: {:storable, "de.renew.diagram.FigureDecoration"},
+            decoration: {:storable, "de.renew.diagram.FigureDecoration"},
             nil: [:string, default: {:string, "de.renew.diagram.FigureDecoration"}]
           ]
         },

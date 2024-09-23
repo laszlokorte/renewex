@@ -189,7 +189,12 @@ defmodule Renewex.Grammar do
         "de.renew.gui.VirtualPlaceFigure" => %{
           super: "de.renew.gui.PlaceFigure",
           interfaces: [],
-          fields: [highlight_figure: {:storable, "de.renew.gui.PlaceFigure"}]
+          fields: [place: {:storable, "de.renew.gui.PlaceFigure"}]
+        },
+        "de.renew.gui.VirtualTransitionFigure" => %{
+          super: "de.renew.gui.TransitionFigure",
+          interfaces: [],
+          fields: [transition: {:storable, "de.renew.gui.TransitionFigure"}]
         },
         "de.renew.gui.ArcConnection" => %{
           super: "CH.ifa.draw.figures.LineConnection",

@@ -71,6 +71,40 @@ defmodule RenewexTest do
       )
     end
 
+    test "implementations of Connectors" do
+      grammar = Renewex.Grammar.new(11)
+
+      all_connectors =
+        Hierarchy.implementors_of(
+          grammar,
+          "CH.ifa.draw.framework.Connector"
+        )
+        |> Enum.sort()
+
+      expected_connectors =
+        Enum.sort([
+          "CH.ifa.draw.contrib.ChopPolygonConnector",
+          "CH.ifa.draw.figures.ChopEllipseConnector",
+          "CH.ifa.draw.figures.ChopPieConnector",
+          "CH.ifa.draw.figures.ChopRoundRectangleConnector",
+          "CH.ifa.draw.figures.ShortestDistanceConnector",
+          "CH.ifa.draw.standard.AbstractConnector",
+          "CH.ifa.draw.standard.ChopBoxConnector",
+          "de.renew.diagram.BottomConnector",
+          "de.renew.diagram.HBottomConnector",
+          "de.renew.diagram.HSplitCenterConnector",
+          "de.renew.diagram.HTopConnector",
+          "de.renew.diagram.HorizontalConnector",
+          "de.renew.diagram.LeftConnector",
+          "de.renew.diagram.RightConnector",
+          "de.renew.diagram.TopConnector",
+          "de.renew.diagram.VSplitCenterConnector",
+          "de.renew.diagram.VerticalConnector"
+        ])
+
+      assert all_connectors == expected_connectors
+    end
+
     test "subtypes_of Connections" do
       grammar = Renewex.Grammar.new(11)
 

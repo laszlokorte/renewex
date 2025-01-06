@@ -1122,7 +1122,7 @@ defmodule Renewex.Grammar do
             {:ok, Serializer.append_token(next_ser, {:int, value})}
 
           "Storable" ->
-            Serializer.serialize_storable(next_ser, value)
+            Serializer.serialize_ref(next_ser, value)
 
           "UNKNOWN" ->
             ser
@@ -1196,7 +1196,7 @@ defmodule Renewex.Grammar do
         serialize_list_field(ser, field_values[field_name], list_type)
 
       {field_name, {:storable, rule}}, {:ok, %Serializer{} = ser} ->
-        Serializer.serialize_storable(ser, field_values[field_name], rule)
+        Serializer.serialize_ref(ser, field_values[field_name], rule)
 
       {field_name, {:rule, rule}}, {:ok, %Serializer{} = ser} ->
         Serializer.serialize_grammar_rule(ser, rule, field_values[field_name].fields)
@@ -1220,7 +1220,7 @@ defmodule Renewex.Grammar do
     Serializer.serialize_list(serializer, list, fn item, ser ->
       case type_spec do
         {:storable, rule} ->
-          Serializer.serialize_storable(ser, item, rule)
+          Serializer.serialize_ref(ser, item, rule)
 
         {:rule, rule} ->
           Serializer.serialize_grammar_rule(ser, rule, item)

@@ -109,17 +109,19 @@ defmodule RenewexTest do
       grammar = Renewex.Grammar.new(11)
 
       assert(
-        Renewex.Hierarchy.subtypes_of(grammar, [
-          "de.renew.gui.fs.IsaConnection",
-          "de.renew.gui.ArcConnection"
-        ]) ==
-          [
+        Enum.sort(
+          Renewex.Hierarchy.subtypes_of(grammar, [
+            "de.renew.gui.fs.IsaConnection",
+            "de.renew.gui.ArcConnection"
+          ])
+        ) ==
+          Enum.sort([
             "de.renew.gui.DoubleArcConnection",
             "de.renew.gui.HollowDoubleArcConnection",
             "de.renew.gui.ArcConnection",
             "de.renew.gui.InhibitorConnection",
             "de.renew.gui.fs.IsaConnection"
-          ]
+          ])
       )
     end
 
@@ -300,47 +302,6 @@ defmodule RenewexTest do
   end
 
   describe "serializer" do
-    test "simple serializer" do
-      root =
-        Storable.new("CH.ifa.draw.standard.StandardDrawing", %{
-          figures: [
-            Storable.new("CH.ifa.draw.figures.RoundRectangleFigure", %{
-              x: 4,
-              y: 8,
-              w: 15,
-              h: 16,
-              arc_width: 23,
-              arc_height: 42,
-              attributes:
-                Storable.new("CH.ifa.draw.figures.FigureAttributes", %{
-                  attributes: [
-                    {"Fill", "Color", {:rgba, 32, 64, 128, 255}},
-                    {"Stroke", "Int", 4},
-                    {"Visible", "Boolean", true}
-                  ]
-                })
-            })
-          ]
-        })
-
-      document = Document.new(11, root, [], {42, 32, 108, 128})
-
-      expected_output =
-        [
-          ~S(11 CH.ifa.draw.standard.StandardDrawing 1 ),
-          ~S(CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 3 ),
-          ~S("Fill" "Color" 32 64 128 255 ),
-          ~S("Stroke" "Int" 4 ),
-          ~S("Visible" "Boolean" "true" ),
-          ~S(4 8 15 16 23 42 42 32 108 128)
-        ]
-        |> Enum.join()
-
-      assert {:ok, actual_output} = Renewex.serialize_document(document)
-
-      assert expected_output == actual_output, "expected document to be serialized correctly"
-    end
-
     test "serializer with refs" do
       refs = [
         Storable.new("CH.ifa.draw.figures.RoundRectangleFigure", %{
@@ -358,15 +319,17 @@ defmodule RenewexTest do
                 {"Visible", "Boolean", true}
               ]
             })
-        }),
+        })
+      ]
+
+      root =
         Storable.new("CH.ifa.draw.standard.StandardDrawing", %{
           figures: [
             {:ref, 0}
           ]
         })
-      ]
 
-      document = Document.new(11, {:ref, 1}, refs, {42, 32, 108, 128})
+      document = Document.new(11, root, refs, {42, 32, 108, 128})
 
       expected_output =
         [

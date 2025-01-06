@@ -56,12 +56,30 @@ defmodule Renewex.Serializer do
   end
 
   @doc """
-  Serialize a `Storable` of `expected_type` into the `serializer`.
+  Serialize a `Storable` into the `serializer`.
 
   ## Parameters
   - `serializer`: The serializer to write the result into.
   - `storable`: The struct to serialize.
-  - `expected_type`: The name of a Java class or interface that the storable is expected to be a subtype of. 
+
+  ## Returns
+  Either a tuple `{:ok, serializer}` with the serialized data appended to the `serializer`s outout if successful.
+  Or `{:error, reason}` if the serialization failed for some `reason`.
+  """
+  def serialize_storable(
+        %Serializer{} = serializer,
+        %Storable{class_name: class_name, fields: fields}
+      ) do
+    serialize_grammar_rule(append(serializer, class_name), class_name, fields)
+  end
+
+  @doc """
+  Serialize a reference to a `Storable` of `expected_type` into the `serializer`.
+
+  ## Parameters
+  - `serializer`: The serializer to write the result into.
+  - `reference`: The reference to the `Storable` or nil.
+  - `expected_type`: The name of a Java class or interface that the `Storable` is expected to be a subtype of. 
     See `Renewex.Grammar` for details on how the [Renew](http://renew.de) file format is based on a Java class 
     hierarchy that is emulated here.
 
@@ -69,13 +87,13 @@ defmodule Renewex.Serializer do
   Either a tuple `{:ok, serializer}` with the serialized data appended to the `serializer`s outout if successful.
   Or `{:error, reason}` if the serialization failed for some `reason`.
   """
-  def serialize_storable(serializer, storable, expected_type \\ nil)
+  def serialize_ref(serializer, reference, expected_type \\ nil)
 
-  def serialize_storable(%Serializer{} = serializer, nil, _) do
+  def serialize_ref(%Serializer{} = serializer, nil, _) do
     {:ok, append(serializer, "NULL")}
   end
 
-  def serialize_storable(
+  def serialize_ref(
         %Serializer{used_refs: used_refs, refs: all_refs} = serializer,
         {:ref, ref},
         expected_type
@@ -92,8 +110,7 @@ defmodule Renewex.Serializer do
 
           serialize_storable(
             %Serializer{serializer | used_refs: Map.put(used_refs, ref, new_ref)},
-            storable,
-            expected_type
+            storable
           )
 
         idx when is_integer(idx) ->
@@ -101,20 +118,6 @@ defmodule Renewex.Serializer do
       end
     else
       {:error, {storable.class_name, expected_type}}
-    end
-  end
-
-  def serialize_storable(
-        %Serializer{} = serializer,
-        %Storable{class_name: class_name, fields: fields},
-        expected_type
-      ) do
-    if is_nil(expected_type) or
-         Hierarchy.is_implementation_of(serializer.grammar, class_name, expected_type) or
-         Hierarchy.is_subtype_of(serializer.grammar, class_name, expected_type) do
-      serialize_grammar_rule(append(serializer, class_name), class_name, fields)
-    else
-      {:error, {class_name, expected_type}}
     end
   end
 
